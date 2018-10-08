@@ -38,6 +38,10 @@ body {
     font-weight: 700;
 }
 
+.text-vertical-center .speaker-lineup-2018 {
+  margin-bottom: 30px;
+}
+
 h3 {
     color: white;
 }
