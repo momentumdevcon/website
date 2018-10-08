@@ -77,5 +77,6 @@ ul.social-buttons {
 }
 
 .conference-date {
-  font-size: 48px
+  font-size: 48px;
+  color: white;
 }
