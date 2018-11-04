@@ -182,7 +182,9 @@ hr.small {
 /* About */
 
 .about {
-    padding: 50px 0;
+    background: linear-gradient(45deg, #fff, #56b2d3, #008abe);
+    padding: 50px 0 100px 0;
+    color: white;
 }
 
 /* Services */

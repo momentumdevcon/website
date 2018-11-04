@@ -19,6 +19,45 @@
   margin: 0 auto;
 }
 
+.conference-date {
+  margin-bottom: 50px;
+}
+
+.astronaut-icon {
+  margin-bottom: 25px;
+}
+
+.fa.fa-user-astronaut {
+  font-size: 75px;
+}
+
+.fa.fa-chevron-down {
+  font-size: 50px;
+  position: absolute;
+  text-align: center;
+  bottom: 25px;
+  width: 100%;
+  color: #fff;
+}
+
+.fas.fa-phone {
+  transform: rotate(90deg);
+}
+
+.phone-number {
+  padding-left: 2px;
+}
+
+.btn.btn-dark.btn-lg.session {
+  white-space: normal;
+  background: #008abe;
+  margin-top: 50px;
+}
+
+.btn.btn-dark.btn-lg.session:hover {
+  background: #006e98;
+}
+
 @media only screen and (max-width: 720px) {
   .momentum-responsive-header-img {
     padding: 0 1em 0 1em;
