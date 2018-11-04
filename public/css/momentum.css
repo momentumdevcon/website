@@ -23,6 +23,11 @@
   margin-bottom: 50px;
 }
 
+#speakers{
+  background: linear-gradient(45deg, #fff, #56b2d3, #008abe);
+  padding: 50px 0 100px 0;
+  color: white;
+}
 .astronaut-icon {
   margin-bottom: 25px;
 }
