@@ -129,3 +129,9 @@ ul.social-buttons {
 .main-logo {
   padding-top: 100px;
 }
+
+@media(max-width: 400px) {
+  .callout h1 {
+    font-size: 4em;
+  }
+}
