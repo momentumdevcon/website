@@ -19,6 +19,52 @@
   margin: 0 auto;
 }
 
+.conference-date {
+  margin-bottom: 50px;
+}
+
+#speakers{
+  background: linear-gradient(45deg, #fff, #56b2d3, #008abe);
+  padding: 50px 0 100px 0;
+  color: white;
+}
+
+.speakers-icon {
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.fas.fa-bullhorn {
+  font-size: 75px;
+}
+
+.fa.fa-chevron-down {
+  font-size: 50px;
+  position: absolute;
+  text-align: center;
+  bottom: 25px;
+  width: 100%;
+  color: #fff;
+}
+
+.fas.fa-phone {
+  transform: rotate(90deg);
+}
+
+.phone-number {
+  padding-left: 2px;
+}
+
+.btn.btn-dark.btn-lg.session {
+  white-space: normal;
+  background: #008abe;
+  margin-top: 50px;
+}
+
+.btn.btn-dark.btn-lg.session:hover {
+  background: #006e98;
+}
+
 @media only screen and (max-width: 720px) {
   .momentum-responsive-header-img {
     padding: 0 1em 0 1em;
@@ -83,4 +129,10 @@ ul.social-buttons {
 
 .main-logo {
   padding-top: 100px;
+}
+
+@media(max-width: 400px) {
+  .callout h1 {
+    font-size: 4em;
+  }
 }
