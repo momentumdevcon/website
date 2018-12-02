@@ -1,6 +1,6 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import Layout from '../components/layout'
+import { Layout } from '../components'
 
 import pic03 from '../assets/images/pic03.jpg'
 import pic08 from '../assets/images/pic08.jpg'
