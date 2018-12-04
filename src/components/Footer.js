@@ -1,12 +1,12 @@
 import React from 'react';
 import Icon from './Icon';
-import { footerSocialIcons } from '../assets/data';
+import socialIcons from '../assets/data/socialIcons.json';
 
 const Footer = () => (
   <footer id="footer">
     <div className="inner">
       <ul className="icons">
-        {footerSocialIcons.map(({ iconName, link }, i) => (
+        {socialIcons.footer.map(({ iconName, link }, i) => (
           <li key={i}>
             <Icon iconName={iconName} link={link} />
           </li>
