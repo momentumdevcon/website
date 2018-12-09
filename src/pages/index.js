@@ -1,7 +1,7 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import { Layout, Banner, Tile } from '../components';
-import tileContent from '../assets/data/tileContent.json';
+import { Layout, Banner, ContentBlock } from '../components';
+import blockContent from '../assets/data/blockContent.json';
 
 const HomeIndex = () => (
   <Layout>
@@ -15,8 +15,8 @@ const HomeIndex = () => (
     <Banner />
     <div id="main">
       <section id="one" className="tiles">
-        {tileContent.homePage.map(c => (
-          <Tile header={c.header} content={c.content} />
+        {blockContent.homePage.map(c => (
+          <ContentBlock className="homePageContent" header={c.header} content={c.content} />
         ))}
       </section>
     </div>

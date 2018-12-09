@@ -8,7 +8,7 @@ const Icon = ({ iconName, link }) =>
       <span className="label">{upperCaseFirstLetter(iconName)}</span>
     </a>
   ) : (
-    <i className={`icon alt fa-${iconName}`} />
+    <i className={`icon alt fa-${iconName}`} style={{ padding: '10px !important' }} />
   ));
 
 export default Icon;
