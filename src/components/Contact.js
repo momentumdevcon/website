@@ -32,7 +32,7 @@ const Contact = () => (
           <div className="contact-method">
             <span className="icon alt fa-envelope" />
             <h3>Email</h3>
-            <a href="#">info@momentumdevcon.com</a>
+            <a href="mailto:info@momentumdevcon.com">info@momentumdevcon.com</a>
           </div>
         </section>
         <section>
