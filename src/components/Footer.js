@@ -13,10 +13,7 @@ const Footer = () => (
         ))}
       </ul>
       <ul className="copyright">
-        <li>Copyright &copy; Momentum Conference 2017-2018</li>
-        <li>
-          Design: <a href="https://html5up.net">HTML5 UP</a>
-        </li>
+        <li>Copyright &copy; Momentum Conference 2017-2019</li>
       </ul>
     </div>
   </footer>
