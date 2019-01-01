@@ -13,8 +13,8 @@ const ContentBlock = ({
         </header>
         {content && (
           <ul>
-            {content.map(c => (
-              <li key={`${header}`}>{c}</li>
+            {content.map((c, i) => (
+              <li key={`${header}-${i}`}>{c}</li>
             ))}
           </ul>
         )}
