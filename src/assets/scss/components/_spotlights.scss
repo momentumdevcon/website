@@ -82,7 +82,7 @@
 			}
 		}
 
-		@include breakpoint(large) {
+		@include breakpoint(medium) {
 			> section {
 				> .image {
 					width: 45%;
@@ -92,9 +92,9 @@
 					width: 55%;
 				}
 			}
-		}
+    }
 
-		@include breakpoint(medium) {
+		@include breakpoint(small) {
 			> section {
 				display: block;
 
@@ -109,7 +109,7 @@
 			}
 		}
 
-		@include breakpoint(small) {
+		@include breakpoint(xsmall) {
 			> section {
 				> .content {
 					@include padding(3em, 1.5em);
