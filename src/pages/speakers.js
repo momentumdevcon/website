@@ -1,22 +1,27 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import { Layout } from '../components';
+import { Link } from 'gatsby';
+import { BannerLanding, Layout } from '../components';
 import SpeakersList from '../components/SpeakersList';
+
 // import pic11 from '../assets/images/pic11.jpg';
 
 const SpeakersPage = () => (
   <Layout>
     <Helmet>
-      <title>SpeakersPage - Forty by HTML5 UP</title>
+      <title>Speakers - Momentum Dev Con</title>
       <meta name="description" content="SpeakersPage Page" />
     </Helmet>
+
+    <BannerLanding pageName="Speakers">
+      <Link to="/schedule">
+        <p>Schedule is now live!</p>
+      </Link>
+    </BannerLanding>
 
     <div id="main" className="alt">
       <section id="one">
         <div className="inner">
-          <header className="major">
-            <h1>Speakers</h1>
-          </header>
           {/* <span className="image main">
             <img src={pic11} alt="" />
           </span> */}

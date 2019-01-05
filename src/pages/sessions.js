@@ -10,7 +10,7 @@ const Sessions = () => (
       <meta name="description" content="Sessions" />
     </Helmet>
 
-    <BannerLanding />
+    <BannerLanding pageName="Sessions" />
 
     <div id="main">
       <section id="one">

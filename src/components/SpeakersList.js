@@ -1,10 +1,6 @@
 import React from 'react';
-import { Link, StaticQuery, graphql } from 'gatsby';
-import ContentBlock from './ContentBlock';
+import { StaticQuery, graphql } from 'gatsby';
 import Icon from './Icon';
-
-const getSessionTitle = (allSessions, speakerSessions) =>
-  allSessions.find(session => session.alternative_id === speakerSessions[0].toString()).title;
 
 const SpeakersList = () => (
   <StaticQuery
@@ -28,14 +24,8 @@ const SpeakersList = () => (
         }
       }
     `}
-    render={({ sessionizeData: { speakers, sessions } }) => (
+    render={({ sessionizeData: { speakers } }) => (
       <section id="learnmore" className="about">
-        <div>
-          <p className="lead">
-            <Link to="/schedule">Schedule is now live!</Link>
-          </p>
-        </div>
-        <div />
         <div className="speakerContainer">
           <section>
             <article style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
