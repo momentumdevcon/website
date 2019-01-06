@@ -30,10 +30,8 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-
         & .speaker {
-          margin-right: 50px;
-          margin-bottom: 50px;
+          margin: 25px;
           position: relative;
 
           & header {
@@ -60,8 +58,8 @@
             left: 0;
             right: 0;
             bottom: 15px;
-            width: 38%;
-            margin: 0 auto;
+            display: flex;
+            justify-content: center;
 
             & .icon.alt.fa-facebook {
               padding-right: 10px;
