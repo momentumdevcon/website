@@ -42,12 +42,6 @@
       @include padding(3em, 0);
       width: calc(100% - 3em);
     }
-
-    .speakers {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
   }
 }
 

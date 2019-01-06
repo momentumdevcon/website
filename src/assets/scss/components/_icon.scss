@@ -27,6 +27,14 @@
       width: 2em;
     }
   }
+
+  &.alt {
+    &.speakerIcon {
+      &:before {
+        border: 1px solid #2a2f4a;
+      }
+    }
+  }
 }
 
 a.icon {
@@ -49,11 +57,5 @@ a.icon {
         background-color: desaturate(darken(_palette(accent1), 15), 5);
       }
     }
-  }
-}
-
-.speakerSocialIcons {
-  & .icon.alt.fa-facebook {
-    padding-right: 10px;
   }
 }

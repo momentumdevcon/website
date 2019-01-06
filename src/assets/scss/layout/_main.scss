@@ -6,21 +6,69 @@
 
 /* Main */
 
-	#main {
-		background-color: _palette(bg-alt);
+#main {
+  background-color: _palette(bg-alt);
 
-		> * {
-			border-top: solid 1px _palette(border);
+  > * {
+    border-top: solid 1px _palette(border);
 
-			&:first-child {
-				border-top: 0;
-			}
+    &:first-child {
+      border-top: 0;
+    }
 
-			@include inner;
-		}
+    @include inner;
+  }
 
-		&.alt {
-			background-color: transparent;
-			border-bottom: solid 1px _palette(border);
-		}
-	}
+  &.alt {
+    background-color: transparent;
+    border-bottom: solid 1px _palette(border);
+  }
+
+  & .about {
+    & .speakerContainer {
+      & article {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        & .speaker {
+          margin-right: 50px;
+          margin-bottom: 50px;
+          position: relative;
+
+          & header {
+            text-align: center;
+            margin-bottom: 10px;
+          }
+
+          & .speakerName {
+            margin-bottom: 0;
+          }
+
+          & img {
+            height: 200px;
+            width: 200px;
+            border-radius: 50%;
+            transition: all 0.5s ease-in-out;
+          }
+          img:hover {
+            transform: scale(1.05);
+          }
+
+          & .speakerSocialIcons {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 15px;
+            width: 38%;
+            margin: 0 auto;
+
+            & .icon.alt.fa-facebook {
+              padding-right: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

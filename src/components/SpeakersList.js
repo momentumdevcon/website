@@ -28,27 +28,24 @@ const SpeakersList = () => (
       <section id="learnmore" className="about">
         <div className="speakerContainer">
           <section>
-            <article style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
+            <article>
               {speakers.map((speaker, index) => (
-                <div key={index} style={{ paddingRight: '30px' }}>
-                  <header style={{ textAlign: 'center' }}>
-                    <h3>{speaker.fullName}</h3>
+                <div key={index} className="speaker">
+                  <header>
+                    <h3 className="speakerName">{speaker.fullName}</h3>
                   </header>
-                  <img
-                    alt={`${speaker.fullName}`}
-                    src={`${speaker.profilePicture}`}
-                    style={{
-                      height: '200px',
-                      width: '200px',
-                      borderRadius: '50%',
-                    }}
-                  />
-                  <div
-                    className="speakerSocialIcons"
-                    style={{ display: 'flex', justifyContent: 'center', marginBottom: '30px' }}
-                  >
-                    <Icon iconName="facebook" link="https://www.facebook.com/momentumdevcon" />
-                    <Icon iconName="twitter" link="https://twitter.com/momentumdevcon" />
+                  <img alt={`${speaker.fullName}`} src={`${speaker.profilePicture}`} />
+                  <div className="speakerSocialIcons">
+                    <Icon
+                      className="speakerIcon"
+                      iconName="facebook"
+                      link="https://www.facebook.com/momentumdevcon"
+                    />
+                    <Icon
+                      className="speakerIcon"
+                      iconName="twitter"
+                      link="https://twitter.com/momentumdevcon"
+                    />
                   </div>
                 </div>
               ))}
