@@ -27,14 +27,12 @@
 .title {
   color: #ffffff;
   font-weight: 600;
-  font-size: 2.05em; /* Old was 1.35 */
+  font-size: 2.05em;
   text-align: center;
 }
 
 @media(max-width: 736px) {
   .spotlights > section .talkbubble:before {
-    /* left: 0 !important; */
-    /* right: 0 !important; */
     border: none;
   }
 }
