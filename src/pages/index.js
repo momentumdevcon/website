@@ -2,15 +2,13 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import { Layout, Banner, ContentBlock } from '../components';
 import blockContent from '../assets/data/blockContent.json';
+import metaContent from '../assets/data/metaContent.js';
 
 const HomeIndex = () => (
   <Layout>
     <Helmet
       title="Momentum Developer Conference"
-      meta={[
-        { name: 'description', content: 'Sample' },
-        { name: 'keywords', content: 'sample, something' },
-      ]}
+      meta={[...metaContent]}
     />
     <Banner />
     <div id="main">

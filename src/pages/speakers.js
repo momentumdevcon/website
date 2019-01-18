@@ -3,15 +3,14 @@ import Helmet from 'react-helmet';
 import { Link } from 'gatsby';
 import { BannerLanding, Layout } from '../components';
 import SpeakersList from '../components/SpeakersList';
-
-// import pic11 from '../assets/images/pic11.jpg';
+import metaContent from '../assets/data/metaContent.js';
 
 const SpeakersPage = () => (
   <Layout>
-    <Helmet>
-      <title>Speakers - Momentum Dev Con</title>
-      <meta name="description" content="SpeakersPage Page" />
-    </Helmet>
+    <Helmet
+      title="Speakers - Momentum Dev Con"
+      meta={[...metaContent]}
+    />
 
     <BannerLanding pageName="Speakers">
       <Link to="/schedule">
@@ -22,9 +21,6 @@ const SpeakersPage = () => (
     <div id="main" className="alt">
       <section id="one">
         <div className="inner">
-          {/* <span className="image main">
-            <img src={pic11} alt="" />
-          </span> */}
           <SpeakersList />
         </div>
       </section>
