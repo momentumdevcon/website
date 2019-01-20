@@ -1,0 +1,38 @@
+.talkbubble {
+  background: #4f5786;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px !important;
+}
+
+.spotlights > section .talkbubble:before {
+  height: 0;
+  top: 38%;
+  border-top: 13px solid transparent;
+  border-bottom: 13px solid transparent;
+  background: none;
+  opacity: inherit;
+}
+.spotlights > section:nth-child(odd) .talkbubble:before {
+  border-left: 26px solid #4f5786;
+  left: 100% !important;
+}
+
+.spotlights > section:nth-child(even) .talkbubble:before {
+  right: 100%;
+  border-right: 26px solid #4f5786;
+  left: inherit !important;
+}
+
+.title {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 2.05em;
+  text-align: center;
+}
+
+@media(max-width: 736px) {
+  .spotlights > section .talkbubble:before {
+    border: none;
+  }
+}

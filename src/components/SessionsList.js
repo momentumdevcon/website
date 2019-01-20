@@ -1,9 +1,7 @@
 import React from 'react';
-import { Link, StaticQuery, graphql } from 'gatsby';
+import { StaticQuery, graphql } from 'gatsby';
 
-// TODO: Find pics that match each session. 
-// Host them locally and match them to session when mapping over sessionize data
-import pic08 from '../assets/images/pic08.jpg';
+import '../assets/css/sessions.css';
 
 const SessionsList = () => (
   <StaticQuery
@@ -25,16 +23,13 @@ const SessionsList = () => (
         <div id='main'>
           <section id="two" className="spotlights">
             {
-              sessions.map((session, index) => (
+              sessions.map((session) => (
                 <section key={session.alternative_id}>
-                  <Link to="/generic" className="image">
-                    <img src={pic08} alt="" />
-                  </Link>
+                  <div className="image talkbubble">
+                    <div className="title">{session.title}</div>
+                  </div>
                   <div className="content">
                     <div className="inner">
-                      <header className="major">
-                        <h3>{session.title}</h3>
-                      </header>
                       <p>{session.description}</p>
                     </div>
                   </div>
