@@ -166,13 +166,16 @@
       max-height: 30em;
       min-height: 20em;
     }
-  }
-
-  @include breakpoint(medium) {
-    article {
-      width: 50% !important;
+    & .sponsorsArticle {
+      height: 100%;
     }
   }
+
+  // @include breakpoint(medium) {
+  //   article {
+  //     width: 50% !important;
+  //   }
+  // }
 
   @include breakpoint(small) {
     article {
@@ -180,6 +183,10 @@
       height: 16em;
       max-height: none;
       min-height: 0;
+
+      & .sponsorsArticle {
+        height: 100%;
+      }
 
       h3 {
         font-size: 1.5em;

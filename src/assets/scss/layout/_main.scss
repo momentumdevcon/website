@@ -69,4 +69,21 @@
       }
     }
   }
+
+  .whatIsMomentumTiles {
+    background-color: _palette(bg);
+  }
+
+  .sponsors {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    & .sponsorWrapper {
+      margin: 25px;
+      img {
+        width: 100px !important;
+      }
+    }
+  }
 }
