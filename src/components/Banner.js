@@ -16,6 +16,9 @@ const Banner = () => (
           </li>
         </ul> */}
       </div>
+      <a href="https://www.thecircuit.net/the-circuit-events/#!event/2019/3/21/momentum-developer-apos-s-conference">
+        Early registration is now open!
+      </a>
     </div>
   </section>
 );
