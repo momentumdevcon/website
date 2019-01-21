@@ -8,17 +8,17 @@ const Banner = () => (
       </header>
       <div className="content">
         <p>Presented by The Circuit</p>
-        {/* <ul className="actions">
-          <li>
-            <a href="#one" className="button next scrolly">
-              Get Started
-            </a>
-          </li>
-        </ul> */}
       </div>
-      <a href="https://www.thecircuit.net/the-circuit-events/#!event/2019/3/21/momentum-developer-apos-s-conference">
-        Early registration is now open!
-      </a>
+      <ul className="actions">
+        <li>
+          <a 
+            href="https://www.thecircuit.net/the-circuit-events/#!event/2019/3/21/momentum-developer-apos-s-conference" 
+            className="button next scrolly"
+          >
+            Early registration tickets
+          </a>
+        </li>
+      </ul>
     </div>
   </section>
 );
