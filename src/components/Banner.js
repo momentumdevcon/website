@@ -1,4 +1,5 @@
 import React from 'react';
+import '../assets/css/banner.css';
 
 const Banner = () => (
   <section id="banner" className="major">
@@ -9,6 +10,7 @@ const Banner = () => (
       <div className="content">
         <p>Presented by The Circuit</p>
       </div>
+      <p className="date">March 21, 2019</p>
       <ul className="actions">
         <li>
           <a 
