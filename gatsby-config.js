@@ -23,7 +23,7 @@ module.exports = {
     {
       resolve: 'gatsby-source-apiserver',
       options: {
-        url: 'http://sessionize.com/api/v2/vgfro8cj/view/all',
+        url: 'https://sessionize.com/api/v2/ea0qkz1p/view/all',
         method: 'get',
         headers: {
           'Content-Type': 'application/json',
