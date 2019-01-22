@@ -1,7 +1,6 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import { Layout, Banner, ContentBlock } from '../components';
-import blockContent from '../assets/data/blockContent.json';
+import { Layout, Banner } from '../components';
 import metaContent from '../assets/data/metaContent.js';
 import { convergys, cyberark, dynatrace, gaslight, kroger, max } from '../assets/images';
 
@@ -13,9 +12,16 @@ const HomeIndex = () => (
     <Banner />
     <div id="main">
       <section id="one" className="tiles whatIsMomentumTiles">
-        {blockContent.homePage.map(c => (
-          <ContentBlock className="homePageContent" header={c.header} content={c.content} />
-        ))}
+        <article>
+          <header className="major">
+            <h3>What is Momentum?</h3>
+          </header>
+          <p>
+            Momentum is a Cincinnati developer conference dedicated to providing
+            developers with great content for learning and success.
+            Join us on March 21, 2019 at Sharonville Convention Center.
+          </p>
+        </article>
       </section>
       <section id="two" className="tiles">
         <article className="sponsorsArticle">
