@@ -81,6 +81,12 @@
     align-items: center;
     & .sponsorWrapper {
       margin: 25px;
+      z-index: 10;
+
+      a {
+        border: none;
+      }
+
       img {
         width: 100px !important;
       }
