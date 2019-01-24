@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Starter - Forty V2',
-    author: 'Hunter Chang',
-    description: 'A Gatsby.js V2 Starter based on Forty by HTML5 UP',
+    title: 'Momentum Developer Conference',
+    authors: ['Michael Richardson', 'Ryan Lynn', 'Brandon Culp', 'Jason Miazga'],
+    description: 'Momentum is a Cincinnati developer conference dedicated to providing developers with great content for learning and success',
   },
   plugins: [
     'gatsby-plugin-react-helmet',

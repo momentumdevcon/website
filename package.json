@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-starter-forty-v2",
-  "description": "Gatsby Starter - Forty V2",
+  "name": "momentum_website",
+  "description": "The website for the Momentum Developer Conference",
   "version": "1.13.0",
-  "author": "Hunter Chang",
+  "authors": ["Michael Richardson", "Ryan Lynn", "Brandon Culp", "Jason Miazga"],
   "dependencies": {
     "classnames": "^2.2.6",
     "gatsby": "^2.0.0",
@@ -32,6 +32,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://gitlab.com/momentumdevcon/website"
   }
 }
