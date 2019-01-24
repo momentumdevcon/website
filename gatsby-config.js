@@ -23,13 +23,26 @@ module.exports = {
     {
       resolve: 'gatsby-source-apiserver',
       options: {
-        url: 'https://sessionize.com/api/v2/ea0qkz1p/view/all',
-        method: 'get',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        typePrefix: 'sessionize__',
-        name: 'data',
+        entitiesArray: [
+          {
+            url: 'https://sessionize.com/api/v2/ea0qkz1p/view/all',
+            method: 'get',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            typePrefix: 'sessionize__',
+            name: 'data',
+          },
+          {
+            url: 'https://sessionize.com/api/v2/ea0qkz1p/view/sessions',
+            method: 'get',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            typePrefix: 'sessions__',
+            name: 'data',
+          }
+        ]
       },
     },
     {

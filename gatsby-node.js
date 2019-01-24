@@ -10,16 +10,47 @@ const path = require('path');
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
 
-  return new Promise((resolve, reject) => {
-    graphql(`
-      {
-        sessionizeData {
-          speakers {
-            fullName
+  const sessions = graphql(`
+    {
+      sessionsData {
+        sessions {
+          alternative_id
+          description
+          speakers{
+            name
           }
+          categories{
+            categoryItems{
+              name
+            }
+          }
+          title
         }
       }
-    `).then((result) => {
+    }
+  `).then((result) => {
+      result.data.sessionsData.sessions.forEach(({ alternative_id }) => {
+        createPage({
+          path: `/session/${alternative_id}`,
+          component: path.resolve('./src/templates/session.js'),
+          context: {
+            // Data passed to context is available
+            // in page queries as GraphQL variables.
+            slug: alternative_id,
+          },
+        });
+      });
+    });
+
+  const speakers = graphql(`
+    {
+      sessionizeData {
+        speakers {
+          fullName
+        }
+      }
+    }
+  `).then((result) => {
       result.data.sessionizeData.speakers.forEach(({ fullName }) => {
         createPage({
           path: `/speakers/${fullName}`,
@@ -31,7 +62,7 @@ exports.createPages = ({ graphql, actions }) => {
           },
         });
       });
-      resolve();
     });
-  });
+  
+  return Promise.all([sessions, speakers]);
 };
