@@ -24,6 +24,7 @@ const ContentBlock = ({
             height: '200px',
             width: '200px',
           }}
+          alt=""
         />
       )}
       {link && <Link to="/landing" className="link primary" />}
