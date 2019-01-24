@@ -1,7 +1,7 @@
 {
   "name": "gatsby-starter-forty-v2",
   "description": "Gatsby Starter - Forty V2",
-  "version": "1.0.0",
+  "version": "1.13.0",
   "author": "Hunter Chang",
   "dependencies": {
     "classnames": "^2.2.6",
