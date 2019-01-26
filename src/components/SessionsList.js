@@ -1,5 +1,5 @@
 import React from 'react';
-import { StaticQuery, graphql } from 'gatsby';
+import { StaticQuery, graphql, Link } from 'gatsby';
 
 import '../assets/css/sessions.css';
 
@@ -7,17 +7,18 @@ const SessionsList = () => (
   <StaticQuery
     query={graphql`
       query SessionQuery {
-        sessionizeData {
+        sessionsData {
           sessions {
             alternative_id
-            description
-            speakers
+            speakers{
+              name
+            }
             title
           }
         }
       }
     `}
-    render={({ sessionizeData: { sessions } }) => (
+    render={({ sessionsData: { sessions } }) => (
       <section id="learnmore" className="about">
         <div />
         <div id='main'>
@@ -26,11 +27,13 @@ const SessionsList = () => (
               sessions.map((session) => (
                 <section key={session.alternative_id}>
                   <div className="image talkbubble">
-                    <div className="title">{session.title}</div>
+                    <Link to={`/session/${session.alternative_id}`}>
+                      <div className="title">{session.title}</div>
+                    </Link>
                   </div>
                   <div className="content">
                     <div className="inner">
-                      <p>{session.description}</p>
+                      <p>{session.speakers[0].name}</p>
                     </div>
                   </div>
               </section>

@@ -3,6 +3,9 @@
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
   border-radius: 10px !important;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
 }
 
 .spotlights > section .talkbubble:before {
@@ -26,9 +29,12 @@
 
 .title {
   color: #ffffff;
-  font-weight: 600;
-  font-size: 2.05em;
+  font-size: 1.40em;
   text-align: center;
+}
+
+.content > .inner {
+  font-size: 1.20em;
 }
 
 @media(max-width: 736px) {
