@@ -12,11 +12,7 @@ const SpeakersPage = () => (
       meta={[...metaContent]}
     />
 
-    <BannerLanding pageName="Speakers">
-      <Link to="/schedule">
-        <p>Schedule is now live!</p>
-      </Link>
-    </BannerLanding>
+    <BannerLanding pageName="Speakers" />
 
     <div id="main" className="alt">
       <section id="one">

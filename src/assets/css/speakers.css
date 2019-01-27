@@ -1,0 +1,16 @@
+.speaker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.session-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -20px;
+}
+
+.no-social {
+  margin-top: 0.85em;
+}

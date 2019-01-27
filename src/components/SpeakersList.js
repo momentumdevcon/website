@@ -1,6 +1,15 @@
 import React from 'react';
-import { StaticQuery, graphql } from 'gatsby';
+import { StaticQuery, graphql, Link } from 'gatsby';
 import Icon from './Icon';
+import '../assets/css/speakers.css';
+
+const generateSocialLink = (type, url) => (
+  <Icon
+    className="speakerIcon"
+    iconName={type}
+    link={url}
+  />
+);
 
 const SpeakersList = () => (
   <StaticQuery
@@ -24,36 +33,61 @@ const SpeakersList = () => (
         }
       }
     `}
-    render={({ sessionizeData: { speakers } }) => (
-      <section id="learnmore" className="about">
-        <div className="speakerContainer">
-          <section>
-            <article>
-              {speakers.map((speaker, index) => (
-                <div key={index} className="speaker">
-                  <header>
-                    <h3 className="speakerName">{speaker.fullName}</h3>
-                  </header>
-                  <img alt={`${speaker.fullName}`} src={`${speaker.profilePicture}`} />
-                  <div className="speakerSocialIcons">
-                    <Icon
-                      className="speakerIcon"
-                      iconName="facebook"
-                      link="https://www.facebook.com/momentumdevcon"
-                    />
-                    <Icon
-                      className="speakerIcon"
-                      iconName="twitter"
-                      link="https://twitter.com/momentumdevcon"
-                    />
+    render={({ sessionizeData: { speakers, sessions } }) => {
+      const formattedSessions =
+        sessions
+        .map(session => Object.values(session))
+        .reduce((acc, cur) => {
+          const title = cur[1].split('').slice(0, 25);
+          if (title.length !== cur[1].length) {
+            title.push('...');
+          }
+          return {
+            ...acc,
+            [cur[0]]: title.join('')
+          }
+        }, {})
+
+      return (
+        <section id="learnmore" className="about">
+          <div className="speakerContainer">
+            <section>
+              <article>
+                {speakers.map((speaker, index) => (
+                  <div key={index} className="speaker">
+                    <header>
+                      <h3 className="speakerName">{speaker.fullName}</h3>
+                    </header>
+                    <img alt={`${speaker.fullName}`} src={`${speaker.profilePicture}`} />
+                    <div className="speakerSocialIcons">
+                      {
+                        speaker.links.length > 0 && speaker.links[0].linkType === 'Twitter' ? 
+                          generateSocialLink('twitter', speaker.links[0].url)
+                          : ''
+                      }
+                      {
+                        speaker.links.length > 0 && speaker.links[1].linkType === 'LinkedIn' ? 
+                          generateSocialLink('linkedin-square', speaker.links[1].url)
+                          : ''
+                      }
+                    </div>
+                    <div className={`session-links${speaker.links.length === 0 ? ' no-social' : ''}` }>
+                      {
+                        speaker.sessions.map(sessionId => (
+                          <Link to={`/session/${sessionId}`}>
+                            {formattedSessions[sessionId]}
+                          </Link>
+                        ))
+                      }
+                    </div>
                   </div>
-                </div>
-              ))}
-            </article>
-          </section>
-        </div>
-      </section>
-    )}
+                ))}
+              </article>
+            </section>
+          </div>
+        </section>
+      )
+    }}
   />
 );
 
