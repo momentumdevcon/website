@@ -66,7 +66,7 @@ const SpeakersList = () => (
                           : ''
                       }
                       {
-                        speaker.links.length > 0 && speaker.links[1].linkType === 'LinkedIn' ? 
+                        speaker.links.length > 1 && speaker.links[1].linkType === 'LinkedIn' ? 
                           generateSocialLink('linkedin-square', speaker.links[1].url)
                           : ''
                       }
