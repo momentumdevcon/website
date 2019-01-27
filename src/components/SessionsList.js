@@ -24,20 +24,27 @@ const SessionsList = () => (
         <div id='main'>
           <section id="two" className="spotlights">
             {
-              sessions.map((session) => (
-                <section key={session.alternative_id}>
-                  <div className="image talkbubble">
-                    <Link to={`/session/${session.alternative_id}`}>
-                      <div className="title">{session.title}</div>
-                    </Link>
-                  </div>
-                  <div className="content">
-                    <div className="inner">
-                      <p>{session.speakers[0].name}</p>
+              sessions.map((session) => {
+                const shortTitle = session.title.split('').slice(0, 40);
+                if (shortTitle.length !== session.title.length) {
+                  shortTitle.push('...');
+                }
+                const newTitle = shortTitle.join('');
+                return (
+                  <section key={session.alternative_id}>
+                    <div className="image talkbubble">
+                      <Link to={`/session/${session.alternative_id}`}>
+                        <div className="title">{newTitle}</div>
+                      </Link>
                     </div>
-                  </div>
-              </section>
-              ))
+                    <div className="content">
+                      <div className="inner">
+                        <p>{session.speakers[0].name}</p>
+                      </div>
+                    </div>
+                  </section>
+                )
+              })
             }
           </section>
         </div>
