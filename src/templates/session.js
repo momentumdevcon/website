@@ -34,7 +34,7 @@ export default ({ data: { sessionsData }, pageContext: { slug } }) => {
                     <span className="info-prefix">Tags:</span>
                       {
                         tags.map((tag, index) => (
-                          <span>{`${index !== tags.length - 1 ? `${tag}, ` : tag}`}</span>
+                          <span key={tag}>{`${index !== tags.length - 1 ? `${tag}, ` : tag}`}</span>
                         ))
                       }
                   </span>

@@ -1,6 +1,5 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import { Link } from 'gatsby';
 import { BannerLanding, Layout } from '../components';
 import SpeakersList from '../components/SpeakersList';
 import metaContent from '../assets/data/metaContent.js';

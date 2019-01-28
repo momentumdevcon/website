@@ -54,7 +54,7 @@ const SpeakersList = () => (
             <section>
               <article>
                 {speakers.map((speaker, index) => (
-                  <div key={index} className="speaker">
+                  <div key={speaker.fullName} className="speaker">
                     <header>
                       <h3 className="speakerName">{speaker.fullName}</h3>
                     </header>
@@ -74,7 +74,7 @@ const SpeakersList = () => (
                     <div className={`session-links${speaker.links.length === 0 ? ' no-social' : ''}` }>
                       {
                         speaker.sessions.map(sessionId => (
-                          <Link to={`/session/${sessionId}`}>
+                          <Link key={sessionId} to={`/session/${sessionId}`}>
                             {formattedSessions[sessionId]}
                           </Link>
                         ))
