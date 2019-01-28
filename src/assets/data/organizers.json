@@ -1,0 +1,20 @@
+[
+    {
+        "name": "Michael Richardson",
+        "twitter":"anaccidentaldev",
+        "linkedin":"https://www.linkedin.com/in/accidentaldeveloper/"
+    },
+    {
+        "name":"Tracy Ruberg",
+        "photo":"tracy.jpg",
+        "twitter":""
+    },
+    {
+        "name":"Christy Berning",
+        "photo":"christy.jpg"
+    },
+    {
+        "name": "Taryn Ruberg",
+        "photo":"taryn.jpg"
+    }
+]
