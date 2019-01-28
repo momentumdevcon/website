@@ -5,6 +5,7 @@ import socialIcons from '../assets/data/socialIcons.json';
 const Footer = () => (
   <footer id="footer">
     <div className="inner">
+    <span>#momentumdevcon</span>
       <ul className="icons">
         {socialIcons.footer.map(({ iconName, link }, i) => (
           <li key={i}>
