@@ -1,20 +1,23 @@
 [
     {
         "name": "Michael Richardson",
+        "photo":"michael.jpg",
         "twitter":"anaccidentaldev",
         "linkedin":"https://www.linkedin.com/in/accidentaldeveloper/"
     },
     {
         "name":"Tracy Ruberg",
         "photo":"tracy.jpg",
-        "twitter":""
+        "linkedin":"https://www.linkedin.com/in/tracyruberg/"
     },
     {
         "name":"Christy Berning",
-        "photo":"christy.jpg"
+        "photo":"christy.jpg",
+        "linkedin":"https://www.linkedin.com/in/christy-berning-595b53a2/"
     },
     {
         "name": "Taryn Ruberg",
-        "photo":"taryn.jpg"
+        "photo":"taryn.jpg",
+        "linkedin":"https://www.linkedin.com/in/taryn-ruberg-a49517114/"
     }
 ]
