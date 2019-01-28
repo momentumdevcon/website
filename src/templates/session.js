@@ -28,14 +28,19 @@ export default ({ data: { sessionsData }, pageContext: { slug } }) => {
             <div className="description">{session.description}</div>
             <div className="levelTags">
               <span><span className="info-prefix">Level: </span>{level}</span>
-              <span>
-                <span className="info-prefix">Tags:</span>
-                  {
-                    tags.map((tag, index) => (
-                      <span>{`${index !== tags.length - 1 ? `${tag}, ` : tag}`}</span>
-                    ))
-                  }
-              </span>
+              {
+                tags.length > 0 ?
+                  <span>
+                    <span className="info-prefix">Tags:</span>
+                      {
+                        tags.map((tag, index) => (
+                          <span>{`${index !== tags.length - 1 ? `${tag}, ` : tag}`}</span>
+                        ))
+                      }
+                  </span>
+                :
+                ''
+              }
             </div>
           </div>
         </section>

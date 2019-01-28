@@ -16,6 +16,7 @@ const Banner = () => (
           <a 
             href="https://www.thecircuit.net/the-circuit-events/#!event/2019/3/21/momentum-developer-apos-s-conference" 
             className="button next scrolly"
+            target="newtab"
           >
             Early registration tickets
           </a>
