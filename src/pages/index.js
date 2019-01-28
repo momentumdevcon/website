@@ -37,7 +37,7 @@ const HomeIndex = () => (
           </header>
           <div className="sponsors">
             {sponsors.map(({ img, link, alt }) => (
-              <div className="sponsorWrapper">
+              <div key={link} className="sponsorWrapper">
                 <a href={link}>
                   <img src={img} style={{ height: '100%', width: '200px' }} alt={alt} />
                 </a>
