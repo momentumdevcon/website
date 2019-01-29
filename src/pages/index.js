@@ -44,6 +44,10 @@ const HomeIndex = () => (
               </div>
             ))}
           </div>
+          <p>
+            Interested in becoming a sponsor? Email us at{' '}
+            <a href="mailto:sponsors@momentumdevcon.com">sponsors@momentumdevcon.com</a>
+          </p>
         </article>
       </section>
     </div>

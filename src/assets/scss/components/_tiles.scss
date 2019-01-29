@@ -71,7 +71,8 @@
     &:before {
       @include vendor('transition', 'opacity 0.5s ease');
       bottom: 0;
-      content: '';
+      // messed up a tags. pseudo classes may not work if they are commented out
+      // content: '';
       display: block;
       height: 100%;
       left: 0;
@@ -83,7 +84,7 @@
 
     &:after {
       background-color: transparentize(_palette(bg), 0.75);
-      content: '';
+      // content: '';
       display: block;
       height: 100%;
       left: 0;
