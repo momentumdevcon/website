@@ -2,11 +2,16 @@
   "name": "momentum_website",
   "description": "The website for the Momentum Developer Conference",
   "version": "1.13.0",
-  "authors": ["Michael Richardson", "Ryan Lynn", "Brandon Culp", "Jason Miazga"],
+  "authors": [
+    "Michael Richardson",
+    "Ryan Lynn",
+    "Brandon Culp",
+    "Jason Miazga"
+  ],
   "dependencies": {
     "classnames": "^2.2.6",
     "gatsby": "^2.0.0",
-    "gatsby-plugin-gtag": "^1.0.4",
+    "gatsby-plugin-gtag": "^1.0.6",
     "gatsby-plugin-manifest": "^2.0.2",
     "gatsby-plugin-offline": "^2.0.5",
     "gatsby-plugin-react-helmet": "^3.0.0",

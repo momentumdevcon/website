@@ -26,7 +26,7 @@
 
   &:after {
     @include vendor('transition', 'opacity #{_duration(banner)} ease');
-    @include vendor('transition-delay', '0.75s');
+    @include vendor('transition-delay', '0.375s');
     @include vendor('pointer-events', 'none');
     background-color: _palette(bg);
     content: '';

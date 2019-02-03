@@ -15,7 +15,7 @@ const Contact = () => (
           <div className="contact-method">
             <span className="icon alt fa-phone" />
             <h3>Phone</h3>
-            <span>(513)-608-0358</span>
+            <span>(513) 917-3814</span>
           </div>
         </section>
         <section>

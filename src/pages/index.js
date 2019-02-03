@@ -37,13 +37,17 @@ const HomeIndex = () => (
           </header>
           <div className="sponsors">
             {sponsors.map(({ img, link, alt }) => (
-              <div className="sponsorWrapper">
-                <a href={link}>
+              <div key={link} className="sponsorWrapper">
+                <a href={link}  target="_blank" rel="noopener">
                   <img src={img} style={{ height: '100%', width: '200px' }} alt={alt} />
                 </a>
               </div>
             ))}
           </div>
+          <p>
+            Interested in becoming a sponsor? Email us at{' '}
+            <a href="mailto:sponsors@momentumdevcon.com">sponsors@momentumdevcon.com</a>
+          </p>
         </article>
       </section>
     </div>
