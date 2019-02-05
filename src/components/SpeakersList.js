@@ -1,15 +1,7 @@
 import React from 'react';
 import { StaticQuery, graphql, Link } from 'gatsby';
-import Icon from './Icon';
+import generateSocialLink from '../utils/generateSocialLink';
 import '../assets/css/speakers.css';
-
-const generateSocialLink = (type, url) => (
-  <Icon
-    className="speakerIcon"
-    iconName={type}
-    link={url}
-  />
-);
 
 const SpeakersList = () => (
   <StaticQuery
@@ -62,12 +54,12 @@ const SpeakersList = () => (
                     <div className="speakerSocialIcons">
                       {
                         speaker.links.length > 0 && speaker.links[0].linkType === 'Twitter' ? 
-                          generateSocialLink('twitter', speaker.links[0].url)
+                          generateSocialLink(speaker.links[0], 'speakerIcon')
                           : ''
                       }
                       {
                         speaker.links.length > 1 && speaker.links[1].linkType === 'LinkedIn' ? 
-                          generateSocialLink('linkedin-square', speaker.links[1].url)
+                          generateSocialLink(speaker.links[1], 'speakerIcon')
                           : ''
                       }
                     </div>

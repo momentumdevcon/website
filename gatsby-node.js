@@ -46,19 +46,21 @@ exports.createPages = ({ graphql, actions }) => {
     {
       sessionizeData {
         speakers {
-          fullName
+          firstName
+          lastName
         }
       }
     }
   `).then((result) => {
-      result.data.sessionizeData.speakers.forEach(({ fullName }) => {
+      result.data.sessionizeData.speakers.forEach(({ firstName, lastName }) => {
+        const slug = `${firstName.split(' ').join('_')}_${lastName.split(' ').join('_')}`;
         createPage({
-          path: `/speakers/${fullName}`,
+          path: `/speakers/${slug}`,
           component: path.resolve('./src/templates/speaker.js'),
           context: {
             // Data passed to context is available
             // in page queries as GraphQL variables.
-            slug: fullName,
+            slug,
           },
         });
       });

@@ -1,26 +1,29 @@
 import React from 'react';
+import { graphql, Link } from 'gatsby';
 import { Layout } from '../components/';
-import { graphql } from 'gatsby';
+import generateSocialLink from '../utils/generateSocialLink';
 
 export default ({ data: { sessionizeData }, pageContext: { slug } }) => {
-  const speaker = sessionizeData.speakers.find(speaker => speaker.fullName === slug);
+  const speaker = sessionizeData.speakers.find((speaker) => {
+    const craftedSlug = `${speaker.firstName.split(' ').join('_')}_${speaker.lastName.split(' ').join('_')}`;
+    return craftedSlug === slug;
+  });
   const speakerSessions = sessionizeData.sessions.filter(session =>
     speaker.sessions.includes(parseInt(session.alternative_id)));
 
   return (
     <Layout>
       <div>{speaker.fullName}</div>
+      <img src={speaker.profilePicture} alt={speaker.fullName} />
       <div>{speaker.tagLine}</div>
       <div>{speaker.bio}</div>
-      <img src={speaker.profilePicture} alt={speaker.fullName} />
       {speaker.links.map(link => (
-        <div key={link.linkType}>{link.linkType}</div>
+        generateSocialLink(link, 'speakerSocial')
       ))}
       {speakerSessions.map(session => (
-        <div key={session.alternative_id}>
-          <div>{session.title}</div>
-          <div>{session.description}</div>
-        </div>
+        <Link key={session.alternative_id} to={`/session/${session.alternative_id}`}>
+          {session.title}
+        </Link>
       ))}
     </Layout>
   );
@@ -31,6 +34,8 @@ export const query = graphql`
     sessionizeData {
       speakers {
         fullName
+        firstName
+        lastName
         tagLine
         bio
         profilePicture
