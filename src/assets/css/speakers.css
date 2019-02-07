@@ -14,3 +14,7 @@
 .no-social {
   margin-top: 0.85em;
 }
+
+.speakerSlug {
+  border-bottom: none;
+}

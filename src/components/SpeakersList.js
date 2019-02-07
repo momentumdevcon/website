@@ -2,6 +2,7 @@ import React from 'react';
 import { StaticQuery, graphql, Link } from 'gatsby';
 import generateSocialLink from '../utils/generateSocialLink';
 import '../assets/css/speakers.css';
+import getSpeakerSlug from '../utils/getSpeakerSlug';
 
 const SpeakersList = () => (
   <StaticQuery
@@ -12,6 +13,8 @@ const SpeakersList = () => (
             tagLine
             profilePicture
             fullName
+            firstName
+            lastName
             sessions
             links {
               url
@@ -50,7 +53,9 @@ const SpeakersList = () => (
                     <header>
                       <h3 className="speakerName">{speaker.fullName}</h3>
                     </header>
-                    <img alt={`${speaker.fullName}`} src={`${speaker.profilePicture}`} />
+                    <Link className="speakerSlug" to={`/speakers/${getSpeakerSlug(speaker.firstName, speaker.lastName)}`}>
+                      <img alt={`${speaker.fullName}`} src={`${speaker.profilePicture}`} />
+                    </Link>
                     <div className="speakerSocialIcons">
                       {
                         speaker.links.length > 0 && speaker.links[0].linkType === 'Twitter' ? 

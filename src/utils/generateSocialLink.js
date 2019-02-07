@@ -11,6 +11,7 @@ const generateSocialLink = (link, className) => {
 
   return (
     <Icon
+      key={iconType}
       className={className}
       iconName={iconType}
       link={link.url}
