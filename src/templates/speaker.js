@@ -1,8 +1,10 @@
 import React from 'react';
+import Helmet from 'react-helmet';
 import { graphql, Link } from 'gatsby';
 import { Layout } from '../components/';
 import generateSocialLink from '../utils/generateSocialLink';
 import getSpeakerSlug from '../utils/getSpeakerSlug';
+import metaContent from '../assets/data/metaContent';
 import '../assets/css/speaker.css';
 
 export default ({ data: { sessionizeData }, pageContext: { slug } }) => {
@@ -16,6 +18,10 @@ export default ({ data: { sessionizeData }, pageContext: { slug } }) => {
 
   return (
     <Layout>
+      <Helmet
+       title={`${speaker.fullName} - Momentum Dev Con`}
+       meta={[...metaContent]}
+      />
       <div id="main" className="alt">
         <div className="inner horizontalContainer">
           <div className="verticalContainer">
