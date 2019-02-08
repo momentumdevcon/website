@@ -1,5 +1,6 @@
 .horizontalContainer {
   display: flex;
+  border-top: none !important;
 }
 
 .verticalContainer {
@@ -7,6 +8,19 @@
   flex-direction: column;
   align-items: center;
   width: calc(100% - 6em);
+}
+
+.backArrow {
+  margin-top: 25px;
+  margin-left: 20px;
+}
+
+.backArrow a {
+  border-bottom: none;
+}
+
+.backArrow .fa-arrow-left {
+  margin-right: 10px;
 }
 
 .speakerImage {
