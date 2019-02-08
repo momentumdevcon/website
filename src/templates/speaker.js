@@ -12,14 +12,15 @@ export default ({ data: { sessionizeData }, pageContext: { slug } }) => {
   });
   const speakerSessions = sessionizeData.sessions.filter(session =>
     speaker.sessions.includes(parseInt(session.alternative_id)));
+  const sessionText = `Session${speakerSessions.length > 1 ? 's' : ''}:`
 
   return (
     <Layout>
       <div id="main" className="alt">
         <div className="inner horizontalContainer">
           <div className="verticalContainer">
-            <img src={speaker.profilePicture} alt={speaker.fullName} />
-            <div>{speaker.tagLine}</div>
+            <img className="speakerImage" src={speaker.profilePicture} alt={speaker.fullName} />
+            <div className="tagline">{speaker.tagLine}</div>
             <div className="horizontalContainer">
               {speaker.links.map(link => (
                 generateSocialLink(link, 'speakerSocial')
@@ -27,13 +28,18 @@ export default ({ data: { sessionizeData }, pageContext: { slug } }) => {
             </div>
           </div>
           <div className="verticalContainer">
-            <div>{speaker.fullName}</div>
+            <h1 className="name">{speaker.fullName}</h1>
             <div>{speaker.bio}</div>
-            {speakerSessions.map(session => (
-              <Link key={session.alternative_id} to={`/session/${session.alternative_id}`}>
-                {session.title}
-              </Link>
-            ))}
+            <div className="sessions">
+              <h2>{sessionText}</h2>
+              {speakerSessions.map(session => (
+                <div>
+                  <Link key={session.alternative_id} to={`/session/${session.alternative_id}`}>
+                    {session.title}
+                  </Link>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
