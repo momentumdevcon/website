@@ -1,0 +1,69 @@
+.horizontalContainer {
+  display: flex;
+  border-top: none !important;
+}
+
+.verticalContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: calc(100% - 6em);
+}
+
+.backArrow {
+  margin-top: 25px;
+  margin-left: 20px;
+}
+
+.backArrow a {
+  border-bottom: none;
+}
+
+.backArrow .fa-arrow-left {
+  margin-right: 10px;
+}
+
+.speakerImage {
+  height: 400px;
+  width: 400px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.speakerSocial {
+  margin: 5px;
+}
+
+.tagline {
+  text-align: center;
+  margin: 10px;
+}
+
+.name {
+  margin-bottom: .5em;
+}
+
+.sessions {
+  margin-top: 20px;
+}
+
+.sessions > h2 {
+  text-align: center;
+  margin-bottom: .5em;
+}
+
+.sessions div:nth-child(2n - 1) {
+  margin-top: 10px;
+}
+
+@media(max-width: 980px) {
+  .inner.horizontalContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .speakerImage {
+    height: 300px;
+    width: 300px;
+  }
+}
