@@ -20,7 +20,7 @@ export default ({ data: { sessionizeData }, pageContext: { slug } }) => {
     <Layout>
       <Helmet
        title={`${speaker.fullName} - Momentum Dev Con`}
-       meta={[...metaContent]}
+       meta={[...metaContent, {name: "twitter:image", content:speaker.profilePicture}]}
       />
       <div id="main" className="alt">
         <div className="inner horizontalContainer">
