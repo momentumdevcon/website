@@ -1,7 +1,7 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import { graphql, Link } from 'gatsby';
-import { Layout } from '../components/';
+import { Layout, Icon } from '../components/';
 import generateSocialLink from '../utils/generateSocialLink';
 import getSpeakerSlug from '../utils/getSpeakerSlug';
 import metaContent from '../assets/data/metaContent';
@@ -23,6 +23,14 @@ export default ({ data: { sessionizeData }, pageContext: { slug } }) => {
        meta={[...metaContent]}
       />
       <div id="main" className="alt">
+        <div className="backArrow">
+          <Link to="/speakers">
+            <Icon
+              iconName="arrow-left"
+            />
+            Back to Speakers
+          </Link>
+        </div>
         <div className="inner horizontalContainer">
           <div className="verticalContainer">
             <img className="speakerImage" src={speaker.profilePicture} alt={speaker.fullName} />
@@ -39,8 +47,8 @@ export default ({ data: { sessionizeData }, pageContext: { slug } }) => {
             <div className="sessions">
               <h2>{sessionText}</h2>
               {speakerSessions.map(session => (
-                <div>
-                  <Link key={session.alternative_id} to={`/session/${session.alternative_id}`}>
+                <div key={session.alternative_id}>
+                  <Link to={`/session/${session.alternative_id}`}>
                     {session.title}
                   </Link>
                 </div>
