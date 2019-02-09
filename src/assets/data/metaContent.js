@@ -7,11 +7,11 @@ export const mainDescription =
 
 const commonMetaContent = [
   { name: 'description', property: 'og:description', content: mainDescription },
-  { name: 'twitter:card', content: 'summary' },
+  { name: 'twitter:card', content: 'summary_large_image' },
   { name: 'twitter:site', content: '@momentumdevcon' },
   { name: 'twitter:description', content: mainDescription },
   { name: 'twitter:creator', content: '@momentumdevcon' },
-  { name: 'twitter:image', content: chevron },
+  { name: 'twitter:image', content: logoWPadding },
   { property: 'og:type', content: 'website' },
   // { "property": 'og:url', "content": "http://momentumdevcon.com" },
   { property: 'og:image', content: logoWPadding, name: 'image' },
