@@ -22,7 +22,7 @@ export default ({ data: { sessionizeData }, pageContext: { slug } }) => {
     <Layout>
       <Helmet
        title={pageTitle}
-       meta={createMetaContent(pageTitle, `${speaker.firstName}'s ${sessionText}: ${sessionList}`, speaker.profilePicture)}
+       meta={createMetaContent(pageTitle, `${speaker.firstName}'s ${sessionText} ${sessionList}`, speaker.profilePicture)}
       />
       <div id="main" className="alt">
         <div className="backArrow">
