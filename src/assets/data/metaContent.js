@@ -1,5 +1,6 @@
 import chevron from '../images/Chevrons-White-Background.png'
 import logoWPadding from '../images/logo-with-padding.png'
+import logo from '../images/momentum-logo.png'
 
 export const mainTitle = 'Momentum Developer Conference'
 export const mainDescription =
@@ -11,7 +12,7 @@ const commonMetaContent = [
   { name: 'twitter:site', content: '@momentumdevcon' },
   { name: 'twitter:description', content: mainDescription },
   { name: 'twitter:creator', content: '@momentumdevcon' },
-  { name: 'twitter:image', content: logoWPadding },
+  { name: 'twitter:image', content: logo },
   { property: 'og:type', content: 'website' },
   // { "property": 'og:url', "content": "http://momentumdevcon.com" },
   { property: 'og:image', content: logoWPadding, name: 'image' },
