@@ -12,9 +12,8 @@ const commonMetaContent = [
   { name: 'twitter:site', content: '@momentumdevcon' },
   { name: 'twitter:description', content: mainDescription },
   { name: 'twitter:creator', content: '@momentumdevcon' },
-  { name: 'twitter:image', content: logo },
+  // { name: 'twitter:image', content: logoWPadding },
   { property: 'og:type', content: 'website' },
-  // { "property": 'og:url', "content": "http://momentumdevcon.com" },
   { property: 'og:image', content: logoWPadding, name: 'image' },
   { property: 'og:site_name', content: 'Momentum Developer Conference' },
 ]
