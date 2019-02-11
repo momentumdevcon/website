@@ -14,7 +14,7 @@ const commonMetaContent = [
   { name: 'twitter:creator', content: '@momentumdevcon' },
   { property: 'og:type', content: 'website' },
   { property: 'og:image', content: logoWPadding, name: 'image' },
-  { name: 'twitter:image', content: logo },
+  { name: 'twitter:image', content: "https://deploy-preview-28--momentumdevcon.netlify.com/static/logo-with-padding-b2bf39356b1bfa234808747580f8b1c9.png" },
   { property: 'og:site_name', content: 'Momentum Developer Conference' },
 ]
 
