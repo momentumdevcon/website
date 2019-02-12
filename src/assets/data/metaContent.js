@@ -1,6 +1,4 @@
-import chevron from '../images/Chevrons-White-Background.png'
 import logoWPadding from '../images/logo-with-padding.png'
-import logo from '../images/bg.jpg'
 
 export const mainTitle = 'Momentum Developer Conference'
 export const mainDescription =
