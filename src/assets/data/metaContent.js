@@ -1,10 +1,13 @@
 import chevron from '../images/Chevrons-White-Background.png'
 import logoWPadding from '../images/logo-with-padding.png'
-import logo from '../images/momentum-logo.png'
+import logo from '../images/bg.jpg'
 
 export const mainTitle = 'Momentum Developer Conference'
 export const mainDescription =
-  'Momentum is a Cincinnati developer conference dedicated to providing developers with great content for learning and success. Join us on March 21, 2019 at Sharonville Convention Center.'
+  'Momentum is a Cincinnati developer conference helping developers be better, stronger and faster. Join us March 21, 2019 at Sharonville Convention Center.';
+
+const canonicalUrl = "https://momentumdevcon.com";
+const logoAbsoluteUrl = canonicalUrl + logoWPadding;
 
 const commonMetaContent = [
   { name: 'description', property: 'og:description', content: mainDescription },
@@ -12,10 +15,9 @@ const commonMetaContent = [
   { name: 'twitter:site', content: '@momentumdevcon' },
   { name: 'twitter:description', content: mainDescription },
   { name: 'twitter:creator', content: '@momentumdevcon' },
-  { name: 'twitter:image', content: logo },
   { property: 'og:type', content: 'website' },
-  // { "property": 'og:url', "content": "http://momentumdevcon.com" },
   { property: 'og:image', content: logoWPadding, name: 'image' },
+  { name: 'twitter:image', content: logoAbsoluteUrl },
   { property: 'og:site_name', content: 'Momentum Developer Conference' },
 ]
 
