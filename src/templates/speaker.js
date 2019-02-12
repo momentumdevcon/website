@@ -16,7 +16,7 @@ export default ({ data: { sessionizeData }, pageContext: { slug } }) => {
     speaker.sessions.includes(parseInt(session.alternative_id)));
   const sessionText = `Session${speakerSessions.length > 1 ? 's' : ''}:`
 
-  const pageTitle = `Momentum 2019 Speaker: ${speaker.fullName}`;
+  const pageTitle = `${speaker.fullName} - Momentum 2019 Speaker`;
   const sessionList = speakerSessions.map(session => `"${session.title}"`).join(", ");
   return (
     <Layout>
