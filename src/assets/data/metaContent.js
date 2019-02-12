@@ -6,7 +6,7 @@ export const mainTitle = 'Momentum Developer Conference'
 export const mainDescription =
   'Momentum is a Cincinnati developer conference helping developers be better, stronger and faster. Join us March 21, 2019 at Sharonville Convention Center.';
 
-const canonicalUrl = "https://momentumdevcon.com/";
+const canonicalUrl = "https://momentumdevcon.com";
 const logoAbsoluteUrl = canonicalUrl + logoWPadding;
 
 const commonMetaContent = [
