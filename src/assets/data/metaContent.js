@@ -4,7 +4,10 @@ import logo from '../images/bg.jpg'
 
 export const mainTitle = 'Momentum Developer Conference'
 export const mainDescription =
-  'Momentum is a Cincinnati developer conference dedicated to providing developers with great content for learning and success. Join us on March 21, 2019 at Sharonville Convention Center.'
+  'Momentum is a Cincinnati developer conference helping developers be better, stronger and faster. Join us March 21, 2019 at Sharonville Convention Center.';
+
+const canonicalUrl = "https://momentumdevcon.com/";
+const logoAbsoluteUrl = canonicalUrl + logoWPadding;
 
 const commonMetaContent = [
   { name: 'description', property: 'og:description', content: mainDescription },
@@ -14,7 +17,7 @@ const commonMetaContent = [
   { name: 'twitter:creator', content: '@momentumdevcon' },
   { property: 'og:type', content: 'website' },
   { property: 'og:image', content: logoWPadding, name: 'image' },
-  { name: 'twitter:image', content: "https://deploy-preview-28--momentumdevcon.netlify.com/static/logo-with-padding-b2bf39356b1bfa234808747580f8b1c9.png" },
+  { name: 'twitter:image', content: logoAbsoluteUrl },
   { property: 'og:site_name', content: 'Momentum Developer Conference' },
 ]
 
