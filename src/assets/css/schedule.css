@@ -3,6 +3,12 @@
   background-color: #404975;
 }
 
+@media(max-width: 5120px) {
+  .schedule {
+    height: 1800px;
+  }
+}
+
 @media(max-width: 1680px) {
   .schedule {
     height: 2090px;
