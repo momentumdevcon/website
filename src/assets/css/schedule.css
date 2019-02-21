@@ -1,5 +1,6 @@
 .schedule {
   width: 100%;
+  background-color: #404975;
 }
 
 @media(max-width: 1680px) {

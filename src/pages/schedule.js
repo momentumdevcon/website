@@ -15,7 +15,7 @@ const SchedulePage = () => (
 
     <div id="main" className="alt">
       <div className="inner">
-        <iframe className="schedule" src="data:text/html,<script type='text/javascript' src='https://sessionize.com/api/v2/tl3o9lkp/view/gridtable'></script>" />
+        <iframe className="schedule" title="Momentum Schedule" src="data:text/html,<script type='text/javascript' src='https://sessionize.com/api/v2/tl3o9lkp/view/gridtable'></script>" />
       </div>
     </div>
   </Layout>
