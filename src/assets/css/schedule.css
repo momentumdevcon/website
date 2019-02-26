@@ -1,0 +1,46 @@
+.schedule {
+  width: 100%;
+  background-color: #404975;
+}
+
+@media(max-width: 5120px) {
+  .schedule {
+    height: 1800px;
+  }
+}
+
+@media(max-width: 1680px) {
+  .schedule {
+    height: 2090px;
+  }
+}
+
+@media(max-width: 1280px) {
+  .schedule {
+    height: 2370px;
+  }
+}
+
+@media(max-width: 980px) {
+  .schedule {
+    height: 2970px;
+  }
+}
+
+@media(max-width: 736px) {
+  .schedule {
+    height: 5270px;
+  }
+}
+
+@media(max-width: 480px) {
+  .schedule {
+    height: 5620px;
+  }
+}
+
+@media(max-width: 360px) {
+  .schedule {
+    height: 6270px;
+  }
+}
