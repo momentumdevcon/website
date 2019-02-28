@@ -29,19 +29,22 @@ const SpeakersList = () => (
       }
     `}
     render={({ sessionizeData: { speakers, sessions } }) => {
-      const formattedSessions =
+      const sessionTitlesById =
         sessions
         .map(session => Object.values(session))
         .reduce((acc, cur) => {
-          const title = cur[1].split('').slice(0, 25);
-          if (title.length !== cur[1].length) {
-            title.push('...');
+          const shortTitle = cur[1].split('').slice(0, 25);
+          if (shortTitle.length !== cur[1].length) {
+            shortTitle.push('...');
           }
           return {
-            ...acc,
-            [cur[0]]: title.join('')
+            ...acc, 
+            [cur[0]]: {
+              shortTitle: shortTitle.join(''),
+              title: cur[1]
+            }
           }
-        }, {})
+        }, {});
 
       return (
         <section id="learnmore" className="about">
@@ -71,8 +74,8 @@ const SpeakersList = () => (
                     <div className={`session-links${speaker.links.length === 0 ? ' no-social' : ''}` }>
                       {
                         speaker.sessions.map(sessionId => (
-                          <Link key={sessionId} to={`/session/${sessionId}`}>
-                            {formattedSessions[sessionId]}
+                          <Link title={sessionTitlesById[sessionId].title} key={sessionId} to={`/session/${sessionId}`}>
+                            {sessionTitlesById[sessionId].shortTitle}
                           </Link>
                         ))
                       }

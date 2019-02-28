@@ -34,7 +34,7 @@ const SessionsList = () => (
                   <section key={session.alternative_id}>
                     <div className="image talkbubble">
                       <Link to={`/session/${session.alternative_id}`}>
-                        <div className="title">{newTitle}</div>
+                        <div title={session.title} className="title">{newTitle}</div>
                       </Link>
                     </div>
                     <div className="content">
