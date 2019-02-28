@@ -3,6 +3,7 @@ import { StaticQuery, graphql, Link } from 'gatsby';
 import generateSocialLink from '../utils/generateSocialLink';
 import '../assets/css/speakers.css';
 import getSpeakerSlug from '../utils/getSpeakerSlug';
+import { Chevrons } from '../assets/images';
 
 const SpeakersList = () => (
   <StaticQuery
@@ -57,7 +58,7 @@ const SpeakersList = () => (
                       <h3 className="speakerName">{speaker.fullName}</h3>
                     </header>
                     <Link className="speakerSlug" to={`/speakers/${getSpeakerSlug(speaker.firstName, speaker.lastName)}`}>
-                      <img alt={`${speaker.fullName}`} src={`${speaker.profilePicture}`} />
+                      <img alt={`${speaker.fullName}`} src={`${speaker.profilePicture || Chevrons}`} />
                     </Link>
                     <div className="speakerSocialIcons">
                       {
