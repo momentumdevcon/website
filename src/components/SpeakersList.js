@@ -31,8 +31,7 @@ const SpeakersList = () => (
       }
     `}
     render={({ sessionizeData: { speakers, sessions } }) => {
-      const sessionTitlesById =
-        sessions
+      const sessionTitlesById = sessions
         .map(session => Object.values(session))
         .reduce((acc, cur) => {
           const shortTitle = cur[1].split('').slice(0, 25);
@@ -40,12 +39,12 @@ const SpeakersList = () => (
             shortTitle.push('...');
           }
           return {
-            ...acc, 
+            ...acc,
             [cur[0]]: {
               shortTitle: shortTitle.join(''),
-              title: cur[1]
-            }
-          }
+              title: cur[1],
+            },
+          };
         }, {});
 
       return (
@@ -58,29 +57,36 @@ const SpeakersList = () => (
                     <header>
                       <h3 className="speakerName">{formatName(speaker.fullName)}</h3>
                     </header>
-                    <Link className="speakerSlug" to={`/speakers/${getSpeakerSlug(speaker.firstName, speaker.lastName)}`}>
-                      <img alt={`${formatName(speaker.fullName)}`} src={`${speaker.profilePicture || Chevrons}`} />
+                    <Link
+                      className="speakerSlug"
+                      to={`/speakers/${getSpeakerSlug(speaker.firstName, speaker.lastName)}`}
+                    >
+                      <img
+                        alt={`${formatName(speaker.fullName)}`}
+                        src={`${speaker.profilePicture || Chevrons}`}
+                        className={speaker.profilePicture ? 'profilePic' : 'placeholder'}
+                      />
                     </Link>
                     <div className="speakerSocialIcons">
-                      {
-                        speaker.links.length > 0 && speaker.links[0].linkType === 'Twitter' ? 
-                          generateSocialLink(speaker.links[0], 'speakerIcon')
-                          : ''
-                      }
-                      {
-                        speaker.links.length > 1 && speaker.links[1].linkType === 'LinkedIn' ? 
-                          generateSocialLink(speaker.links[1], 'speakerIcon')
-                          : ''
-                      }
+                      {speaker.links.length > 0 && speaker.links[0].linkType === 'Twitter'
+                        ? generateSocialLink(speaker.links[0], 'speakerIcon')
+                        : ''}
+                      {speaker.links.length > 1 && speaker.links[1].linkType === 'LinkedIn'
+                        ? generateSocialLink(speaker.links[1], 'speakerIcon')
+                        : ''}
                     </div>
-                    <div className={`session-links${speaker.links.length === 0 ? ' no-social' : ''}` }>
-                      {
-                        speaker.sessions.map(sessionId => (
-                          <Link title={sessionTitlesById[sessionId].title} key={sessionId} to={`/session/${sessionId}`}>
-                            {sessionTitlesById[sessionId].shortTitle}
-                          </Link>
-                        ))
-                      }
+                    <div
+                      className={`session-links${speaker.links.length === 0 ? ' no-social' : ''}`}
+                    >
+                      {speaker.sessions.map(sessionId => (
+                        <Link
+                          title={sessionTitlesById[sessionId].title}
+                          key={sessionId}
+                          to={`/session/${sessionId}`}
+                        >
+                          {sessionTitlesById[sessionId].shortTitle}
+                        </Link>
+                      ))}
                     </div>
                   </div>
                 ))}
@@ -88,7 +94,7 @@ const SpeakersList = () => (
             </section>
           </div>
         </section>
-      )
+      );
     }}
   />
 );
