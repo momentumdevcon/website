@@ -5,6 +5,7 @@ import { Layout, Icon } from '../components/';
 import generateSocialLink from '../utils/generateSocialLink';
 import getSpeakerSlug from '../utils/getSpeakerSlug';
 import metaContent, { createMetaContent } from '../assets/data/metaContent';
+import formatName from '../utils/formatName';
 import { Chevrons } from '../assets/images';
 import '../assets/css/speaker.css';
 
@@ -36,7 +37,7 @@ export default ({ data: { sessionizeData }, pageContext: { slug } }) => {
         </div>
         <div className="inner horizontalContainer">
           <div className="verticalContainer">
-            <img className="speakerImage" src={speaker.profilePicture || Chevrons} alt={speaker.fullName} />
+            <img className="speakerImage" src={speaker.profilePicture || Chevrons} alt={formatName(speaker.fullName)} />
             <div className="tagline">{speaker.tagLine}</div>
             <div className="horizontalContainer">
               {speaker.links.map(link => (
@@ -45,7 +46,7 @@ export default ({ data: { sessionizeData }, pageContext: { slug } }) => {
             </div>
           </div>
           <div className="verticalContainer">
-            <h1 className="name">{speaker.fullName}</h1>
+            <h1 className="name">{formatName(speaker.fullName)}</h1>
             <div>{speaker.bio}</div>
             <div className="sessions">
               <h2>{sessionText}</h2>
