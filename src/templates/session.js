@@ -1,14 +1,15 @@
 import React from 'react';
 import Helmet from 'react-helmet'
+import { graphql } from 'gatsby';
 import metaContent from '../assets/data/metaContent.js';
 import { Layout } from '../components';
-import { graphql } from 'gatsby';
+import formatName from '../utils/formatName';
 import '../assets/css/session.css';
 
 export default ({ data: { sessionsData }, pageContext: { slug } }) => {
   const session = sessionsData.sessions.find(session => session.alternative_id === slug);
   const title = session.title;
-  const speakerName = session.speakers[0].name;
+  const speakerNames = session.speakers.map(speaker => formatName(speaker.name));
   const level = session.categories[0].categoryItems[0].name;
   const tags = session.categories[1].categoryItems.map(item => item.name);
   
@@ -24,7 +25,10 @@ export default ({ data: { sessionsData }, pageContext: { slug } }) => {
             <header className="major session-title">
               <h1>{title}</h1>
             </header>
-            <div className="presenter"><span className="info-prefix">Presented by:</span>{speakerName}</div>
+            <div className="presenter">
+              <span className="info-prefix">Presented by:</span>
+              {speakerNames.length > 1 ? `${speakerNames[0]} and ${speakerNames[1]}` : speakerNames[0]}
+            </div>
             <div className="description">{session.description}</div>
             <div className="levelTags">
               <span><span className="info-prefix">Level: </span>{level}</span>
