@@ -39,6 +39,24 @@
     position: relative;
     width: 100%; // was 40% in template
 
+    &.sponsorsArticle {
+      min-height: 26em;
+      max-height: initial;
+      background-color: #d9dced;
+      height: initial;
+      color: #242943;
+      &:after {
+        background-color: #242943;
+      }
+      
+      h3 {
+        color: #242943;
+      }
+      header.major > :first-child:after {
+        background-color: #242943
+      }
+    }
+
     .image {
       display: none;
     }
@@ -167,10 +185,6 @@
       max-height: 30em;
       min-height: 20em;
     }
-    & .sponsorsArticle {
-      height: 100%;
-      max-height: 40em;
-    }
   }
 
   // @include breakpoint(medium) {
@@ -186,14 +200,10 @@
       max-height: none;
       min-height: 0;
 
-      & .sponsorsArticle {
-        height: 100%;
-      }
-
       h3 {
         font-size: 1.5em;
       }
-    }
+
   }
 
   @include breakpoint(xsmall) {
@@ -204,4 +214,5 @@
       width: 100% !important;
     }
   }
+}
 }
