@@ -2,7 +2,22 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import { Layout, Banner } from '../components';
 import metaContent from '../assets/data/metaContent.js';
-import { convergys, cyberark, dynatrace, gaslight, kroger, max } from '../assets/images';
+import { 
+  convergys,
+  cyberark,
+  dynatrace,
+  gaslight,
+  kroger,
+  max,
+  vaco,
+  ascendum,
+  smartdata,
+  fusionalliance,
+  luma,
+  ingage,
+  eliassen,
+  sonatype
+ } from '../assets/images';
 
 const sponsors = [
   { img: kroger, link: 'https://www.kroger.com', alt: 'Kroger Sponsor Image' },
@@ -11,6 +26,14 @@ const sponsors = [
   { img: cyberark, link: 'https://www.cyberark.com', alt: 'Cyberark Sponsor Image' },
   { img: dynatrace, link: 'https://www.dynatrace.com', alt: 'Dynatrace Sponsor Image' },
   { img: max, link: 'https://maxtrain.com', alt: 'Maxtrain Sponsor Image' },
+  { img: vaco, link: 'https://www.vaco.com', alt: 'Vaco Sponsor Image' },
+  { img: ascendum, link: 'https://ascendum.com/', alt: 'Ascendum Sponsor Image' },
+  { img: smartdata, link: 'https://smartdata.net/', alt: 'Smart Data Sponsor Image' },
+  { img: fusionalliance, link: 'https://fusionalliance.com/', alt: 'Fusion Alliance Sponsor Image' },
+  { img: luma, link: 'https://lumafintech.com/', alt: 'Luma Financial Technologies Sponsor Image' },
+  { img: ingage, link: 'http://www.ingagepartners.com/', alt: 'Ingage Partners Sponsor Image' },
+  { img: eliassen, link: 'https://www.eliassen.com/', alt: 'Eliassen Sponsor Image' },
+  { img: sonatype, link: 'https://www.sonatype.com/', alt: 'Sonatype Sponsor Image' }
 ];
 
 const HomeIndex = () => (
