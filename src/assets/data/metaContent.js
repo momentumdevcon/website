@@ -4,7 +4,7 @@ export const mainTitle = 'Momentum Developer Conference'
 export const mainDescription =
   'Momentum is a Cincinnati developer conference helping developers be better, stronger and faster. Join us March 21, 2019 at Sharonville Convention Center.';
 
-const canonicalUrl = "https://momentumdevcon.com";
+export const canonicalUrl = "https://momentumdevcon.com";
 const logoAbsoluteUrl = canonicalUrl + logoWPadding;
 
 const commonMetaContent = [
@@ -24,7 +24,8 @@ const homeMetaContent = [
   { property: 'og:title', content: mainTitle },
 ]
 
-export function createMetaContent(title, description, image) {
+export function createMetaContent(title, description, imageOrNull) {
+  const image = imageOrNull || logoAbsoluteUrl;
   return [
     { name: 'description', property: 'og:description', content: description },
     { name: 'twitter:card', content: 'summary_large_image' },
