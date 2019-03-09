@@ -55,11 +55,16 @@ const SpeakersList = () => (
                 {speakers.map((speaker, index) => (
                   <div key={formatName(speaker.fullName)} className="speaker">
                     <header>
-                      <h3 className="speakerName">{formatName(speaker.fullName)}</h3>
+                      <Link 
+                        className="gatsby-link"
+                        to={`/speakers/${getSpeakerSlug(speaker.fullName)}`}
+                      >
+                        <h3 className="speakerName">{formatName(speaker.fullName)}</h3>
+                      </Link>
                     </header>
                     <Link
-                      className="speakerSlug"
-                      to={`/speakers/${getSpeakerSlug(speaker.firstName, speaker.lastName)}`}
+                      className="gatsby-link"
+                      to={`/speakers/${getSpeakerSlug(speaker.fullName)}`}
                     >
                       <img
                         alt={`${formatName(speaker.fullName)}`}

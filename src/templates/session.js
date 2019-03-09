@@ -1,9 +1,10 @@
 import React from 'react';
 import Helmet from 'react-helmet'
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import metaContent from '../assets/data/metaContent.js';
 import { Layout } from '../components';
 import formatName from '../utils/formatName';
+import getSpeakerSlug from '../utils/getSpeakerSlug.js';
 import '../assets/css/session.css';
 
 export default ({ data: { sessionsData }, pageContext: { slug } }) => {
@@ -12,6 +13,12 @@ export default ({ data: { sessionsData }, pageContext: { slug } }) => {
   const speakerNames = session.speakers.map(speaker => formatName(speaker.name));
   const level = session.categories[0].categoryItems[0].name;
   const tags = session.categories[1].categoryItems.map(item => item.name);
+
+  const getNameWithLink = (slug, name) => (
+    <Link className="gatsby-link" to={`/speakers/${getSpeakerSlug(slug)}`}>
+      {name}
+    </Link>
+  );
   
   return (
     <Layout>
@@ -27,7 +34,10 @@ export default ({ data: { sessionsData }, pageContext: { slug } }) => {
             </header>
             <div className="presenter">
               <span className="info-prefix">Presented by:</span>
-              {speakerNames.length > 1 ? `${speakerNames[0]} and ${speakerNames[1]}` : speakerNames[0]}
+                { getNameWithLink(session.speakers[0].name, speakerNames[0]) }
+              { speakerNames.length > 1 ?
+                <span> and { getNameWithLink(session.speakers[1].name, speakerNames[1]) }</span> : ''
+              }
             </div>
             <div className="description">{session.description}</div>
             <div className="levelTags">
