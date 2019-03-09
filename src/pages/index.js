@@ -51,6 +51,16 @@ const HomeIndex = () => (
             great content for learning and success. Join us on March 21, 2019 at Sharonville
             Convention Center.
           </p>
+          <header className="major">
+            <h4>What do I get with my ticket?</h4>
+          </header>
+          <ul>
+           <li>35 sessions of great content (5 tracks, 7 sessions each)</li>
+           <li>Speakers from Cincinnati, the region, and around the globe</li>
+           <li>Breakfast, lunch, and happy hour</li>
+           <li>Refreshments throughout the day</li>
+           <li>Connect and chat with some of Cincinnati's best developers</li>
+          </ul>
         </article>
       </section>
       <section id="two" className="tiles">
