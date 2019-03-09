@@ -45,14 +45,12 @@ exports.createPages = ({ graphql, actions }) => {
     {
       sessionizeData {
         speakers {
-          firstName
-          lastName
+          fullName
         }
       }
     }
   `).then((result) => {
       result.data.sessionizeData.speakers.forEach(({ fullName }) => {
-        // const slug = `${firstName.split(' ').join('_')}_${lastName.split(' ').join('_')}`;
         const slug = fullName.split(' ').join('_');
         createPage({
           path: `/speakers/${slug}`,
