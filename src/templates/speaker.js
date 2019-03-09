@@ -4,14 +4,14 @@ import { graphql, Link } from 'gatsby';
 import { Layout, Icon } from '../components/';
 import generateSocialLink from '../utils/generateSocialLink';
 import getSpeakerSlug from '../utils/getSpeakerSlug';
-import metaContent, { createMetaContent } from '../assets/data/metaContent';
+import { createMetaContent } from '../assets/data/metaContent';
 import formatName from '../utils/formatName';
 import { Chevrons } from '../assets/images';
 import '../assets/css/speaker.css';
 
 export default ({ data: { sessionizeData }, pageContext: { slug } }) => {
   const speaker = sessionizeData.speakers.find((speaker) => {
-    const speakerSlug = getSpeakerSlug(speaker.firstName, speaker.lastName);
+    const speakerSlug = getSpeakerSlug(speaker.fullName);
     return speakerSlug === slug;
   });
   const speakerSessions = sessionizeData.sessions.filter(session =>

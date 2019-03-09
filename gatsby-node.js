@@ -4,7 +4,6 @@
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 
-// You can delete this file if you're not using it
 const path = require('path');
 
 exports.createPages = ({ graphql, actions }) => {
@@ -52,8 +51,9 @@ exports.createPages = ({ graphql, actions }) => {
       }
     }
   `).then((result) => {
-      result.data.sessionizeData.speakers.forEach(({ firstName, lastName }) => {
-        const slug = `${firstName.split(' ').join('_')}_${lastName.split(' ').join('_')}`;
+      result.data.sessionizeData.speakers.forEach(({ fullName }) => {
+        // const slug = `${firstName.split(' ').join('_')}_${lastName.split(' ').join('_')}`;
+        const slug = fullName.split(' ').join('_');
         createPage({
           path: `/speakers/${slug}`,
           component: path.resolve('./src/templates/speaker.js'),
