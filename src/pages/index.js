@@ -52,10 +52,10 @@ const HomeIndex = () => (
             Convention Center.
           </p>
           <header className="major">
-            <h4>What do I get with my ticket?</h4>
+            <h4>What does my ticket include?</h4>
           </header>
           <ul>
-           <li>35 sessions of outstanding content (5 tracks, 7 sessions each) - presented by speakers from Cincinnati, the region, and around the globe</li>
+           <li>35 sessions of outstanding content presented by speakers from Cincinnati, the region, and around the globe</li>
            <li>Breakfast, lunch, and happy hour</li>
            <li>Refreshments throughout the day</li>
            <li>Connect and chat with some of Cincinnati's best developers</li>
