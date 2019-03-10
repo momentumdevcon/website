@@ -1,14 +1,17 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import { BannerLanding, Layout } from '../components';
-import metaContent from '../assets/data/metaContent.js';
+import { createMetaContent, mainTitle, mainDescription } from '../assets/data/metaContent.js';
 import '../assets/css/schedule.css';
+
+const pageTitle = "Schedule - " + mainTitle;
+const scheduleMeta = createMetaContent(pageTitle, mainDescription);
 
 const SchedulePage = () => (
   <Layout>
     <Helmet
-      title="Schedule - Momentum Developer Conference"
-      meta={[...metaContent]}
+      title={pageTitle}
+      meta={scheduleMeta}
     />
 
     <BannerLanding pageName="Schedule" />

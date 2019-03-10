@@ -1,8 +1,8 @@
-import React from 'react'
-import Helmet from 'react-helmet'
-import { Layout, Banner } from '../components'
-import metaContent from '../assets/data/metaContent.js'
-import {
+import React from 'react';
+import Helmet from 'react-helmet';
+import { Layout, Banner } from '../components';
+import metaContent, { mainDescription } from '../assets/data/metaContent.js';
+import { 
   convergys,
   cyberark,
   dynatrace,
@@ -95,10 +95,17 @@ const HomeIndex = ({ data }) => (
             <h3>What is Momentum?</h3>
           </header>
           <p>
-            Momentum is a Cincinnati developer conference dedicated to providing
-            developers with great content for learning and success. Join us on
-            March 21, 2019 at Sharonville Convention Center.
+            {mainDescription}
           </p>
+          <header className="major">
+            <h4>What does my ticket include?</h4>
+          </header>
+          <ul>
+           <li>35 sessions of outstanding content presented by speakers from Cincinnati, the region, and around the globe</li>
+           <li>Breakfast, lunch, and happy hour</li>
+           <li>Refreshments throughout the day</li>
+           <li>Connect and chat with some of Cincinnati's best developers</li>
+          </ul>
         </article>
       </section>
       <section id="two" className="tiles">
