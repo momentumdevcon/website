@@ -16,13 +16,18 @@ import {
   luma,
   ingage,
   eliassen,
-  sonatype
+  sonatype,
+  ge,
+  fifthThird,
+  cbts
  } from '../assets/images';
 
 const sponsors = [
   { img: kroger, link: 'https://www.kroger.com', alt: 'Kroger Sponsor Image' },
-  { img: gaslight, link: 'https://teamgaslight.com', alt: 'Gaslight Sponsor Image' },
   { img: convergys, link: 'https://www.concentrix.com', alt: 'Concentrix Sponsor Image' },
+  { img: ge, link: 'https://www.ge.com', alt: 'GE Sponsor Image' },
+  { img: fifthThird, link: 'https://www.53.com', alt: '5/3 Sponsor Image' },
+  { img: gaslight, link: 'https://teamgaslight.com', alt: 'Gaslight Sponsor Image' },
   { img: cyberark, link: 'https://www.cyberark.com', alt: 'Cyberark Sponsor Image' },
   { img: dynatrace, link: 'https://www.dynatrace.com', alt: 'Dynatrace Sponsor Image' },
   { img: max, link: 'https://maxtrain.com', alt: 'Maxtrain Sponsor Image' },
@@ -33,7 +38,8 @@ const sponsors = [
   { img: luma, link: 'https://lumafintech.com/', alt: 'Luma Financial Technologies Sponsor Image' },
   { img: ingage, link: 'http://www.ingagepartners.com/', alt: 'Ingage Partners Sponsor Image' },
   { img: eliassen, link: 'https://www.eliassen.com/', alt: 'Eliassen Sponsor Image' },
-  { img: sonatype, link: 'https://www.sonatype.com/', alt: 'Sonatype Sponsor Image' }
+  { img: sonatype, link: 'https://www.sonatype.com/', alt: 'Sonatype Sponsor Image' },
+  { img: cbts, link: 'https://www.cbts.com/', alt: 'CBTS Sponsor Image' }
 ];
 
 const HomeIndex = () => (
