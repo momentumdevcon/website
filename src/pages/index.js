@@ -19,75 +19,21 @@ import {
   sonatype,
 } from '../assets/images'
 
+import {sponsors,  query as sponsorImageQuery } from '../components/SponsorData'
+
 import Img from 'gatsby-image'
 
-const sponsors = [
-  { img: kroger, link: 'https://www.kroger.com', alt: 'Kroger Sponsor Image' },
-  {
-    img: gaslight,
-    link: 'https://teamgaslight.com',
-    alt: 'Gaslight Sponsor Image',
-  },
-  {
-    img: convergys,
-    link: 'https://www.concentrix.com',
-    alt: 'Concentrix Sponsor Image',
-  },
-  {
-    img: cyberark,
-    link: 'https://www.cyberark.com',
-    alt: 'Cyberark Sponsor Image',
-  },
-  {
-    img: dynatrace,
-    link: 'https://www.dynatrace.com',
-    alt: 'Dynatrace Sponsor Image',
-  },
-  { img: max, link: 'https://maxtrain.com', alt: 'Maxtrain Sponsor Image' },
-  { img: vaco, link: 'https://www.vaco.com', alt: 'Vaco Sponsor Image' },
-  {
-    img: ascendum,
-    link: 'https://ascendum.com/',
-    alt: 'Ascendum Sponsor Image',
-  },
-  {
-    img: smartdata,
-    link: 'https://smartdata.net/',
-    alt: 'Smart Data Sponsor Image',
-  },
-  {
-    img: fusionalliance,
-    link: 'https://fusionalliance.com/',
-    alt: 'Fusion Alliance Sponsor Image',
-  },
-  {
-    img: luma,
-    link: 'https://lumafintech.com/',
-    alt: 'Luma Financial Technologies Sponsor Image',
-  },
-  {
-    img: ingage,
-    link: 'http://www.ingagepartners.com/',
-    alt: 'Ingage Partners Sponsor Image',
-  },
-  {
-    img: eliassen,
-    link: 'https://www.eliassen.com/',
-    alt: 'Eliassen Sponsor Image',
-  },
-  {
-    img: sonatype,
-    link: 'https://www.sonatype.com/',
-    alt: 'Sonatype Sponsor Image',
-  },
-]
 
-const HomeIndex = ({ data }) => (
+const HomeIndex = ({ data }) =>{
+  console.log(data);
+  console.log(sponsorImageQuery)
+  return (
   <Layout>
     <Helmet title="Momentum Developer Conference" meta={[...metaContent]} />
+    
     {/* <Img fluid={data.cincy.childImageSharp.fluid}/> */}
     <Banner />
-    <Img fixed={data.gaslight.childImageSharp.fixed} />
+    {/* <Img fixed={data.gaslight.childImageSharp.fixed} /> */}
     <div id="main">
       <section id="one" className="tiles whatIsMomentumTiles">
         <article>
@@ -114,11 +60,11 @@ const HomeIndex = ({ data }) => (
             <h3>Sponsors</h3>
           </header>
           <div className="sponsors">
-            {sponsors.map(({ img, link, alt }) => (
-              <div key={link} className="sponsorWrapper">
+            {sponsors.map(({ key, fileName, link, alt }) => (
+              <div key={key} className="sponsorWrapper">
                 <a href={link} target="_blank" rel="noopener">
-                  <img
-                    src={img}
+                  <Img
+                    fixed={data.sponsorImages.edges.find(n => n.node.relativePath === fileName).childImageSharp.image200}
                     style={{ height: '100%', width: '200px' }}
                     alt={alt}
                   />
@@ -136,32 +82,46 @@ const HomeIndex = ({ data }) => (
       </section>
     </div>
   </Layout>
-)
+)}
 
 export default HomeIndex
 
-export const sponsorImage = graphql`
-fragment sponsorImage on File {
-  childImageSharp {
-      fixed(width: 200) {
-        ...GatsbyImageSharpFixed_tracedSVG
-      }
-    }
-  }
-`;
+// export const sponsorImage = graphql`
+// fragment sponsorImage on File {
+//   childImageSharp {
+//       fixed(width: 200) {
+//         ...GatsbyImageSharpFixed_tracedSVG
+//       }
+//     }
+//   }
+// `;
 
 export const query = graphql`
-query {
-  gaslight: file(relativePath: {eq: "kroger.png"}) {
-    ...sponsorImage
-  }
-  cincy: file(relativePath: {eq: "bg.jpg"}) {
-    childImageSharp {
-      fluid(maxWidth: 2560) {
-        # Choose either the fragment including a small base64ed image, a traced placeholder SVG, or one without.
-        ...GatsbyImageSharpFluid_noBase64
+  query {
+    sponsorImages: allFile(filter: { sourceInstanceName: { eq: "sponsors" } }) {
+      edges {
+        node {
+          relativePath
+          ...sponsorImage
+        }
       }
     }
   }
-}
 `
+
+// export const query = sponsorImageQuery
+// // export const query = graphql`
+// // query {
+// //   gaslight: file(relativePath: {eq: "kroger.png"}) {
+// //     ...sponsorImage
+// //   }
+// //   cincy: file(relativePath: {eq: "bg.jpg"}) {
+// //     childImageSharp {
+// //       fluid(maxWidth: 2560) {
+// //         # Choose either the fragment including a small base64ed image, a traced placeholder SVG, or one without.
+// //         ...GatsbyImageSharpFluid_noBase64
+// //       }
+// //     }
+// //   }
+// // }
+// // `
