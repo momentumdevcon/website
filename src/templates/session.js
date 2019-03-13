@@ -1,7 +1,7 @@
 import React from 'react';
 import Helmet from 'react-helmet'
 import { graphql, Link } from 'gatsby';
-import metaContent from '../assets/data/metaContent.js';
+import {createMetaContent} from '../assets/data/metaContent.js';
 import { Layout } from '../components';
 import formatName from '../utils/formatName';
 import getSpeakerSlug from '../utils/getSpeakerSlug.js';
@@ -14,6 +14,9 @@ export default ({ data: { sessionsData }, pageContext: { slug } }) => {
   const level = session.categories[0].categoryItems[0].name;
   const tags = session.categories[1].categoryItems.map(item => item.name);
 
+  const pageTitle = `${title} - Momentum Developer Conference`;
+  const pageDescription = `${title} presented by ${speakerNames.join(", ")} at Momentum 2019`
+  const metaContent = createMetaContent(pageTitle, pageDescription)
   const getNameWithLink = (slug, name) => (
     <Link className="gatsby-link" to={`/speakers/${getSpeakerSlug(slug)}`}>
       {name}
@@ -23,7 +26,7 @@ export default ({ data: { sessionsData }, pageContext: { slug } }) => {
   return (
     <Layout>
       <Helmet
-        title={`${title} - Momentum Dev Con`}
+        title={pageTitle}
         meta={[...metaContent]}
       />
       <div id="main" className="alt">
