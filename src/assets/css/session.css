@@ -18,3 +18,7 @@
   font-weight: bold;
   margin-right: 5px;
 }
+
+.gatsby-link {
+  border: none;
+}

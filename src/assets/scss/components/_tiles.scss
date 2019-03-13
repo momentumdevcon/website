@@ -39,6 +39,24 @@
     position: relative;
     width: 100%; // was 40% in template
 
+    &.sponsorsArticle {
+      min-height: 26em;
+      max-height: initial;
+      background-color: #d9dced;
+      height: initial;
+      color: #242943;
+      &:after {
+        background-color: #242943;
+      }
+      
+      h3 {
+        color: #242943;
+      }
+      header.major > :first-child:after {
+        background-color: #242943
+      }
+    }
+
     .image {
       display: none;
     }
@@ -160,48 +178,63 @@
     background-color: _palette(accent1);
   }
 
+  &.whatIsMomentumTiles article {
+    min-height: 30em;
+  }
+
   @include breakpoint(large) {
+    &.whatIsMomentumTiles article {
+      min-height: 30em;
+    }
+
     article {
       @include padding(4em, 3em);
       height: 30vh;
       max-height: 30em;
       min-height: 20em;
     }
-    & .sponsorsArticle {
-      height: 100%;
-      max-height: 40em;
+  }
+
+  @include breakpoint(medium) {
+    &.whatIsMomentumTiles article {
+      min-height: 30em;
     }
   }
 
-  // @include breakpoint(medium) {
-  //   article {
-  //     width: 50% !important;
-  //   }
-  // }
-
   @include breakpoint(small) {
+    &.whatIsMomentumTiles article {
+      min-height: 32em;
+    }
+
     article {
       @include padding(3em, 1.5em);
       height: 16em;
       max-height: none;
       min-height: 0;
 
-      & .sponsorsArticle {
-        height: 100%;
-      }
-
       h3 {
         font-size: 1.5em;
       }
-    }
+
   }
 
   @include breakpoint(xsmall) {
+    &.whatIsMomentumTiles article {
+      min-height: 37em;
+    }
+
     display: block;
 
     article {
       height: 20em;
       width: 100% !important;
+    }
+  }
+}
+
+  @include breakpoint(xxsmall) {
+    &.whatIsMomentumTiles article {
+      min-height: 38em;
     }
   }
 }

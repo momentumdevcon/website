@@ -1,27 +1,66 @@
 import React from 'react';
-import { Layout } from '../components/';
-import { graphql } from 'gatsby';
+import Helmet from 'react-helmet';
+import { graphql, Link } from 'gatsby';
+import { Layout, Icon } from '../components/';
+import generateSocialLink from '../utils/generateSocialLink';
+import getSpeakerSlug from '../utils/getSpeakerSlug';
+import { createMetaContent } from '../assets/data/metaContent';
+import formatName from '../utils/formatName';
+import { Chevrons } from '../assets/images';
+import '../assets/css/speaker.css';
 
 export default ({ data: { sessionizeData }, pageContext: { slug } }) => {
-  const speaker = sessionizeData.speakers.find(speaker => speaker.fullName === slug);
+  const speaker = sessionizeData.speakers.find((speaker) => {
+    const speakerSlug = getSpeakerSlug(speaker.fullName);
+    return speakerSlug === slug;
+  });
   const speakerSessions = sessionizeData.sessions.filter(session =>
     speaker.sessions.includes(parseInt(session.alternative_id)));
+  const sessionText = `Session${speakerSessions.length > 1 ? 's' : ''}:`
 
+  const pageTitle = `${speaker.fullName} - Momentum 2019 Speaker`;
+  const sessionList = speakerSessions.map(session => `"${session.title}"`).join(", ");
   return (
     <Layout>
-      <div>{speaker.fullName}</div>
-      <div>{speaker.tagLine}</div>
-      <div>{speaker.bio}</div>
-      <img src={speaker.profilePicture} alt={speaker.fullName} />
-      {speaker.links.map(link => (
-        <div key={link.linkType}>{link.linkType}</div>
-      ))}
-      {speakerSessions.map(session => (
-        <div key={session.alternative_id}>
-          <div>{session.title}</div>
-          <div>{session.description}</div>
+      <Helmet
+       title={pageTitle}
+       meta={createMetaContent(pageTitle, `${speaker.firstName}'s ${sessionText} ${sessionList}`, speaker.profilePicture)}
+      />
+      <div id="main" className="alt">
+        <div className="backArrow">
+          <Link to="/speakers">
+            <Icon
+              iconName="arrow-left"
+            />
+            Back to Speakers
+          </Link>
         </div>
-      ))}
+        <div className="inner horizontalContainer">
+          <div className="verticalContainer">
+            <img className="speakerImage" src={speaker.profilePicture || Chevrons} alt={formatName(speaker.fullName)} />
+            <div className="tagline">{speaker.tagLine}</div>
+            <div className="horizontalContainer">
+              {speaker.links.map(link => (
+                generateSocialLink(link, 'speakerSocial')
+              ))}
+            </div>
+          </div>
+          <div className="verticalContainer">
+            <h1 className="name">{formatName(speaker.fullName)}</h1>
+            <div>{speaker.bio}</div>
+            <div className="sessions">
+              <h2>{sessionText}</h2>
+              {speakerSessions.map(session => (
+                <div key={session.alternative_id}>
+                  <Link to={`/session/${session.alternative_id}`}>
+                    {session.title}
+                  </Link>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
     </Layout>
   );
 };
@@ -31,6 +70,8 @@ export const query = graphql`
     sessionizeData {
       speakers {
         fullName
+        firstName
+        lastName
         tagLine
         bio
         profilePicture

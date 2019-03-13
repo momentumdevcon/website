@@ -1,16 +1,45 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import { Layout, Banner } from '../components';
-import metaContent from '../assets/data/metaContent.js';
-import { convergys, cyberark, dynatrace, gaslight, kroger, max } from '../assets/images';
+import metaContent, { mainDescription } from '../assets/data/metaContent.js';
+import { 
+  convergys,
+  cyberark,
+  dynatrace,
+  gaslight,
+  kroger,
+  max,
+  vaco,
+  ascendum,
+  smartdata,
+  fusionalliance,
+  luma,
+  ingage,
+  eliassen,
+  sonatype,
+  ge,
+  fifthThird,
+  cbts
+ } from '../assets/images';
 
 const sponsors = [
   { img: kroger, link: 'https://www.kroger.com', alt: 'Kroger Sponsor Image' },
-  { img: gaslight, link: 'https://teamgaslight.com', alt: 'Gaslight Sponsor Image' },
   { img: convergys, link: 'https://www.concentrix.com', alt: 'Concentrix Sponsor Image' },
+  { img: ge, link: 'https://www.ge.com', alt: 'GE Sponsor Image' },
+  { img: fifthThird, link: 'https://www.53.com', alt: '5/3 Sponsor Image' },
+  { img: gaslight, link: 'https://teamgaslight.com', alt: 'Gaslight Sponsor Image' },
   { img: cyberark, link: 'https://www.cyberark.com', alt: 'Cyberark Sponsor Image' },
   { img: dynatrace, link: 'https://www.dynatrace.com', alt: 'Dynatrace Sponsor Image' },
   { img: max, link: 'https://maxtrain.com', alt: 'Maxtrain Sponsor Image' },
+  { img: vaco, link: 'https://www.vaco.com', alt: 'Vaco Sponsor Image' },
+  { img: ascendum, link: 'https://ascendum.com/', alt: 'Ascendum Sponsor Image' },
+  { img: smartdata, link: 'https://smartdata.net/', alt: 'Smart Data Sponsor Image' },
+  { img: fusionalliance, link: 'https://fusionalliance.com/', alt: 'Fusion Alliance Sponsor Image' },
+  { img: luma, link: 'https://lumafintech.com/', alt: 'Luma Financial Technologies Sponsor Image' },
+  { img: ingage, link: 'http://www.ingagepartners.com/', alt: 'Ingage Partners Sponsor Image' },
+  { img: eliassen, link: 'https://www.eliassen.com/', alt: 'Eliassen Sponsor Image' },
+  { img: sonatype, link: 'https://www.sonatype.com/', alt: 'Sonatype Sponsor Image' },
+  { img: cbts, link: 'https://www.cbts.com/', alt: 'CBTS Sponsor Image' }
 ];
 
 const HomeIndex = () => (
@@ -24,10 +53,17 @@ const HomeIndex = () => (
             <h3>What is Momentum?</h3>
           </header>
           <p>
-            Momentum is a Cincinnati developer conference dedicated to providing developers with
-            great content for learning and success. Join us on March 21, 2019 at Sharonville
-            Convention Center.
+            {mainDescription}
           </p>
+          <header className="major">
+            <h4>What does my ticket include?</h4>
+          </header>
+          <ul>
+           <li>35 sessions of outstanding content presented by speakers from Cincinnati, the region, and around the globe</li>
+           <li>Breakfast, lunch, and happy hour</li>
+           <li>Refreshments throughout the day</li>
+           <li>Connect and chat with some of Cincinnati's best developers</li>
+          </ul>
         </article>
       </section>
       <section id="two" className="tiles">

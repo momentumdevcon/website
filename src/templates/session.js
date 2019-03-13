@@ -1,21 +1,32 @@
 import React from 'react';
 import Helmet from 'react-helmet'
-import metaContent from '../assets/data/metaContent.js';
+import { graphql, Link } from 'gatsby';
+import {createMetaContent} from '../assets/data/metaContent.js';
 import { Layout } from '../components';
-import { graphql } from 'gatsby';
+import formatName from '../utils/formatName';
+import getSpeakerSlug from '../utils/getSpeakerSlug.js';
 import '../assets/css/session.css';
 
 export default ({ data: { sessionsData }, pageContext: { slug } }) => {
   const session = sessionsData.sessions.find(session => session.alternative_id === slug);
   const title = session.title;
-  const speakerName = session.speakers[0].name;
+  const speakerNames = session.speakers.map(speaker => formatName(speaker.name));
   const level = session.categories[0].categoryItems[0].name;
   const tags = session.categories[1].categoryItems.map(item => item.name);
+
+  const pageTitle = `${title} - Momentum Developer Conference`;
+  const pageDescription = `${title} presented by ${speakerNames.join(", ")} at Momentum 2019`
+  const metaContent = createMetaContent(pageTitle, pageDescription)
+  const getNameWithLink = (slug, name) => (
+    <Link className="gatsby-link" to={`/speakers/${getSpeakerSlug(slug)}`}>
+      {name}
+    </Link>
+  );
   
   return (
     <Layout>
       <Helmet
-        title={`${title} - Momentum Dev Con`}
+        title={pageTitle}
         meta={[...metaContent]}
       />
       <div id="main" className="alt">
@@ -24,7 +35,13 @@ export default ({ data: { sessionsData }, pageContext: { slug } }) => {
             <header className="major session-title">
               <h1>{title}</h1>
             </header>
-            <div className="presenter"><span className="info-prefix">Presented by:</span>{speakerName}</div>
+            <div className="presenter">
+              <span className="info-prefix">Presented by:</span>
+                { getNameWithLink(session.speakers[0].name, speakerNames[0]) }
+              { speakerNames.length > 1 ?
+                <span> and { getNameWithLink(session.speakers[1].name, speakerNames[1]) }</span> : ''
+              }
+            </div>
             <div className="description">{session.description}</div>
             <div className="levelTags">
               <span><span className="info-prefix">Level: </span>{level}</span>

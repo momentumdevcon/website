@@ -1,15 +1,10 @@
 import React from 'react';
 import { StaticQuery, graphql, Link } from 'gatsby';
-import Icon from './Icon';
+import generateSocialLink from '../utils/generateSocialLink';
 import '../assets/css/speakers.css';
-
-const generateSocialLink = (type, url) => (
-  <Icon
-    className="speakerIcon"
-    iconName={type}
-    link={url}
-  />
-);
+import getSpeakerSlug from '../utils/getSpeakerSlug';
+import formatName from '../utils/formatName';
+import { Chevrons } from '../assets/images';
 
 const SpeakersList = () => (
   <StaticQuery
@@ -20,6 +15,8 @@ const SpeakersList = () => (
             tagLine
             profilePicture
             fullName
+            firstName
+            lastName
             sessions
             links {
               url
@@ -34,19 +31,21 @@ const SpeakersList = () => (
       }
     `}
     render={({ sessionizeData: { speakers, sessions } }) => {
-      const formattedSessions =
-        sessions
+      const sessionTitlesById = sessions
         .map(session => Object.values(session))
         .reduce((acc, cur) => {
-          const title = cur[1].split('').slice(0, 25);
-          if (title.length !== cur[1].length) {
-            title.push('...');
+          const shortTitle = cur[1].split('').slice(0, 25);
+          if (shortTitle.length !== cur[1].length) {
+            shortTitle.push('...');
           }
           return {
             ...acc,
-            [cur[0]]: title.join('')
-          }
-        }, {})
+            [cur[0]]: {
+              shortTitle: shortTitle.join(''),
+              title: cur[1],
+            },
+          };
+        }, {});
 
       return (
         <section id="learnmore" className="about">
@@ -54,31 +53,45 @@ const SpeakersList = () => (
             <section>
               <article>
                 {speakers.map((speaker, index) => (
-                  <div key={speaker.fullName} className="speaker">
+                  <div key={formatName(speaker.fullName)} className="speaker">
                     <header>
-                      <h3 className="speakerName">{speaker.fullName}</h3>
+                      <Link 
+                        className="gatsby-link"
+                        to={`/speakers/${getSpeakerSlug(speaker.fullName)}`}
+                      >
+                        <h3 className="speakerName">{formatName(speaker.fullName)}</h3>
+                      </Link>
                     </header>
-                    <img alt={`${speaker.fullName}`} src={`${speaker.profilePicture}`} />
+                    <Link
+                      className="gatsby-link"
+                      to={`/speakers/${getSpeakerSlug(speaker.fullName)}`}
+                    >
+                      <img
+                        alt={`${formatName(speaker.fullName)}`}
+                        src={`${speaker.profilePicture || Chevrons}`}
+                        className={speaker.profilePicture ? 'profilePic' : 'placeholder'}
+                      />
+                    </Link>
                     <div className="speakerSocialIcons">
-                      {
-                        speaker.links.length > 0 && speaker.links[0].linkType === 'Twitter' ? 
-                          generateSocialLink('twitter', speaker.links[0].url)
-                          : ''
-                      }
-                      {
-                        speaker.links.length > 1 && speaker.links[1].linkType === 'LinkedIn' ? 
-                          generateSocialLink('linkedin-square', speaker.links[1].url)
-                          : ''
-                      }
+                      {speaker.links.length > 0 && speaker.links[0].linkType === 'Twitter'
+                        ? generateSocialLink(speaker.links[0], 'speakerIcon')
+                        : ''}
+                      {speaker.links.length > 1 && speaker.links[1].linkType === 'LinkedIn'
+                        ? generateSocialLink(speaker.links[1], 'speakerIcon')
+                        : ''}
                     </div>
-                    <div className={`session-links${speaker.links.length === 0 ? ' no-social' : ''}` }>
-                      {
-                        speaker.sessions.map(sessionId => (
-                          <Link key={sessionId} to={`/session/${sessionId}`}>
-                            {formattedSessions[sessionId]}
-                          </Link>
-                        ))
-                      }
+                    <div
+                      className={`session-links${speaker.links.length === 0 ? ' no-social' : ''}`}
+                    >
+                      {speaker.sessions.map(sessionId => (
+                        <Link
+                          title={sessionTitlesById[sessionId].title}
+                          key={sessionId}
+                          to={`/session/${sessionId}`}
+                        >
+                          {sessionTitlesById[sessionId].shortTitle}
+                        </Link>
+                      ))}
                     </div>
                   </div>
                 ))}
@@ -86,7 +99,7 @@ const SpeakersList = () => (
             </section>
           </div>
         </section>
-      )
+      );
     }}
   />
 );
