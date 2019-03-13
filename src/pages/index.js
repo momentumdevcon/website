@@ -17,7 +17,10 @@ import {
   ingage,
   eliassen,
   sonatype,
-} from '../assets/images'
+  ge,
+  fifthThird,
+  cbts
+ } from '../assets/images';
 
 import {sponsors,  query as sponsorImageQuery } from '../components/SponsorData'
 
