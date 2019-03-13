@@ -8,16 +8,28 @@ export const sponsors = [
     alt: 'Kroger Sponsor Image',
   },
   {
-    key: 'gaslight',
-    fileName: 'gaslight.png',
-    link: 'https://teamgaslight.com',
-    alt: 'Gaslight Sponsor Image',
-  },
-  {
     key: 'convergys',
     fileName: 'convergys.png',
     link: 'https://www.concentrix.com',
     alt: 'Concentrix Sponsor Image',
+  },
+  {
+    key: 'ge',
+    fileName: 'GE Logo.png',
+    link: 'https://www.ge.com',
+    alt: 'GE Sponsor Image',
+  },
+  {
+    key: 'fifthThird',
+    fileName: '53.png',
+    link: 'https://www.53.com',
+    alt: '5/3 Sponsor Image',
+  },
+  {
+    key: 'gaslight',
+    fileName: 'gaslight.png',
+    link: 'https://teamgaslight.com',
+    alt: 'Gaslight Sponsor Image',
   },
   {
     key: 'cyberark',
@@ -84,6 +96,12 @@ export const sponsors = [
     fileName: 'sonatype.png',
     link: 'https://www.sonatype.com/',
     alt: 'Sonatype Sponsor Image',
+  },
+  {
+    key: 'cbts',
+    fileName: 'cbts.png',
+    link: 'https://www.cbts.com/',
+    alt: 'CBTS Sponsor Image',
   },
 ]
 
