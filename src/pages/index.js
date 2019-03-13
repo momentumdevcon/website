@@ -2,25 +2,6 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import { Layout, Banner } from '../components';
 import metaContent, { mainDescription } from '../assets/data/metaContent.js';
-import { 
-  convergys,
-  cyberark,
-  dynatrace,
-  gaslight,
-  kroger,
-  max,
-  vaco,
-  ascendum,
-  smartdata,
-  fusionalliance,
-  luma,
-  ingage,
-  eliassen,
-  sonatype,
-  ge,
-  fifthThird,
-  cbts
- } from '../assets/images';
 
 import {sponsors,  query as sponsorImageQuery } from '../components/SponsorData'
 
