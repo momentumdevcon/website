@@ -1,10 +1,11 @@
-import React from 'react';
-import Icon from './Icon';
-import socialIcons from '../assets/data/socialIcons.json';
+import React from 'react'
+import Icon from './Icon'
+import socialIcons from '../assets/data/socialIcons.json'
 
 const Footer = () => (
   <footer id="footer">
     <div className="inner">
+      <span class="hashtag">#momentumdevcon</span>
       <ul className="icons">
         {socialIcons.footer.map(({ iconName, link }, i) => (
           <li key={i}>
@@ -17,6 +18,6 @@ const Footer = () => (
       </ul>
     </div>
   </footer>
-);
+)
 
-export default Footer;
+export default Footer
