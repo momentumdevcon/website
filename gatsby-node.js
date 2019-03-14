@@ -11,6 +11,18 @@ exports.createPages = ({ graphql, actions }) => {
 
   const sessions = graphql(`
     {
+      sessionizeData {
+        speakers {
+          alternative_id
+          firstName
+          lastName
+          bio
+          tagLine
+          profilePicture
+          isTopSpeaker
+          fullName
+        }
+      }
       sessionsData {
         sessions {
           alternative_id
