@@ -3,23 +3,24 @@ import Helmet from 'react-helmet';
 import { Layout, Banner } from '../components';
 import metaContent, { mainDescription } from '../assets/data/metaContent.js';
 import { 
+  ascendum,
+  cbts,
   convergys,
   cyberark,
   dynatrace,
-  gaslight,
-  kroger,
-  max,
-  vaco,
-  ascendum,
-  smartdata,
-  fusionalliance,
-  luma,
-  ingage,
   eliassen,
-  sonatype,
-  ge,
   fifthThird,
-  cbts
+  fusionalliance,
+  gaslight,
+  ge,
+  ingage,
+  kroger,
+  luma,
+  max,
+  nexum,
+  smartdata,
+  sonatype,
+  vaco
  } from '../assets/images';
 
 const sponsors = [
@@ -39,7 +40,8 @@ const sponsors = [
   { img: ingage, link: 'http://www.ingagepartners.com/', alt: 'Ingage Partners Sponsor Image' },
   { img: eliassen, link: 'https://www.eliassen.com/', alt: 'Eliassen Sponsor Image' },
   { img: sonatype, link: 'https://www.sonatype.com/', alt: 'Sonatype Sponsor Image' },
-  { img: cbts, link: 'https://www.cbts.com/', alt: 'CBTS Sponsor Image' }
+  { img: cbts, link: 'https://www.cbts.com/', alt: 'CBTS Sponsor Image' },
+  { img: nexum, link: 'https://www.nexuminc.com/', alt: 'Nexum Sponsor Image' }
 ];
 
 const HomeIndex = () => (
