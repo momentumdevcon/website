@@ -74,7 +74,7 @@ const HomeIndex = () => (
           <div className="sponsors">
             {sponsors.map(({ img, link, alt }) => (
               <div key={link} className="sponsorWrapper">
-                <a href={link}  target="_blank" rel="noopener">
+                <a href={link}  target="_blank" rel="noopener noreferrer">
                   <img src={img} style={{ height: '100%', width: '200px' }} alt={alt} />
                 </a>
               </div>
