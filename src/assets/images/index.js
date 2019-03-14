@@ -15,5 +15,6 @@ export { default as eliassen } from './eliassen.png';
 export { default as sonatype } from './sonatype.png';
 export { default as fifthThird } from './53.png';
 export { default as ge } from './GE Logo.png';
+export { default as nexum } from './nexum.png';
 
 export { default as Chevrons } from './Chevrons.png';
