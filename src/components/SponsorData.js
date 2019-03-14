@@ -103,6 +103,12 @@ export const sponsors = [
     link: 'https://www.cbts.com/',
     alt: 'CBTS Sponsor Image',
   },
+  {
+    key: 'nexum',
+    fileName: 'nexum.png',
+    link: 'https://www.nexuminc.com/',
+    alt: 'Nexum Sponsor Image',
+  },
 ]
 
 export const sponsorImage = graphql`
