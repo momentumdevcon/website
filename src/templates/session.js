@@ -7,16 +7,18 @@ import formatName from '../utils/formatName';
 import getSpeakerSlug from '../utils/getSpeakerSlug.js';
 import '../assets/css/session.css';
 
-export default ({ data: { sessionsData }, pageContext: { slug } }) => {
+export default ({ data: { sessionsData, sessionizeData }, pageContext: { slug } }) => {
   const session = sessionsData.sessions.find(session => session.alternative_id === slug);
   const title = session.title;
   const speakerNames = session.speakers.map(speaker => formatName(speaker.name));
   const level = session.categories[0].categoryItems[0].name;
   const tags = session.categories[1].categoryItems.map(item => item.name);
 
+  const speaker1 = sessionizeData.speakers.find(speaker => speaker.alternative_id === session.speakers[0].alternative_id);
+
   const pageTitle = `${title} - Momentum Developer Conference`;
   const pageDescription = `${title} presented by ${speakerNames.join(", ")} at Momentum 2019`
-  const metaContent = createMetaContent(pageTitle, pageDescription)
+  const metaContent = createMetaContent(pageTitle, pageDescription, speaker1.profilePicture)
   const getNameWithLink = (slug, name) => (
     <Link className="gatsby-link" to={`/speakers/${getSpeakerSlug(slug)}`}>
       {name}
@@ -68,15 +70,28 @@ export default ({ data: { sessionsData }, pageContext: { slug } }) => {
 
 export const query = graphql`
   query NewSessionQuery {
+    sessionizeData {
+      speakers {
+        alternative_id
+        firstName
+        lastName
+        bio
+        tagLine
+        profilePicture
+        isTopSpeaker
+        fullName
+      }
+    }
     sessionsData {
       sessions {
         alternative_id
         description
-        speakers{
+        speakers {
+          alternative_id
           name
         }
-        categories{
-          categoryItems{
+        categories {
+          categoryItems {
             name
           }
         }
@@ -84,4 +99,4 @@ export const query = graphql`
       }
     }
   }
-`;
+`
