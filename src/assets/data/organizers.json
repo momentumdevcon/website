@@ -1,0 +1,46 @@
+[
+  {
+    "name":"Tracy Ruberg",
+    "photo":"tracy",
+    "links": [
+      {
+        "linkType": "LinkedIn",
+        "url": "https://www.linkedin.com/in/tracyruberg/"
+      }
+    ]
+  },
+  {
+    "name":"Christy Berning",
+    "photo":"christy",
+    "links": [
+      {
+        "linkType": "LinkedIn",
+        "url": "https://www.linkedin.com/in/christy-berning-595b53a2/"
+      }
+    ]
+  },
+  {
+    "name": "Taryn Ruberg",
+    "photo":"taryn",
+    "links": [
+      {
+        "linkType": "LinkedIn",
+        "url": "https://www.linkedin.com/in/taryn-ruberg-a49517114/"
+      }
+    ]
+  },
+  {
+    "name": "Michael Richardson",
+    "photo":"michael",
+    "links": [
+      {
+        "linkType": "Twitter",
+        "url": "https://twitter.com/anaccidentaldev"
+      },
+      {
+        "linkType": "LinkedIn",
+        "url": "https://www.linkedin.com/in/accidentaldeveloper/"
+      }
+    ]
+  }
+]
