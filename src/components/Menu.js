@@ -1,6 +1,8 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Link } from 'gatsby';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { Link } from 'gatsby'
+
+export const registrationUrl = `https://www.thecircuit.net/the-circuit-events/#!event/2019/3/21/momentum-developer-apos-s-conference`
 
 const Menu = props => (
   <nav id="menu">
@@ -10,6 +12,11 @@ const Menu = props => (
           <Link onClick={props.onToggleMenu} to="/">
             Home
           </Link>
+        </li>
+        <li>
+          <a href={registrationUrl} target="newtab">
+            Register
+          </a>
         </li>
         <li>
           <Link onClick={props.onToggleMenu} to="/schedule">
@@ -37,10 +44,10 @@ const Menu = props => (
       Close
     </a>
   </nav>
-);
+)
 
 Menu.propTypes = {
   onToggleMenu: PropTypes.func,
-};
+}
 
-export default Menu;
+export default Menu
