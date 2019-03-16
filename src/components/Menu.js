@@ -14,7 +14,7 @@ const Menu = props => (
           </Link>
         </li>
         <li>
-          <a href={registrationUrl} target="newtab">
+          <a onClick={props.onToggleMenu} href={registrationUrl} target="newtab">
             Register
           </a>
         </li>
