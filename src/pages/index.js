@@ -14,9 +14,7 @@ const HomeIndex = ({ data }) =>{
   <Layout>
     <Helmet title="Momentum Developer Conference" meta={[...metaContent]} />
     
-    {/* <Img fluid={data.cincy.childImageSharp.fluid}/> */}
     <Banner />
-    {/* <Img fixed={data.gaslight.childImageSharp.fixed} /> */}
     <div id="main">
       <section id="one" className="tiles whatIsMomentumTiles">
         <article>
@@ -68,16 +66,6 @@ const HomeIndex = ({ data }) =>{
 
 export default HomeIndex
 
-// export const sponsorImage = graphql`
-// fragment sponsorImage on File {
-//   childImageSharp {
-//       fixed(width: 200) {
-//         ...GatsbyImageSharpFixed_tracedSVG
-//       }
-//     }
-//   }
-// `;
-
 export const query = graphql`
   query {
     sponsorImages: allFile(filter: { sourceInstanceName: { eq: "sponsors" } }) {
@@ -90,20 +78,3 @@ export const query = graphql`
     }
   }
 `
-
-// export const query = sponsorImageQuery
-// // export const query = graphql`
-// // query {
-// //   gaslight: file(relativePath: {eq: "kroger.png"}) {
-// //     ...sponsorImage
-// //   }
-// //   cincy: file(relativePath: {eq: "bg.jpg"}) {
-// //     childImageSharp {
-// //       fluid(maxWidth: 2560) {
-// //         # Choose either the fragment including a small base64ed image, a traced placeholder SVG, or one without.
-// //         ...GatsbyImageSharpFluid_noBase64
-// //       }
-// //     }
-// //   }
-// // }
-// // `
