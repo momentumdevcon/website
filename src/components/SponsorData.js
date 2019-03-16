@@ -120,16 +120,3 @@ export const sponsorImage = graphql`
     }
   }
 `
-
-export const query = graphql`
-  query {
-    sponsorImages: allFile(filter: { sourceInstanceName: { eq: "images" } }) {
-      edges {
-        node {
-          relativePath
-          ...sponsorImage
-        }
-      }
-    }
-  }
-`
