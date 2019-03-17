@@ -1,5 +1,6 @@
 import React from 'react';
 import '../assets/css/banner.css';
+import { registrationUrl } from './Menu'
 
 const Banner = () => (
   <section id="banner" className="major">
@@ -14,11 +15,11 @@ const Banner = () => (
       <ul className="actions">
         <li>
           <a 
-            href="https://www.thecircuit.net/the-circuit-events/#!event/2019/3/21/momentum-developer-apos-s-conference" 
+            href={ registrationUrl } 
             className="button next scrolly"
             target="newtab"
           >
-            Early registration tickets
+            Register for Momentum 2019
           </a>
         </li>
       </ul>
