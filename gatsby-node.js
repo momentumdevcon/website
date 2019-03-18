@@ -51,17 +51,7 @@ exports.createPages = ({ graphql, actions }) => {
           },
         });
       });
-    });
 
-  const speakers = graphql(`
-    {
-      sessionizeData {
-        speakers {
-          fullName
-        }
-      }
-    }
-  `).then((result) => {
       result.data.sessionizeData.speakers.forEach(({ fullName }) => {
         const slug = fullName.split(' ').join('_');
         createPage({
@@ -76,5 +66,5 @@ exports.createPages = ({ graphql, actions }) => {
       });
     });
   
-  return Promise.all([sessions, speakers]);
+  return Promise.all([sessions]);
 };
