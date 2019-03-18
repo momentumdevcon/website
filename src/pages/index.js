@@ -1,52 +1,19 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import { Layout, Banner } from '../components';
+import { graphql } from 'gatsby'
 import metaContent, { mainDescription } from '../assets/data/metaContent.js';
-import { 
-  ascendum,
-  cbts,
-  convergys,
-  cyberark,
-  dynatrace,
-  eliassen,
-  fifthThird,
-  fusionalliance,
-  gaslight,
-  ge,
-  ingage,
-  kroger,
-  luma,
-  max,
-  nexum,
-  smartdata,
-  sonatype,
-  vaco
- } from '../assets/images';
 
-const sponsors = [
-  { img: kroger, link: 'https://www.kroger.com', alt: 'Kroger Sponsor Image' },
-  { img: convergys, link: 'https://www.concentrix.com', alt: 'Concentrix Sponsor Image' },
-  { img: ge, link: 'https://www.ge.com', alt: 'GE Sponsor Image' },
-  { img: fifthThird, link: 'https://www.53.com', alt: '5/3 Sponsor Image' },
-  { img: gaslight, link: 'https://teamgaslight.com', alt: 'Gaslight Sponsor Image' },
-  { img: cyberark, link: 'https://www.cyberark.com', alt: 'Cyberark Sponsor Image' },
-  { img: dynatrace, link: 'https://www.dynatrace.com', alt: 'Dynatrace Sponsor Image' },
-  { img: max, link: 'https://maxtrain.com', alt: 'Maxtrain Sponsor Image' },
-  { img: vaco, link: 'https://www.vaco.com', alt: 'Vaco Sponsor Image' },
-  { img: ascendum, link: 'https://ascendum.com/', alt: 'Ascendum Sponsor Image' },
-  { img: smartdata, link: 'https://smartdata.net/', alt: 'Smart Data Sponsor Image' },
-  { img: fusionalliance, link: 'https://fusionalliance.com/', alt: 'Fusion Alliance Sponsor Image' },
-  { img: luma, link: 'https://lumafintech.com/', alt: 'Luma Financial Technologies Sponsor Image' },
-  { img: ingage, link: 'http://www.ingagepartners.com/', alt: 'Ingage Partners Sponsor Image' },
-  { img: eliassen, link: 'https://www.eliassen.com/', alt: 'Eliassen Sponsor Image' },
-  { img: sonatype, link: 'https://www.sonatype.com/', alt: 'Sonatype Sponsor Image' },
-  { img: cbts, link: 'https://www.cbts.com/', alt: 'CBTS Sponsor Image' },
-  { img: nexum, link: 'https://www.nexuminc.com/', alt: 'Nexum Sponsor Image' }
-];
+import {sponsors } from '../components/SponsorData'
 
-const HomeIndex = () => (
+import Img from 'gatsby-image'
+
+
+const HomeIndex = ({ data }) =>{
+  return (
   <Layout>
     <Helmet title="Momentum Developer Conference" meta={[...metaContent]} />
+    
     <Banner />
     <div id="main">
       <section id="one" className="tiles whatIsMomentumTiles">
@@ -74,22 +41,40 @@ const HomeIndex = () => (
             <h3>Sponsors</h3>
           </header>
           <div className="sponsors">
-            {sponsors.map(({ img, link, alt }) => (
-              <div key={link} className="sponsorWrapper">
-                <a href={link}  target="_blank" rel="noopener noreferrer">
-                  <img src={img} style={{ height: '100%', width: '200px' }} alt={alt} />
+            {sponsors.map(({ name, fileName, link }) => (
+              <div key={name} className="sponsorWrapper">
+                <a href={link} target="_blank" rel="noopener" style={{ height: '100%', width: '200px' }}>
+                  <Img
+                    fixed={data.sponsorImages.edges.find(n => n.node.relativePath === fileName).node.childImageSharp.image200}
+                    alt={name + " Sponsor Image"}
+                  />
                 </a>
               </div>
             ))}
           </div>
           <p>
             Interested in becoming a sponsor? Email us at{' '}
-            <a href="mailto:sponsors@momentumdevcon.com">sponsors@momentumdevcon.com</a>
+            <a href="mailto:sponsors@momentumdevcon.com">
+              sponsors@momentumdevcon.com
+            </a>
           </p>
         </article>
       </section>
     </div>
   </Layout>
-);
+)}
 
-export default HomeIndex;
+export default HomeIndex
+
+export const query = graphql`
+  query {
+    sponsorImages: allFile(filter: { sourceInstanceName: { eq: "sponsors" } }) {
+      edges {
+        node {
+          relativePath
+          ...sponsorImage
+        }
+      }
+    }
+  }
+`

@@ -1,3 +1,5 @@
+const path = require(`path`)
+
 module.exports = {
   siteMetadata: {
     title: 'Momentum Developer Conference',
@@ -55,6 +57,15 @@ module.exports = {
         // enable ip anonymization
         anonymize: true,
       },
-    }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `sponsors`,
+        path: path.join(__dirname, `src`, `assets`, `images`, `sponsors`),
+      },
+    },
+    `gatsby-transformer-sharp`, 
+    `gatsby-plugin-sharp`
   ],
 };
