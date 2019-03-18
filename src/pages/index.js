@@ -4,7 +4,7 @@ import { Layout, Banner } from '../components';
 import { graphql } from 'gatsby'
 import metaContent, { mainDescription } from '../assets/data/metaContent.js';
 
-import {sponsors,  query as sponsorImageQuery } from '../components/SponsorData'
+import {sponsors } from '../components/SponsorData'
 
 import Img from 'gatsby-image'
 
@@ -41,12 +41,12 @@ const HomeIndex = ({ data }) =>{
             <h3>Sponsors</h3>
           </header>
           <div className="sponsors">
-            {sponsors.map(({ key, fileName, link, alt }) => (
-              <div key={key} className="sponsorWrapper">
-                <a href={link} target="_blank" rel="noopener" style={{ height: '100%', width: '200px' }}
-                    alt={alt}>
+            {sponsors.map(({ name, fileName, link }) => (
+              <div key={name} className="sponsorWrapper">
+                <a href={link} target="_blank" rel="noopener" style={{ height: '100%', width: '200px' }}>
                   <Img
                     fixed={data.sponsorImages.edges.find(n => n.node.relativePath === fileName).node.childImageSharp.image200}
+                    alt={name + " Sponsor Image"}
                   />
                 </a>
               </div>
