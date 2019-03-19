@@ -5,42 +5,42 @@
 
 @media(max-width: 5120px) {
   .schedule {
-    height: 1800px;
+    height: 1920px;
   }
 }
 
 @media(max-width: 1680px) {
   .schedule {
-    height: 2090px;
+    height: 2246px;
   }
 }
 
 @media(max-width: 1280px) {
   .schedule {
-    height: 2370px;
+    height: 2860px;
   }
 }
 
 @media(max-width: 980px) {
   .schedule {
-    height: 2970px;
+    height: 2860px;
   }
 }
 
-@media(max-width: 736px) {
+@media(max-width: 860px) {
   .schedule {
-    height: 5270px;
+    height: 6680px;
   }
 }
 
 @media(max-width: 480px) {
   .schedule {
-    height: 5620px;
+    height: 7519px;
   }
 }
 
 @media(max-width: 360px) {
   .schedule {
-    height: 6270px;
+    height: 8000px;
   }
 }
