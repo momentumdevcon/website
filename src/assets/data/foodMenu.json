@@ -1,0 +1,39 @@
+[
+  {
+    "meal": "Breakfast",
+    "dishes": [
+      "Fresh Fruit Platter",
+      "Baker’s Basket served w/ butter",
+      "Coffee, Tea, Fruit Juice"
+    ]
+  },
+  {
+    "meal": "Lunch",
+    "dishes": [
+      "Pasta Salad",
+      "Chips",
+      "Roast beef, Ham and Turkey",
+      "Tomato, Lettuce, Onion and Condiments",
+      "Assorted Cheeses",
+      "Rolls and Breads",
+      "Iced Tea, Soft Drinks and Water",
+      "Assorted Desserts"
+    ]
+  },
+  {
+    "meal": "Afternoon Break",
+    "dishes": [
+      "Fresh baked cookies and brownies",
+      "Coffee, Tea, Soft Drinks, Water"
+    ]
+  },
+  {
+    "meal": "Reception",
+    "dishes": [
+      "Antipasto w/ green, greek and black olives, peppers, assorted salami, marinated mushrooms, artichokes, tomatoes and sliced cheeses with assorted baguettes",
+      "Fried Ravioli",
+      "Buffalo Chicken Bites",
+      "Meatballs"
+    ]
+  }
+]
