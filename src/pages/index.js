@@ -61,13 +61,13 @@ const HomeIndex = ({ data }) => {
                     href={link}
                     target="_blank"
                     rel="noopener"
-                    style={{ height: '100%', width: '200px' }}
+                    style={{ height: '100%' }}
                   >
                     <Img
                       fixed={
                         data.sponsorImages.edges.find(
                           n => n.node.relativePath === fileName
-                        ).node.childImageSharp.image200
+                        ).node.childImageSharp.image250
                       }
                       alt={name + ' Sponsor Image'}
                     />
@@ -115,7 +115,7 @@ const HomeIndex = ({ data }) => {
                       fixed={
                         data.sponsorImages.edges.find(
                           n => n.node.relativePath === fileName
-                        ).node.childImageSharp.image200
+                        ).node.childImageSharp.image150
                       }
                       alt={name + ' Sponsor Image'}
                     />
