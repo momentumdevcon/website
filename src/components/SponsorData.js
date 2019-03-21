@@ -114,7 +114,13 @@ export const sponsors = [
 export const sponsorImage = graphql`
   fragment sponsorImage on File {
     childImageSharp {
+      image150: fixed(width: 150) {
+        ...GatsbyImageSharpFixed_tracedSVG
+      }
       image200: fixed(width: 200) {
+        ...GatsbyImageSharpFixed_tracedSVG
+      }
+      image250: fixed(width: 250) {
         ...GatsbyImageSharpFixed_tracedSVG
       }
     }
