@@ -2,8 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
 
-export const registrationUrl = `https://www.thecircuit.net/the-circuit-events/#!event/2019/3/21/momentum-developer-apos-s-conference`
-
 const Menu = props => (
   <nav id="menu">
     <div className="inner">
@@ -12,11 +10,6 @@ const Menu = props => (
           <Link onClick={props.onToggleMenu} to="/">
             Home
           </Link>
-        </li>
-        <li>
-          <a onClick={props.onToggleMenu} href={registrationUrl} target="newtab">
-            Register
-          </a>
         </li>
         <li>
           <Link onClick={props.onToggleMenu} to="/schedule">
