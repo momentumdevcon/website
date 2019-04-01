@@ -2,7 +2,7 @@ import logoWPadding from '../images/logo-with-padding.png'
 
 export const mainTitle = 'Momentum Developer Conference'
 export const mainDescription =
-  'Momentum is a Cincinnati developer conference helping developers be better, faster, and stronger. Join us on March 21st at Sharonville Convention Center.';
+  'Momentum is a Cincinnati developer conference helping developers be better, faster, and stronger. Join us next year!';
 
 export const canonicalUrl = "https://momentumdevcon.com";
 const logoAbsoluteUrl = canonicalUrl + logoWPadding;

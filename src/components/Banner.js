@@ -11,18 +11,7 @@ const Banner = () => (
       <div className="content">
         <p>Presented by The Circuit</p>
       </div>
-      <p className="date">March 21, 2019</p>
-      <ul className="actions">
-        <li>
-          <a 
-            href={ registrationUrl } 
-            className="button next scrolly"
-            target="newtab"
-          >
-            Register for Momentum 2019
-          </a>
-        </li>
-      </ul>
+      <p className="date">Thank you everyone for making Momentum 2019 amazing!</p>
     </div>
   </section>
 );
