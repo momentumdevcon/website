@@ -11,7 +11,7 @@ const Banner = () => (
       <div className="content">
         <p>Presented by The Circuit</p>
       </div>
-      <p className="date">See you next year!</p>
+      <p className="date">Thank you everyone for making Momentum 2019 amazing!</p>
     </div>
   </section>
 );
