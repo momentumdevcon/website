@@ -27,6 +27,8 @@ exports.createPages = ({ graphql, actions }) => {
         sessions {
           alternative_id
           description
+          startsAt
+          endsAt
           speakers{
             name
           }
@@ -64,6 +66,7 @@ exports.createPages = ({ graphql, actions }) => {
           },
         });
       });
+      console.log(' ***** IM THE DATA *********', result.data.sessionsData.sessions)
     });
   
   return Promise.all([sessions]);

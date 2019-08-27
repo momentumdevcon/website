@@ -18,7 +18,9 @@ const SchedulePage = () => (
 
     <div id="main" className="alt">
       <div className="inner">
-        <iframe className="schedule" title="Momentum Schedule" src="/schedule-iframe2.html" />
+        <>
+          IM SOME CONTENT
+        </>
       </div>
     </div>
   </Layout>
