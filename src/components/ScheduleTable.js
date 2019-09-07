@@ -1,5 +1,6 @@
 import React from 'react';
 import { StaticQuery, graphql, Link } from 'gatsby';
+import '../assets/css/schedule.css'
 import timeInfo from '../utils/formatTime'
 
 const ScheduleTable = props => (
@@ -9,12 +10,17 @@ const ScheduleTable = props => (
         sessionsData {
             sessions {
                 alternative_id
-                startsAt
+                categories {
+                    categoryItems {
+                        name
+                    }
+                }
                 endsAt
                 room
                 speakers{
                     name
                 }
+                startsAt
                 title
             }
         }
@@ -23,7 +29,7 @@ const ScheduleTable = props => (
     render={({ sessionsData: { sessions } }) => {
         const rooms = sessions.reduce((acc, cur) => acc.includes(cur.room) ? acc : acc.concat(cur.room), [])
         return (
-            <>  
+            <div className='schedule'>  
                 {rooms.map(room => (
                     <>
                         <h2>{room}</h2>
@@ -33,12 +39,13 @@ const ScheduleTable = props => (
                                     <div>{session.title}</div>
                                     <div>{timeInfo(session.startsAt, session.endsAt)}</div>
                                     <div>{session.speakers.map(speaker => speaker.name)}</div>
+                                    <div>{session.categories.map(category => <div>{category.categoryItems.map(item => item.name)}</div>)}</div>
                                 </>
                             ))
                         }
                     </>
                 ))}
-            </>
+            </div>
         )
     }}
   />
