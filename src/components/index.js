@@ -7,3 +7,4 @@ export { default as Icon } from './Icon';
 export { default as Layout } from './layout';
 export { default as Menu } from './Menu';
 export { default as ContentBlock } from './ContentBlock';
+export { default as ScheduleTable } from './ScheduleTable';

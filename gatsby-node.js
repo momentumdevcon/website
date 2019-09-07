@@ -32,6 +32,7 @@ exports.createPages = ({ graphql, actions }) => {
           speakers{
             name
           }
+          room
           categories{
             categoryItems{
               name
@@ -66,7 +67,6 @@ exports.createPages = ({ graphql, actions }) => {
           },
         });
       });
-      console.log(' ***** IM THE DATA *********', result.data.sessionsData.sessions)
     });
   
   return Promise.all([sessions]);

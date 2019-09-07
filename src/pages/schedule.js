@@ -1,6 +1,6 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import { BannerLanding, Layout } from '../components';
+import { BannerLanding, Layout, ScheduleTable } from '../components';
 import { createMetaContent, mainTitle, mainDescription } from '../assets/data/metaContent.js';
 import '../assets/css/schedule.css';
 
@@ -19,7 +19,7 @@ const SchedulePage = () => (
     <div id="main" className="alt">
       <div className="inner">
         <>
-          IM SOME CONTENT
+          <ScheduleTable />
         </>
       </div>
     </div>
