@@ -28,19 +28,22 @@ const ScheduleTable = props => (
     `}
     render={({ sessionsData: { sessions } }) => {
         const rooms = sessions.reduce((acc, cur) => acc.includes(cur.room) ? acc : acc.concat(cur.room), [])
+        const startTimes = sessions.reduce((acc, cur) => acc.includes(cur.startsAt) ? acc : acc.concat(cur.startsAt), [])
+            .map(time => timeInfo(time).split(' ')[0] + ' ' + timeInfo(time).split(' ')[1])
         return (
-            <div className='schedule'>  
+            <div className='schedule-wrapper'> 
+                {startTimes.map(time => <h3 className={time}>{time}</h3>)}
                 {rooms.map(room => (
                     <>
-                        <h2>{room}</h2>
+                        <h3 className={room}>{room}</h3>
                         {sessions.filter(session => session.room === room)
                             .map(session => (
-                                <>
+                                <div className={session.room.split(' ')[0] + '-' + timeInfo(session.startsAt).split(' ')[0]}>
                                     <div>{session.title}</div>
                                     <div>{timeInfo(session.startsAt, session.endsAt)}</div>
                                     <div>{session.speakers.map(speaker => speaker.name)}</div>
                                     <div>{session.categories.map(category => <div>{category.categoryItems.map(item => item.name)}</div>)}</div>
-                                </>
+                                </div>
                             ))
                         }
                     </>
