@@ -27,27 +27,37 @@ const ScheduleTable = props => (
     }
     `}
     render={({ sessionsData: { sessions } }) => {
-        const rooms = sessions.reduce((acc, cur) => acc.includes(cur.room) ? acc : acc.concat(cur.room), [])
-        const startTimes = sessions.reduce((acc, cur) => acc.includes(cur.startsAt) ? acc : acc.concat(cur.startsAt), [])
-            .map(time => timeInfo(time).split(' ')[0] + ' ' + timeInfo(time).split(' ')[1])
+        const rooms = sessions.reduce((acc, cur) => acc.includes(cur.room) ? acc : acc.concat(cur.room), []).sort();
+        const rawStartTimes = sessions.reduce((acc, cur) => acc.includes(cur.startsAt) ? acc : acc.concat(cur.startsAt), [])
         return (
-            <div className='schedule-wrapper'> 
-                {startTimes.map(time => <h3 className={time}>{time}</h3>)}
-                {rooms.map(room => (
-                    <>
-                        <h3 className={room}>{room}</h3>
-                        {sessions.filter(session => session.room === room)
-                            .map(session => (
-                                <div className={session.room.split(' ')[0] + '-' + timeInfo(session.startsAt).split(' ')[0]}>
-                                    <div>{session.title}</div>
-                                    <div>{timeInfo(session.startsAt, session.endsAt)}</div>
-                                    <div>{session.speakers.map(speaker => speaker.name)}</div>
-                                    <div>{session.categories.map(category => <div>{category.categoryItems.map(item => item.name)}</div>)}</div>
+            <div className='table-grid'>
+                <div className="table-grid__row hide-sm">
+                    <div className="table-grid__cell table-grid__cell--header"></div>
+                    {rooms.map(room => <div className="table-grid__cell table-grid__cell--header">{room}</div>)}
+                </div>
+                {
+                    rawStartTimes.map(time => {
+                        const periodSessions = sessions.filter(session => session.startsAt === time)
+                            .sort((firstSession, secondSession) => {
+                                return(firstSession.room > secondSession.room) ? 1 : -1
+                            })
+                            .map(session => {
+                                return (
+                                <div className="table-grid__cell">
+                                    <span className="table-grid__cell-label">{session.room}</span>
+                                    <span className="table-grid__cell-body">{session.title}</span>
                                 </div>
-                            ))
-                        }
-                    </>
-                ))}
+                            )})
+                        return (
+                            <div className="table-grid__row">
+                                <div className="table-grid__cell table-grid__cell--header">
+                                    {timeInfo(time).substring(0, timeInfo(time).indexOf('M') + 1)}
+                                </div>
+                                {periodSessions}
+                            </div>
+                        )
+                    })
+                }
             </div>
         )
     }}

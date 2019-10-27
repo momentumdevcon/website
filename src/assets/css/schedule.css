@@ -1,244 +1,3 @@
-.schedule-wrapper {
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  /* background-color: #404975; */
-}
-
-[class="8:30 AM"] {
-  grid-column: 1;
-  grid-row: 2;
-}
-
-[class="9:35 AM"] {
-  grid-column: 1;
-  grid-row: 3;
-}
-
-[class="10:40 AM"] {
-  grid-column: 1;
-  grid-row: 4;
-}
-
-[class="12:30 PM"] {
-  grid-column: 1;
-  grid-row: 5;
-}
-
-[class="1:35 PM"] {
-  grid-column: 1;
-  grid-row: 6;
-}
-
-[class="2:40 PM"] {
-  grid-column: 1;
-  grid-row: 7;
-}
-
-[class="3:45 PM"] {
-  grid-column: 1;
-  grid-row: 8;
-}
-
-.Ascendum {
-  grid-column: 2;
-  grid-row: 1;
-}
-
-.Dynatrace {
-  grid-column:3;
-  grid-row: 1;
-}
-
-.Vaco {
-  grid-column: 4;
-  grid-row: 1;
-}
-
-.Gaslight {
-  grid-column: 5;
-  grid-row: 1;
-}
-
-.CyberArk {
-  grid-column: 6;
-  grid-row: 1;
-}
-
-[class="Ascendum-8:30"] {
-  grid-column: 2;
-  grid-row: 2;
-}
-
-[class="Ascendum-9:35"] {
-  grid-column: 2;
-  grid-row: 3;
-}
-
-[class="Ascendum-10:40"] {
-  grid-column: 2;
-  grid-row: 4;
-}
-
-[class="Ascendum-12:30"] {
-  grid-column: 2;
-  grid-row: 5;
-}
-
-[class="Ascendum-1:35"] {
-  grid-column: 2;
-  grid-row: 6;
-}
-
-[class="Ascendum-2:40"] {
-  grid-column: 2;
-  grid-row: 7;
-}
-
-[class="Ascendum-3:45"] {
-  grid-column: 2;
-  grid-row: 8;
-}
-
-[class="Dynatrace-8:30"] {
-  grid-column: 3;
-  grid-row: 2;
-}
-
-[class="Dynatrace-9:35"] {
-  grid-column: 3;
-  grid-row: 3;
-}
-
-[class="Dynatrace-10:40"] {
-  grid-column: 3;
-  grid-row: 4;
-}
-
-[class="Dynatrace-12:30"] {
-  grid-column: 3;
-  grid-row: 5;
-}
-
-[class="Dynatrace-1:35"] {
-  grid-column: 3;
-  grid-row: 6;
-}
-
-[class="Dynatrace-2:40"] {
-  grid-column: 3;
-  grid-row: 7;
-}
-
-[class="Dynatrace-3:45"] {
-  grid-column: 3;
-  grid-row: 8;
-}
-
-[class="Vaco-8:30"] {
-  grid-column: 4;
-  grid-row: 2;
-}
-
-[class="Vaco-9:35"] {
-  grid-column: 4;
-  grid-row: 3;
-}
-
-[class="Vaco-10:40"] {
-  grid-column: 4;
-  grid-row: 4;
-}
-
-[class="Vaco-12:30"] {
-  grid-column: 4;
-  grid-row: 5;
-}
-
-[class="Vaco-1:35"] {
-  grid-column: 4;
-  grid-row: 6;
-}
-
-[class="Vaco-2:40"] {
-  grid-column: 4;
-  grid-row: 7;
-}
-
-[class="Vaco-3:45"] {
-  grid-column: 4;
-  grid-row: 8;
-}
-
-[class="Gaslight-8:30"] {
-  grid-column: 5;
-  grid-row: 2;
-}
-
-[class="Gaslight-9:35"] {
-  grid-column: 5;
-  grid-row: 3;
-}
-
-[class="Gaslight-10:40"] {
-  grid-column: 5;
-  grid-row: 4;
-}
-
-[class="Gaslight-12:30"] {
-  grid-column: 5;
-  grid-row: 5;
-}
-
-[class="Gaslight-1:35"] {
-  grid-column: 5;
-  grid-row: 6;
-}
-
-[class="Gaslight-2:40"] {
-  grid-column: 5;
-  grid-row: 7;
-}
-
-[class="Gaslight-3:45"] {
-  grid-column: 5;
-  grid-row: 8;
-}
-
-[class="CyberArk-8:30"] {
-  grid-column: 6;
-  grid-row: 2;
-}
-
-[class="CyberArk-9:35"] {
-  grid-column: 6;
-  grid-row: 3;
-}
-
-[class="CyberArk-10:40"] {
-  grid-column: 6;
-  grid-row: 4;
-}
-
-[class="CyberArk-12:30"] {
-  grid-column: 6;
-  grid-row: 5;
-}
-
-[class="CyberArk-1:35"] {
-  grid-column: 6;
-  grid-row: 6;
-}
-
-[class="CyberArk-2:40"] {
-  grid-column: 6;
-  grid-row: 7;
-}
-
-[class="CyberArk-3:45"] {
-  grid-column: 6;
-  grid-row: 8;
-}
 @media(max-width: 5120px) {
   .schedule {
     height: 1920px;
@@ -278,5 +37,69 @@
 @media(max-width: 360px) {
   .schedule {
     height: 8000px;
+  }
+}
+*/
+
+.table-grid {
+  display: grid;
+}
+
+.table-grid__row {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  border-bottom: solid 2px grey;
+}
+
+.table-grid__cell {
+  display: flex;
+  flex-direction: column;
+  border-right: solid 2px grey;
+}
+
+/* Center room and time content and differenciate them from regular cells */
+.table-grid__cell--header {
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+/* These will be hidden by default and be revealed on smaller screens. See media query below */
+.table-grid__cell-label {
+  display: none;
+  width: 100%;
+  color: white;
+}
+
+.table-grid__cell-body {
+  /* flex-grow will push the room labels to the top of the container on mobile */
+  flex-grow: 1;
+  width: 100%;
+}
+
+/* These styles with be applied when the screen is less than 600px wide */
+/* I picked 600px ramdomly. Choose a breakpoint that makes sense for you */
+
+@media screen and (max-width: 600px) {
+  
+  /* Utility class to hide elements while the screen is small */
+  .hide-sm {
+    display: none;
+  }
+  
+  /* Adds a gap between the table rows */
+  .table-grid {
+    grid-gap: 1em;
+  }
+  
+  /* Stack the cells vertically */
+  .table-grid__row {
+    grid-auto-flow: row;
+  }
+  
+  /* Make the room labels appear */
+  .table-grid__cell-label {
+    display: block;
   }
 }
