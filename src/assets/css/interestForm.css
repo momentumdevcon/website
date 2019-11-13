@@ -1,0 +1,46 @@
+.Interest {
+  margin-top: 8px;
+}
+
+.InterestForm input {
+  background-color: #d9dced !important;
+}
+
+.Interest-Checkboxes {
+  display: flex;
+  justify-content: center;
+}
+
+.Interest-Checkboxes input[type="checkbox"] + label::before {
+  background-color: #d9dced;
+}
+
+.InterestForm button {
+  width: 100%;
+  margin-top: 16px;
+}
+
+.InterestForm form {
+  margin: 0;
+}
+
+.InterestForm label {
+  margin: 8px 0px;
+}
+
+.InterestForm .Required-Field::after {
+  content: '*'
+}
+
+.privacy-terms {
+  margin: 1em 0;
+  color: #FFF;
+  font-size: 80%;
+}
+
+@media(max-width: 942px) {
+  .Interest-Checkboxes {
+    display: flex;
+    flex-direction: column;
+  }
+}

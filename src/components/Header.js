@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
-import logo from '../assets/images/momentum-logo.png';
+import logo from '../assets/images/white-text.svg';
 import '../assets/css/logo.css';
 
 const Header = props => (

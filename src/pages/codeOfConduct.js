@@ -2,7 +2,6 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import { BannerLanding, Layout } from '../components';
 import { createMetaContent, mainTitle, mainDescription } from '../assets/data/metaContent.js';
-import foodMenu from '../assets/data/foodMenu.json';
 import '../assets/css/schedule.css';
 
 const pageTitle = "Code of Conduct - " + mainTitle;
