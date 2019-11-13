@@ -1,0 +1,10 @@
+{
+  "success": {
+    "heading": "You're on the list!",
+    "body": "Thanks for your interest! We'll reach out shortly!"
+  },
+  "error": {
+    "heading": "Sorry, something went wrong!",
+    "body": "Please try again in a few minutes."
+  }
+}

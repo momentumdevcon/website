@@ -7,3 +7,8 @@ export { default as Icon } from './Icon';
 export { default as Layout } from './layout';
 export { default as Menu } from './Menu';
 export { default as ContentBlock } from './ContentBlock';
+export { default as InterestForm } from './InterestForm';
+export { sponsorData } from './SponsorData';
+export { default as WhatIsMomentum } from './WhatIsMomentum';
+export { default as Sponsors } from './Sponsors';
+export { default as Wrapper } from './Wrapper';

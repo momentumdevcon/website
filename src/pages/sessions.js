@@ -7,11 +7,11 @@ import metaContent from '../assets/data/metaContent.js';
 const Sessions = () => (
   <Layout>
     <Helmet
-      title="Sessions - Momentum Dev Con"
+      title="2019 Sessions - Momentum Dev Con"
       meta={[...metaContent]}
     />
 
-    <BannerLanding pageName="Sessions" />
+    <BannerLanding pageName="2019 Sessions" />
 
     <div id="main">
       <SessionsList />
