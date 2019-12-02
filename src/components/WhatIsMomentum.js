@@ -16,7 +16,7 @@ const WhatIsMomentum = () => (
           30+ sessions of outstanding content presented by speakers from
           Cincinnati, the region, and around the globe
         </li>
-        <li>Breakfast, lunch, and happy hour</li>
+        <li>Breakfast and lunch</li>
         <li>Refreshments throughout the day</li>
         <li>
           Connect and chat with some of Cincinnati's best developers
