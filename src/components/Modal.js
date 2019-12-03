@@ -11,7 +11,6 @@ const Modal = ({children, formState, updateFormState}) => {
     <React.Fragment>
       <button 
         id="modal-btn"
-        style={{background: "rgba(36,41,67,.8)"}}
         onClick={() => {
           setStyle('block')
           updateFormState('')
