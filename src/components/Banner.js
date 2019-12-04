@@ -11,7 +11,7 @@ const Banner = () => (
       <div className="content">
         <p>Powered by The Circuit</p>
       </div>
-      <p className="date">October 16, 2020 at the Hyatt Regency Cincinnati!</p>
+      <p className="date" >October 16, 2020 <br/>At the Hyatt Regency in Downtown Cincinnati</p>
       <InterestForm />
     </div>
   </section>
