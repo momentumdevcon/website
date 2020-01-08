@@ -67,6 +67,10 @@ const InterestForm = () => {
                 <label htmlFor="Attending">Attending</label>
               </div>
               <div>
+                <input type="checkbox" id="Speaking" name="Speaking" value="Speaking" onChange={(e) => updateCheckbox(e.target, interest, updateInterest)} />
+                <label htmlFor="Speaking">Speaking</label>
+              </div>
+              <div>
                 <input type="checkbox" id="Sponsoring" name="Sponsoring" value="Sponsoring" onChange={(e) => updateCheckbox(e.target, interest, updateInterest)} />
                 <label htmlFor="Sponsoring">Sponsoring</label>
               </div>
