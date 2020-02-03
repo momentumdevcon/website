@@ -11,8 +11,8 @@ export default ({ data: { sessionsData, sessionizeData }, pageContext: { slug } 
   const session = sessionsData.sessions.find(session => session.alternative_id === slug);
   const title = session.title;
   const speakerNames = session.speakers.map(speaker => formatName(speaker.name));
-  const level = session.categories[0].categoryItems[0].name;
-  const tags = session.categories[1].categoryItems.map(item => item.name);
+  const level = session.categories.find(cat => cat.alternative_id === 4014).categoryItems[0].name;
+  const tags = session.categories.find(cat => cat.alternative_id === 2450).categoryItems.map(item => item.name);
 
   const speaker1 = sessionizeData.speakers.find(speaker => speaker.alternative_id === session.speakers[0].alternative_id);
 
@@ -91,6 +91,7 @@ export const query = graphql`
           name
         }
         categories {
+          alternative_id
           categoryItems {
             name
           }

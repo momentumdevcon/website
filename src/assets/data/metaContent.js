@@ -1,11 +1,11 @@
-import logoWPadding from '../images/logo-with-padding.png'
-
 export const mainTitle = 'Momentum Developer Conference'
 export const mainDescription =
-  'Momentum is a Cincinnati developer conference helping developers be better, faster, and stronger. Join us next year!';
+  'Momentum is a Cincinnati developer conference helping developers be better, faster, and stronger. Join us on Oct. 16, 2020 at the Hyatt Regency Cincinnati!'
 
-export const canonicalUrl = "https://momentumdevcon.com";
-const logoAbsoluteUrl = canonicalUrl + logoWPadding;
+const logoWPadding = '/square-logo.png'
+
+export const canonicalUrl = 'https://momentumdevcon.com'
+const logoAbsoluteUrl = canonicalUrl + logoWPadding
 
 const commonMetaContent = [
   { name: 'description', property: 'og:description', content: mainDescription },
@@ -25,7 +25,7 @@ const homeMetaContent = [
 ]
 
 export function createMetaContent(title, description, imageOrNull) {
-  const image = imageOrNull || logoAbsoluteUrl;
+  const image = imageOrNull || logoAbsoluteUrl
   return [
     { name: 'description', property: 'og:description', content: description },
     { name: 'twitter:card', content: 'summary_large_image' },

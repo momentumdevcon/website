@@ -23,11 +23,11 @@ const Contact = () => (
             <span className="icon alt fa-home" />
             <h3>Address</h3>
             <span>
-              Sharonville Convention Center
+              Hyatt Regency Cincinnati
               <br />
-              11355 Chester Rd
+              151 W 5th St
               <br />
-              Cincinnati, OH 45246
+              Cincinnati, OH 45202
             </span>
           </div>
         </section>

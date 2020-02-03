@@ -1,6 +1,6 @@
 import { graphql } from 'gatsby'
 
-export const sponsors = [
+export const sponsorData = [
   {
     name: 'Kroger',
     fileName: 'kroger.png',

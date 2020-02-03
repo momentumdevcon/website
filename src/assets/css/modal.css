@@ -1,0 +1,66 @@
+.modal {
+  display: none;
+  position: fixed; 
+  padding-top: 30vh;
+  left: 0; 
+  top: 0;
+  width: 100%;
+  height: 100%; 
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  position: relative; 
+  background-color: #303658;
+  padding: 20px; 
+  margin: auto; 
+  width: 40%;  
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+  color: black;
+}
+
+#modal-btn {
+  max-width: 100%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  background: rgba(36,41,67,.8);
+}
+
+.close-btn {
+  float: right; 
+  color: lightgray; 
+  font-size: 24px;  
+  font-weight: bold;
+  margin-top: -24px;
+  margin-right: -10px;
+}
+
+.close-btn:hover {
+  color: darkgray;
+}
+
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+
+@media(max-width: 1370px) {
+  .modal-content {
+    width: 50%;
+  }
+}
+
+@media(max-width: 480px) {
+  .modal-content {
+    width: 80%;
+  }
+}

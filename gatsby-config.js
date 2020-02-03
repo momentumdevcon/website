@@ -17,7 +17,7 @@ module.exports = {
         background_color: '#663399',
         theme_color: '#663399',
         display: 'minimal-ui',
-        icon: 'src/assets/images/Chevrons.png', // This path is relative to the root of the site.
+        icon: 'src/assets/images/favicon.png', // This path is relative to the root of the site.
       },
     },
     'gatsby-plugin-sass',
@@ -61,11 +61,12 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `sponsors`,
-        path: path.join(__dirname, `src`, `assets`, `images`, `sponsors`),
+        path: `${__dirname}/src/assets/markdown`,
+        name: `markdown`,
       },
     },
     `gatsby-transformer-sharp`, 
-    `gatsby-plugin-sharp`
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-remark`,
   ],
 };

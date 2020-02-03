@@ -1,6 +1,6 @@
 import React from 'react';
+import { InterestForm } from '.';
 import '../assets/css/banner.css';
-import { registrationUrl } from './Menu'
 
 const Banner = () => (
   <section id="banner" className="major">
@@ -9,9 +9,10 @@ const Banner = () => (
         <h1>Momentum Developer Conference</h1>
       </header>
       <div className="content">
-        <p>Presented by The Circuit</p>
+        <p>Powered by The Circuit</p>
       </div>
-      <p className="date">Thank you everyone for making Momentum 2019 amazing!</p>
+      <p className="date" >October 16, 2020 <br/>At the Hyatt Regency in Downtown Cincinnati</p>
+      <InterestForm />
     </div>
   </section>
 );

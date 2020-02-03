@@ -4,7 +4,7 @@ import { BannerLanding, Layout, ScheduleTable } from '../components';
 import { createMetaContent, mainTitle, mainDescription } from '../assets/data/metaContent.js';
 import '../assets/css/schedule.css';
 
-const pageTitle = "Schedule - " + mainTitle;
+const pageTitle = "2019 Schedule - " + mainTitle;
 const scheduleMeta = createMetaContent(pageTitle, mainDescription);
 
 const SchedulePage = () => (
@@ -14,7 +14,7 @@ const SchedulePage = () => (
       meta={scheduleMeta}
     />
 
-    <BannerLanding pageName="Schedule" />
+    <BannerLanding pageName="2019 Schedule" />
 
     <div id="main" className="alt">
       <div className="inner">
