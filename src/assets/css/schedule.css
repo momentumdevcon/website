@@ -1,3 +1,7 @@
+a {
+  border-bottom: 0px;
+}
+
 @media(max-width: 5120px) {
   .schedule {
     height: 1920px;
@@ -49,13 +53,21 @@
   display: grid;
   grid-auto-flow: column;
   grid-auto-columns: 1fr;
-  border-bottom: solid 2px grey;
 }
 
+.table-grid__row + .table-grid__row .table-grid__cell {
+  border-top-width: 0;
+}
+ 
 .table-grid__cell {
   display: flex;
   flex-direction: column;
-  border-right: solid 2px grey;
+  border: solid 1px rgb(82, 114, 141);
+  padding: 15px 20px;
+}
+
+.table-grid__cell + .table-grid__cell {
+  border-left-width: 0;
 }
 
 /* Center room and time content and differenciate them from regular cells */
@@ -63,6 +75,7 @@
   align-items: center;
   justify-content: center;
   color: white;
+  font-size: 1.4em;
 }
 
 /* These will be hidden by default and be revealed on smaller screens. See media query below */
@@ -70,12 +83,27 @@
   display: none;
   width: 100%;
   color: white;
+  font-size: 1.3em;
 }
+
 
 .table-grid__cell-body {
   /* flex-grow will push the room labels to the top of the container on mobile */
   flex-grow: 1;
-  width: 100%;
+  font-size: 1.2em;
+  display: inline;
+  line-height: 1.0;
+}
+
+.table-grid__cell-tag {
+  /* flex-grow will push the room labels to the top of the container on mobile */
+  font-size: .75em;
+  display: block;
+  background: #77B6EA;
+  border-radius: 5px;
+  color: white;
+  padding: 5px;
+  margin: 0 5px 5px 0;
 }
 
 /* These styles with be applied when the screen is less than 600px wide */

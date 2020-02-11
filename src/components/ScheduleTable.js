@@ -27,7 +27,6 @@ const ScheduleTable = props => (
     }
     `}
     render={({ sessionsData: { sessions } }) => {
-        console.log(sessions)
         const rooms = sessions.reduce((acc, cur) => acc.includes(cur.room) ? acc : acc.concat(cur.room), []).sort();
         const rawStartTimes = sessions.reduce((acc, cur) => acc.includes(cur.startsAt) ? acc : acc.concat(cur.startsAt), [])
         return (
@@ -51,11 +50,11 @@ const ScheduleTable = props => (
                                     </Link>
                                     {session.speakers.map((speaker, i) => (
                                         <Link id={i} to={`/speakers/${speaker.name.replace(/ /g, "_")}`}>
-                                            <span className="table-grid__cel-body">{speaker.name}</span>
+                                            <span><i>{speaker.name}</i></span>
                                         </Link>
                                     ))}
                                     {session.categories.map((categoriesObject, i) => categoriesObject.categoryItems.map((category, j) => (
-                                        <span key={`${i}-${j}`} className="table-grid__cell-body">{category.name}</span>
+                                        <span key={`${i}-${j}`}><span className="table-grid__cell-tag">{category.name}</span></span>
                                     )))}
                                 </div>
                             )})
