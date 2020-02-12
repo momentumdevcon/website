@@ -4,7 +4,7 @@ import generateSocialLink from '../utils/generateSocialLink';
 import '../assets/css/speakers.css';
 import getSpeakerSlug from '../utils/getSpeakerSlug';
 import formatName from '../utils/formatName';
-import { Chevrons } from '../assets/images';
+import { BlueLogo } from '../assets/images';
 
 const SpeakersList = () => (
   <StaticQuery
@@ -68,7 +68,7 @@ const SpeakersList = () => (
                     >
                       <img
                         alt={`${formatName(speaker.fullName)}`}
-                        src={`${speaker.profilePicture || Chevrons}`}
+                        src={`${speaker.profilePicture || BlueLogo}`}
                         className={speaker.profilePicture ? 'profilePic' : 'placeholder'}
                       />
                     </Link>

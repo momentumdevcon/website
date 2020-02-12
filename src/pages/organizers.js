@@ -4,7 +4,7 @@ import { BannerLanding, Layout } from '../components';
 import metaContent from '../assets/data/metaContent.js';
 import organizers from '../assets/data/organizers.json';
 import organizerPhotos from '../assets/images/organizers';
-import { Chevrons } from '../assets/images';
+import { BlueLogo } from '../assets/images';
 import generateSocialLink from '../utils/generateSocialLink';
 import formatName from '../utils/formatName';
 
@@ -29,7 +29,7 @@ const OrganizersPage = () => (
                   </header>
                     <img
                       alt={`${formatName(organizer.name)}`}
-                      src={organizerPhotos[organizer.photo] || Chevrons}
+                      src={organizerPhotos[organizer.photo] || BlueLogo}
                       className={organizer.photo ? 'profilePic' : 'placeholder'}
                     />
                   <div className="speakerSocialIcons">
