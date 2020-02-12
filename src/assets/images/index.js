@@ -1,1 +1,1 @@
-export { default as Chevrons } from './Chevrons.png';
+export { default as BlueLogo } from './cropped.svg';
