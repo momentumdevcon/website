@@ -65,6 +65,13 @@ module.exports = {
         name: `markdown`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `sponsors`,
+        path: path.join(__dirname, `src`, `assets`, `images`, `sponsors`),
+      },
+    },
     `gatsby-transformer-sharp`, 
     `gatsby-plugin-sharp`,
     `gatsby-transformer-remark`,

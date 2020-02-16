@@ -1,0 +1,76 @@
+.sponsors-page-wrapper {
+  background-image: linear-gradient(
+    to left top, 
+    #175ef5, 
+    #0087fa,
+    #009fdc, 
+    #00afb6, 
+    #6dbaa1);
+}
+
+.sponsors-wrapper {
+  padding-top: 2.5em;
+  display: flex;
+  flex-direction: column;
+}
+
+.sponsor-level > h1 {
+  text-align: center;
+  margin: 0 0 0.5em 0;
+}
+
+.sponsor-level .line {
+  height: 2px;
+  background-color: #fff;
+  width: 75%;
+  margin: 0 auto;
+}
+
+.sponsors {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5em;
+  margin-top: 2em;
+  flex-wrap: wrap;
+}
+
+.sponsors > .sponsor > a,
+.sponsors > .sponsor > .sponsor-circle > a {  
+  border-bottom: none;
+}
+
+.sponsor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.sponsor-circle > a > .gatsby-image-wrapper > img {
+  padding-top: 5px;
+  width: 100%;
+}
+
+.sponsor-circle {
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow:  5px 5px 10px #666666, 
+               -5px -5px 10px #ffffff;
+  height: 225px;
+  width: 225px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 25px;
+  transition: all .2s ease-in-out;
+}
+
+.sponsor-circle:hover {
+  transform: scale(1.1);
+}
+
+.sponsor > h3 {
+  margin-bottom: 0px;
+}

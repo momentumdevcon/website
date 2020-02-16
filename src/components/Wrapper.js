@@ -8,10 +8,12 @@ const Wrapper = ({ children, title }) => {
   const meta = createMetaContent(pageTitle, mainDescription);
 
   return (
-    <Layout>
+    <Layout page={`${title.toLowerCase()}`}>
       <Helmet title={pageTitle} meta={meta} />
       <BannerLanding pageName={title} />
-      { children }
+      <div className={`${title.toLowerCase()}-page-wrapper`}>
+        { children }
+      </div>
     </Layout>
   );
 };
