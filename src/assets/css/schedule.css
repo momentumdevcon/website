@@ -1,5 +1,6 @@
 a {
   border-bottom: 0px;
+  margin-bottom: 5px;
 }
 
 @media(max-width: 5120px) {
@@ -86,23 +87,27 @@ a {
   font-size: 1.3em;
 }
 
-
 .table-grid__cell-body {
   /* flex-grow will push the room labels to the top of the container on mobile */
   flex-grow: 1;
-  font-size: 1.2em;
-  display: inline;
+  font-size: 1.1em;
+  display: block;
   line-height: 1.0;
+}
+
+.table-grid__cell-speaker {
+  line-height: 1.0;
+  align-items: flex-start;
 }
 
 .table-grid__cell-tag {
   /* flex-grow will push the room labels to the top of the container on mobile */
   font-size: .75em;
-  display: block;
+  display: inline-block;
   background: #77B6EA;
   border-radius: 5px;
   color: white;
-  padding: 5px;
+  padding: 3px;
   margin: 0 5px 5px 0;
 }
 

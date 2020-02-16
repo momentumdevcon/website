@@ -50,12 +50,14 @@ const ScheduleTable = props => (
                                     </Link>
                                     {session.speakers.map((speaker, i) => (
                                         <Link id={i} to={`/speakers/${speaker.name.replace(/ /g, "_")}`}>
-                                            <span><i>{speaker.name}</i></span>
+                                            <div className="table-grid__cell-speaker"><i>{speaker.name}</i></div>
                                         </Link>
                                     ))}
-                                    {session.categories.map((categoriesObject, i) => categoriesObject.categoryItems.map((category, j) => (
-                                        <span key={`${i}-${j}`}><span className="table-grid__cell-tag">{category.name}</span></span>
-                                    )))}
+                                    <div className="category-container">
+                                        {session.categories.map((categoriesObject, i) => categoriesObject.categoryItems.map((category, j) => (
+                                            <span key={`${i}-${j}`}><span className="table-grid__cell-tag">{category.name}</span></span>
+                                        )))}
+                                    </div>
                                 </div>
                             )})
                         return (
