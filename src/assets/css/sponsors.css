@@ -1,11 +1,12 @@
 .sponsors-page-wrapper {
-  background-image: linear-gradient(
+  /* background-image: linear-gradient(
     to left top, 
     #175ef5, 
     #0087fa,
     #009fdc, 
     #00afb6, 
-    #6dbaa1);
+    #6dbaa1); */
+  background-color: #393f64;
 }
 
 .sponsors-wrapper {
@@ -57,8 +58,8 @@
   background: #ffffff;
   box-shadow:  5px 5px 10px #666666, 
                -5px -5px 10px #ffffff;
-  height: 225px;
-  width: 225px;
+  height: 150px;
+  width: 150px;
   display: flex;
   flex-direction: column;
   align-items: center;

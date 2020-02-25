@@ -26,7 +26,7 @@ const Sponsors = ({ data }) => {
                               fixed={
                                 data.sponsorImages.edges.find(
                                   n => n.node.relativePath === fileName
-                                ).node.childImageSharp.image175
+                                ).node.childImageSharp.image125
                               }
                               alt={`${company} logo`}
                             />
@@ -60,6 +60,6 @@ export const query = graphql`
       }
     }
   }
-`
+`;
 
 export default Sponsors;
