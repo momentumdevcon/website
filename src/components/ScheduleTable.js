@@ -55,7 +55,7 @@ const ScheduleTable = props => (
                                     ))}
                                     <div className="category-container">
                                         {session.categories.map((categoriesObject, i) => categoriesObject.categoryItems.map((category, j) => (
-                                            <span key={`${i}-${j}`}><span className="table-grid__cell-tag">{category.name}</span></span>
+                                            <span key={`${i}-${j}`}><span className={`table-grid__cell-tag-${i}`}>{category.name}</span></span>
                                         )))}
                                     </div>
                                 </div>
