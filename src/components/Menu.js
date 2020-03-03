@@ -33,7 +33,7 @@ const Menu = ({ menuState }) => (
 )
 
 Menu.propTypes = {
-  menuState: PropTypes.bool
+  menuState: PropTypes.string
 }
 
 export default Menu
