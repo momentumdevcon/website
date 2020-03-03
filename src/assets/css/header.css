@@ -1,0 +1,136 @@
+#header {
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 0 0.4em 0 rgba(0, 0, 0, 0.15);
+  font-weight: 600;
+  height: 3.25em;
+  letter-spacing: 0.12em;
+  line-height: 3.25em;
+  position: fixed;
+  text-transform: uppercase;
+  top: 0;
+  width: 100%;
+  z-index: 10000;
+  background-color: #303658;
+}
+
+#header .logo {
+  border: 0;
+  font-size: 0.8em;
+  padding: 0 1.5em;
+}
+
+#hamburger-menu {
+  width: 32px;
+  margin: 16px 16px;
+  transform: rotate(0deg);
+  transition: .5s ease-in-out;
+  cursor: pointer;
+}
+
+#hamburger-menu span {
+  display: block;
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background: #FFF;
+  border-radius: 4px;
+  left: 0;
+  transform: rotate(0deg);
+  transition: .25s ease-in-out;
+}
+
+#hamburger-menu span:nth-child(1) {
+  top: 0px;
+}
+
+#hamburger-menu span:nth-child(2),#hamburger-menu span:nth-child(3) {
+  top: 6px;
+}
+
+#hamburger-menu span:nth-child(4) {
+  top: 12px;
+}
+
+#hamburger-menu.Open span:nth-child(1) {
+  top: 8px;
+  width: 0%;
+  left: 50%;
+}
+
+#hamburger-menu.Open span:nth-child(2) {
+  transform: rotate(45deg);
+}
+
+#hamburger-menu.Open span:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+#hamburger-menu.Open span:nth-child(4) {
+  top: 8px;
+  width: 0%;
+  left: 50%;
+}
+
+.menu-links {
+  height: 100%;
+  position: fixed;
+  right: -250px;
+  width: 250px;
+  margin-top: 50px;
+  transform: translateX(0px);
+  transition: transform 250ms ease-in-out;
+  list-style: none;
+  background-color: #303658;
+  padding: 0px;
+}
+
+.menu-links a {
+  border-bottom: none;
+  padding-left: 1.4em;
+}
+
+.menu-links.Open {
+  transform: translateX(-250px);
+}
+
+#menu-close-container {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+@media(min-width: 1000px) {
+  #header {
+    justify-content: flex-start;
+  }
+
+  #hamburger-menu {
+    display: none;
+  }
+
+  .menu-links {
+    display: flex;
+    width: 86%;
+    font-size: 0.8rem;
+    margin-top: 0px;
+    position: unset;
+  }
+
+  .menu-links.Open {
+    display: flex;
+    width: 86%;
+    position: unset;
+    transform: none;
+    transition: none;
+  }
+
+  .menu-links a {
+    padding: 0 0.8em;
+  }
+
+  #menu-close-container {
+    display: none;
+    width: 0px;
+  }
+}

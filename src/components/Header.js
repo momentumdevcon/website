@@ -1,24 +1,34 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React, { useState } from 'react';
 import { Link } from 'gatsby';
-import logo from '../assets/images/white-text.svg';
+import Menu from './Menu';
+import logo from '../assets/images/cropped-white.svg';
 import '../assets/css/logo.css';
+import '../assets/css/header.css';
 
-const Header = props => (
-  <header id="header" className="alt">
-    <Link to="/" className="logo">
-      <img src={logo} alt="logo" />
-    </Link>
-    <nav>
-      <a className="menu-link" onClick={props.onToggleMenu} href="javascript:;">
-        Menu
-      </a>
-    </nav>
-  </header>
-);
+const Header = () => {
+  const [menuState, updateMenuState] = useState(' Closed')
+  
+  const toggleMenu = () => {
+    if (menuState === ' Closed') {
+      return updateMenuState(' Open');
+    }
+    return updateMenuState(' Closed')
+  }
 
-Header.propTypes = {
-  onToggleMenu: PropTypes.func,
-};
+  return (
+    <header id="header">
+      <Link to="/" className="logo">
+        <img src={logo} alt="logo" />
+      </Link>
+      <div id="hamburger-menu" className={menuState} onClick={toggleMenu}>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <Menu menuState={menuState} />
+    </header>
+  );
+}
 
 export default Header;
