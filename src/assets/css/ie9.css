@@ -86,9 +86,3 @@
 	#contact > .inner > * {
 		float: left;
 	}
-
-/* Menu */
-
-	#menu .inner {
-		margin: 0 auto;
-	}
