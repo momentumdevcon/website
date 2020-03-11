@@ -1,28 +1,33 @@
 import { graphql } from 'gatsby'
-// Primo, Room, Lunch or Break, Game Room, Booth, Speaker Social, Lanyard
+// Headlining, Room, Lunch or Break, Game Room, Booth, Speaker Social, Lanyard
 
 export const sponsorData = {
-  Primo: [],
+  Headlining: [],
   Room: [
     {
       company: 'Ascendum',
       fileName: 'ascendum.png',
       link: 'https://ascendum.com/',
     },
-    // {
-    //   company: 'GE',
-    //   fileName: 'GE Logo.png',
-    //   link: 'https://www.ge.com',
-    // },
+    {
+      company: 'DMG',
+      fileName: 'dmg.png',
+      link: 'https://divisionsmg.com/',
+    },
+    {
+      company: 'GE',
+      fileName: 'GE Logo.png',
+      link: 'https://www.ge.com',
+    },
   ],
   Lunch: [],
   Break: [],
   Game: [
-    // {
-    //   company: 'Calibrity',
-    //   fileName: 'callibrity.jpg',
-    //   link: 'https://www.callibrity.com/',
-    // },
+    {
+      company: 'Calibrity',
+      fileName: 'callibrity.jpg',
+      link: 'https://www.callibrity.com/',
+    },
   ],
   Booth: [
     {
