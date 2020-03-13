@@ -8,10 +8,11 @@ export default function BasicTemplate({ data }) {
   return (
     <Wrapper title={frontmatter.title}>
       <div
-        className="container"
-        style={{ padding: '20px' }}
+        className="container alt"
+        id="main"
       >
         <div
+          className="inner"
           dangerouslySetInnerHTML={{ __html: html }}
         />
       </div>
