@@ -1,6 +1,5 @@
 a {
   border-bottom: 0px;
-  margin-bottom: 5px;
 }
 
 @media(max-width: 5120px) {
@@ -53,11 +52,18 @@ a {
 .table-grid__row {
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: 1fr;
+  /* take 100% and divide it by the number of rooms */
+  grid-auto-columns: minmax(16.67%, 1fr);
 }
 
 .table-grid__row + .table-grid__row .table-grid__cell {
   border-top-width: 0;
+}
+
+@media(max-width: 600px) {
+  .table-grid__row:first-child + .table-grid__row .table-grid__cell--header {
+    border-top-width: 1px;
+  } 
 }
  
 .table-grid__cell {
@@ -69,6 +75,12 @@ a {
 
 .table-grid__cell + .table-grid__cell {
   border-left-width: 0;
+}
+
+@media(max-width: 600px) {
+  .table-grid__cell + .table-grid__cell {
+    border-left-width: 1px;
+  }
 }
 
 /* Center room and time content and differenciate them from regular cells */
@@ -93,11 +105,15 @@ a {
   font-size: 1.1em;
   display: block;
   line-height: 1.0;
+  margin-bottom: 8px;
+  border-bottom: 0px;
 }
 
 .table-grid__cell-speaker {
   line-height: 1.0;
   align-items: flex-start;
+  margin-bottom: 8px;
+  border-bottom: 0px;
 }
 
 .table-grid__cell-tag {
