@@ -1,6 +1,5 @@
-.schedule {
-  width: 100%;
-  background-color: #404975;
+a {
+  border-bottom: 0px;
 }
 
 @media(max-width: 5120px) {
@@ -42,5 +41,135 @@
 @media(max-width: 360px) {
   .schedule {
     height: 8000px;
+  }
+}
+*/
+
+.table-grid {
+  display: grid;
+}
+
+.table-grid__row {
+  display: grid;
+  grid-auto-flow: column;
+  /* take 100% and divide it by the number of rooms */
+  grid-auto-columns: minmax(16.67%, 1fr);
+}
+
+.table-grid__row + .table-grid__row .table-grid__cell {
+  border-top-width: 0;
+}
+
+@media(max-width: 600px) {
+  .table-grid__row:first-child + .table-grid__row .table-grid__cell--header {
+    border-top-width: 1px;
+  } 
+}
+ 
+.table-grid__cell {
+  display: flex;
+  flex-direction: column;
+  border: solid 1px rgb(82, 114, 141);
+  padding: 15px 20px;
+}
+
+.table-grid__cell + .table-grid__cell {
+  border-left-width: 0;
+}
+
+@media(max-width: 600px) {
+  .table-grid__cell + .table-grid__cell {
+    border-left-width: 1px;
+  }
+}
+
+/* Center room and time content and differenciate them from regular cells */
+.table-grid__cell--header {
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.4em;
+}
+
+/* These will be hidden by default and be revealed on smaller screens. See media query below */
+.table-grid__cell-label {
+  display: none;
+  width: 100%;
+  color: white;
+  font-size: 1.3em;
+}
+
+.table-grid__cell-body {
+  /* flex-grow will push the room labels to the top of the container on mobile */
+  flex-grow: 1;
+  font-size: 1.1em;
+  display: block;
+  line-height: 1.0;
+  margin-bottom: 8px;
+  border-bottom: 0px;
+}
+
+.table-grid__cell-speaker {
+  line-height: 1.0;
+  align-items: flex-start;
+  margin-bottom: 8px;
+  border-bottom: 0px;
+}
+
+.table-grid__cell-tag {
+  /* flex-grow will push the room labels to the top of the container on mobile */
+  font-size: .75em;
+  display: inline-block;
+  border-radius: 5px;
+  color: white;
+  padding: 3px;
+  margin: 0 5px 5px 0;
+}
+
+.table-grid__cell-tag-0 {
+  /* flex-grow will push the room labels to the top of the container on mobile */
+  font-size: .75em;
+  display: inline-block;
+  border-radius: 5px;
+  color: white;
+  padding: 3px;
+  margin: 0 5px 5px 0;
+  background: hsl(271, 79%, 50%);
+}
+
+.table-grid__cell-tag-1 {
+  /* flex-grow will push the room labels to the top of the container on mobile */
+  font-size: .75em;
+  display: inline-block;
+  border-radius: 5px;
+  color: white;
+  padding: 3px;
+  margin: 0 5px 5px 0;
+  background: #f804d0;
+}
+
+/* These styles with be applied when the screen is less than 600px wide */
+/* I picked 600px ramdomly. Choose a breakpoint that makes sense for you */
+
+@media screen and (max-width: 600px) {
+  
+  /* Utility class to hide elements while the screen is small */
+  .hide-sm {
+    display: none;
+  }
+  
+  /* Adds a gap between the table rows */
+  .table-grid {
+    grid-gap: 1em;
+  }
+  
+  /* Stack the cells vertically */
+  .table-grid__row {
+    grid-auto-flow: row;
+  }
+  
+  /* Make the room labels appear */
+  .table-grid__cell-label {
+    display: block;
   }
 }
