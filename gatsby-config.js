@@ -3,8 +3,14 @@ const path = require(`path`)
 module.exports = {
   siteMetadata: {
     title: 'Momentum Developer Conference',
-    authors: ['Michael Richardson', 'Ryan Lynn', 'Brandon Culp', 'Jason Miazga'],
-    description: 'Momentum is a Cincinnati developer conference dedicated to providing developers with great content for learning and success',
+    authors: [
+      'Michael Richardson',
+      'Ryan Lynn',
+      'Brandon Culp',
+      'Jason Miazga',
+    ],
+    description:
+      'Momentum is a Cincinnati developer conference dedicated to providing developers with great content for learning and success',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -43,8 +49,8 @@ module.exports = {
             },
             typePrefix: 'sessions__',
             name: 'data',
-          }
-        ]
+          },
+        ],
       },
     },
     {
@@ -68,12 +74,19 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        path: `${__dirname}/static/blogs`,
+        name: `blog`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: `sponsors`,
         path: path.join(__dirname, `src`, `assets`, `images`, `sponsors`),
       },
     },
-    `gatsby-transformer-sharp`, 
+    `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-remark`,
   ],
-};
+}
