@@ -15,7 +15,7 @@ export default function BasicTemplate({ data }) {
         <div className="inner">
           <div className="blog-author">
             By {frontmatter.author} &mdash;{' '}
-            {publishedDate.toLocaleDateString('en-US')}
+            {publishedDate.toLocaleDateString('en-US', { timeZone: 'UTC' })}
           </div>
           <div dangerouslySetInnerHTML={{ __html: html }} />
         </div>
