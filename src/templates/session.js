@@ -7,7 +7,7 @@ import formatName from '../utils/formatName';
 import getSpeakerSlug from '../utils/getSpeakerSlug.js';
 import '../assets/css/session.css';
 
-export default ({ data: { sessionsData, sessionizeData }, pageContext: { slug } }) => {
+const SessionTemplate = ({ data: { sessionsData, sessionizeData }, pageContext: { slug } }) => {
   const session = sessionsData.sessions.find(session => session.alternative_id === slug);
   const title = session.title;
   const speakerNames = session.speakers.map(speaker => formatName(speaker.name));
@@ -17,7 +17,7 @@ export default ({ data: { sessionsData, sessionizeData }, pageContext: { slug } 
   const speaker1 = sessionizeData.speakers.find(speaker => speaker.alternative_id === session.speakers[0].alternative_id);
 
   const pageTitle = `${title} - Momentum Developer Conference`;
-  const pageDescription = `${title} presented by ${speakerNames.join(", ")} at Momentum 2019`
+  const pageDescription = `${title} presented by ${speakerNames.join(', ')} at Momentum 2019`
   const metaContent = createMetaContent(pageTitle, pageDescription, speaker1.profilePicture)
   const getNameWithLink = (slug, name) => (
     <Link className="gatsby-link" to={`/speakers/${getSpeakerSlug(slug)}`}>
@@ -39,7 +39,7 @@ export default ({ data: { sessionsData, sessionizeData }, pageContext: { slug } 
             </header>
             <div className="presenter">
               <span className="info-prefix">Presented by:</span>
-                { getNameWithLink(session.speakers[0].name, speakerNames[0]) }
+              { getNameWithLink(session.speakers[0].name, speakerNames[0]) }
               { speakerNames.length > 1 ?
                 <span> and { getNameWithLink(session.speakers[1].name, speakerNames[1]) }</span> : ''
               }
@@ -51,14 +51,14 @@ export default ({ data: { sessionsData, sessionizeData }, pageContext: { slug } 
                 tags.length > 0 ?
                   <span>
                     <span className="info-prefix">Tags:</span>
-                      {
-                        tags.map((tag, index) => (
-                          <span key={tag}>{`${index !== tags.length - 1 ? `${tag}, ` : tag}`}</span>
-                        ))
-                      }
+                    {
+                      tags.map((tag, index) => (
+                        <span key={tag}>{`${index !== tags.length - 1 ? `${tag}, ` : tag}`}</span>
+                      ))
+                    }
                   </span>
-                :
-                ''
+                  :
+                  ''
               }
             </div>
           </div>
@@ -67,6 +67,8 @@ export default ({ data: { sessionsData, sessionizeData }, pageContext: { slug } 
     </Layout>
   );
 };
+
+export default SessionTemplate;
 
 export const query = graphql`
   query NewSessionQuery {

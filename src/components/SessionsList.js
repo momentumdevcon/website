@@ -43,7 +43,7 @@ const SessionsList = () => (
                           { 
                             session.speakers.length > 1 ?
                               `${formatName(session.speakers[0].name)} and ${formatName(session.speakers[1].name)}`
-                            :
+                              :
                               formatName(session.speakers[0].name)
                           }
                         </p>

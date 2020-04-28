@@ -52,7 +52,7 @@ const SpeakersList = () => (
           <div className="speakerContainer">
             <section>
               <article>
-                {speakers.map((speaker, index) => (
+                {speakers.map((speaker) => (
                   <div key={formatName(speaker.fullName)} className="speaker">
                     <header>
                       <Link 

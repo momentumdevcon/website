@@ -27,11 +27,11 @@ const OrganizersPage = () => (
                   <header>
                     <h3 className="speakerName">{formatName(organizer.name)}</h3>
                   </header>
-                    <img
-                      alt={`${formatName(organizer.name)}`}
-                      src={organizerPhotos[organizer.photo] || BlueLogo}
-                      className={organizer.photo ? 'profilePic' : 'placeholder'}
-                    />
+                  <img
+                    alt={`${formatName(organizer.name)}`}
+                    src={organizerPhotos[organizer.photo] || BlueLogo}
+                    className={organizer.photo ? 'profilePic' : 'placeholder'}
+                  />
                   <div className="speakerSocialIcons">
                     { organizer.links.map(link => generateSocialLink(link, 'speakerIcon')) }
                   </div>

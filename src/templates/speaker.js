@@ -9,7 +9,7 @@ import formatName from '../utils/formatName';
 import { BlueLogo } from '../assets/images';
 import '../assets/css/speaker.css';
 
-export default ({ data: { sessionizeData }, pageContext: { slug } }) => {
+const SpeakerTemplate = ({ data: { sessionizeData }, pageContext: { slug } }) => {
   const speaker = sessionizeData.speakers.find((speaker) => {
     const speakerSlug = getSpeakerSlug(speaker.fullName);
     return speakerSlug === slug;
@@ -19,12 +19,12 @@ export default ({ data: { sessionizeData }, pageContext: { slug } }) => {
   const sessionText = `Session${speakerSessions.length > 1 ? 's' : ''}:`
 
   const pageTitle = `${speaker.fullName} - Momentum 2019 Speaker`;
-  const sessionList = speakerSessions.map(session => `"${session.title}"`).join(", ");
+  const sessionList = speakerSessions.map(session => `"${session.title}"`).join(', ');
   return (
     <Layout>
       <Helmet
-       title={pageTitle}
-       meta={createMetaContent(pageTitle, `${speaker.firstName}'s ${sessionText} ${sessionList}`, speaker.profilePicture)}
+        title={pageTitle}
+        meta={createMetaContent(pageTitle, `${speaker.firstName}'s ${sessionText} ${sessionList}`, speaker.profilePicture)}
       />
       <div id="main" className="alt">
         <div className="backArrow">
@@ -64,6 +64,8 @@ export default ({ data: { sessionizeData }, pageContext: { slug } }) => {
     </Layout>
   );
 };
+
+export default SpeakerTemplate;
 
 export const query = graphql`
   query SpeakertQuery {
