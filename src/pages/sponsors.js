@@ -12,16 +12,16 @@ const Sponsors = ({ data }) => {
         {
           Object.keys(sponsorData).map((sponsorLevel) => {
             return (
-              <div className='sponsor-level'>
+              <div className='sponsor-level' key={sponsorLevel}>
                 <h1>{sponsorLevel}</h1>
                 <div className='line' />
                 <div className='sponsors'>
                   {sponsorData[sponsorLevel].map(({ company, fileName, link }) => (
-                    <div className='sponsor'>
+                    <div className='sponsor' key={company}>
                       {fileName &&
                       <>
                         <div className='sponsor-circle'>
-                          <a href={link} target='_blank'>
+                          <a href={link} target='_blank' rel="noopener noreferrer">
                             <Img
                               fixed={
                                 data.sponsorImages.edges.find(
@@ -34,7 +34,7 @@ const Sponsors = ({ data }) => {
                         </div>
                       </>
                       }
-                      <a href={link} target='_blank'>
+                      <a href={link} target='_blank' rel="noopener noreferrer">
                         <h3>{company}</h3>
                       </a>
                     </div>

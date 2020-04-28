@@ -5,7 +5,7 @@ import { createMetaContent, mainTitle, mainDescription } from '../assets/data/me
 import foodMenu from '../assets/data/foodMenu.json';
 import '../assets/css/schedule.css';
 
-const pageTitle = "Food - " + mainTitle;
+const pageTitle = 'Food - ' + mainTitle;
 const scheduleMeta = createMetaContent(pageTitle, mainDescription);
 
 const FoodMenu = () => (

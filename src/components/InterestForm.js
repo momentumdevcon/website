@@ -6,11 +6,11 @@ import SubmitMessage from '../components/SubmitMessage';
 import submitMessages from '../assets/data/submitMessages.json';
 
 const handleSubmit = (e, name, email, interest, updateFormState) => {
-  fetch("/", {
-    method: "POST",
-    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+  fetch('/', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
     body: encode({
-      "form-name": "Register",
+      'form-name': 'Register',
       name,
       email,
       ...interest
