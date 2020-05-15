@@ -1,5 +1,6 @@
 export { default as Banner } from './Banner';
 export { default as BannerLanding } from './BannerLanding';
+export { default as CallForPresenters } from './CallForPresenters';
 export { default as Contact } from './Contact';
 export { default as Footer } from './Footer';
 export { default as Header } from './Header';
