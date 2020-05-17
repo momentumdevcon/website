@@ -2,7 +2,7 @@ import React from 'react';
 
 const CallForPresenters = () => (
   <section id="one" className="tiles whatIsMomentumTiles">
-    <article style={{ minHeight: '12em' }}>
+    <article>
       <header className="major">
         <h3>Call for proposals now open!</h3>
       </header>

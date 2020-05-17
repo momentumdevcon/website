@@ -32,9 +32,9 @@
     background-repeat: no-repeat;
     background-size: cover;
     cursor: default;
-    height: 40vh;
-    max-height: 40em;
-    min-height: 23em;
+    // height: 40vh;
+    // max-height: 40em;
+    // min-height: 23em;
     overflow: hidden;
     position: relative;
     width: 100%; // was 40% in template
@@ -175,63 +175,63 @@
     background-color: _palette(accent1);
   }
 
-  &.whatIsMomentumTiles article {
-    min-height: 32em;
-  }
+//   &.whatIsMomentumTiles article {
+//     min-height: 32em;
+//   }
 
-  @include breakpoint(large) {
-    &.whatIsMomentumTiles article {
-      min-height: 32em;
-    }
+//   @include breakpoint(large) {
+//     &.whatIsMomentumTiles article {
+//       min-height: 32em;
+//     }
 
-    article {
-      @include padding(4em, 3em);
-      height: 30vh;
-      max-height: 32em;
-      min-height: 20em;
-    }
-  }
+//     article {
+//       @include padding(4em, 3em);
+//       height: 30vh;
+//       max-height: 32em;
+//       min-height: 20em;
+//     }
+//   }
 
-  @include breakpoint(medium) {
-    &.whatIsMomentumTiles article {
-      min-height: 34em;
-    }
-  }
+//   @include breakpoint(medium) {
+//     &.whatIsMomentumTiles article {
+//       min-height: 34em;
+//     }
+//   }
 
-  @include breakpoint(small) {
-    &.whatIsMomentumTiles article {
-      min-height: 34em;
-    }
+//   @include breakpoint(small) {
+//     &.whatIsMomentumTiles article {
+//       min-height: 34em;
+//     }
 
-    article {
-      @include padding(3em, 1.5em);
-      height: 16em;
-      max-height: none;
-      min-height: 0;
+//     article {
+//       @include padding(3em, 1.5em);
+//       height: 16em;
+//       max-height: none;
+//       min-height: 0;
 
-      h3 {
-        font-size: 1.5em;
-      }
+//       h3 {
+//         font-size: 1.5em;
+//       }
 
-  }
+//   }
 
-  @include breakpoint(xsmall) {
-    &.whatIsMomentumTiles article {
-      min-height: 39em;
-    }
+//   @include breakpoint(xsmall) {
+//     &.whatIsMomentumTiles article {
+//       min-height: 39em;
+//     }
 
-    display: block;
+//     display: block;
 
-    article {
-      height: 20em;
-      width: 100% !important;
-    }
-  }
-}
+//     article {
+//       height: 20em;
+//       width: 100% !important;
+//     }
+//   }
+// }
 
-  @include breakpoint(xxsmall) {
-    &.whatIsMomentumTiles article {
-      min-height: 40em;
-    }
-  }
+//   @include breakpoint(xxsmall) {
+//     &.whatIsMomentumTiles article {
+//       min-height: 40em;
+//     }
+//   }
 }

@@ -2,7 +2,7 @@ import React from 'react';
 
 const CovidMessage = () => (
   <section id="one" className="tiles whatIsMomentumTiles">
-    <article style={{ minHeight: '14em' }}>
+    <article>
       <header className="major">
         <h3>COVID-19 Update</h3>
       </header>

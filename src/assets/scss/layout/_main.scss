@@ -7,6 +7,9 @@
 /* Main */
 
 #main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   background-color: _palette(bg-alt);
 
   > * {
@@ -75,7 +78,23 @@
 
   .whatIsMomentumTiles {
     background-color: _palette(bg);
+    &.latestBlogPost {
+      & .blogTitle {
+        border-bottom: 1px dotted white;
+      }
+      & .blogSummary {
+        margin-top: 10px;
+      }
+      & .iconAndText {
+        display: flex;
+        padding-right: 10px;
+        & .icon {
+          padding-right: 10px;
+        }
+      }
+    }
   }
+  
 
   .sponsors {
     display: flex;
