@@ -2,9 +2,16 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
 import metaContent from '../assets/data/metaContent.js'
-import { Banner, CallForPresenters, CovidMessage, Layout, WhatIsMomentum } from '../components'
+import { 
+  Banner,
+  CallForPresenters,
+  CovidMessage,
+  Layout,
+  LatestBlogPost,
+  WhatIsMomentum 
+} from '../components'
 
-const HomeIndex = () => (
+const HomeIndex = ({ data }) => (
   <Layout>
     <Helmet title="Momentum Developer Conference" meta={[...metaContent]} />
     <Banner />
@@ -12,6 +19,7 @@ const HomeIndex = () => (
       <CovidMessage />
       <CallForPresenters />
       <WhatIsMomentum />
+      <LatestBlogPost posts={data.allMarkdownRemark.edges} />
     </div>
   </Layout>
 )
@@ -20,11 +28,18 @@ export default HomeIndex
 
 export const query = graphql`
   query {
-    sponsorImages: allFile(filter: { sourceInstanceName: { eq: "sponsors" } }) {
+    allMarkdownRemark(filter: {frontmatter: {template: {eq: "blog"}}}) {
       edges {
         node {
-          relativePath
-          ...sponsorImage
+          frontmatter {
+            template
+            slug
+            author
+            publishedDate
+            title
+            published
+            summary
+          }
         }
       }
     }

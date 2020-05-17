@@ -5,7 +5,9 @@ const WhatIsMomentum = () => (
   <section id="one" className="tiles whatIsMomentumTiles">
     <article>
       <header className="major">
-        <h3>What is Momentum?</h3>
+        <h3>
+          What is Momentum?
+        </h3>
       </header>
       <p>{mainDescription}</p>
       <header className="major">
