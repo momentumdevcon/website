@@ -22,13 +22,16 @@ const Contact = () => (
           <div className="contact-method">
             <span className="icon alt fa-home" />
             <h3>Address</h3>
-            <span>
+            <a 
+              target='_blank' rel="noopener noreferrer"
+              href="https://maps.google.com?q=Hyatt+Regency+Cincinnati%2C+West+5th+Street%2C+Cincinnati%2C+OH"
+            >
               Hyatt Regency Cincinnati
               <br />
               151 W 5th St
               <br />
               Cincinnati, OH 45202
-            </span>
+            </a>
           </div>
         </section>
       </section>
