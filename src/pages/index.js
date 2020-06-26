@@ -4,7 +4,6 @@ import { graphql } from 'gatsby'
 import metaContent from '../assets/data/metaContent.js'
 import { 
   Banner,
-  CallForPresenters,
   CovidMessage,
   Layout,
   LatestBlogPost,
@@ -17,7 +16,6 @@ const HomeIndex = ({ data }) => (
     <Banner />
     <div id="main">
       <CovidMessage />
-      <CallForPresenters />
       <WhatIsMomentum />
       <LatestBlogPost posts={data.allMarkdownRemark.edges} />
     </div>
