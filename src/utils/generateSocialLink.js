@@ -1,12 +1,14 @@
 import React from 'react';
 import Icon from '../components/Icon';
+import { faRss, faBuilding } from '@fortawesome/free-solid-svg-icons';
+import { faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons';
 
 const generateSocialLink = (link, className) => {
   const types = {
-    Twitter: 'twitter',
-    LinkedIn: 'linkedin-square',
-    Blog: 'rss',
-    Company_Website: 'building-o'
+    Twitter: faTwitter,
+    LinkedIn: faLinkedin,
+    Blog: faRss,
+    Company_Website: faBuilding 
   }
 
   const iconType = types[link.linkType] || '';
@@ -14,8 +16,10 @@ const generateSocialLink = (link, className) => {
     <Icon
       key={iconType}
       className={className}
-      iconName={iconType}
+      icon={iconType}
+      label={link.linkType === 'Company_Website' ? 'Website' : link.linkType}
       link={link.url}
+      size="md"
     />
     :
     '';

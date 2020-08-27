@@ -16,19 +16,6 @@
   }
 
   &.alt {
-    &:before {
-      background-color: _palette(fg-bold);
-      border-radius: 100%;
-      color: _palette(bg);
-      display: inline-block;
-      height: 2em;
-      line-height: 2em;
-      text-align: center;
-      width: 2em;
-    }
-  }
-
-  &.alt {
     &.speakerIcon {
       &:before {
         border: 1px solid #2a2f4a;

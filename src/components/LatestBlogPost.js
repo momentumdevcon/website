@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import moment from 'moment';
-import Icon from './Icon'
+import Icon from './Icon';
+import { faCalendarAlt ,faComment, faUser } from '@fortawesome/free-solid-svg-icons';
 
 const formatDate = (date) => moment(date.replace(/-/g, '/'), 'YYYY/MM/DD', true).valueOf();
 const sortDates = (a, b) =>
@@ -23,7 +24,7 @@ export const LatestPost = ({ posts }) => {
         <header className="major">
           <h3>
             <span style={{ paddingRight: '12px' }}>
-              <Icon iconName='comment' className="fa-md" />
+              <Icon icon={faComment} size="md" />
             </span>
                 Latest Blog Post
           </h3>
@@ -43,11 +44,11 @@ export const LatestPost = ({ posts }) => {
         </p>
         <div className='iconAndText' style={{ display: 'flex' }}>
           <span className='icon'>
-            <Icon iconName='user' />
+            <Icon icon={faUser} size="2x" />
           </span>
           <p>{`${frontmatter.author}`}</p>
           <span className='icon' style={{ marginLeft: '20px' }}>
-            <Icon iconName='calendar' />
+            <Icon icon={faCalendarAlt} size="2x" />
           </span>
           <p>{`${frontmatter.publishedDate}`}</p>
         </div>

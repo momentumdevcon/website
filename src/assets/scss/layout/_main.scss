@@ -67,8 +67,19 @@
             display: flex;
             justify-content: center;
 
-            & .icon.alt.fa-linkedin-square {
+            & .icon.alt.speakerIcon:last-child {
               margin-left: 5px;
+            }
+
+            & .icon.alt.speakerIcon {
+              background-color: #fff;
+              border-radius: 100%;
+              color: #242943;
+              display: inline-block;
+              height: 2em;
+              line-height: 2em;
+              text-align: center;
+              width: 2em;
             }
           }
         }

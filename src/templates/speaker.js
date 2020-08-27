@@ -1,6 +1,7 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import { graphql, Link } from 'gatsby';
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import { Layout, Icon } from '../components/';
 import generateSocialLink from '../utils/generateSocialLink';
 import getSpeakerSlug from '../utils/getSpeakerSlug';
@@ -30,7 +31,7 @@ const SpeakerTemplate = ({ data: { sessionizeData }, pageContext: { slug } }) =>
         <div className="backArrow">
           <Link to="/speakers">
             <Icon
-              iconName="arrow-left"
+              icon={faArrowLeft}
             />
             Back to Speakers
           </Link>
