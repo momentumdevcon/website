@@ -1,7 +1,7 @@
 import React from 'react'
 import Icon from './Icon'
 import Contact from '../components/Contact';
-import socialIcons from '../assets/data/socialIcons.json'
+import { socialIcons } from '../assets/data/socialIcons'
 
 const Footer = () => (
   <footer id="footer">
@@ -9,9 +9,9 @@ const Footer = () => (
       <Contact />
       <span className="hashtag">#MomentumDevCon</span>
       <ul className="icons">
-        {socialIcons.footer.map(({ iconName, link }) => (
-          <li key={iconName}>
-            <Icon iconName={iconName} link={link} />
+        {socialIcons.footer.map(({ icon, label, link }) => (
+          <li key={label}>
+            <Icon icon={icon} label={label} link={link} size="lg" />
           </li>
         ))}
       </ul>
