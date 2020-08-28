@@ -14,12 +14,12 @@ const generateSocialLink = (link, className) => {
   const iconType = types[link.linkType] || '';
   const socialIcon = iconType ?
     <Icon
-      key={iconType}
+      key={link.linkType}
       className={className}
       icon={iconType}
       label={link.linkType === 'Company_Website' ? 'Website' : link.linkType}
       link={link.url}
-      size="md"
+      size="sm"
     />
     :
     '';
