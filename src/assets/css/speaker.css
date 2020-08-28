@@ -10,19 +10,6 @@
   width: calc(100% - 6em);
 }
 
-.backArrow {
-  margin-top: 25px;
-  margin-left: 20px;
-}
-
-.backArrow a {
-  border-bottom: none;
-}
-
-.backArrow .fa-arrow-left {
-  margin-right: 10px;
-}
-
 .speakerImage {
   height: 400px;
   width: 400px;
@@ -37,10 +24,6 @@
 .tagline {
   text-align: center;
   margin: 10px;
-}
-
-.name {
-  margin-bottom: .5em;
 }
 
 .sessions {

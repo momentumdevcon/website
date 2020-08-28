@@ -24,7 +24,7 @@ export const LatestPost = ({ posts }) => {
         <header className="major">
           <h3>
             <span style={{ paddingRight: '12px' }}>
-              <Icon icon={faComment} size="md" />
+              <Icon icon={faComment} size="sm" />
             </span>
                 Latest Blog Post
           </h3>

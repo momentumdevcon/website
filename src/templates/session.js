@@ -2,7 +2,7 @@ import React from 'react';
 import Helmet from 'react-helmet'
 import { graphql, Link } from 'gatsby';
 import {createMetaContent} from '../assets/data/metaContent.js';
-import { Layout } from '../components';
+import { BannerLanding, Layout } from '../components';
 import formatName from '../utils/formatName';
 import getSpeakerSlug from '../utils/getSpeakerSlug.js';
 import '../assets/css/session.css';
@@ -31,12 +31,12 @@ const SessionTemplate = ({ data: { sessionsData, sessionizeData }, pageContext: 
         title={pageTitle}
         meta={[...metaContent]}
       />
+
+      <BannerLanding pageName={title} />
+
       <div id="main" className="alt">
         <section id="one">
           <div className="inner">
-            <header className="major session-title">
-              <h1>{title}</h1>
-            </header>
             <div className="presenter">
               <span className="info-prefix">Presented by:</span>
               { getNameWithLink(session.speakers[0].name, speakerNames[0]) }
