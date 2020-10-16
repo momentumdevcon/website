@@ -5,7 +5,7 @@ export const socialIcons = {
     {
       'icon': faTwitter,
       'label': 'twitter',
-      'link': 'https://twitter.com/momentumdevcon'
+      'link': 'https://twitter.com/momentumdevcon?lang=en'
     },
     {
       'icon': faLinkedin,

@@ -4,6 +4,7 @@ import { graphql } from 'gatsby'
 import metaContent from '../assets/data/metaContent.js'
 import { 
   Banner,
+  ContentWeek,
   CovidMessage,
   Layout,
   LatestBlogPost,
@@ -15,6 +16,7 @@ const HomeIndex = ({ data }) => (
     <Helmet title="Momentum Developer Conference" meta={[...metaContent]} />
     <Banner />
     <div id="main">
+      <ContentWeek />
       <CovidMessage />
       <WhatIsMomentum />
       <LatestBlogPost posts={data.allMarkdownRemark.edges} />
