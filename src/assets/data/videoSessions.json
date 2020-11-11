@@ -1,0 +1,47 @@
+[
+  {
+    "name": "Matthew Groves",
+    "title": "Don't Drop ACID - Transactions in Distributed NoSQL",
+    "link": "https://youtu.be/N7TRj0ti_x4"
+  },
+  {
+    "name": "Joel Tosi",
+    "title": "Growing a Learning Organization",
+    "link": "https://youtu.be/ldaRZorVyVg"
+  },
+  {
+    "name": "Tyler Jennings",
+    "title": "What Time Is It Anyway?",
+    "link": "https://youtu.be/41JpVPVhGV8"
+  },
+  {
+    "name": "Lorien Rensing",
+    "title": "Breaking Down the Monolith: A journey toward CI/CD",
+    "link": "https://youtu.be/DVfhd3NvOO8"
+  },
+  {
+    "name": "Craig Stuntz",
+    "title": "What on Earth Is Quantum Computing?",
+    "link": "https://youtu.be/css0AZtgKCM"
+  },
+  {
+    "name": "Matt Eland",
+    "title": "C# 9.0 and the Rise of Functional .NET",
+    "link": "https://youtu.be/ERtVLQY00PU"
+  },
+  {
+    "name": "Sierra Obryan",
+    "title": "Data binding in Android ",
+    "link": "https://youtu.be/8gwnr6k-KMA"
+  },
+  {
+    "name": "Matt Williams",
+    "title": "End the Stigma: Become a Mental Health Ally",
+    "link": "https://youtu.be/TOoYlqIxAm0"
+  },
+  {
+    "name": "David Neal",
+    "title": "Software and the Art of Delivery",
+    "link": "https://youtu.be/HGfeQpq9l58"
+  }
+]

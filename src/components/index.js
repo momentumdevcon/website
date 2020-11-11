@@ -15,3 +15,4 @@ export { default as WhatIsMomentum } from './WhatIsMomentum';
 export { default as Wrapper } from './Wrapper';
 export { default as LatestBlogPost } from './LatestBlogPost';
 export { default as ContentWeek } from './ContentWeek';
+export { default as VideoSessions } from './VideoSessions';
