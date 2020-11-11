@@ -8,7 +8,7 @@ import {
   CovidMessage,
   Layout,
   LatestBlogPost,
-  WhatIsMomentum 
+  WhatIsMomentum
 } from '../components'
 
 const HomeIndex = ({ data }) => (
