@@ -1,7 +1,7 @@
 export { default as Banner } from './Banner';
 export { default as BannerLanding } from './BannerLanding';
 export { default as Contact } from './Contact';
-export { default as CovidMessage } from './CovidMessage';
+export { default as CallForPresenters } from './CallForPresenters';
 export { default as Footer } from './Footer';
 export { default as Header } from './Header';
 export { default as Icon } from './Icon';
@@ -14,5 +14,4 @@ export { sponsorData } from './SponsorData';
 export { default as WhatIsMomentum } from './WhatIsMomentum';
 export { default as Wrapper } from './Wrapper';
 export { default as LatestBlogPost } from './LatestBlogPost';
-export { default as ContentWeek } from './ContentWeek';
 export { default as VideoSessions } from './VideoSessions';
