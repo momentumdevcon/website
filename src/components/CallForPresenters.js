@@ -7,7 +7,13 @@ const CallForPresenters = () => (
     <article>
       <header className="major cfp">
         <h3>CFP Now Open!</h3>
-        <img className="banner" src={CFPBanner} alt="Cfp now open through May 31" />
+        <a href="https://sessionize.com/momentum-2021" target="_blank">
+          <img
+            className="banner"
+            src={CFPBanner}
+            alt="Cfp now open through May 31"
+          />
+        </a>
       </header>
       <p>
       We are moving forward with our plans to have an in-person conference on October 15, and have opened up our call for presenters! 
