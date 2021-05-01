@@ -1,6 +1,6 @@
 export const mainTitle = 'Momentum Developer Conference'
 export const mainDescription =
-  'Momentum is a Cincinnati developer conference helping developers be better, faster, and stronger. Join us on October 15, 2021 (tentative) at the Hyatt Regency Cincinnati!'
+  'Momentum is a Cincinnati developer conference helping developers be better, faster, and stronger. Join us on October 15, 2021 at the Hyatt Regency Cincinnati!'
 
 const logoWPadding = '/square-logo.png'
 
