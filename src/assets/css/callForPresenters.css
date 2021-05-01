@@ -1,0 +1,28 @@
+.cfp .banner {
+  height: 50%;
+  width: 100%;
+}
+
+@media(min-width: 737px) {
+  .cfp .banner {
+    width: 25%;
+  }
+}
+
+@media(min-width: 860px) {
+  .cfp .banner {
+    width: 30%;
+  }
+}
+
+@media(min-width: 960px) {
+  .cfp .banner {
+    width: 35%;
+  }
+}
+
+@media(min-width: 1060px) {
+  .cfp .banner {
+    width: 40%;
+  }
+}

@@ -16,7 +16,7 @@ const Footer = () => (
         ))}
       </ul>
       <ul className="copyright">
-        <li>Copyright &copy; Momentum Conference 2017-2020</li>
+        <li>Copyright &copy; Momentum Conference 2017-2021</li>
       </ul>
     </div>
   </footer>
