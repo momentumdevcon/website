@@ -21,7 +21,7 @@ const WhatIsMomentum = () => (
         <li>Breakfast and lunch</li>
         <li>Refreshments throughout the day</li>
         <li>
-          Connect and chat with some of Cincinnati's best developers
+          Connect and chat with awesome developers
         </li>
       </ul>
     </article>

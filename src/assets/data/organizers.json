@@ -10,26 +10,6 @@
     ]
   },
   {
-    "name":"Christy Berning",
-    "photo":"christy",
-    "links": [
-      {
-        "linkType": "LinkedIn",
-        "url": "https://www.linkedin.com/in/christy-berning-595b53a2/"
-      }
-    ]
-  },
-  {
-    "name": "Taryn Ruberg",
-    "photo":"taryn",
-    "links": [
-      {
-        "linkType": "LinkedIn",
-        "url": "https://www.linkedin.com/in/taryn-ruberg-a49517114/"
-      }
-    ]
-  },
-  {
     "name": "Michael Richardson",
     "photo":"michael",
     "links": [
@@ -40,6 +20,118 @@
       {
         "linkType": "LinkedIn",
         "url": "https://www.linkedin.com/in/accidentaldeveloper/"
+      }
+    ]
+  },
+  {
+    "name": "Izzi Bikun",
+    "photo":"izzi",
+    "links": [
+      {
+        "linkType": "Twitter",
+        "url": "https://twitter.com/izzib76"
+      },
+      {
+        "linkType": "LinkedIn",
+        "url": "https://www.linkedin.com/in/elizabethbikun/"
+      }
+    ]
+  },
+  {
+    "name": "Taryn Ruberg",
+    "photo":"taryn",
+    "links": [
+      {
+        "linkType": "LinkedIn",
+        "url": "https://www.linkedin.com/in/christy-berning-595b53a2/"
+      }
+    ]
+  },
+  {
+    "name": "Kat Fairbanks",
+    "photo":"kat",
+    "links": [
+      {
+        "linkType": "Twitter",
+        "url": "https://twitter.com/DerKatzenbar"
+      },
+      {
+        "linkType": "LinkedIn",
+        "url": "https://www.linkedin.com/in/katzenbar/"
+      }
+    ]
+  },
+  {
+    "name": "Jennifer LeMaster",
+    "photo":"jennifer",
+    "links": [
+      {
+        "linkType": "Twitter",
+        "url": "https://twitter.com/activistshrugg1"
+      },
+      {
+        "linkType": "LinkedIn",
+        "url": "https://www.linkedin.com/in/jennifer-lemaster-168b29145/"
+      }
+    ]
+  },
+  {
+    "name": "Brandon Culp",
+    "photo":"brandon",
+    "links": [
+      {
+        "linkType": "Twitter",
+        "url": "https://twitter.com/bculp_"
+      },
+      {
+        "linkType": "LinkedIn",
+        "url": "https://www.linkedin.com/in/brandonculp/"
+      },
+      {
+        "linkType": "Company_Website",
+        "url": "https://BrandonCulp.com"
+      }
+    ]
+  },
+  {
+    "name": "Ryan Lynn",
+    "photo":"ryan",
+    "links": [
+      {
+        "linkType": "Twitter",
+        "url": "https://twitter.com/prehistoric_dev"
+      },
+      {
+        "linkType": "LinkedIn",
+        "url": "https://www.linkedin.com/in/ryanlynn523/"
+      }
+    ]
+  },
+  {
+    "name": "Jason Miazga",
+    "photo":"jason",
+    "links": [
+      {
+        "linkType": "Twitter",
+        "url": "https://twitter.com/jmiazga"
+      },
+      {
+        "linkType": "LinkedIn",
+        "url": "https://www.linkedin.com/in/jasonmiazga/"
+      },
+      {
+        "linkType": "Company_Website",
+        "url": "https://jasonmiazga.com"
+      }
+    ]
+  },
+  {
+    "name": "Chris Nelson",
+    "photo":"chris",
+    "links": [
+      {
+        "linkType": "Twitter",
+        "url": "https://twitter.com/superchris"
       }
     ]
   }
