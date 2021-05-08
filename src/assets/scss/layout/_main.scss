@@ -66,9 +66,14 @@
             bottom: 40px;
             display: flex;
             justify-content: center;
+            height: 32px;
 
-            & .icon.alt.speakerIcon:last-child {
-              margin-left: 5px;
+            & .icon:first-child {
+              margin: 0;
+            }
+
+            & .icon {
+              margin-left: 4px;
             }
 
             & .icon.alt.speakerIcon {

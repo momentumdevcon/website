@@ -81,7 +81,7 @@ const SpeakersList = () => (
                         : ''}
                     </div>
                     <div
-                      className={`session-links${speaker.links.length === 0 ? ' no-social' : ''}`}
+                      className="session-links"
                     >
                       {speaker.sessions.map(sessionId => (
                         <Link
