@@ -44,6 +44,10 @@
 		&:active {
 			color: desaturate(darken(_palette(highlight), 15), 5) !important;
 		}
+
+		&.no-underline {
+			border-bottom: none;
+		}
 	}
 
 	strong, b {
