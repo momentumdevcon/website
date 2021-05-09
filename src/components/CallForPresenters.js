@@ -7,7 +7,7 @@ const CallForPresenters = () => (
     <article>
       <header className="major cfp">
         <h3>CFP Now Open!</h3>
-        <a href="https://sessionize.com/momentum-2021" target="_blank">
+        <a href="https://sessionize.com/momentum-2021" target="_blank" className="no-underline" rel="noopener">
           <img
             className="banner"
             src={CFPBanner}
