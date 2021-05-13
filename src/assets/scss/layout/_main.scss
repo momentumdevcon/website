@@ -94,7 +94,10 @@
 
   .whatIsMomentumTiles {
     background-color: _palette(bg);
-    &.latestBlogPost {
+    &.blogPost {
+      & article {
+        padding-top: 0px;
+      }
       & .blogTitle {
         border-bottom: 1px dotted white;
       }

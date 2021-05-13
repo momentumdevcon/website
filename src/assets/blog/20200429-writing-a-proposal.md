@@ -3,7 +3,7 @@ template: 'blog'
 slug: 'writing-winning-proposal-four-easy-steps'
 title: 'Writing a Winning Proposal in Four Easy Steps'
 author: 'Kat Fairbanks'
-publishedDate: '2020-04-29'
+publishedDate: '04-29-2020'
 published: 'true'
 summary: 'Momentum committee member and conference speaker Kat Fairbanks walks you through how to write a successful speaker proposal!'
 ---

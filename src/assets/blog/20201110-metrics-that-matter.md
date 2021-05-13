@@ -3,7 +3,7 @@ template: 'blog'
 slug: 'metrics-that-matter'
 title: 'Metrics That Matter - Moving from What is Easy to What is Impactful'
 author: 'Joel Tosi'
-publishedDate: '2020-11-10'
+publishedDate: '11-10-2020'
 published: 'true'
 summary: 'Learn how to progress towards better metrics and to separate signal from noise.'
 ---

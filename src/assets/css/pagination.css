@@ -1,0 +1,32 @@
+.paginationWrapper {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 2em;
+  border-top: none !important;
+}
+
+.paginationWrapper .currentPage {
+  padding: 10px;
+  border: 1px solid;
+  border-radius: 5px;
+  margin: 0 5px;
+}
+
+.paginationWrapper .link {
+  text-decoration: none;
+  padding: 10px; 
+  border: none;
+  margin: 0 5px;
+}
+
+.paginationWrapper .link:hover {
+  padding: 10px;
+  border: 1px dashed;
+  border-radius: 5px;
+}
+
+@media(max-width: 736px) {
+  .paginationWrapper {
+    padding-bottom: 1em;
+  }
+}

@@ -5,6 +5,7 @@
  */
 
 const path = require('path')
+const { paginate } = require('gatsby-awesome-pagination');
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
@@ -73,6 +74,15 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       component: markdownTemplate,
       context: {}, // additional data can be passed via context
     })
+  })
+
+  const posts = blogsResult.data.allMarkdownRemark.edges
+  paginate({
+    createPage, // The Gatsby `createPage` function
+    items: posts, // An array of objects
+    itemsPerPage: 4, // How many items you want per page
+    pathPrefix: '/blog', // Creates pages like `/blog`, `/blog/2`, etc
+    component:path.resolve('src/templates/blogList.js'), // Just like `createPage()`
   })
 
   const sessions = graphql(`
