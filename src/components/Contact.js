@@ -15,7 +15,7 @@ const Contact = () => (
       <div className="contact-method">
         <Icon size="lg" icon={ faPhone } />
         <h3>Phone</h3>
-        <a href="tel:1-513-917-3814">1-513-917-3814</a>
+        <a href="tel:1-513-313-8278">1-513-313-8278</a>
       </div>
     </section>
     <section>
