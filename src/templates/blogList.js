@@ -8,13 +8,12 @@ const BlogList = ({ data, pageContext }) => {
   const sortedPosts = posts
     .sort(sortDates);
 
-    console.log('sortedPosts: ', sortedPosts);
   return (
     <Paginator pageContext={pageContext} pageTitle='Blog'>
       <div className='container alt' id='main'>
         <div className='inner'>
           {
-            data.allMarkdownRemark.edges.map(({ node: { frontmatter } }) => {
+            sortedPosts.map(({ node: { frontmatter } }) => {
               return (
                 <section
                   id="two"

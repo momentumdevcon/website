@@ -95,9 +95,6 @@
   .whatIsMomentumTiles {
     background-color: _palette(bg);
     &.blogPost {
-      & article {
-        padding-top: 0px;
-      }
       & .blogTitle {
         border-bottom: 1px dotted white;
       }
@@ -133,6 +130,18 @@
 
       a {
         border: none;
+      }
+    }
+  }
+}
+
+.blog-page-wrapper {
+  & .whatIsMomentumTiles {
+    &.blogPost {
+      & article {
+        padding-top: 0;
+        padding-left: 1em !important;
+        padding-right: 1em !important;
       }
     }
   }

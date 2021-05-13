@@ -7,15 +7,13 @@ export default function BasicTemplate({ data }) {
   const { markdownRemark } = data
   const { html, frontmatter } = markdownRemark
 
-  const publishedDate = new Date(frontmatter.publishedDate)
-
   return (
     <Wrapper title={frontmatter.title}>
       <div className="container alt" id="main">
         <div className="inner">
           <div className="blog-author">
             By {frontmatter.author} &mdash;{' '}
-            {publishedDate.toLocaleDateString('en-US', { timeZone: 'UTC' })}
+            {frontmatter.publishedDate}
           </div>
           <div dangerouslySetInnerHTML={{ __html: html }} />
         </div>
