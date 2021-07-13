@@ -10,15 +10,17 @@ const Sponsors = ({ data }) => {
     <Wrapper title='Sponsors'>
       <div className='sponsors-wrapper'>
         {
-          Object.keys(sponsorData).map((sponsorLevel) => {
-            return (
-              <div className='sponsor-level' key={sponsorLevel}>
-                <h1>{sponsorLevel}</h1>
-                <div className='line' />
-                <div className='sponsors'>
-                  {sponsorData[sponsorLevel].map(({ company, fileName, link }) => (
-                    <div className='sponsor' key={company}>
-                      {fileName &&
+          Object.keys(sponsorData)
+            .filter(sponsorLevel => sponsorData[sponsorLevel].length > 0)
+            .map((sponsorLevel) => {
+              return (
+                <div className='sponsor-level' key={sponsorLevel}>
+                  <h1>{sponsorLevel}</h1>
+                  <div className='line' />
+                  <div className='sponsors'>
+                    {sponsorData[sponsorLevel].map(({ company, fileName, link }) => (
+                      <div className='sponsor' key={company}>
+                        {fileName &&
                       <>
                         <div className='sponsor-circle'>
                           <a href={link} target='_blank' rel="noopener noreferrer">
@@ -33,16 +35,16 @@ const Sponsors = ({ data }) => {
                           </a>
                         </div>
                       </>
-                      }
-                      <a href={link} target='_blank' rel="noopener noreferrer">
-                        <h3>{company}</h3>
-                      </a>
-                    </div>
-                  ))}
+                        }
+                        <a href={link} target='_blank' rel="noopener noreferrer">
+                          <h3>{company}</h3>
+                        </a>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-              </div>
-            );
-          })
+              )
+            })
         }
       </div>
     </Wrapper>

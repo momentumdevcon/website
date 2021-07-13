@@ -6,43 +6,60 @@ export const sponsorData = {
   Room: [
     {
       company: 'Ascendum',
-      fileName: 'ascendum.png',
+      fileName: 'ascendum.jpg',
       link: 'https://ascendum.com/',
+    },
+    {
+      company: 'GE',
+      fileName: 'ge.png',
+      link: 'https://www.ge.com',
     },
     {
       company: 'DMG',
       fileName: 'dmg.png',
-      link: 'https://divisionsmg.com/',
+      link: 'https://divisionsmg.com',
     },
     {
-      company: 'GE',
-      fileName: 'GE Logo.png',
-      link: 'https://www.ge.com',
-    },
+      company: 'Cincinnati State',
+      fileName: 'cincinnatiState.png',
+      link: 'https://cincinnatistate.edu/',
+    }
   ],
-  Lunch: [],
-  Break: [],
-  Game: [
+  'Lunch/Break': [
     {
-      company: 'Calibrity',
-      fileName: 'callibrity.jpg',
-      link: 'https://www.callibrity.com/',
-    },
+      company: 'LUMA',
+      fileName: 'luma.png',
+      link: 'https://lumafintech.com/',
+    }
   ],
+  Game: [],
   Booth: [
     {
-      company: 'Brooksource',
-      fileName: 'brooksource.png',
-      link: 'https://www.brooksource.com/',
+      company: 'Sentrilock',
+      fileName: 'sentrilock.jpg',
+      link: 'https://www.sentrilock.com/',
     },
     {
-      company: 'SentriLock',
-      fileName: 'sentrilock.png',
-      link: 'https://www.sentrilock.com/',
+      company: 'Prosource',
+      fileName: 'prosource.png',
+      link: 'https://www.totalprosource.com/',
+    },
+    {
+      company: 'McCracken',
+      fileName: 'mcCrackenGroup.png',
+      link: 'https://mccrackengrp.com/',
+    },
+    {
+      company: 'Vernovis',
+      fileName: 'vernovis.png',
+      link: 'https://www.vernovis.com/',
     },
   ],
   'Speaker Social': [],
   Lanyard: [],
+  'Interested In Sponsoring?': [{
+    company: 'Contact us to learn about our remaining sponsorship opportunities!'
+  }],
 }
 
 export const sponsorImage = graphql`
