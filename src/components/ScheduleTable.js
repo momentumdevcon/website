@@ -15,12 +15,9 @@ const ScheduleTable = () => (
                         name
                     }
                 }
-                endsAt
-                room
-                speakers{
+                speakers {
                     name
                 }
-                startsAt
                 title
             }
         }
