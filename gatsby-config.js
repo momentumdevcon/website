@@ -1,4 +1,5 @@
 const path = require(`path`)
+const SESSIONIZE_API = 'https://sessionize.com/api/v2/5w3fcf7e/view';
 
 module.exports = {
   siteMetadata: {
@@ -33,7 +34,7 @@ module.exports = {
       options: {
         entitiesArray: [
           {
-            url: 'https://sessionize.com/api/v2/ea0qkz1p/view/all',
+            url: `${SESSIONIZE_API}/all`,
             method: 'get',
             headers: {
               'Content-Type': 'application/json',
@@ -42,7 +43,7 @@ module.exports = {
             name: 'data',
           },
           {
-            url: 'https://sessionize.com/api/v2/ea0qkz1p/view/sessions',
+            url: `${SESSIONIZE_API}/sessions`,
             method: 'get',
             headers: {
               'Content-Type': 'application/json',

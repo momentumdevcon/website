@@ -103,12 +103,9 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         sessions {
           alternative_id
           description
-          startsAt
-          endsAt
           speakers {
             name
           }
-          room
           categories {
             alternative_id
             categoryItems {

@@ -7,17 +7,20 @@ import formatName from '../utils/formatName';
 import getSpeakerSlug from '../utils/getSpeakerSlug.js';
 import '../assets/css/session.css';
 
+const LEVEL_ID = 29909;
+const TAG_ID = 29909;
+
 const SessionTemplate = ({ data: { sessionsData, sessionizeData }, pageContext: { slug } }) => {
   const session = sessionsData.sessions.find(session => session.alternative_id === slug);
   const title = session.title;
   const speakerNames = session.speakers.map(speaker => formatName(speaker.name));
-  const level = session.categories.find(cat => cat.alternative_id === 4014).categoryItems[0].name;
-  const tags = session.categories.find(cat => cat.alternative_id === 2450).categoryItems.map(item => item.name);
+  const level = session.categories.find(cat => cat.alternative_id === LEVEL_ID).categoryItems[0].name;
+  const tags = session.categories.find(cat => cat.alternative_id === TAG_ID).categoryItems.map(item => item.name);
 
   const speaker1 = sessionizeData.speakers.find(speaker => speaker.alternative_id === session.speakers[0].alternative_id);
 
   const pageTitle = `${title} - Momentum Developer Conference`;
-  const pageDescription = `${title} presented by ${speakerNames.join(', ')} at Momentum 2019`
+  const pageDescription = `${title} presented by ${speakerNames.join(', ')} at Momentum 2021`
   const metaContent = createMetaContent(pageTitle, pageDescription, speaker1.profilePicture)
   const getNameWithLink = (slug, name) => (
     <Link className="gatsby-link" to={`/speakers/${getSpeakerSlug(slug)}`}>
