@@ -15,6 +15,11 @@ const Menu = ({ menuState }) => (
       </Link>
     </li>
     <li>
+      <Link to="/sponsors">
+        Sponsors
+      </Link>
+    </li>
+    <li>
       <Link to="/organizers">
         Organizers
       </Link>

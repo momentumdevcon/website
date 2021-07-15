@@ -1,7 +1,6 @@
 export { default as Banner } from './Banner';
 export { default as BannerLanding } from './BannerLanding';
 export { default as Contact } from './Contact';
-export { default as CallForPresenters } from './CallForPresenters';
 export { default as Footer } from './Footer';
 export { default as Header } from './Header';
 export { default as Icon } from './Icon';
@@ -14,6 +13,6 @@ export { sponsorData } from './SponsorData';
 export { default as WhatIsMomentum } from './WhatIsMomentum';
 export { default as Wrapper } from './Wrapper';
 export { default as LatestBlogPost } from './LatestBlogPost';
-export { default as VideoSessions } from './VideoSessions';
 export { default as Paginator } from './Paginator';
 export { default as BlogInfo } from './BlogInfo';
+export { default as CallForSponsors } from './CallForSponsors';
