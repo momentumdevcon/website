@@ -8,7 +8,7 @@ import getSpeakerSlug from '../utils/getSpeakerSlug.js';
 import '../assets/css/session.css';
 
 const LEVEL_ID = 29909;
-const TAG_ID = 29909;
+const TAG_ID = 29914;
 
 const SessionTemplate = ({ data: { sessionsData, sessionizeData }, pageContext: { slug } }) => {
   const session = sessionsData.sessions.find(session => session.alternative_id === slug);
