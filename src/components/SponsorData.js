@@ -54,6 +54,16 @@ export const sponsorData = {
       fileName: 'vernovis.png',
       link: 'https://www.vernovis.com/',
     },
+    {
+      company: 'Eliassen Group',
+      fileName: 'eliassen.png',
+      link: 'https://www.eliassen.com/',
+    },
+    {
+      company: 'Insight',
+      fileName: 'insight.png',
+      link: 'https://www.insight.com'
+    }
   ],
   'Speaker Social': [],
   Lanyard: [],
