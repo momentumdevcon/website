@@ -23,7 +23,7 @@ const SessionTemplate = ({ data: { sessionsData, sessionizeData }, pageContext: 
   const pageDescription = `${title} presented by ${speakerNames.join(', ')} at Momentum 2021`
   const metaContent = createMetaContent(pageTitle, pageDescription, speaker1.profilePicture)
   const getNameWithLink = (slug, name) => (
-    <Link className="gatsby-link" to={`/speakers/${getSpeakerSlug(slug)}`}>
+    <Link to={`/speakers/${getSpeakerSlug(slug)}`}>
       {name}
     </Link>
   );
