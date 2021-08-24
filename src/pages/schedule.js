@@ -1,21 +1,9 @@
 import React from 'react';
-import Helmet from 'react-helmet';
-import { BannerLanding, Layout, ScheduleTable } from '../components';
-import { createMetaContent, mainTitle, mainDescription } from '../assets/data/metaContent.js';
+import { ScheduleTable, Wrapper } from '../components';
 import '../assets/css/schedule.css';
 
-const pageTitle = '2019 Schedule - ' + mainTitle;
-const scheduleMeta = createMetaContent(pageTitle, mainDescription);
-
 const SchedulePage = () => (
-  <Layout>
-    <Helmet
-      title={pageTitle}
-      meta={scheduleMeta}
-    />
-
-    <BannerLanding pageName="2019 Schedule" />
-
+  <Wrapper title="2021 Schedule">
     <div id="main" className="alt">
       <div className="inner">
         <>
@@ -23,7 +11,7 @@ const SchedulePage = () => (
         </>
       </div>
     </div>
-  </Layout>
+  </Wrapper>
 );
 
 export default SchedulePage;

@@ -1,18 +1,8 @@
 import React from 'react';
-import Helmet from 'react-helmet';
-import { BannerLanding, Layout } from '../components';
-import SpeakersList from '../components/SpeakersList';
-import metaContent from '../assets/data/metaContent.js';
+import { SpeakersList, Wrapper } from '../components';
 
 const SpeakersPage = () => (
-  <Layout>
-    <Helmet
-      title="2021 Speakers - Momentum Dev Con"
-      meta={[...metaContent]}
-    />
-
-    <BannerLanding pageName="2021 Speakers" />
-
+  <Wrapper title="2021 Speakers">
     <div id="main" className="alt">
       <section id="one">
         <div className="inner">
@@ -20,7 +10,7 @@ const SpeakersPage = () => (
         </div>
       </section>
     </div>
-  </Layout>
+  </Wrapper>
 );
 
 export default SpeakersPage;

@@ -1,10 +1,8 @@
 import React from 'react';
-import Helmet from 'react-helmet';
 import { graphql, Link } from 'gatsby';
-import { BannerLanding, Layout } from '../components/';
+import { Wrapper } from '../components/';
 import generateSocialLink from '../utils/generateSocialLink';
 import getSpeakerSlug from '../utils/getSpeakerSlug';
-import { createMetaContent } from '../assets/data/metaContent';
 import formatName from '../utils/formatName';
 import { BlueLogo } from '../assets/images';
 import '../assets/css/speaker.css';
@@ -18,17 +16,15 @@ const SpeakerTemplate = ({ data: { sessionizeData }, pageContext: { slug } }) =>
     speaker.sessions.includes(parseInt(session.alternative_id)));
   const sessionText = `Session${speakerSessions.length > 1 ? 's' : ''}:`
 
-  const pageTitle = `${speaker.fullName} - Momentum 2019 Speaker`;
+  const pageTitle = `${speaker.fullName} - Momentum 2021 Speaker`;
   const sessionList = speakerSessions.map(session => `"${session.title}"`).join(', ');
   return (
-    <Layout>
-      <Helmet
-        title={pageTitle}
-        meta={createMetaContent(pageTitle, `${speaker.firstName}'s ${sessionText} ${sessionList}`, speaker.profilePicture)}
-      />
-
-      <BannerLanding pageName={formatName(speaker.fullName)} />
-
+    <Wrapper
+      title={formatName(speaker.fullName)}
+      pageTitle={pageTitle}
+      metaDescription={`${speaker.firstName}'s ${sessionText} ${sessionList}`}
+      metaImage={speaker.profilePicture}
+    >
       <div id="main" className="alt">
         <div className="inner horizontalContainer">
           <div className="verticalContainer">
@@ -55,7 +51,7 @@ const SpeakerTemplate = ({ data: { sessionizeData }, pageContext: { slug } }) =>
           </div>
         </div>
       </div>
-    </Layout>
+    </Wrapper>
   );
 };
 

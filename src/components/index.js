@@ -10,6 +10,8 @@ export { default as ContentBlock } from './ContentBlock';
 export { default as ScheduleTable } from './ScheduleTable';
 export { default as InterestForm } from './InterestForm';
 export { sponsorData } from './SponsorData';
+export { default as SpeakersList } from './SpeakersList';
+export { default as SessionsList } from './SessionsList';
 export { default as WhatIsMomentum } from './WhatIsMomentum';
 export { default as Wrapper } from './Wrapper';
 export { default as LatestBlogPost } from './LatestBlogPost';
