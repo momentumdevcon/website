@@ -1,7 +1,5 @@
 import React from 'react';
-import Helmet from 'react-helmet';
-import { BannerLanding, Layout } from '../components';
-import metaContent from '../assets/data/metaContent.js';
+import { Wrapper } from '../components';
 import organizers from '../assets/data/organizers.json';
 import organizerPhotos from '../assets/images/organizers';
 import { BlueLogo } from '../assets/images';
@@ -9,14 +7,7 @@ import generateSocialLink from '../utils/generateSocialLink';
 import formatName from '../utils/formatName';
 
 const OrganizersPage = () => (
-  <Layout>
-    <Helmet
-      title="Organizers - Momentum Dev Con"
-      meta={[...metaContent]}
-    />
-
-    <BannerLanding pageName="Organizers" />
-
+  <Wrapper title="Organizers">
     <div id="main" className="alt">
       <section id="one" className="about">
         <div className="inner">
@@ -45,7 +36,7 @@ const OrganizersPage = () => (
         </div>
       </section>
     </div>
-  </Layout>
+  </Wrapper>
 );
 
 export default OrganizersPage;

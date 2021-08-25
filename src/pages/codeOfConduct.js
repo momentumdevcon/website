@@ -1,24 +1,11 @@
 import React from 'react';
-import Helmet from 'react-helmet';
-import { BannerLanding, Layout } from '../components';
-import { createMetaContent, mainTitle, mainDescription } from '../assets/data/metaContent.js';
+import { Wrapper } from '../components';
 import '../assets/css/schedule.css';
 
-const pageTitle = 'Code of Conduct - ' + mainTitle;
-const scheduleMeta = createMetaContent(pageTitle, mainDescription);
-
 const CodeOfConduct = () => (
-  <Layout>
-    <Helmet
-      title={pageTitle}
-      meta={scheduleMeta}
-    />
-
-    <BannerLanding pageName="Code of Conduct" />
-
+  <Wrapper title="Code of Conduct">
     <div id="main" className="alt">
       <div className="inner">
-
         <p>
   At Momentum Developer Conference, we value all our speakers and attendees. Our goal is to make this conference a safe space where new and experienced developers can connect and learn from one another. Therefore, we do not tolerate any form of harassment or prejudice. This Code of Conduct governs both in-person events as well as online forums, including but not limited to social media.
         </p>
@@ -48,7 +35,8 @@ const CodeOfConduct = () => (
         </p>
       </div>
     </div>
-  </Layout>
+  </Wrapper>
+
 );
 
 export default CodeOfConduct;

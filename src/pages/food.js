@@ -1,22 +1,9 @@
 import React from 'react';
-import Helmet from 'react-helmet';
-import { BannerLanding, Layout } from '../components';
-import { createMetaContent, mainTitle, mainDescription } from '../assets/data/metaContent.js';
+import { Wrapper } from '../components';
 import foodMenu from '../assets/data/foodMenu.json';
-import '../assets/css/schedule.css';
-
-const pageTitle = 'Food - ' + mainTitle;
-const scheduleMeta = createMetaContent(pageTitle, mainDescription);
 
 const FoodMenu = () => (
-  <Layout>
-    <Helmet
-      title={pageTitle}
-      meta={scheduleMeta}
-    />
-
-    <BannerLanding pageName="Food" />
-
+  <Wrapper title="Food">
     <div id="main" className="alt">
       <div className="inner">
         {
@@ -31,7 +18,7 @@ const FoodMenu = () => (
         }
       </div>
     </div>
-  </Layout>
+  </Wrapper>
 );
 
 export default FoodMenu;

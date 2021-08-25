@@ -1,8 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
-import Wrapper from '../components/Wrapper';
-import { sponsorData } from '../components/SponsorData';
+import { sponsorData, Wrapper } from '../components';
 import '../assets/css/sponsors.css';
 
 const Sponsors = ({ data }) => {

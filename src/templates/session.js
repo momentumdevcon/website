@@ -1,8 +1,6 @@
 import React from 'react';
-import Helmet from 'react-helmet'
 import { graphql, Link } from 'gatsby';
-import {createMetaContent} from '../assets/data/metaContent.js';
-import { BannerLanding, Layout } from '../components';
+import { Wrapper } from '../components';
 import formatName from '../utils/formatName';
 import getSpeakerSlug from '../utils/getSpeakerSlug.js';
 import '../assets/css/session.css';
@@ -19,9 +17,7 @@ const SessionTemplate = ({ data: { sessionsData, sessionizeData }, pageContext: 
 
   const speaker1 = sessionizeData.speakers.find(speaker => speaker.alternative_id === session.speakers[0].alternative_id);
 
-  const pageTitle = `${title} - Momentum Developer Conference`;
   const pageDescription = `${title} presented by ${speakerNames.join(', ')} at Momentum 2021`
-  const metaContent = createMetaContent(pageTitle, pageDescription, speaker1.profilePicture)
   const getNameWithLink = (slug, name) => (
     <Link to={`/speakers/${getSpeakerSlug(slug)}`}>
       {name}
@@ -29,14 +25,7 @@ const SessionTemplate = ({ data: { sessionsData, sessionizeData }, pageContext: 
   );
   
   return (
-    <Layout>
-      <Helmet
-        title={pageTitle}
-        meta={[...metaContent]}
-      />
-
-      <BannerLanding pageName={title} />
-
+    <Wrapper title={title} metaImage={speaker1.profilePicture} metaDescription={pageDescription}>
       <div id="main" className="alt">
         <section id="one">
           <div className="inner">
@@ -67,7 +56,7 @@ const SessionTemplate = ({ data: { sessionsData, sessionizeData }, pageContext: 
           </div>
         </section>
       </div>
-    </Layout>
+    </Wrapper>
   );
 };
 
