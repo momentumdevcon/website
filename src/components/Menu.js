@@ -25,6 +25,11 @@ const Menu = ({ menuState }) => (
       </Link>
     </li>
     <li>
+      <Link to="https://ti.to/the-circuit/momentum" target='_blank' rel="noopener noreferrer">
+        Tickets
+      </Link>
+    </li>
+    <li>
       <Link to="/blog">
         Blog
       </Link>
