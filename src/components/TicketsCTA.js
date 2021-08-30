@@ -7,7 +7,7 @@ const TicketsCTA = () => (
         <h3>2021 Tickets On Sale Now!</h3>
       </header>
       <a href="https://ti.to/the-circuit/momentum">
-        Order your early bird tickets today!
+        Order your tickets today!
       </a>
     </article>
   </section>
