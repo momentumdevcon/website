@@ -19,3 +19,4 @@ export { default as Paginator } from './Paginator';
 export { default as BlogInfo } from './BlogInfo';
 export { default as CallForSponsors } from './CallForSponsors';
 export { default as TicketsCTA } from './TicketsCTA';
+export { default as CovidPolicyBlurb } from './CovidPolicyBlurb';
