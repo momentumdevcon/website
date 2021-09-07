@@ -35,6 +35,11 @@ const Menu = ({ menuState }) => (
       </Link>
     </li>
     <li>
+      <Link to="/covid">
+        COVID Policy
+      </Link>
+    </li>
+    <li>
       <Link to="/codeOfConduct">
         Code of Conduct
       </Link>
