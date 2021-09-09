@@ -4,7 +4,6 @@ import organizers from '../assets/data/organizers.json';
 import organizerPhotos from '../assets/images/organizers';
 import { BlueLogo } from '../assets/images';
 import generateSocialLink from '../utils/generateSocialLink';
-import formatName from '../utils/formatName';
 
 const OrganizersPage = () => (
   <Wrapper title="Organizers">
@@ -16,12 +15,12 @@ const OrganizersPage = () => (
               {
                 organizers
                   .map((organizer) => (
-                    <div key={formatName(organizer.name)} className="speaker">
+                    <div key={organizer.name} className="speaker">
                       <header>
-                        <h3 className="speakerName">{formatName(organizer.name)}</h3>
+                        <h3 className="speakerName">{organizer.name}</h3>
                       </header>
                       <img
-                        alt={`${formatName(organizer.name)}`}
+                        alt={organizer.name}
                         src={organizerPhotos[organizer.photo] || BlueLogo}
                         className={organizer.photo ? 'profilePic' : 'placeholder'}
                       />

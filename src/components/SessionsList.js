@@ -1,6 +1,5 @@
 import React from 'react';
 import { StaticQuery, graphql, Link } from 'gatsby';
-import formatName from '../utils/formatName';
 import '../assets/css/sessions.css';
 
 const SessionsList = () => (
@@ -42,9 +41,9 @@ const SessionsList = () => (
                         <p>
                           { 
                             session.speakers.length > 1 ?
-                              `${formatName(session.speakers[0].name)} and ${formatName(session.speakers[1].name)}`
+                              `${session.speakers[0].name} and ${session.speakers[1].name}`
                               :
-                              formatName(session.speakers[0].name)
+                              session.speakers[0].name
                           }
                         </p>
                       </div>

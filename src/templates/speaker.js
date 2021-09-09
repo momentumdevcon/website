@@ -3,7 +3,6 @@ import { graphql, Link } from 'gatsby';
 import { Wrapper } from '../components/';
 import generateSocialLink from '../utils/generateSocialLink';
 import getSpeakerSlug from '../utils/getSpeakerSlug';
-import formatName from '../utils/formatName';
 import { BlueLogo } from '../assets/images';
 import '../assets/css/speaker.css';
 
@@ -20,7 +19,7 @@ const SpeakerTemplate = ({ data: { sessionizeData }, pageContext: { slug } }) =>
   const sessionList = speakerSessions.map(session => `"${session.title}"`).join(', ');
   return (
     <Wrapper
-      title={formatName(speaker.fullName)}
+      title={speaker.fullName}
       pageTitle={pageTitle}
       metaDescription={`${speaker.firstName}'s ${sessionText} ${sessionList}`}
       metaImage={speaker.profilePicture}
@@ -28,7 +27,7 @@ const SpeakerTemplate = ({ data: { sessionizeData }, pageContext: { slug } }) =>
       <div id="main" className="alt">
         <div className="inner horizontalContainer">
           <div className="verticalContainer">
-            <img className="speakerImage" src={speaker.profilePicture || BlueLogo} alt={formatName(speaker.fullName)} />
+            <img className="speakerImage" src={speaker.profilePicture || BlueLogo} alt={speaker.fullName} />
             <div className="tagline">{speaker.tagLine}</div>
             <div className="horizontalContainer">
               {speaker.links.map(link => (

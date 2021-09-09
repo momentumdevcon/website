@@ -1,7 +1,6 @@
 import React from 'react';
 import { graphql, Link } from 'gatsby';
 import { Wrapper } from '../components';
-import formatName from '../utils/formatName';
 import getSpeakerSlug from '../utils/getSpeakerSlug.js';
 import '../assets/css/session.css';
 
@@ -11,7 +10,7 @@ const TAG_ID = 29914;
 const SessionTemplate = ({ data: { sessionsData, sessionizeData }, pageContext: { slug } }) => {
   const session = sessionsData.sessions.find(session => session.alternative_id === slug);
   const title = session.title;
-  const speakerNames = session.speakers.map(speaker => formatName(speaker.name));
+  const speakerNames = session.speakers.map(speaker => speaker.name);
   const level = session.categories.find(cat => cat.alternative_id === LEVEL_ID).categoryItems[0].name;
   const tags = session.categories.find(cat => cat.alternative_id === TAG_ID).categoryItems.map(item => item.name);
 
