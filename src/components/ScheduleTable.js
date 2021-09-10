@@ -15,10 +15,13 @@ const ScheduleTable = () => (
                         name
                     }
                 }
+                endsAt
+                room
+                startsAt
+                title
                 speakers {
                     name
                 }
-                title
             }
         }
     }
