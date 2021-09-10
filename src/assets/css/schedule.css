@@ -134,7 +134,8 @@
   color: white;
   padding: 3px;
   margin: 0 5px 5px 0;
-  background: hsl(271, 79%, 50%);
+  background: hsl(222,100%,54%);
+  font-weight: 600;
 }
 
 .table-grid__cell-tag-1 {
@@ -145,7 +146,8 @@
   color: white;
   padding: 3px;
   margin: 0 5px 5px 0;
-  background: #f804d0;
+  background:hsl(182,96%,31%);
+  font-weight: 600;
 }
 
 /* These styles with be applied when the screen is less than 600px wide */
