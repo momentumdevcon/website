@@ -3,7 +3,6 @@ import { StaticQuery, graphql, Link } from 'gatsby';
 import generateSocialLink from '../utils/generateSocialLink';
 import '../assets/css/speakers.css';
 import getSpeakerSlug from '../utils/getSpeakerSlug';
-import formatName from '../utils/formatName';
 import { BlueLogo } from '../assets/images';
 
 const SpeakersList = () => (
@@ -53,13 +52,13 @@ const SpeakersList = () => (
             <section>
               <article>
                 {speakers.map((speaker) => (
-                  <div key={formatName(speaker.fullName)} className="speaker">
+                  <div key={speaker.fullName} className="speaker">
                     <header>
                       <Link 
                         className="gatsby-link"
                         to={`/speakers/${getSpeakerSlug(speaker.fullName)}`}
                       >
-                        <h3 className="speakerName">{formatName(speaker.fullName)}</h3>
+                        <h3 className="speakerName">{speaker.fullName}</h3>
                       </Link>
                     </header>
                     <Link
@@ -67,8 +66,8 @@ const SpeakersList = () => (
                       to={`/speakers/${getSpeakerSlug(speaker.fullName)}`}
                     >
                       <img
-                        alt={`${formatName(speaker.fullName)}`}
-                        src={`${speaker.profilePicture || BlueLogo}`}
+                        alt={speaker.fullName}
+                        src={speaker.profilePicture || BlueLogo}
                         className={speaker.profilePicture ? 'profilePic' : 'placeholder'}
                       />
                     </Link>
