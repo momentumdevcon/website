@@ -2,7 +2,13 @@ import { graphql } from 'gatsby'
 // Headlining, Room, Lunch or Break, Game Room, Booth, Speaker Social, Lanyard
 
 export const sponsorData = {
-  Headlining: [],
+  Headlining: [
+    {
+      company: 'Fifth Third Bank',
+      fileName: 'fifthThird.png',
+      link: 'https://www.53.com/content/fifth-third/en.html',
+    }
+  ],
   Room: [
     {
       company: 'Ascendum',
@@ -23,6 +29,11 @@ export const sponsorData = {
       company: 'Cincinnati State',
       fileName: 'cincinnatiState.png',
       link: 'https://cincinnatistate.edu/',
+    },
+    {
+      company: 'Callibrity',
+      fileName: 'callibrity-2021.png',
+      link: 'https://www.callibrity.com/',
     }
   ],
   'Lunch/Break': [
@@ -66,7 +77,42 @@ export const sponsorData = {
     }
   ],
   'Speaker Social': [],
-  Lanyard: [],
+  Lanyard: [
+    {
+      company: 'Cloverleaf',
+      fileName: 'cloverleaf.png',
+      link: 'https://www.cloverleaf.me'
+    }
+  ],
+  'Community Partners': [
+    {
+      company: 'MAX Technical Training',
+      link: 'https://maxtrain.com/'
+    },
+    {
+      company: 'CinJUG',
+    },
+    {
+      company: 'getWITit',
+      link: 'https://getwitit.org/'
+    },
+    {
+      company: 'Women Who Code',
+      link: 'https://www.womenwhocode.com/cincinnati'
+    },
+    {
+      company: 'Cincinnati Software Craftsmanship',
+      link: 'https://craftsmanship.dev/'
+    },
+    {
+      company: 'KCDC',
+      link: 'https://www.kcdc.info/'
+    },
+    {
+      company: 'Virtual Coffee',
+      link: 'https://virtualcoffee.io/'
+    },
+  ],
   'Interested In Sponsoring?': [{
     company: 'Contact us to learn about our remaining sponsorship opportunities!'
   }],
