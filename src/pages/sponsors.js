@@ -16,7 +16,7 @@ const Sponsors = ({ data }) => {
                 <div className='sponsor-level' key={sponsorLevel}>
                   <h1>{sponsorLevel}</h1>
                   <div className='line' />
-                  <div className='sponsors'>
+                  <div className={`sponsors ${sponsorLevel === 'Community Partners' ? 'communityPartners' : ''}`}>
                     {sponsorData[sponsorLevel].map(({ company, fileName, link }) => (
                       <div className='sponsor' key={company}>
                         {fileName &&
@@ -36,7 +36,9 @@ const Sponsors = ({ data }) => {
                       </>
                         }
                         <a href={link} target='_blank' rel="noopener noreferrer">
-                          <h3>{company}</h3>
+                          <h3 className={`${sponsorLevel === 'Interested In Sponsoring?' ? 'sponsorsCTA' : ''}`}>
+                            {company}
+                          </h3>
                         </a>
                       </div>
                     ))}
