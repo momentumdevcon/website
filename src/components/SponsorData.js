@@ -34,6 +34,11 @@ export const sponsorData = {
       company: 'Callibrity',
       fileName: 'callibrity-2021.png',
       link: 'https://www.callibrity.com/',
+    },
+    {
+      company: 'Progress',
+      fileName: 'progress.png',
+      link: 'https://www.telerik.com/',
     }
   ],
   'Lunch/Break': [
@@ -74,6 +79,16 @@ export const sponsorData = {
       company: 'Insight',
       fileName: 'insight.png',
       link: 'https://www.insight.com'
+    },
+    { 
+      company: 'Tech Elevator',
+      fileName: 'tech-elevator.png',
+      link: 'https://www.techelevator.com/'
+    },
+    { 
+      company: 'Sonatype',
+      fileName: 'sonatype.png',
+      link: 'https://www.sonatype.com/'
     }
   ],
   'Speaker Social': [],
@@ -111,6 +126,14 @@ export const sponsorData = {
     {
       company: 'Virtual Coffee',
       link: 'https://virtualcoffee.io/'
+    },
+    {
+      company: 'Stir Trek',
+      link: 'https://stirtrek.com/'
+    },
+    {
+      company: 'CincyML',
+      link: 'https://www.cincinnatiml.com/'
     },
   ],
   'Interested In Sponsoring?': [{
