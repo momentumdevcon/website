@@ -136,9 +136,6 @@ export const sponsorData = {
       link: 'https://www.cincinnatiml.com/'
     },
   ],
-  'Interested In Sponsoring?': [{
-    company: 'Contact us to learn about our remaining sponsorship opportunities!'
-  }],
 }
 
 export const sponsorImage = graphql`
