@@ -3,7 +3,6 @@ import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
 import metaContent from '../assets/data/metaContent.js'
 import { 
-  CallForSponsors,
   CovidPolicyBlurb,
   Banner,
   Layout,
@@ -18,7 +17,6 @@ const HomeIndex = ({ data }) => (
     <Banner />
     <div id="main">
       <TicketsCTA />
-      <CallForSponsors />
       <CovidPolicyBlurb />
       <WhatIsMomentum />
       <LatestBlogPost posts={data.allMarkdownRemark.edges} />
