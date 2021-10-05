@@ -26,9 +26,14 @@ We will be following the **guidelines and recommendation of public health offici
 We will continue to monitor expectations for large events and make any necessary adjustments as needed. Please note that it is impossible to precisely predict what these guidelines will be in mid-October. 
 
 ### Mask Policy
-We will be following CDC and public health official recommendations, as well as all local guidelines and mandates.
 
-At this time, we expect that masks *will be required* at Momentum 2021. If you are not following the requirements in place at the time of the event, one of our staff or venue security may ask you to comply. Failure or refusal to do so may result in removal from the venue, by venue security or law enforcement **without refund**.
+We will be following CDC and public health official recommendations, as well as all local guidelines and mandates. **All people attending Momentum must wear a mask covering their mouth and nose.** 
+
+Exceptions: 
+- You may remove your mask while actively eating or drinking.
+- Speakers will be permitted to remove their mask while giving their presentation, provided that they remain at least 6 feet from conference attendees.
+
+If you are not wearing a mask, or are not wearing it properly, one of our staff or venue security may ask you to put one on. Failure or refusal to do so may result in removal from the venue, by venue security or law enforcement **without refund**.
 
 This policy could change for any reason, including national or local positive test rates, serious disease or hospitalization incidence rate, changing national or local regulations, etc. We understand this is difficult and, for some, is a divisive issue. **Momentum will err on the side of safety because we care about you and your health**, and we appreciate your understanding.
 
