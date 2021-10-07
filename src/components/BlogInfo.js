@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 import Icon from './Icon';
 import { faCalendarAlt, faUser } from '@fortawesome/free-solid-svg-icons';
 
-const BlogInfo = ({ info, blogPrefix=''}) => (
+const BlogInfo = ({ info, blogPrefix='/blog/'}) => (
   <>
     <Link
       to={`${blogPrefix ? blogPrefix : ''}${info.slug}`}
