@@ -27,7 +27,9 @@ We will continue to monitor expectations for large events and make any necessary
 
 ### Mask Policy
 
-We will be following CDC and public health official recommendations, as well as all local guidelines and mandates. **All people attending Momentum must wear a mask covering their mouth and nose.** 
+We will be following CDC and public health official recommendations, as well as all local guidelines and mandates. 
+
+**All people attending Momentum must wear a mask covering their mouth and nose.** 
 
 Exceptions: 
 - You may remove your mask while actively eating or drinking.
@@ -35,7 +37,7 @@ Exceptions:
 
 If you are not wearing a mask, or are not wearing it properly, one of our staff or venue security may ask you to put one on. Failure or refusal to do so may result in removal from the venue, by venue security or law enforcement **without refund**.
 
-This policy could change for any reason, including national or local positive test rates, serious disease or hospitalization incidence rate, changing national or local regulations, etc. We understand this is difficult and, for some, is a divisive issue. **Momentum will err on the side of safety because we care about you and your health**, and we appreciate your understanding.
+We understand this is difficult and, for some, is a divisive issue. **Momentum will err on the side of safety because we care about you and your health**, and we appreciate your understanding.
 
 ### Vaccination Policy
 Again, we are following the CDC and Department of Health rules for vaccination recommendations.
