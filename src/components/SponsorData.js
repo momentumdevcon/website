@@ -7,6 +7,11 @@ export const sponsorData = {
       company: 'Fifth Third Bank',
       fileName: 'fifthThird.png',
       link: 'https://www.53.com/content/fifth-third/en.html',
+    },
+    {
+      company: 'Kroger',
+      fileName: 'kroger.png',
+      link: 'https://www.kroger.com'
     }
   ],
   Room: [
