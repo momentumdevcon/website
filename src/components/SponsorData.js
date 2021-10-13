@@ -94,6 +94,11 @@ export const sponsorData = {
       company: 'Sonatype',
       fileName: 'sonatype.png',
       link: 'https://www.sonatype.com/'
+    },
+    { 
+      company: 'Brooksource',
+      fileName: 'brooksource.png',
+      link: 'https://www.brooksource.com/'
     }
   ],
   'Speaker Social': [],
