@@ -1,39 +1,40 @@
 [
   {
-    "meal": "Breakfast",
+    "meal": "Salads",
     "dishes": [
-      "Fresh Fruit Platter",
-      "Baker’s Basket served w/ butter",
-      "Coffee, Tea, Fruit Juice"
+      "Spring Greens Salad, Seasonal Vegetables, with Red Wine Vinaigrette",
+      "Wild Rice Salad with Black Eyed Peas, Bell Peppers, Smokey Bacon, and Sweet Paprika Vinaigrette"
     ]
   },
   {
-    "meal": "Lunch",
+    "meal": "Sandwiches",
     "dishes": [
-      "Pasta Salad",
-      "Chips",
-      "Roast beef, Ham and Turkey",
-      "Tomato, Lettuce, Onion and Condiments",
-      "Assorted Cheeses",
-      "Rolls and Breads",
-      "Iced Tea, Soft Drinks and Water",
-      "Assorted Desserts"
+      "Herb Marinated Roast Beef, Pickled Onion, Red Leaf Lettuce, Tomato and Horseradish Cream Cheese Spread on Sourdough Bread",
+      "Herb Marinated Grilled Chicken Breast, Pesto Spread, Mozzarella, Bibb Lettuce, Herb Roasted Tomato and Onion on a Wheat Roll",
+      "Grilled Portobello, Red Onion with Spinach, Vegan Sun-Dried Tomato Aioli, on 7 Grain Wheat Bread",
+      "Turkey Breast, with Garlic Aioli, Romaine Lettuce, Tomato, and Bacon on Sourdough Bread"
     ]
   },
   {
-    "meal": "Afternoon Break",
+    "meal": "Side",
     "dishes": [
-      "Fresh baked cookies and brownies",
-      "Coffee, Tea, Soft Drinks, Water"
+      "Hen of the Woods Potato Chips"
     ]
   },
   {
-    "meal": "Reception",
+    "meal": "Desserts",
     "dishes": [
-      "Antipasto w/ green, greek and black olives, peppers, assorted salami, marinated mushrooms, artichokes, tomatoes and sliced cheeses with assorted baguettes",
-      "Fried Ravioli",
-      "Buffalo Chicken Bites",
-      "Meatballs"
+      "Salted Caramel Brownies",
+      "Vanilla Cake with Roasted Apple Compote and Mascarpone Cream"
+    ]
+  },
+  {
+    "meal": "Drinks",
+    "dishes": [
+      "Soft Drinks",
+      "Bottled Water",
+      "Coffee",
+      "Tea"
     ]
   }
 ]

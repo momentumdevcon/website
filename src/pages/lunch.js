@@ -3,7 +3,7 @@ import { Wrapper } from '../components';
 import foodMenu from '../assets/data/foodMenu.json';
 
 const FoodMenu = () => (
-  <Wrapper title="Food">
+  <Wrapper title="Lunch">
     <div id="main" className="alt">
       <div className="inner">
         {

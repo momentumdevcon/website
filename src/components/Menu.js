@@ -10,11 +10,6 @@ const Menu = ({ menuState }) => (
       </Link>
     </li>
     <li>
-      <Link to="/sessions">
-        Sessions
-      </Link>
-    </li>
-    <li>
       <Link to="/schedule">
         Schedule
       </Link>
@@ -30,8 +25,8 @@ const Menu = ({ menuState }) => (
       </Link>
     </li>
     <li>
-      <Link to="https://ti.to/the-circuit/momentum?source=menu" target='_blank' rel="noopener noreferrer">
-        Tickets
+      <Link to="/lunch">
+        Lunch
       </Link>
     </li>
     <li>
