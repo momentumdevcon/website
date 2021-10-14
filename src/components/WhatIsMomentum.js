@@ -15,7 +15,7 @@ const WhatIsMomentum = () => (
       </header>
       <ul>
         <li>
-          30+ sessions of outstanding content presented by speakers from
+          30 sessions of outstanding content presented by speakers from
           Cincinnati, the region, and around the globe
         </li>
         <li>Breakfast and lunch</li>
