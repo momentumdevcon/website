@@ -1,6 +1,6 @@
 export const mainTitle = 'Momentum Developer Conference'
 export const mainDescription =
-  'Momentum brings software developers together to sharpen skills, make connections, and geek out with impunity. After you’ve enjoyed our riveting presentations, we encourage you to visit the Banks, explore our microbreweries, or throw axes with friends. Momentum is more than a Cincinnati conference, it\'s a catapult for your career. Join the experience on October 15, 2021 at the Regency Hyatt, 151 W 5th St, Cincinnati, 45202.'
+  'Momentum brings software developers together to sharpen skills, make connections, and geek out with impunity. After you’ve enjoyed our riveting presentations, we encourage you to visit the Banks, explore our microbreweries, or throw axes with friends. Momentum is more than a Cincinnati conference, it\'s a catapult for your career. Join us in Fall 2022 for the next experience in Cincinnati'
 
 const logoWPadding = '/square-logo.png'
 

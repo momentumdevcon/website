@@ -1,0 +1,22 @@
+.banner-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+img.banner {
+  height: 50%;
+  width: 100%;
+}
+
+@media(min-width: 860px) {
+  img.banner {
+    width: 90%;
+  }
+}
+
+@media(min-width: 1060px) {
+  img.banner {
+    width: 80%;
+  }
+}

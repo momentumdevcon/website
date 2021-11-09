@@ -25,11 +25,6 @@ const Menu = ({ menuState }) => (
       </Link>
     </li>
     <li>
-      <Link to="/lunch">
-        Lunch
-      </Link>
-    </li>
-    <li>
       <Link to="/blog">
         Blog
       </Link>
