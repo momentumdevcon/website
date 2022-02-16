@@ -21,7 +21,7 @@ const ThankYou = () => (
       To those of you who selflessly invested long hours – we appreciate you so much. 
       Thank you! Momentum 2021 was a truly memorable event and we’ve been humbled by the positive feedback we’ve received. 
       It’s our hope that you’ll journey with us as Momentum continues to grow in size, prestige, and influence. 
-      Plan to join us next October!
+      Plan to join us this October at the Hard Rock Casino!
       </p>
     </article>
   </section>

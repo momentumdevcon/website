@@ -11,7 +11,7 @@ const Banner = () => (
       <div className="content">
         <p>Powered by The Circuit</p>
       </div>
-      <p className="date" >Coming Fall 2022</p>
+      <p className="date" >October 20, 2022</p>
       <InterestForm />
     </div>
   </section>
