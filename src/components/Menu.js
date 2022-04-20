@@ -5,19 +5,14 @@ import { Link } from 'gatsby'
 const Menu = ({ menuState }) => (
   <ul className={`menu-links${menuState}`}>
     <li>
-      <Link to="/speakers">
-        Speakers
-      </Link>
+      <a href="https://sessionize.com/momentum-2022">
+        CFP
+      </a>
     </li>
     <li>
-      <Link to="/schedule">
-        Schedule
-      </Link>
-    </li>
-    <li>
-      <Link to="/sponsors">
-        Sponsors
-      </Link>
+      <a href="https://2021.momentumdevcon.com">
+        2021 Conference
+      </a>
     </li>
     <li>
       <Link to="/organizers">
@@ -27,11 +22,6 @@ const Menu = ({ menuState }) => (
     <li>
       <Link to="/blog">
         Blog
-      </Link>
-    </li>
-    <li>
-      <Link to="/covid">
-        COVID Policy
       </Link>
     </li>
     <li>
