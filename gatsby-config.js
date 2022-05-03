@@ -1,4 +1,4 @@
-const path = require(`path`)
+const path = require('path')
 const SESSIONIZE_API = 'https://sessionize.com/api/v2/5w3fcf7e/view';
 
 module.exports = {
@@ -28,7 +28,7 @@ module.exports = {
       },
     },
     'gatsby-plugin-sass',
-    'gatsby-plugin-offline',
+    'gatsby-plugin-remove-serviceworker',
     {
       resolve: 'gatsby-source-apiserver',
       options: {
@@ -55,10 +55,10 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-gtag`,
+      resolve: 'gatsby-plugin-gtag',
       options: {
         // your google analytics tracking id
-        trackingId: `UA-129266653-1`,
+        trackingId: 'UA-129266653-1',
         // Puts tracking script in the head instead of the body
         head: true,
         // enable ip anonymization
@@ -66,28 +66,28 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/src/assets/markdown`,
-        name: `markdown`,
+        name: 'markdown',
       },
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/src/assets/blog`,
-        name: `blog`,
+        name: 'blog',
       },
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: `sponsors`,
-        path: path.join(__dirname, `src`, `assets`, `images`, `sponsors`),
+        name: 'sponsors',
+        path: path.join(__dirname, 'src', 'assets', 'images', 'sponsors'),
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
-    `gatsby-transformer-remark`,
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-remark',
   ],
 }
