@@ -5,11 +5,13 @@
 Check out https://codebushi.com/gatsby-starters/ for more Gatsby starters and templates.
 
 
-## Installation
+## Getting Started
+
+Set your node version to the version in the .nvmrc. If you use nvm, simply run `nvm use`
 
 Install dependencies by running `yarn` in the terminal
 
-Start the site by running `gatsby develop` in the terminal
+Start the site by running `yarn develop` in the terminal
 
 ## CSS Grid
 
