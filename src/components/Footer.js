@@ -16,7 +16,7 @@ const Footer = () => (
         ))}
       </ul>
       <ul className="copyright">
-        <li>Copyright &copy; Momentum Conference 2017-2021</li>
+        <li>Copyright &copy; Momentum Conference 2017-{new Date().getFullYear()}</li>
       </ul>
     </div>
   </footer>

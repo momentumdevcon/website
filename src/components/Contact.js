@@ -24,11 +24,11 @@ const Contact = () => (
         <h3>Address</h3>
         <a 
           target='_blank' rel="noopener noreferrer"
-          href="https://maps.google.com?q=Hyatt+Regency+Cincinnati%2C+West+5th+Street%2C+Cincinnati%2C+OH"
+          href="https://www.google.com/maps/place/Hard+Rock+Casino+Cincinnati/@39.1081763,-84.5098039,17z/data=!3m1!4b1!4m5!3m4!1s0x8841b16c1b870331:0xbdcac896337247d9!8m2!3d39.1081763!4d-84.5076152"
         >
-              Hyatt Regency Cincinnati
+              Hard Rock Casino Cincinnati
           <br />
-              151 W 5th St
+              1000 Broadway St
           <br />
               Cincinnati, OH 45202
         </a>
