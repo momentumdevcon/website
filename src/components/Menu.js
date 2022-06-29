@@ -20,11 +20,6 @@ const Menu = ({ menuState }) => (
       </a>
     </li>
     <li>
-      <Link to="/blog">
-        Blog
-      </Link>
-    </li>
-    <li>
       <Link to="/codeOfConduct">
         Code of Conduct
       </Link>
