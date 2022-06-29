@@ -24,20 +24,6 @@
     ]
   },
   {
-    "name": "Izzi Bikun",
-    "photo":"izzi",
-    "links": [
-      {
-        "linkType": "Twitter",
-        "url": "https://twitter.com/izzib76"
-      },
-      {
-        "linkType": "LinkedIn",
-        "url": "https://www.linkedin.com/in/elizabethbikun/"
-      }
-    ]
-  },
-  {
     "name": "Taryn Ruberg",
     "photo":"taryn",
     "links": [
@@ -58,20 +44,6 @@
       {
         "linkType": "LinkedIn",
         "url": "https://www.linkedin.com/in/katzenbar/"
-      }
-    ]
-  },
-  {
-    "name": "Jennifer LeMaster",
-    "photo":"jennifer",
-    "links": [
-      {
-        "linkType": "Twitter",
-        "url": "https://twitter.com/activistshrugg1"
-      },
-      {
-        "linkType": "LinkedIn",
-        "url": "https://www.linkedin.com/in/jennifer-lemaster-168b29145/"
       }
     ]
   },
@@ -122,16 +94,6 @@
       {
         "linkType": "Company_Website",
         "url": "https://jasonmiazga.com"
-      }
-    ]
-  },
-  {
-    "name": "Chris Nelson",
-    "photo":"chris",
-    "links": [
-      {
-        "linkType": "Twitter",
-        "url": "https://twitter.com/superchris"
       }
     ]
   }
