@@ -20,11 +20,11 @@ const BlogInfo = ({ info, blogPrefix='/blog/'}) => (
     </p>
     <div className='iconAndText' style={{ display: 'flex' }}>
       <span className='icon'>
-        <Icon icon={faUser} size="2x" />
+        <Icon icon={faUser} size="xl" />
       </span>
       <p>{`${info.author}`}</p>
       <span className='icon' style={{ marginLeft: '20px' }}>
-        <Icon icon={faCalendarAlt} size="2x" />
+        <Icon icon={faCalendarAlt} size="xl" />
       </span>
       <p>{`${info.publishedDate}`}</p>
     </div>
