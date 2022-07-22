@@ -16,10 +16,11 @@ const Paginator = ({ children, pageContext, pageTitle }) => (
           generateArrFromInt(pageContext.numberOfPages).map(
             (page) =>
               pageContext.humanPageNumber === page + 1
-                ? <div className='currentPage'>{page + 1}</div>
+                ? <div key={page} className='currentPage'>{page + 1}</div>
                 : <Link
                   to={`/blog${page === 0 ? '' : `/${page + 1}`}`}
                   className='link'
+                  key={page}
                 >
                   {page + 1}
                 </Link>
