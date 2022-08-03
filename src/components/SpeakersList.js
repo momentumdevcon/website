@@ -33,7 +33,7 @@ const SpeakersList = () => (
       const sessionTitlesById = sessions
         .map(session => Object.values(session))
         .reduce((acc, cur) => {
-          const shortTitle = cur[1].split('').slice(0, 25);
+          const shortTitle = cur[1].split('').slice(0, 35);
           if (shortTitle.length !== cur[1].length) {
             shortTitle.push('...');
           }

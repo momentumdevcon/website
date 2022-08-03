@@ -36,3 +36,9 @@ Here is an example of using the grid, for a 3 column layout:
     </div>
 </div>
 ```
+
+## Guides
+### Updating Speakers/Sessions
+On Sessionize, copy the previous year's query into this year's query
+Update the URL in gatsby-config.js
+Update the tags/level codes for this year in src/assets/data/levelAndTagId.js

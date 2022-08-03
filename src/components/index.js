@@ -18,3 +18,4 @@ export { default as LatestBlogPost } from './LatestBlogPost';
 export { default as Paginator } from './Paginator';
 export { default as BlogInfo } from './BlogInfo';
 export { default as CallForPresenters } from './CallForPresenters';
+export { TicketsCTA } from './TicketsCTA';

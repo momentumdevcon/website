@@ -1,11 +1,9 @@
 import React from 'react';
 import { StaticQuery, graphql, Link } from 'gatsby';
 import getSpeakerSlug from '../utils/getSpeakerSlug';
+import { LEVEL_ID, TAG_ID } from '../assets/data/levelAndTagId';
 import '../assets/css/sessions.css';
 import '../assets/css/session.css';
-
-const LEVEL_ID = 29909;
-const TAG_ID = 29914;
 
 const SessionsList = () => (
   <StaticQuery

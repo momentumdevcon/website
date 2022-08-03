@@ -2,10 +2,8 @@ import React from 'react';
 import { graphql, Link } from 'gatsby';
 import { Wrapper } from '../components';
 import getSpeakerSlug from '../utils/getSpeakerSlug.js';
+import { LEVEL_ID, TAG_ID } from '../assets/data/levelAndTagId';
 import '../assets/css/session.css';
-
-const LEVEL_ID = 29909;
-const TAG_ID = 29914;
 
 const SessionTemplate = ({ data: { sessionsData, sessionizeData }, pageContext: { slug } }) => {
   const session = sessionsData.sessions.find(session => session.alternative_id === slug);
@@ -16,7 +14,7 @@ const SessionTemplate = ({ data: { sessionsData, sessionizeData }, pageContext: 
 
   const speaker1 = sessionizeData.speakers.find(speaker => speaker.alternative_id === session.speakers[0].alternative_id);
 
-  const pageDescription = `${title} presented by ${speakerNames.join(', ')} at Momentum 2021`
+  const pageDescription = `${title} presented by ${speakerNames.join(', ')} at Momentum 2022`
   const getNameWithLink = (slug, name) => (
     <Link to={`/speakers/${getSpeakerSlug(slug)}`}>
       {name}
