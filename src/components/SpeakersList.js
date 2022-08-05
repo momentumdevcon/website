@@ -72,12 +72,9 @@ const SpeakersList = () => (
                       />
                     </Link>
                     <div className="speakerSocialIcons">
-                      {speaker.links.length > 0 && speaker.links[0].linkType === 'Twitter'
-                        ? generateSocialLink(speaker.links[0], 'speakerIcon')
-                        : ''}
-                      {speaker.links.length > 1 && speaker.links[1].linkType === 'LinkedIn'
-                        ? generateSocialLink(speaker.links[1], 'speakerIcon')
-                        : ''}
+                      {
+                        speaker.links.map(link => generateSocialLink(link, 'speakerIcon'))
+                      }
                     </div>
                     <div
                       className="session-links"
