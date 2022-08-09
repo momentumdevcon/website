@@ -31,7 +31,13 @@ export const sponsorData = {
       link: 'https://www.launchscout.com/',
     },
   ],
-  'Lunch/Break': [],
+  'Lunch/Break': [
+    {
+      company: 'alexa',
+      fileName: 'alexa.png',
+      link: 'https://developer.amazon.com/en-US/alexa'
+    }
+  ],
   Game: [],
   Booth: [
     { 
