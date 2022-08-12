@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
 
-const Menu = ({ menuState }) => (
+export const Menu = ({ menuState }) => (
   <ul className={`menu-links${menuState}`}>
     <li>
       <a href="https://ti.to/the-circuit/momentum-2022?source=menu" target='_blank' rel="noopener noreferrer">
@@ -45,5 +45,3 @@ const Menu = ({ menuState }) => (
 Menu.propTypes = {
   menuState: PropTypes.string
 }
-
-export default Menu

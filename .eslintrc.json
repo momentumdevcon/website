@@ -4,6 +4,14 @@
     "es6": true
   },
   "extends": ["eslint:recommended", "plugin:react/recommended"],
+  "overrides": [
+    {
+      "files": ["src/templates/*", "src/pages/*", "src/html.js"],
+      "rules": {
+        "import/no-default-export": "off"
+      }
+    }
+  ],
   "parserOptions": {
     "ecmaVersion": 9,
     "ecmaFeatures": {
@@ -12,9 +20,11 @@
     "sourceType": "module"
   },
   "plugins": [
+    "import",
     "react"
   ],
   "rules": {
+    "import/no-default-export": "error",
     "indent": [
       "error",
       2
@@ -23,13 +33,13 @@
       "error",
       "unix"
     ],
-    "react/no-unescaped-entities": 0,
     "quotes": [
       "error",
       "single"
     ],
-    "react/prop-types": 0,
-    "semi": 0
+    "react/no-unescaped-entities": "off",
+    "react/prop-types": "off",
+    "semi": "off"
   },
   "settings": {
     "react": {

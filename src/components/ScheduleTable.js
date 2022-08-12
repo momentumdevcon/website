@@ -78,6 +78,4 @@
 //   />
 // )
 
-const ScheduleTable = () => {}
-
-export default ScheduleTable
+export const ScheduleTable = () => {}

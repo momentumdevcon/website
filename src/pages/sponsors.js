@@ -64,5 +64,4 @@ export const query = graphql`
     }
   }
 `;
-
 export default Sponsors;

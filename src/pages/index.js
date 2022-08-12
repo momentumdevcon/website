@@ -1,7 +1,7 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
-import metaContent from '../assets/data/metaContent.js'
+import { metaContent } from '../assets/data/metaContent.js'
 import { 
   Banner,
   Layout,

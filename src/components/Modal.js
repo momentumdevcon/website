@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../assets/css/modal.css';
 
-const Modal = ({children, formState, updateFormState}) => {
+export const Modal = ({children, formState, updateFormState}) => {
   const [modalStyle, setStyle] = useState('');
   if (typeof window !== 'undefined') {
     window.onclick = ((e) => e.target.className === 'modal' ? setStyle('none') : '')
@@ -27,5 +27,3 @@ const Modal = ({children, formState, updateFormState}) => {
     </React.Fragment>
   )
 }
-
-export default Modal;

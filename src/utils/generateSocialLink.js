@@ -1,9 +1,9 @@
 import React from 'react';
-import Icon from '../components/Icon';
+import { Icon } from '../components/Icon';
 import { faRss, faBuilding } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons';
 
-const generateSocialLink = (link, className) => {
+export const generateSocialLink = (link, className) => {
   const types = {
     Twitter: faTwitter,
     LinkedIn: faLinkedin,
@@ -26,5 +26,3 @@ const generateSocialLink = (link, className) => {
 
   return socialIcon
 };
-
-export default generateSocialLink;

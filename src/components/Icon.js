@@ -8,7 +8,7 @@ config.autoAddCss = false;
 
 const upperCaseFirstLetter = word => word.replace(word.split('')[0], word.charAt(0).toUpperCase());
 
-const Icon = ({ className, icon, label, link, size }) =>
+export const Icon = ({ className, icon, label, link, size }) =>
   (link ? (
     <a href={link} className={classnames('icon alt', { [className]: className })} target="_blank" rel="noopener noreferrer">
       <FontAwesomeIcon icon={icon} size={size} />
@@ -17,5 +17,3 @@ const Icon = ({ className, icon, label, link, size }) =>
   ) : (
     <FontAwesomeIcon icon={icon} size={size} className={classnames('icon alt', { [className]: className })} />
   ));
-
-export default Icon;

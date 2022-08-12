@@ -1,9 +1,9 @@
 import React from 'react';
 import { Wrapper } from '../components';
 import organizers from '../assets/data/organizers.json';
-import organizerPhotos from '../assets/images/organizers';
+import { organizerPhotos } from '../assets/images/organizers';
 import { BlueLogo } from '../assets/images';
-import generateSocialLink from '../utils/generateSocialLink';
+import { generateSocialLink } from '../utils/generateSocialLink';
 
 const OrganizersPage = () => (
   <Wrapper title="Organizers">
@@ -37,5 +37,4 @@ const OrganizersPage = () => (
     </div>
   </Wrapper>
 );
-
 export default OrganizersPage;

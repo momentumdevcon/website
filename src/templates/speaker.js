@@ -1,8 +1,8 @@
 import React from 'react';
 import { graphql, Link } from 'gatsby';
 import { Wrapper } from '../components/';
-import generateSocialLink from '../utils/generateSocialLink';
-import getSpeakerSlug from '../utils/getSpeakerSlug';
+import { generateSocialLink } from '../utils/generateSocialLink';
+import { getSpeakerSlug } from '../utils/getSpeakerSlug';
 import { BlueLogo } from '../assets/images';
 import '../assets/css/speaker.css';
 
@@ -53,7 +53,6 @@ const SpeakerTemplate = ({ data: { sessionizeData }, pageContext: { slug } }) =>
     </Wrapper>
   );
 };
-
 export default SpeakerTemplate;
 
 export const query = graphql`

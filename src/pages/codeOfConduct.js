@@ -38,5 +38,4 @@ const CodeOfConduct = () => (
   </Wrapper>
 
 );
-
 export default CodeOfConduct;

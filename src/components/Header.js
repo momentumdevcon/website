@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { Link } from 'gatsby';
-import Menu from './Menu';
+import { Menu } from './Menu';
 import logo from '../assets/images/cropped-white.svg';
 import '../assets/css/logo.css';
 import '../assets/css/header.css';
 
-const Header = () => {
+export const Header = () => {
   const [menuState, updateMenuState] = useState(' Closed')
   
   const toggleMenu = () => {
@@ -30,5 +30,3 @@ const Header = () => {
     </header>
   );
 }
-
-export default Header;

@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import Icon from './Icon';
+import { Icon } from './Icon';
 import { faCalendarAlt, faUser } from '@fortawesome/free-solid-svg-icons';
 
-const BlogInfo = ({ info, blogPrefix='/blog/'}) => (
+export const BlogInfo = ({ info, blogPrefix='/blog/'}) => (
   <>
     <Link
       to={`${blogPrefix ? blogPrefix : ''}${info.slug}`}
@@ -30,5 +30,3 @@ const BlogInfo = ({ info, blogPrefix='/blog/'}) => (
     </div>
   </>
 );
-
-export default BlogInfo;

@@ -2,7 +2,7 @@ import React from 'react';
 import { InterestForm } from '.';
 import '../assets/css/banner.css';
 
-const Banner = () => (
+export const Banner = () => (
   <section id="banner" className="major">
     <div className="inner">
       <header className="major">
@@ -16,5 +16,3 @@ const Banner = () => (
     </div>
   </section>
 );
-
-export default Banner;
