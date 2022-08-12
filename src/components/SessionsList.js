@@ -1,11 +1,11 @@
 import React from 'react';
 import { StaticQuery, graphql, Link } from 'gatsby';
-import getSpeakerSlug from '../utils/getSpeakerSlug';
+import { getSpeakerSlug } from '../utils/getSpeakerSlug';
 import { LEVEL_ID, TAG_ID } from '../assets/data/levelAndTagId';
 import '../assets/css/sessions.css';
 import '../assets/css/session.css';
 
-const SessionsList = () => (
+export const SessionsList = () => (
   <StaticQuery
     query={graphql`
       query SessionQuery {
@@ -92,5 +92,3 @@ const SessionsList = () => (
     )}
   />
 );
-
-export default SessionsList;

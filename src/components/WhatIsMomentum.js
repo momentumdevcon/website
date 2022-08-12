@@ -1,7 +1,7 @@
 import React from 'react';
 import { mainDescription } from '../assets/data/metaContent.js'
 
-const WhatIsMomentum = () => (
+export const WhatIsMomentum = () => (
   <section id="one" className="tiles whatIsMomentumTiles">
     <article>
       <header className="major">
@@ -27,5 +27,3 @@ const WhatIsMomentum = () => (
     </article>
   </section>
 )
-
-export default WhatIsMomentum;

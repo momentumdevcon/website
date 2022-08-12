@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import Modal from './Modal';
-import encode from '../utils/encode';
+import { Modal } from './Modal';
+import { encode } from '../utils/encode';
 import '../assets/css/interestForm.css';
-import SubmitMessage from '../components/SubmitMessage';
+import { SubmitMessage } from '../components/SubmitMessage';
 import submitMessages from '../assets/data/submitMessages.json';
 
 const handleSubmit = (e, name, email, interest, updateFormState) => {
@@ -39,7 +39,7 @@ const updateCheckbox = (option, interest, updateInterest) => {
   })
 }
 
-const InterestForm = () => {
+export const InterestForm = () => {
   const [name, updateName] = useState('');
   const [email, updateEmail] = useState('');
   const [interest, updateInterest] = useState({});
@@ -90,5 +90,3 @@ const InterestForm = () => {
     </Modal>
   )
 }
-
-export default InterestForm;

@@ -42,3 +42,7 @@ Here is an example of using the grid, for a 3 column layout:
 On Sessionize, copy the previous year's query into this year's query
 Update the URL in gatsby-config.js
 Update the tags/level codes for this year in src/assets/data/levelAndTagId.js
+
+## Best Practices
+### Named Exports
+All exports (besides Pages & Templates) should be named rather than default. This allows components to be easily searched for across the project and adds consistency to the code base. Pages and templates are default exports because they're required by Gatsby.

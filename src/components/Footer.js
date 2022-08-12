@@ -1,9 +1,9 @@
 import React from 'react'
-import Icon from './Icon'
-import Contact from '../components/Contact';
+import { Icon } from './Icon'
+import { Contact } from '../components/Contact';
 import { socialIcons } from '../assets/data/socialIcons'
 
-const Footer = () => (
+export const Footer = () => (
   <footer id="footer">
     <div className="inner">
       <Contact />
@@ -21,5 +21,3 @@ const Footer = () => (
     </div>
   </footer>
 )
-
-export default Footer

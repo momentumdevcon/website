@@ -2,12 +2,12 @@ import React from 'react';
 import { sortDates } from '../utils/sortDates'
 import { faComment } from '@fortawesome/free-solid-svg-icons';
 
-import BlogInfo from './BlogInfo';
-import Icon from './Icon';
+import { BlogInfo } from './BlogInfo';
+import { Icon } from './Icon';
 
 const filterForPublished = ({ node: { frontmatter: { published } } }) => published === 'true';
 
-const LatestPost = ({ posts }) => {
+export const LatestBlogPost = ({ posts }) => {
   const sortedPosts = posts
     .sort(sortDates)
     .filter(filterForPublished);
@@ -32,5 +32,3 @@ const LatestPost = ({ posts }) => {
     </section>
   )
 }
-
-export default LatestPost;

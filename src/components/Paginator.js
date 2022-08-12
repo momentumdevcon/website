@@ -5,7 +5,7 @@ import '../assets/css/pagination.css'
 
 const generateArrFromInt = num => [...Array(parseInt(num, 10)).keys()];
 
-const Paginator = ({ children, pageContext, pageTitle }) => (
+export const Paginator = ({ children, pageContext, pageTitle }) => (
   <Wrapper title={pageTitle}>
     <div className="container alt" id="main">
       <div className="inner">
@@ -30,5 +30,3 @@ const Paginator = ({ children, pageContext, pageTitle }) => (
     </div>
   </Wrapper>
 );
-
-export default Paginator;

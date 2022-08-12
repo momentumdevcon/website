@@ -13,5 +13,4 @@ const SchedulePage = () => (
     </div>
   </Wrapper>
 );
-
 export default SchedulePage;

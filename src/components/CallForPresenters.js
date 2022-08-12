@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CallForPresenters = () => (
+export const CallForPresenters = () => (
   <section id="one" className="tiles whatIsMomentumTiles">
     <article>
       <header className="major">
@@ -14,5 +14,3 @@ const CallForPresenters = () => (
     </article>
   </section>
 )
-
-export default CallForPresenters;

@@ -1,8 +1,8 @@
 import React from 'react';
-import Icon from '../components/Icon';
+import { Icon } from '../components/Icon';
 import { faEnvelope, faPhone, faHome } from '@fortawesome/free-solid-svg-icons';
 
-const Contact = () => (
+export const Contact = () => (
   <section className="contact">
     <section>
       <div className="contact-method">
@@ -36,5 +36,3 @@ const Contact = () => (
     </section>
   </section>
 );
-
-export default Contact;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql, Link } from 'gatsby';
 import { Wrapper } from '../components';
-import getSpeakerSlug from '../utils/getSpeakerSlug.js';
+import { getSpeakerSlug } from '../utils/getSpeakerSlug.js';
 import { LEVEL_ID, TAG_ID } from '../assets/data/levelAndTagId';
 import '../assets/css/session.css';
 
@@ -56,7 +56,6 @@ const SessionTemplate = ({ data: { sessionsData, sessionizeData }, pageContext: 
     </Wrapper>
   );
 };
-
 export default SessionTemplate;
 
 export const query = graphql`

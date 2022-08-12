@@ -20,5 +20,4 @@ const FoodMenu = () => (
     </div>
   </Wrapper>
 );
-
 export default FoodMenu;

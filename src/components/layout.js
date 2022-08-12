@@ -1,10 +1,10 @@
 import React from 'react'
 
 import '../assets/scss/main.scss'
-import Header from './Header'
-import Footer from './Footer'
+import { Header } from './Header'
+import { Footer } from './Footer'
 
-class Layout extends React.Component {
+export class Layout extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -38,5 +38,3 @@ class Layout extends React.Component {
     )
   }
 }
-
-export default Layout

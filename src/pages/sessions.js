@@ -8,5 +8,4 @@ const Sessions = () => (
     </div>
   </Wrapper>
 );
-
 export default Sessions;

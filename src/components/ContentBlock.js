@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 
-const ContentBlock = ({
+export const ContentBlock = ({
   header, subHeader, content, image, link,
 }) => (
   <React.Fragment>
@@ -31,5 +31,3 @@ const ContentBlock = ({
     </article>
   </React.Fragment>
 );
-
-export default ContentBlock;

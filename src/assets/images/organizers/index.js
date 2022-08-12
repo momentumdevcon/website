@@ -6,7 +6,7 @@ import ryan from './ryan.jpg';
 import jason from './jason.jpg';
 import kat from './kat.jpeg';
 
-export default {
+export const organizerPhotos = {
   brandon,
   jason,
   kat,

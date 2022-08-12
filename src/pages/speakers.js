@@ -12,5 +12,4 @@ const SpeakersPage = () => (
     </div>
   </Wrapper>
 );
-
 export default SpeakersPage;

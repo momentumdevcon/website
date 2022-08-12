@@ -41,4 +41,4 @@ export function createMetaContent(title, description, imageOrNull) {
   ]
 }
 
-export default [...commonMetaContent, ...homeMetaContent]
+export const metaContent = [...commonMetaContent, ...homeMetaContent]

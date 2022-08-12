@@ -3,7 +3,7 @@ import Helmet from 'react-helmet';
 import { BannerLanding, Layout } from '.';
 import { createMetaContent, mainTitle, mainDescription } from '../assets/data/metaContent';
 
-const Wrapper = ({ 
+export const Wrapper = ({ 
   children,
   metaDescription,
   metaImage,
@@ -26,5 +26,3 @@ const Wrapper = ({
     </Layout>
   );
 };
-
-export default Wrapper;

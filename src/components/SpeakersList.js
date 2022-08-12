@@ -1,11 +1,11 @@
 import React from 'react';
 import { StaticQuery, graphql, Link } from 'gatsby';
-import generateSocialLink from '../utils/generateSocialLink';
+import { generateSocialLink } from '../utils/generateSocialLink';
 import '../assets/css/speakers.css';
-import getSpeakerSlug from '../utils/getSpeakerSlug';
+import { getSpeakerSlug } from '../utils/getSpeakerSlug';
 import { BlueLogo } from '../assets/images';
 
-const SpeakersList = () => (
+export const SpeakersList = () => (
   <StaticQuery
     query={graphql`
       query SpeakerListQuery {
@@ -99,5 +99,3 @@ const SpeakersList = () => (
     }}
   />
 );
-
-export default SpeakersList;

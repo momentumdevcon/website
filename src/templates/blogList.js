@@ -32,7 +32,6 @@ const BlogList = ({ data, pageContext }) => {
     </Paginator>
   )
 }
-
 export default BlogList
 
 export const pageQuery = graphql`
