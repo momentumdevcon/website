@@ -5,9 +5,9 @@ import { Link } from 'gatsby'
 export const Menu = ({ menuState }) => (
   <ul className={`menu-links${menuState}`}>
     <li>
-      <a href="https://ti.to/the-circuit/momentum-2022?source=menu" target='_blank' rel="noopener noreferrer">
+      <Link to="/tickets">
         Tickets
-      </a>
+      </Link>
     </li>
     <li>
       <Link to="/speakers">
