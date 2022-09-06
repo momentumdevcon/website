@@ -52,14 +52,14 @@
   display: grid;
   grid-auto-flow: column;
   /* take 100% and divide it by the number of rooms */
-  grid-auto-columns: minmax(16.67%, 1fr);
+  grid-auto-columns: minmax(14.28%, 1fr);
 }
 
 .table-grid__row + .table-grid__row .table-grid__cell {
   border-top-width: 0;
 }
 
-@media(max-width: 600px) {
+@media(max-width: 980px) {
   .table-grid__row:first-child + .table-grid__row .table-grid__cell--header {
     border-top-width: 1px;
   } 
@@ -76,13 +76,13 @@
   border-left-width: 0;
 }
 
-@media(max-width: 600px) {
+@media(max-width: 980px) {
   .table-grid__cell + .table-grid__cell {
     border-left-width: 1px;
   }
 }
 
-/* Center room and time content and differenciate them from regular cells */
+/* Center room and time content and differentiate them from regular cells */
 .table-grid__cell--header {
   align-items: center;
   justify-content: center;
@@ -149,8 +149,38 @@
   font-weight: 600;
 }
 
+@media screen and (min-width: 600px) and (max-width: 980px) {
+  
+  /* Utility class to hide elements while the screen is small */
+  .hide-md {
+    display: none;
+  }
+  
+  /* Adds a gap between the table rows */
+  .table-grid {
+    grid-gap: 1em;
+  }
+  
+  /* Stack the cells vertically */
+  .table-grid__row {
+    /* Each row has 3 columns  */
+    grid-auto-flow: row;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  
+  /* Make the room labels appear */
+  .table-grid__cell-label {
+    display: block;
+  }
+
+  .table-grid__cell.table-grid__cell--header {
+    /* full width of the grid row */
+    grid-column: 1 / -1;
+  }
+}
+
 /* These styles with be applied when the screen is less than 600px wide */
-/* I picked 600px ramdomly. Choose a breakpoint that makes sense for you */
+/* I picked 600px randomly. Choose a breakpoint that makes sense for you */
 
 @media screen and (max-width: 600px) {
   

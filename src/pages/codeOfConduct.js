@@ -1,5 +1,6 @@
 import React from 'react';
 import { Wrapper } from '../components';
+// Why is this here? Is this necessary?
 import '../assets/css/schedule.css';
 
 const CodeOfConduct = () => (
