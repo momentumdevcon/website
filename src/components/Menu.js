@@ -10,6 +10,11 @@ export const Menu = ({ menuState }) => (
       </Link>
     </li>
     <li>
+      <Link to="/schedule">
+        Schedule
+      </Link>
+    </li>
+    <li>
       <Link to="/speakers">
         Speakers
       </Link>
@@ -30,14 +35,14 @@ export const Menu = ({ menuState }) => (
       </Link>
     </li>
     <li>
-      <a href="https://2021.momentumdevcon.com">
-        2021 Conference
-      </a>
-    </li>
-    <li>
       <Link to="/codeOfConduct">
         Code of Conduct
       </Link>
+    </li>
+    <li>
+      <a href="https://2021.momentumdevcon.com">
+        2021
+      </a>
     </li>
   </ul>
 )
