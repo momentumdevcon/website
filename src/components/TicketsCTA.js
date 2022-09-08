@@ -7,7 +7,7 @@ export const TicketsCTA = () => (
       <header className="major">
         <h3>2022 Tickets On Sale Now!</h3>
       </header>
-      <TitoWidget />
+      <TitoWidget source="cta-widget" />
     </article>
   </section>
 )
