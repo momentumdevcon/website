@@ -129,24 +129,13 @@ export const sponsorData = {
   ],
 }
 
-export const sponsorImage = graphql`
-  fragment sponsorImage on File {
-    childImageSharp {
-      image125: fixed(width: 125) {
-        ...GatsbyImageSharpFixed_tracedSVG
-      }
-      image150: fixed(width: 150) {
-        ...GatsbyImageSharpFixed_tracedSVG
-      }
-      image175: fixed(width: 175) {
-        ...GatsbyImageSharpFixed_tracedSVG
-      }
-      image200: fixed(width: 200) {
-        ...GatsbyImageSharpFixed_tracedSVG
-      }
-      image250: fixed(width: 250) {
-        ...GatsbyImageSharpFixed_tracedSVG
-      }
-    }
+export const sponsorImage = graphql`fragment sponsorImage on File {
+  childImageSharp {
+    image125: gatsbyImageData(width: 125, placeholder: TRACED_SVG, layout: FIXED)
+    image150: gatsbyImageData(width: 150, placeholder: TRACED_SVG, layout: FIXED)
+    image175: gatsbyImageData(width: 175, placeholder: TRACED_SVG, layout: FIXED)
+    image200: gatsbyImageData(width: 200, placeholder: TRACED_SVG, layout: FIXED)
+    image250: gatsbyImageData(width: 250, placeholder: TRACED_SVG, layout: FIXED)
   }
+}
 `

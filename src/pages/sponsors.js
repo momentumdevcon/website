@@ -1,6 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import Img from 'gatsby-image';
+import { GatsbyImage } from 'gatsby-plugin-image';
 import { sponsorData, Wrapper } from '../components';
 import '../assets/css/sponsors.css';
 
@@ -23,14 +23,11 @@ const Sponsors = ({ data }) => {
                       <>
                         <div className='sponsor-circle'>
                           <a href={link} target='_blank' rel="noopener noreferrer">
-                            <Img
-                              fixed={
-                                data.sponsorImages.edges.find(
-                                  n => n.node.relativePath === fileName
-                                ).node.childImageSharp.image125
-                              }
-                              alt={`${company} logo`}
-                            />
+                            <GatsbyImage
+                              image={data.sponsorImages.edges.find(
+                                n => n.node.relativePath === fileName
+                              ).node.childImageSharp.image125}
+                              alt={`${company} logo`} />
                           </a>
                         </div>
                       </>
@@ -44,7 +41,7 @@ const Sponsors = ({ data }) => {
                     ))}
                   </div>
                 </div>
-              )
+              );
             })
         }
       </div>
