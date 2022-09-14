@@ -4,6 +4,11 @@ import { graphql } from 'gatsby'
 export const sponsorData = {
   Headlining: [
     {
+      company: 'Check Point',
+      fileName: 'checkpoint.jpg',
+      link: 'https://www.checkpoint.com'
+    },
+    {
       company: 'Fifth Third Bank',
       fileName: 'fifthThird.png',
       link: 'https://www.53.com/content/fifth-third/en.html',
