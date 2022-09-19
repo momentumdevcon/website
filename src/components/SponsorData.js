@@ -90,6 +90,11 @@ export const sponsorData = {
       fileName: 'vernovis.png',
       link: 'https://www.vernovis.com/',
     },
+    {
+      company: 'FusionAuth',
+      fileName: 'fusionauth.png',
+      link: 'https://fusionauth.io/',
+    },
   ],
   'Speaker Social': [],
   Lanyard: [
