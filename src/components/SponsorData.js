@@ -32,7 +32,7 @@ export const sponsorData = {
     },
     {
       company: 'Launch Scout',
-      fileName: 'launchScout.jpg',
+      fileName: 'launchScout.png',
       link: 'https://www.launchscout.com/',
     },
   ],
