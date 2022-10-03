@@ -114,7 +114,14 @@ export const sponsorData = {
       link: 'https://www.cincinnatiml.com/'
     },
     {
+      company: 'CinciJS',
+    },
+    {
       company: 'CinJUG',
+    },
+    {
+      company: 'CincyRB',
+      link: 'https://cincyrb.com/'
     },
     {
       company: 'getWITit',
@@ -123,6 +130,10 @@ export const sponsorData = {
     {
       company: 'KCDC',
       link: 'https://www.kcdc.info/'
+    },
+    {
+      company: 'Ohio Elixir',
+      link: 'https://www.ohioelixir.com/'
     },
     {
       company: 'Stir Trek',
