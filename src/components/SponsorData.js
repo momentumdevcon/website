@@ -35,6 +35,11 @@ export const sponsorData = {
       fileName: 'launchScout.png',
       link: 'https://www.launchscout.com/',
     },
+    {
+      company: 'Seven Hills Technology',
+      fileName: 'sevenHills.png',
+      link: 'https://sevenhillstechnology.com/'
+    }
   ],
   'Lunch/Break': [
     {
