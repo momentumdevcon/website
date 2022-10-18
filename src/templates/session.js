@@ -1,7 +1,7 @@
 import React from 'react';
-import { graphql, Link } from 'gatsby';
+import { graphql } from 'gatsby';
 import { Wrapper } from '../components';
-import { getSpeakerSlug } from '../utils/getSpeakerSlug.js';
+import { getSpeakerNameLink } from '../utils/getSpeakerNameLink';
 import { LEVEL_ID, TAG_ID } from '../assets/data/levelAndTagId';
 import '../assets/css/session.css';
 
@@ -15,11 +15,6 @@ const SessionTemplate = ({ data: { sessionsData, sessionizeData }, pageContext: 
   const speaker1 = sessionizeData.speakers.find(speaker => speaker.alternative_id === session.speakers[0].alternative_id);
 
   const pageDescription = `${title} presented by ${speakerNames.join(', ')} at Momentum 2022`
-  const getNameWithLink = (slug, name) => (
-    <Link to={`/speakers/${getSpeakerSlug(slug)}`}>
-      {name}
-    </Link>
-  );
   
   return (
     <Wrapper title={title} metaImage={speaker1.profilePicture} metaDescription={pageDescription}>
@@ -28,9 +23,9 @@ const SessionTemplate = ({ data: { sessionsData, sessionizeData }, pageContext: 
           <div className="inner">
             <div className="presenter">
               <span className="info-prefix">Presented by:</span>
-              { getNameWithLink(session.speakers[0].name, speakerNames[0]) }
+              { getSpeakerNameLink(speakerNames[0]) }
               { speakerNames.length > 1 ?
-                <span> and { getNameWithLink(session.speakers[1].name, speakerNames[1]) }</span> : ''
+                <span> and { getSpeakerNameLink(speakerNames[1]) }</span> : ''
               }
             </div>
             <div className="description">{session.description}</div>
