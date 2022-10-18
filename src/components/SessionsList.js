@@ -1,6 +1,6 @@
 import React from 'react';
 import { StaticQuery, graphql, Link } from 'gatsby';
-import { getSpeakerSlug } from '../utils/getSpeakerSlug';
+import { getSpeakerNameLink } from '../utils/getSpeakerNameLink';
 import { LEVEL_ID, TAG_ID } from '../assets/data/levelAndTagId';
 import '../assets/css/sessions.css';
 import '../assets/css/session.css';
@@ -42,16 +42,7 @@ export const SessionsList = () => (
               }
               const level = session.categories.find(cat => cat.alternative_id === LEVEL_ID).categoryItems[0].name;
               const tags = session.categories.find(cat => cat.alternative_id === TAG_ID).categoryItems.map(item => item.name);
-              const speakers = session.speakers.map(speaker => getSpeakerSlug(speaker.name))
-              const speakerLink = speakers.length > 1 ?
-                (
-                  <div>
-                    <Link to={`/speakers/${speakers[0]}`}>{session.speakers[0].name}</Link>
-                    and
-                    <Link to={`/speakers/${speakers[1]}`}>{session.speakers[1].name}</Link>
-                  </div>
-                ) :
-                <Link to={`/speakers/${speakers[0]}`}>{session.speakers[0].name}</Link>
+              const speakers = session.speakers.map(speaker => speaker.name)
 
               return (
                 <div className="inner session" key={session.alternative_id}>
@@ -63,7 +54,12 @@ export const SessionsList = () => (
                     </h2>
                     <div className="speakerLink">
                       <div className="presentedBy">Presented by:</div>
-                      <div>{speakerLink}</div>
+                      <div>
+                        { getSpeakerNameLink(speakers[0]) }
+                        { speakers.length > 1 ?
+                          <span> and { getSpeakerNameLink(speakers[1]) }</span> : ''
+                        }
+                      </div>
                     </div>
                   </div>
                   <div className="description">{shortDescription}</div>
