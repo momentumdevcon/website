@@ -5,9 +5,8 @@ export const TicketsCTA = () => (
   <section id="one" className="tiles whatIsMomentumTiles">
     <article>
       <header className="major">
-        <h3>2022 Tickets On Sale Now!</h3>
+        <h3>2022 Tickets Have Officially Sold Out!</h3>
       </header>
-      <TitoWidget source="cta-widget" />
     </article>
   </section>
 )

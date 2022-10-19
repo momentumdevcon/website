@@ -5,11 +5,6 @@ import { Link } from 'gatsby'
 export const Menu = ({ menuState }) => (
   <ul className={`menu-links${menuState}`}>
     <li>
-      <Link to="/tickets">
-        Tickets
-      </Link>
-    </li>
-    <li>
       <Link to="/schedule">
         Schedule
       </Link>
