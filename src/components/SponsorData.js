@@ -102,7 +102,7 @@ export const sponsorData = {
     },
     {
       company: 'Eliassen Group',
-      fileName: 'eliassen',
+      fileName: 'eliassen.png',
       link: 'https://www.eliassen.com/'
     }
   ],
