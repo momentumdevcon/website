@@ -100,6 +100,11 @@ export const sponsorData = {
       fileName: 'fusionauth.png',
       link: 'https://fusionauth.io/',
     },
+    {
+      company: 'Eliassen Group',
+      fileName: 'eliassen',
+      link: 'https://www.eliassen.com/'
+    }
   ],
   'Speaker Social': [],
   Lanyard: [
