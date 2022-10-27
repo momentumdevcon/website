@@ -1,5 +1,4 @@
 import React from 'react';
-import { TitoWidget } from './TitoWidget';
 
 export const TicketsCTA = () => (
   <section id="one" className="tiles whatIsMomentumTiles">

@@ -20,3 +20,4 @@ export { BlogInfo } from './BlogInfo';
 export { CallForPresenters } from './CallForPresenters';
 export { TicketsCTA } from './TicketsCTA';
 export { TitoWidget } from './TitoWidget';
+export { ThankYou } from './ThankYou';
