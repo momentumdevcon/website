@@ -4,12 +4,12 @@ import { Link } from 'gatsby'
 
 export const Menu = ({ menuState }) => (
   <ul className={`menu-links${menuState}`}>
-    <li>
+    {/* <li>
       <Link to="/schedule">
         Schedule
       </Link>
-    </li>
-    <li>
+    </li> */}
+    {/* <li>
       <Link to="/speakers">
         Speakers
       </Link>
@@ -18,7 +18,7 @@ export const Menu = ({ menuState }) => (
       <Link to="/sessions">
         Sessions
       </Link>
-    </li>
+    </li> */}
     <li>
       <Link to="/sponsors">
         Sponsors
@@ -34,11 +34,11 @@ export const Menu = ({ menuState }) => (
         Code of Conduct
       </Link>
     </li>
-    <li>
+    {/* <li>
       <a href="https://2021.momentumdevcon.com">
         2021
       </a>
-    </li>
+    </li> */}
   </ul>
 )
 
