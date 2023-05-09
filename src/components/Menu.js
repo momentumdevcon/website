@@ -20,6 +20,11 @@ export const Menu = ({ menuState }) => (
       </Link>
     </li> */}
     <li>
+      <a href="https://sessionize.com/momentum-2023/">
+        CFP
+      </a>
+    </li>
+    <li>
       <Link to="/sponsors">
         Sponsors
       </Link>
