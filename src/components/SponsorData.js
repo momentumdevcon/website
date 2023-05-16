@@ -36,6 +36,11 @@ export const sponsorData = {
       link: 'https://www.ascendum.com/',
     },
     {
+      company: 'Checkpoint',
+      fileName: 'checkpoint.jpg',
+      link: 'https://www.checkpoint.com/',
+    },
+    {
       company: 'MAX Technical Training',
       fileName: 'max.png',
       link: 'https://maxtrain.com/'
