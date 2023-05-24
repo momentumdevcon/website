@@ -39,11 +39,11 @@ export const Menu = ({ menuState }) => (
         Code of Conduct
       </Link>
     </li>
-    {/* <li>
-      <a href="https://2021.momentumdevcon.com">
-        2021
+    <li>
+      <a href="https://2022.momentumdevcon.com">
+        2022
       </a>
-    </li> */}
+    </li>
   </ul>
 )
 
