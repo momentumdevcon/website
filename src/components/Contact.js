@@ -1,6 +1,7 @@
 import React from 'react';
 import { Icon } from '../components/Icon';
 import { faEnvelope, faPhone, faHome } from '@fortawesome/free-solid-svg-icons';
+import logo from '../assets/images/cropped-white.svg';
 
 export const Contact = () => (
   <section className="contact">
@@ -32,6 +33,20 @@ export const Contact = () => (
           <br />
               Cincinnati, OH 45202
         </a>
+      </div>
+    </section>
+    <section>
+      <div className="contact-method">
+        <img src={logo} alt="logo" className='logo icon' />
+        <h3>Prior Years</h3>
+        <ul>
+          <li>
+            <a href="https://2022.momentumdevcon.com">2022</a>
+          </li>
+          <li>
+            <a href="https://2021.momentumdevcon.com">2021</a>
+          </li>
+        </ul>
       </div>
     </section>
   </section>
