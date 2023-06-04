@@ -48,6 +48,7 @@ export const InterestForm = () => {
   return (
     <Modal formState={formState} updateFormState={updateFormState}>
       <div id="main" className="InterestForm">
+        {/* eslint-disable-next-line react/no-unknown-property */}
         <form method="post" data-netlify="true" name="Register" netlify-honeypot="bot-field" onSubmit={(e) => handleSubmit(e, name, email, interest, updateFormState)}>
           <input type="hidden" name="form-name" value="Register" />
           <input type="hidden" name="bot-field" />
