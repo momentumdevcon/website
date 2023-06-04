@@ -36,13 +36,13 @@ export const SessionsList = () => (
               if (shortTitle.length !== session.title.length) {
                 shortTitle.push('...');
               }
-              const shortDescription = session.description.split('').slice(0,340);
-              if (shortDescription.length !== session.description.length) {
+              const shortDescription = session.description && session.description.split('').slice(0,340);
+              if (shortDescription && shortDescription.length !== session.description.length) {
                 shortDescription.push('...')
               }
-              const level = session.categories.find(cat => cat.alternative_id === LEVEL_ID).categoryItems[0].name;
-              const tags = session.categories.find(cat => cat.alternative_id === TAG_ID).categoryItems.map(item => item.name);
-              const speakers = session.speakers.map(speaker => speaker.name)
+              const level = session.categories && session.categories.find(cat => cat.alternative_id === LEVEL_ID) ? session.categories.find(cat => cat.alternative_id === LEVEL_ID).categoryItems[0].name : '';
+              const tags = session.categories && session.categories.find(cat => cat.alternative_id === TAG_ID) ?  session.categories.find(cat => cat.alternative_id === TAG_ID).categoryItems.map(item => item.name) : '';
+              const speakers = session.speakers ? session.speakers.map(speaker => speaker.name) : []
 
               return (
                 <div className="inner session" key={session.alternative_id}>
