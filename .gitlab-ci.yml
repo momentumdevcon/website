@@ -1,0 +1,34 @@
+# Specify the stages of the pipeline
+stages:
+  - install
+  - lint
+
+# Define variables that can be used across the pipeline
+# This is the current version of node specified in our .nvmrc
+variables:
+  NODE_IMAGE: node:16.6.0
+
+# Define the jobs for each stage
+install:
+  stage: install
+  image: $NODE_IMAGE
+  script:
+    - yarn
+  cache:
+    key: ${CI_COMMIT_REF_SLUG}_node_modules
+    paths:
+    - node_modules/
+  only:
+    - merge_requests
+
+lint:
+  stage: lint
+  image: $NODE_IMAGE
+  script:
+    - yarn lint
+  cache:
+    key: ${CI_COMMIT_REF_SLUG}_node_modules
+    paths:
+    - node_modules/
+  only:
+    - merge_requests
