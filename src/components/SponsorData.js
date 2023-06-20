@@ -36,6 +36,11 @@ export const sponsorData = {
       link: 'https://www.ascendum.com/',
     },
     {
+      company: 'CGI',
+      fileName: 'cgi.jpg',
+      link: 'https://www.cgi.com/',
+    },
+    {
       company: 'Checkpoint',
       fileName: 'checkpoint.jpg',
       link: 'https://www.checkpoint.com/',
