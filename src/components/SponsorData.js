@@ -49,6 +49,11 @@ export const sponsorData = {
       company: 'MAX Technical Training',
       fileName: 'max.png',
       link: 'https://maxtrain.com/'
+    },
+    {
+      company: 'Insight',
+      fileName: 'insight.png',
+      link: 'https://www.insight.com'
     }
   ],
   'Speaker Social': [],
