@@ -6,6 +6,6 @@ export const TitoWidget = ({ source }) => (
     <Helmet>
       <script src='https://js.tito.io/v2' />
     </Helmet>
-    <tito-widget event="the-circuit/momentum-2022" source={ source } />
+    <tito-widget event="the-circuit/momentum-2023" source={ source } />
   </>
 );
