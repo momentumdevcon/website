@@ -1,12 +1,21 @@
 import React from 'react';
-import { Wrapper } from '../components';
+import { TitoWidget, Wrapper } from '../components';
 
 const TicketsPage = () => (
-  <Wrapper title="2022 Tickets">
+  <Wrapper title="2023 Tickets">
     <div id="main" className="alt">
       <section id="one">
         <div className="inner">
-          <p>2022 Tickets Have Officially Sold Out!</p>
+          <p>Early bird tickets available now!</p>
+          <TitoWidget />
+          <p>
+            *If you encounter any issues with the integrated purchase experience,
+            use our <nsbp/>
+            <a href="https://ti.to/the-circuit/momentum-2023?source=widget-issue" target='_blank' rel="noopener noreferrer">
+              Tito page 
+            </a>
+            <nsbp/> directly.
+          </p>
         </div>
       </section>
     </div>
