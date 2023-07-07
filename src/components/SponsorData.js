@@ -54,6 +54,11 @@ export const sponsorData = {
       company: 'Insight',
       fileName: 'insight.png',
       link: 'https://www.insight.com'
+    },
+    {
+      company: 'Burtch Works',
+      fileName: 'burtchworks.jpg',
+      link: 'https://www.burtchworks.com/'
     }
   ],
   'Speaker Social': [],
