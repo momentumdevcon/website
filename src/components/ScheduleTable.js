@@ -5,28 +5,29 @@ import '../assets/css/schedule.css'
 
 export const ScheduleTable = () => (
   <StaticQuery
-    query={graphql`
-      query ScheduleQuery {
-        sessionsData {
-            sessions {
-                alternative_id
-                categories {
-                    categoryItems {
-                        name
-                    }
-                }
-                endsAt
-                room
-                startsAt
-                title
-                speakers {
-                    name
-                }
-            }
-        }
-    }
-    `}
+    // query={graphql`
+    //   query ScheduleQuery {
+    //     sessionsData {
+    //         sessions {
+    //             alternative_id
+    //             categories {
+    //                 categoryItems {
+    //                     name
+    //                 }
+    //             }
+    //             endsAt
+    //             room
+    //             startsAt
+    //             title
+    //             speakers {
+    //                 name
+    //             }
+    //         }
+    //     }
+    // }
+    // `}
     render={({ sessionsData: { sessions } }) => {
+      return <div></div>;
       const rooms = sessions.reduce((acc, cur) => acc.includes(cur.room) ? acc : acc.concat(cur.room), []).sort();
       const rawStartTimes = sessions.reduce((acc, cur) => acc.includes(cur.startsAt) ? acc : acc.concat(cur.startsAt), [])
       return (

@@ -6,7 +6,7 @@ const SchedulePage = () => (
   <Wrapper title="2022 Schedule">
     <div id="main" className="alt">
       <div className="inner">
-        <ScheduleTable />
+        {/* <ScheduleTable /> */}
       </div>
     </div>
   </Wrapper>
