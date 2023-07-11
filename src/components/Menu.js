@@ -9,7 +9,7 @@ export const Menu = ({ menuState }) => (
         Schedule
       </Link>
     </li> */}
-    {/* <li>
+    <li>
       <Link to="/speakers">
         Speakers
       </Link>
@@ -18,7 +18,7 @@ export const Menu = ({ menuState }) => (
       <Link to="/sessions">
         Sessions
       </Link>
-    </li> */}
+    </li>
     <li>
       <Link to="/tickets">
         Tickets
