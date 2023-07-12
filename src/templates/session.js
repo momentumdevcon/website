@@ -13,7 +13,7 @@ const SessionTemplate = ({ data: { sessionsData, sessionizeData }, pageContext: 
   const tags = session && session.categories && session.categories.find(cat => cat.alternative_id === TAG_ID) ? session.categories.find(cat => cat.alternative_id === TAG_ID).categoryItems.map(item => item.name) : '';
   const speaker1 = session && session.speakers && session.speakers[0] ? sessionizeData.speakers.find(speaker => speaker.alternative_id === session.speakers[0].alternative_id) : {};
 
-  const pageDescription = `${title} presented by ${speakerNames.join(', ')} at Momentum 2022`
+  const pageDescription = `${title} presented by ${speakerNames.join(', ')} at Momentum 2023`
 
   const PresenterInfo = () => (
     speakerNames.length > 0 ?
