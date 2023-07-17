@@ -4,6 +4,7 @@
 
 .description {
   margin-top: 10px;
+  white-space: pre-wrap;
 }
 
 .levelTags {
