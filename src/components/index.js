@@ -7,7 +7,7 @@ export { Icon } from './Icon';
 export { Layout } from './layout';
 export { Menu } from './Menu';
 export { ContentBlock } from './ContentBlock';
-// export { ScheduleTable } from './ScheduleTable';
+export { ScheduleTable } from './ScheduleTable';
 export { InterestForm } from './InterestForm';
 export { sponsorData } from './SponsorData';
 export { SpeakersList } from './SpeakersList';

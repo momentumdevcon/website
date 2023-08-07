@@ -104,6 +104,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           alternative_id
           description
           speakers {
+            alternative_id
             name
           }
           categories {
@@ -113,6 +114,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             }
           }
           title
+          isServiceSession
         }
       }
     }

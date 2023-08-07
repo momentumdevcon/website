@@ -20,6 +20,11 @@ export const Menu = ({ menuState }) => (
       </Link>
     </li>
     <li>
+      <Link to="/schedule">
+        Schedule
+      </Link>
+    </li>
+    <li>
       <Link to="/tickets">
         Tickets
       </Link>
