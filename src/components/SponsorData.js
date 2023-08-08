@@ -7,6 +7,11 @@ export const sponsorData = {
       company: 'Fifth Third Bank',
       fileName: 'fifthThird.png',
       link: 'https://www.53.com/content/fifth-third/en.html',
+    },
+    {
+      company: 'Veeva',
+      fileName: 'veeva.jpg',
+      link: 'https://www.veeva.com/',
     }
   ],
   Room: [
@@ -19,6 +24,11 @@ export const sponsorData = {
       company: 'Kroger',
       link: 'https://www.kroger.com/',
       fileName: 'kroger.png',
+    },
+    {
+      company: 'Western & Southern',
+      link: 'https://www.westernsouthern.com/',
+      fileName: 'western_southern.png',
     }
   ],
   'Lunch/Break': [
@@ -26,6 +36,11 @@ export const sponsorData = {
       company: 'Eliassen Group',
       fileName: 'eliassen.png',
       link: 'https://www.eliassen.com/'
+    },
+    {
+      company: 'CBTS',
+      fileName: 'cbts.png',
+      link: 'https://www.cbts.com/'
     }
   ],
   Game: [],
@@ -59,6 +74,16 @@ export const sponsorData = {
       company: 'Burtch Works',
       fileName: 'burtchworks.jpg',
       link: 'https://www.burtchworks.com/'
+    },
+    {
+      company: 'Revel IT',
+      fileName: 'revelit.png',
+      link: 'https://www.revelit.com/'
+    },
+    {
+      company: 'Ingage',
+      fileName: 'ingage.png',
+      link: 'https://www.ingagepartners.com/'
     }
   ],
   'Speaker Social': [],
