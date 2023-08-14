@@ -6,7 +6,7 @@ const TicketsPage = () => (
     <div id="main" className="alt">
       <section id="one">
         <div className="inner">
-          <p>Early Bird Ticket Sales Close August 15!</p>
+          <h3>Early Bird Ticket Sales Close August 15!</h3>
           <TitoWidget />
           <p>
             *If you encounter any issues with the integrated purchase experience,
