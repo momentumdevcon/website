@@ -84,6 +84,11 @@ export const sponsorData = {
       company: 'Ingage',
       fileName: 'ingage.png',
       link: 'https://www.ingagepartners.com/'
+    },
+    {
+      company: 'Experis',
+      fileName: 'experis.png',
+      link: 'https://www.experis.com'
     }
   ],
   'Speaker Social': [],
