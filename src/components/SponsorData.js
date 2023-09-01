@@ -29,7 +29,12 @@ export const sponsorData = {
       company: 'Western & Southern',
       link: 'https://www.westernsouthern.com/',
       fileName: 'western_southern.png',
-    }
+    },
+    {
+      company: 'Cincinnati State',
+      fileName: 'cincinnatiState.png',
+      link: 'https://cincinnatistate.edu/',
+    },
   ],
   'Lunch/Break': [
     {
