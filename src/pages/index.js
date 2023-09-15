@@ -2,13 +2,12 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
 import { metaContent } from '../assets/data/metaContent.js'
-import { 
+import {
   Banner,
   Layout,
   LatestBlogPost,
   WhatIsMomentum,
-  CallForPresenters,
-  TicketsCTA
+  TicketsCTA,
 } from '../components'
 
 const HomeIndex = ({ data }) => (
@@ -17,7 +16,6 @@ const HomeIndex = ({ data }) => (
     <Banner />
     <div id="main">
       <TicketsCTA />
-      <CallForPresenters />
       <WhatIsMomentum />
       <LatestBlogPost posts={data.allMarkdownRemark.edges} />
     </div>
@@ -28,7 +26,7 @@ export default HomeIndex
 
 export const query = graphql`
   query {
-    allMarkdownRemark(filter: {frontmatter: {template: {eq: "blog"}}}) {
+    allMarkdownRemark(filter: { frontmatter: { template: { eq: "blog" } } }) {
       edges {
         node {
           frontmatter {

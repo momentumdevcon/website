@@ -1,7 +1,7 @@
 [
   {
-    "name":"Tracy Ruberg",
-    "photo":"tracy",
+    "name": "Tracy Ruberg",
+    "photo": "tracy",
     "links": [
       {
         "linkType": "LinkedIn",
@@ -11,7 +11,7 @@
   },
   {
     "name": "Michael Richardson",
-    "photo":"michael",
+    "photo": "michael",
     "links": [
       {
         "linkType": "Twitter",
@@ -25,7 +25,7 @@
   },
   {
     "name": "Taryn Ruberg",
-    "photo":"taryn",
+    "photo": "taryn",
     "links": [
       {
         "linkType": "LinkedIn",
@@ -35,7 +35,7 @@
   },
   {
     "name": "Kat Fairbanks",
-    "photo":"kat",
+    "photo": "kat",
     "links": [
       {
         "linkType": "Twitter",
@@ -49,7 +49,7 @@
   },
   {
     "name": "Brandon Culp",
-    "photo":"brandon",
+    "photo": "brandon",
     "links": [
       {
         "linkType": "Twitter",
@@ -67,7 +67,7 @@
   },
   {
     "name": "Ryan Lynn",
-    "photo":"ryan",
+    "photo": "ryan",
     "links": [
       {
         "linkType": "Twitter",
@@ -81,7 +81,7 @@
   },
   {
     "name": "Jason Miazga",
-    "photo":"jason",
+    "photo": "jason",
     "links": [
       {
         "linkType": "Twitter",
@@ -94,6 +94,24 @@
       {
         "linkType": "Company_Website",
         "url": "https://jasonmiazga.com"
+      }
+    ]
+  },
+  {
+    "name": "Dev Agrawal",
+    "photo": "dev",
+    "links": [
+      {
+        "linkType": "Twitter",
+        "url": "https://twitter.com/devagrawal09"
+      },
+      {
+        "linkType": "LinkedIn",
+        "url": "https://www.linkedin.com/in/dev-agrawal-88449b157/"
+      },
+      {
+        "linkType": "Company_Website",
+        "url": "https://devagr.me/"
       }
     ]
   }
