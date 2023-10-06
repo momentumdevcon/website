@@ -27,8 +27,20 @@ export const ScheduleTable = () => (
     }
     `}
     render={({ sessionsData: { sessions } }) => {
-      const rooms = sessions.reduce((acc, cur) => acc.includes(cur.room) ? acc : acc.concat(cur.room), []).sort();
+      const MAIN_BALLROOM = 'Main Ballroom';
+
+      const sortRooms = (a, b) => 
+        a === MAIN_BALLROOM
+          ? -1
+          : b === MAIN_BALLROOM
+            ? 1
+            : a.toLowerCase() < b.toLowerCase()
+              ? -1
+              : 1
+
+      const rooms = sessions.reduce((acc, cur) => acc.includes(cur.room) ? acc : acc.concat(cur.room), []).sort(sortRooms)
       const rawStartTimes = sessions.reduce((acc, cur) => acc.includes(cur.startsAt) ? acc : acc.concat(cur.startsAt), [])
+      
       return (
         <div className='table-grid'>
           <div className="table-grid__row hide-sm hide-md">
