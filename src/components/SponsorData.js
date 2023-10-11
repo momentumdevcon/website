@@ -12,13 +12,13 @@ export const sponsorData = {
       company: 'Veeva',
       fileName: 'veeva.jpg',
       link: 'https://www.veeva.com/',
-    }
+    },
   ],
   Room: [
-    { 
+    {
       company: 'Tech Elevator',
       fileName: 'tech-elevator.png',
-      link: 'https://www.techelevator.com/'
+      link: 'https://www.techelevator.com/',
     },
     {
       company: 'Kroger',
@@ -40,13 +40,13 @@ export const sponsorData = {
     {
       company: 'Eliassen Group',
       fileName: 'eliassen.png',
-      link: 'https://www.eliassen.com/'
+      link: 'https://www.eliassen.com/',
     },
     {
       company: 'CBTS',
       fileName: 'cbts.png',
-      link: 'https://www.cbts.com/'
-    }
+      link: 'https://www.cbts.com/',
+    },
   ],
   Game: [],
   Booth: [
@@ -68,46 +68,74 @@ export const sponsorData = {
     {
       company: 'MAX Technical Training',
       fileName: 'max.png',
-      link: 'https://maxtrain.com/'
+      link: 'https://maxtrain.com/',
     },
     {
       company: 'Insight',
       fileName: 'insight.png',
-      link: 'https://www.insight.com'
+      link: 'https://www.insight.com',
     },
     {
       company: 'Burtch Works',
       fileName: 'burtchworks.jpg',
-      link: 'https://www.burtchworks.com/'
+      link: 'https://www.burtchworks.com/',
     },
     {
       company: 'Revel IT',
       fileName: 'revelit.png',
-      link: 'https://www.revelit.com/'
+      link: 'https://www.revelit.com/',
     },
     {
       company: 'Ingage',
       fileName: 'ingage.png',
-      link: 'https://www.ingagepartners.com/'
+      link: 'https://www.ingagepartners.com/',
     },
     {
       company: 'Experis',
       fileName: 'experis.png',
-      link: 'https://www.experis.com'
-    }
+      link: 'https://www.experis.com',
+    },
   ],
   'Speaker Social': [],
   Lanyard: [],
   'Community Partners': [],
+  Supporting: [
+    {
+      company: 'Nx',
+      fileName: 'nx.png',
+      link: 'https://nx.dev',
+    },
+  ],
 }
 
-export const sponsorImage = graphql`fragment sponsorImage on File {
-  childImageSharp {
-    image125: gatsbyImageData(width: 125, placeholder: TRACED_SVG, layout: FIXED)
-    image150: gatsbyImageData(width: 150, placeholder: TRACED_SVG, layout: FIXED)
-    image175: gatsbyImageData(width: 175, placeholder: TRACED_SVG, layout: FIXED)
-    image200: gatsbyImageData(width: 200, placeholder: TRACED_SVG, layout: FIXED)
-    image250: gatsbyImageData(width: 250, placeholder: TRACED_SVG, layout: FIXED)
+export const sponsorImage = graphql`
+  fragment sponsorImage on File {
+    childImageSharp {
+      image125: gatsbyImageData(
+        width: 125
+        placeholder: TRACED_SVG
+        layout: FIXED
+      )
+      image150: gatsbyImageData(
+        width: 150
+        placeholder: TRACED_SVG
+        layout: FIXED
+      )
+      image175: gatsbyImageData(
+        width: 175
+        placeholder: TRACED_SVG
+        layout: FIXED
+      )
+      image200: gatsbyImageData(
+        width: 200
+        placeholder: TRACED_SVG
+        layout: FIXED
+      )
+      image250: gatsbyImageData(
+        width: 250
+        placeholder: TRACED_SVG
+        layout: FIXED
+      )
+    }
   }
-}
 `

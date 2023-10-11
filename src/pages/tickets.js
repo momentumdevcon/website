@@ -6,7 +6,7 @@ const TicketsPage = () => (
     <div id="main" className="alt">
       <section id="one">
         <div className="inner">
-          <h3>Late Registration Tickets Available Through October 6th</h3>
+          <h3>Procrastinator Tickets Still Available!</h3>
           <TitoWidget source="tickets-page-widget" />
           <p>
             *If you encounter any issues with the integrated purchase
