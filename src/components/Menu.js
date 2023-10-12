@@ -4,54 +4,33 @@ import { Link } from 'gatsby'
 
 export const Menu = ({ menuState }) => (
   <ul className={`menu-links${menuState}`}>
-    {/* <li>
-      <Link to="/schedule">
-        Schedule
-      </Link>
-    </li> */}
     <li>
-      <Link to="/speakers">
-        Speakers
-      </Link>
+      <Link to="/speakers">Speakers</Link>
     </li>
     <li>
-      <Link to="/sessions">
-        Sessions
-      </Link>
+      <Link to="/sessions">Sessions</Link>
     </li>
     <li>
-      <Link to="/schedule">
-        Schedule
-      </Link>
+      <Link to="/schedule">Schedule</Link>
     </li>
     <li>
-      <Link to="/tickets">
-        Tickets
-      </Link>
+      <Link to="/tickets">Tickets</Link>
     </li>
     <li>
-      <Link to="/sponsors">
-        Sponsors
-      </Link>
+      <Link to="/sponsors">Sponsors</Link>
     </li>
     <li>
-      <Link to="/organizers">
-        Organizers
-      </Link>
+      <Link to="/food">Food</Link>
     </li>
     <li>
-      <Link to="/codeOfConduct">
-        Code of Conduct
-      </Link>
+      <Link to="/organizers">Organizers</Link>
     </li>
     <li>
-      <a href="https://2022.momentumdevcon.com">
-        2022
-      </a>
+      <Link to="/codeOfConduct">Code of Conduct</Link>
     </li>
   </ul>
 )
 
 Menu.propTypes = {
-  menuState: PropTypes.string
+  menuState: PropTypes.string,
 }
