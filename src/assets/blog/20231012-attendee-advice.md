@@ -2,8 +2,8 @@
 template: 'blog'
 slug: 'attendee-advice'
 title: 'Attendee Advice'
-author: 'Jason Miazga'
-publishedDate: '10-14-2023'
+author: 'Michael Richardson'
+publishedDate: '10-12-2023'
 published: 'true'
 summary: 'First time at a conference? Check out this helpful advice from one of our organizers!'
 ---
