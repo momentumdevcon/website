@@ -1,40 +1,68 @@
 [
   {
-    "meal": "Salads",
+    "meal": "Breakfast",
     "dishes": [
-      "Spring Greens Salad, Seasonal Vegetables, with Red Wine Vinaigrette",
-      "Wild Rice Salad with Black Eyed Peas, Bell Peppers, Smokey Bacon, and Sweet Paprika Vinaigrette"
+      {
+        "dish": "Baked Goods",
+        "items": [
+          "Miniature Danish, Butter Croissants, Blueberry Muffins, Banana Nut Muffins, Pecan-Cinnamon Streusel"
+        ]
+      },
+      {
+        "dish": "Drinks",
+        "items": [
+          "Regular/Decaf Coffee",
+          "Tea",
+          "Orange Juice",
+          "Cranberry Juice",
+          "Apple Juice"
+        ]
+      }
     ]
   },
   {
-    "meal": "Sandwiches",
+    "meal": "Lunch",
     "dishes": [
-      "Herb Marinated Roast Beef, Pickled Onion, Red Leaf Lettuce, Tomato and Horseradish Cream Cheese Spread on Sourdough Bread",
-      "Herb Marinated Grilled Chicken Breast, Pesto Spread, Mozzarella, Bibb Lettuce, Herb Roasted Tomato and Onion on a Wheat Roll",
-      "Grilled Portobello, Red Onion with Spinach, Vegan Sun-Dried Tomato Aioli, on 7 Grain Wheat Bread",
-      "Turkey Breast, with Garlic Aioli, Romaine Lettuce, Tomato, and Bacon on Sourdough Bread"
-    ]
-  },
-  {
-    "meal": "Side",
-    "dishes": [
-      "Hen of the Woods Potato Chips"
-    ]
-  },
-  {
-    "meal": "Desserts",
-    "dishes": [
-      "Salted Caramel Brownies",
-      "Vanilla Cake with Roasted Apple Compote and Mascarpone Cream"
-    ]
-  },
-  {
-    "meal": "Drinks",
-    "dishes": [
-      "Soft Drinks",
-      "Bottled Water",
-      "Coffee",
-      "Tea"
+      {
+        "dish": "Salads",
+        "items": [
+          "Baby Field Greens Salad, Sliced Radish, Carrot, Cucumbers, Garlic Croutons, Ranch & Honey Mustard Dressings",
+          "Ripe Tomato & Onion Salad, Sweet Basil, Red Wine Vinaigrette",
+          "Creamy Buttermilk Coleslaw, Macaroni Salad"
+        ]
+      },
+      {
+        "dish": "Vegetarian/Vegan",
+        "items": [
+          "Hot Zucchini, Squash, and Fennel in Tomato Pomodoro",
+          "Chilled Roasted Portobello, Artichokes, Zucchini & Squash in Herbed Balsamic Reduction"
+        ]
+      },
+      {
+        "dish": "Create Your Own Sandwich",
+        "items": [
+          "Boar's Head Meats: London Broil Roast Beef, Tavern Ham, Oven-Roasted Turkey Breast, Albacore Tuna Salad",
+          "Cheeses: American, Swiss, Aged Cheddar",
+          "Toppings: Leaf Lettuce, Ripe Tomato, Red Onion, Pickle Chips & Spears",
+          "Sauces: Yellow Mustard, Brown Mustard, Mayonnaise, Horseradish Cream",
+          "Breads: Sourdough, Demi Baguette, Flour Tortillas, Croissant, Whole-Grain"
+        ]
+      },
+      {
+        "dish": "Sides",
+        "items": ["House-Fried Kettle Chips, Sea Salt & Black Pepper"]
+      },
+      {
+        "dish": "Desserts",
+        "items": [
+          "Double-Chocolate Brownies, Butterscotch Blondies, Lemon Bars, Red Velvet Cupcakes",
+          "Cookies: Chocolate Chip, Peanut Butter, Oatmeal Raisin"
+        ]
+      },
+      {
+        "dish": "Drinks",
+        "items": ["Soft Drinks", "Bottled Water", "Coffee", "Tea"]
+      }
     ]
   }
 ]
