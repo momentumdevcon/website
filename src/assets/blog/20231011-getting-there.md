@@ -2,8 +2,8 @@
 template: 'blog'
 slug: 'getting-there-2023'
 title: 'Getting There'
-author: 'Jason Miazga'
-publishedDate: '10-13-2023'
+author: 'Michael Richardson'
+publishedDate: '10-11-2023'
 published: 'true'
 summary: 'Everything you need to know to arrive at Momentum 2023 on time.'
 ---

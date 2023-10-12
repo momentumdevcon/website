@@ -2,8 +2,8 @@
 template: 'blog'
 slug: 'what-to-expect-2023'
 title: 'What to Expect at Momentum'
-author: 'Jason Miazga'
-publishedDate: '10-12-2023'
+author: 'Michael Richardson'
+publishedDate: '10-10-2023'
 published: 'true'
 summary: 'Curious about this year at Momentum? This guide is a great place to start!'
 ---
