@@ -3,7 +3,7 @@ template: 'blog'
 slug: 'me-vs-the-command-line'
 title: 'Me vs. the Command Line'
 author: 'Ryan Lynn'
-publishedDate: '06-21-2021'
+publishedDate: '2021-06-21'
 published: 'true'
 summary: "Follow one developer's journey to defeat the command line."
 ---

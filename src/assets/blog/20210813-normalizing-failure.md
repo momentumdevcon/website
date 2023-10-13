@@ -3,7 +3,7 @@ template: 'blog'
 slug: 'normalizing-failure'
 title: 'Normalizing Failure'
 author: 'Izzi Bikun'
-publishedDate: '08-13-2021'
+publishedDate: '2021-08-13'
 published: 'true'
 summary: "Throughout my career as a developer, I have had a lot of struggles and personal failures. When I was starting out, I felt very alone and dumb. Now, I've learned that ALL developers struggle and we are better when we are open and struggle together."
 ---

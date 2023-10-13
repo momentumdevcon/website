@@ -3,7 +3,7 @@ template: 'blog'
 slug: 'cincinnati-tech-community'
 title: 'The Cincinnati Tech Community'
 author: 'Chris Nelson'
-publishedDate: '05-13-2021'
+publishedDate: '2021-05-13'
 published: 'true'
 summary: 'The Momentum Developer Conference is currently running its month-long Call for Proposals (May 1-31, 2021).'
 ---

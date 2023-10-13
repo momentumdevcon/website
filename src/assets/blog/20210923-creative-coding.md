@@ -3,7 +3,7 @@ template: 'blog'
 slug: 'a-more-creative-side-of-code'
 title: 'A More Creative Side of Code'
 author: 'Kat Fairbanks'
-publishedDate: '09-23-2021'
+publishedDate: '2021-09-23'
 published: 'true'
 summary: 'Explore creative coding and learn how to create a simple animation using p5.js.'
 ---

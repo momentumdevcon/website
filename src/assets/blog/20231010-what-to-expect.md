@@ -3,7 +3,7 @@ template: 'blog'
 slug: 'what-to-expect-2023'
 title: 'What to Expect at Momentum'
 author: 'Michael Richardson'
-publishedDate: '10-10-2023'
+publishedDate: '2023-10-10'
 published: 'true'
 summary: 'Curious about this year at Momentum? This guide is a great place to start!'
 ---

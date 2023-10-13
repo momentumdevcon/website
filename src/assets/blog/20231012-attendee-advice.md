@@ -3,7 +3,7 @@ template: 'blog'
 slug: 'attendee-advice'
 title: 'Attendee Advice'
 author: 'Michael Richardson'
-publishedDate: '10-12-2023'
+publishedDate: '2023-10-12'
 published: 'true'
 summary: 'First time at a conference? Check out this helpful advice from one of our organizers!'
 ---

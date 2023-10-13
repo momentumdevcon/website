@@ -3,7 +3,7 @@ template: 'blog'
 slug: 'etiquette-for-trade-shows'
 title: 'Etiquette for Trade Shows'
 author: 'Tracy Ruberg'
-publishedDate: '10-12-2021'
+publishedDate: '2021-10-12'
 published: 'true'
 summary: "Learn about trade show etiquette for participants and exhibitors"
 ---
