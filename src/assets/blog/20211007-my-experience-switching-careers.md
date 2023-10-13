@@ -3,7 +3,7 @@ template: 'blog'
 slug: 'my-experience-switching-careers'
 title: 'My Experience Switching Careers'
 author: 'Brandon Culp'
-publishedDate: '10-07-2021'
+publishedDate: '2021-10-07'
 published: 'true'
 summary: "Hear how one boot camp grad switched careers and what he's learned along the way."
 ---

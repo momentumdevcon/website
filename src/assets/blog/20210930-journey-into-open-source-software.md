@@ -3,7 +3,7 @@ template: 'blog'
 slug: 'journey-into-open-source-software'
 title: 'Journey into Open Source Software'
 author: 'Jason Miazga'
-publishedDate: '09-30-2021'
+publishedDate: '2021-09-30'
 published: 'true'
 summary: 'Learn how to get involved in open source and the path I took to get there.'
 ---

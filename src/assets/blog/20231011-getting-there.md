@@ -3,7 +3,7 @@ template: 'blog'
 slug: 'getting-there-2023'
 title: 'Getting There'
 author: 'Michael Richardson'
-publishedDate: '10-11-2023'
+publishedDate: '2023-10-11'
 published: 'true'
 summary: 'Everything you need to know to arrive at Momentum 2023 on time.'
 ---

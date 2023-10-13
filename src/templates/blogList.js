@@ -1,19 +1,15 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import { BlogInfo, Paginator } from '../components'
-import { sortDates } from '../utils';
 
 const BlogList = ({ data, pageContext }) => {
   const posts = data.allMarkdownRemark.edges;
-  const sortedPosts = posts
-    .sort(sortDates);
-
   return (
     <Paginator pageContext={pageContext} pageTitle='Blog'>
       <div className='container alt' id='main'>
         <div className='inner'>
           {
-            sortedPosts.map(({ node: { frontmatter } }) => {
+            posts.map(({ node: { frontmatter } }) => {
               return (
                 <section
                   id="two"
