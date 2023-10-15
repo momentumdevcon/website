@@ -26,6 +26,14 @@ Momentum 2023 has 35 50-minute sessions, scheduled in 7 time slots with 5 simult
 Review the schedule before you arrive, so that you can plan for the talks you most want to attend. Accept that your plan will probably change. 🤷‍♂️
 Some popular sessions may reach capacity. If a session is particularly important to you, arrive early to claim a good seat.
 
+### Closing Remarks
+
+Win free stuff! Have a proper send-off! Celebrate a successful Momentum!
+
+To end the day, we'll meet in the main ballroom at 5:10 for Closing Remarks.
+
+I know that this is the final session of a long, tiring day and I will do my best to keep it short.
+
 ## Food Schedule
 
 I love good food. I hope you love good food too. Here's the times when you can get it.
@@ -62,13 +70,6 @@ There are over a dozen sponsor booths, staffed by friendly people, lining the ma
 
 We’ll be giving away several items that you can only win by completing a “Meet the Sponsors” sheet. As you visit each sponsor, they will stamp your sheet in the appropriate square. Once your sheet is full, bring it to the main desk to enter in the drawing of your choice. The drawing will occur during the closing remarks. You must be present to win!
 
-## Closing Remarks
-
-Win free stuff! Have a proper send-off! Celebrate a successful Momentum!
-
-To end the day, we'll meet in the main ballroom at 5:10 for Closing Remarks.
-
-I know that this is the final session of a long, tiring day and I will do my best to keep it short.
 
 
 Question:  
