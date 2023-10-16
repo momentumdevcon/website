@@ -1,6 +1,6 @@
 export const mainTitle = 'Momentum Developer Conference'
 export const mainDescription =
-  'Momentum brings software developers together to sharpen skills, make connections, and geek out with impunity. After you’ve enjoyed our riveting presentations, we encourage you to visit the Banks, explore our microbreweries, or throw axes with friends. Momentum is more than a Cincinnati conference, it\'s a catapult for your career. Join us on October 19 at the Hard Rock Casino for the next experience in Cincinnati'
+  'Momentum brings software developers together to sharpen skills, make connections, and geek out with impunity. After you’ve enjoyed our riveting presentations, we encourage you to visit the Banks, explore our microbreweries, or throw axes with friends. Momentum is more than a Cincinnati conference, it\'s a catapult for your career. Join us on October 17 at the Hard Rock Casino for the next experience in Cincinnati'
 
 const logoWPadding = '/square-logo.png'
 

@@ -1,6 +1,6 @@
-import React from 'react';
-import { InterestForm } from '.';
-import '../assets/css/banner.css';
+import React from 'react'
+import { InterestForm } from '.'
+import '../assets/css/banner.css'
 
 export const Banner = () => (
   <section id="banner" className="major">
@@ -11,8 +11,8 @@ export const Banner = () => (
       <div className="content">
         <p>Powered by The Circuit</p>
       </div>
-      <p className="date" >October 19, 2023</p>
+      <p className="date">October 17, 2024</p>
       <InterestForm />
     </div>
   </section>
-);
+)
