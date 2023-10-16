@@ -8,6 +8,13 @@ published: 'true'
 summary: 'Curious about this year at Momentum? This guide is a great place to start!'
 ---
 
+# TL;DR
+
+Momentum 2023 will be very similar to Momentum 2022 with some slight tweaks.
+- There is no lunch break.
+- Breaks between sessions are 20 minutes instead of 15 minutes
+- The only sessions in the "main room" are the Opening and Closing Remarks, plus lunch.
+
 ## Session Schedule
 
 
