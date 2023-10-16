@@ -77,10 +77,3 @@ There are over a dozen sponsor booths, staffed by friendly people, lining the ma
 
 We’ll be giving away several items that you can only win by completing a “Meet the Sponsors” sheet. As you visit each sponsor, they will stamp your sheet in the appropriate square. Once your sheet is full, bring it to the main desk to enter in the drawing of your choice. The drawing will occur during the closing remarks. You must be present to win!
 
-
-
-Question:  
-Why is there not a lunch break? You are forcing me to miss part of the event!
-
-Answer:  
-If we stopped the sessions for a lunch break, we would have 5 less sessions at Momentum. You would have fewer choices, not more. If it makes you feel better, just pretend there are no 11:30 sessions.
