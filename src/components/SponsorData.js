@@ -35,6 +35,11 @@ export const sponsorData = {
       fileName: 'cincinnatiState.png',
       link: 'https://cincinnatistate.edu/',
     },
+    {
+      company: 'P&G',
+      fileName: 'p&g.png',
+      link: 'https://us.pg.com/',
+    },
   ],
   'Lunch/Break': [
     {
