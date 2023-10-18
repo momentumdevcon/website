@@ -47,9 +47,9 @@ I love good food. I hope you love good food too. Here's the times when you can g
 
 | Meal        | Start Time  | End Time
 | ----------- | ----------- | --------
-| Breakfast   | 8:00 AM     | 9:00 AM
+| Breakfast   | 7:30 AM     | 9:30 AM
 | Lunch       | 11:10 AM    | 1:10 PM
-| Snack       | TBA         | TBA
+| Snack       | 1:30 PM     | 3:00 PM
 
 ### Lunch
 
