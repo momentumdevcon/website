@@ -64,5 +64,26 @@
         "items": ["Soft Drinks", "Bottled Water", "Coffee", "Tea"]
       }
     ]
+  },
+  {
+    "meal": "Snack",
+    "dishes": [
+      {
+        "dish": "Chips",
+        "items": ["Tortilla", "Pita", "Kettle", "Pretzel Rods"]
+      },
+      {
+        "dish": "Dips",
+        "items": ["French Onion", "Roasted Salsa", "Traditional Hummus"]
+      },
+      {
+        "dish": "Cupcakes",
+        "items": ["Red Velvet", "Double-Chocolate"]
+      },
+      {
+        "dish": "Miniature Tarts",
+        "items": ["Blueberry-Lemon", "White Chocolate Mousse", "Candied Apple"]
+      }
+    ]
   }
 ]
