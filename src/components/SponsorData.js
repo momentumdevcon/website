@@ -2,33 +2,12 @@ import { graphql } from 'gatsby'
 // Headlining, Room, Lunch or Break, Game Room, Booth, Speaker Social, Lanyard
 
 export const sponsorData = {
-  Headlining: [
+  Headlining: [],
+  Room: [
     {
       company: 'Fifth Third Bank',
       fileName: 'fifthThird.png',
       link: 'https://www.53.com/content/fifth-third/en.html',
-    },
-    {
-      company: 'Veeva',
-      fileName: 'veeva.jpg',
-      link: 'https://www.veeva.com/',
-    },
-  ],
-  Room: [
-    {
-      company: 'Tech Elevator',
-      fileName: 'tech-elevator.png',
-      link: 'https://www.techelevator.com/',
-    },
-    {
-      company: 'Kroger',
-      link: 'https://www.kroger.com/',
-      fileName: 'kroger.png',
-    },
-    {
-      company: 'Western & Southern',
-      link: 'https://www.westernsouthern.com/',
-      fileName: 'western_southern.png',
     },
     {
       company: 'Cincinnati State',
@@ -36,9 +15,9 @@ export const sponsorData = {
       link: 'https://cincinnatistate.edu/',
     },
     {
-      company: 'P&G',
-      fileName: 'p&g.png',
-      link: 'https://us.pg.com/',
+      company: 'Encore Technologies',
+      fileName: 'encore.png',
+      link: 'https://encore.tech/',
     },
   ],
   'Lunch/Break': [
@@ -47,43 +26,13 @@ export const sponsorData = {
       fileName: 'eliassen.png',
       link: 'https://www.eliassen.com/',
     },
-    {
-      company: 'CBTS',
-      fileName: 'cbts.png',
-      link: 'https://www.cbts.com/',
-    },
   ],
   Game: [],
   Booth: [
     {
-      company: 'Ascendum',
-      fileName: 'ascendum.jpg',
-      link: 'https://www.ascendum.com/',
-    },
-    {
-      company: 'CGI',
-      fileName: 'cgi.jpg',
-      link: 'https://www.cgi.com/',
-    },
-    {
-      company: 'Checkpoint',
-      fileName: 'checkpoint.jpg',
-      link: 'https://www.checkpoint.com/',
-    },
-    {
-      company: 'MAX Technical Training',
-      fileName: 'max.png',
-      link: 'https://maxtrain.com/',
-    },
-    {
-      company: 'Insight',
-      fileName: 'insight.png',
-      link: 'https://www.insight.com',
-    },
-    {
-      company: 'Burtch Works',
-      fileName: 'burtchworks.jpg',
-      link: 'https://www.burtchworks.com/',
+      company: 'Ingage',
+      fileName: 'ingage.png',
+      link: 'https://www.ingagepartners.com/',
     },
     {
       company: 'Revel IT',
@@ -91,26 +40,15 @@ export const sponsorData = {
       link: 'https://www.revelit.com/',
     },
     {
-      company: 'Ingage',
-      fileName: 'ingage.png',
-      link: 'https://www.ingagepartners.com/',
-    },
-    {
-      company: 'Experis',
-      fileName: 'experis.png',
-      link: 'https://www.experis.com',
+      company: 'MAX Technical Training',
+      fileName: 'max.png',
+      link: 'https://maxtrain.com/',
     },
   ],
   'Speaker Social': [],
   Lanyard: [],
   'Community Partners': [],
-  Supporting: [
-    {
-      company: 'Nx',
-      fileName: 'nx.png',
-      link: 'https://nx.dev',
-    },
-  ],
+  Supporting: [],
 }
 
 export const sponsorImage = graphql`
