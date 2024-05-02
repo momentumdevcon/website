@@ -7,16 +7,18 @@ export const CallForPresenters = () => (
         <h3>Call for Speakers Now Open!</h3>
       </header>
       <p>
-        Our 2023 Call for Speakers is open from May 1st to May 31st.
-        <br />
-        <a
-          href="https://sessionize.com/momentum-2024/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Link to apply
-        </a>
+        If you would like to be considered for presenting at Momentum 2023, put
+        your best ideas together and get them over to us on Sessionize . Wow us
+        with your expertise, or show us something we haven’t seen. Our CFP is
+        open until May 31st!
       </p>
+      <a
+        href="https://sessionize.com/momentum-2024/"
+        target="_blank"
+        rel="noreferrer"
+      >
+        Link to CFP
+      </a>
     </article>
   </section>
 )
