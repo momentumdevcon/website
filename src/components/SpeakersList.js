@@ -1,41 +1,41 @@
-import React from 'react';
-import { StaticQuery, graphql, Link } from 'gatsby';
-import { generateSocialLink } from '../utils/generateSocialLink';
-import '../assets/css/speakers.css';
-import { getSpeakerSlug } from '../utils/getSpeakerSlug';
-import { BlueLogo } from '../assets/images';
+import React from 'react'
+import { StaticQuery, graphql, Link } from 'gatsby'
+import { generateSocialLink } from '../utils/generateSocialLink'
+import '../assets/css/speakers.css'
+import { getSpeakerSlug } from '../utils/getSpeakerSlug'
+import { BlueLogo } from '../assets/images'
 
 export const SpeakersList = () => (
   <StaticQuery
-    query={graphql`
-      query SpeakerListQuery {
-        sessionizeData {
-          speakers {
-            tagLine
-            profilePicture
-            fullName
-            firstName
-            lastName
-            sessions
-            links {
-              url
-              linkType
-            }
-          }
-          sessions {
-            alternative_id
-            title
-          }
-        }
-      }
-    `}
+    // query={graphql`
+    //   query SpeakerListQuery {
+    //     sessionizeData {
+    //       speakers {
+    //         tagLine
+    //         profilePicture
+    //         fullName
+    //         firstName
+    //         lastName
+    //         sessions
+    //         links {
+    //           url
+    //           linkType
+    //         }
+    //       }
+    //       sessions {
+    //         alternative_id
+    //         title
+    //       }
+    //     }
+    //   }
+    // `}
     render={({ sessionizeData: { speakers, sessions } }) => {
       const sessionTitlesById = sessions
-        .map(session => Object.values(session))
+        .map((session) => Object.values(session))
         .reduce((acc, cur) => {
-          const shortTitle = cur[1].split('').slice(0, 35);
+          const shortTitle = cur[1].split('').slice(0, 35)
           if (shortTitle.length !== cur[1].length) {
-            shortTitle.push('...');
+            shortTitle.push('...')
           }
           return {
             ...acc,
@@ -43,8 +43,8 @@ export const SpeakersList = () => (
               shortTitle: shortTitle.join(''),
               title: cur[1],
             },
-          };
-        }, {});
+          }
+        }, {})
 
       return (
         <section id="learnmore" className="about">
@@ -54,7 +54,7 @@ export const SpeakersList = () => (
                 {speakers.map((speaker) => (
                   <div key={speaker.fullName} className="speaker">
                     <header>
-                      <Link 
+                      <Link
                         className="gatsby-link"
                         to={`/speakers/${getSpeakerSlug(speaker.fullName)}`}
                       >
@@ -68,18 +68,18 @@ export const SpeakersList = () => (
                       <img
                         alt={speaker.fullName}
                         src={speaker.profilePicture || BlueLogo}
-                        className={speaker.profilePicture ? 'profilePic' : 'placeholder'}
+                        className={
+                          speaker.profilePicture ? 'profilePic' : 'placeholder'
+                        }
                       />
                     </Link>
                     <div className="speakerSocialIcons">
-                      {
-                        speaker.links.map(link => generateSocialLink(link, 'speakerIcon'))
-                      }
+                      {speaker.links.map((link) =>
+                        generateSocialLink(link, 'speakerIcon')
+                      )}
                     </div>
-                    <div
-                      className="session-links"
-                    >
-                      {speaker.sessions.map(sessionId => (
+                    <div className="session-links">
+                      {speaker.sessions.map((sessionId) => (
                         <Link
                           title={sessionTitlesById[sessionId].title}
                           key={sessionId}
@@ -95,7 +95,7 @@ export const SpeakersList = () => (
             </section>
           </div>
         </section>
-      );
+      )
     }}
   />
-);
+)

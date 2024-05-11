@@ -5,27 +5,27 @@ import '../assets/css/schedule.css'
 
 export const ScheduleTable = () => (
   <StaticQuery
-    query={graphql`
-      query ScheduleQuery {
-        sessionsData {
-          sessions {
-            alternative_id
-            categories {
-              categoryItems {
-                name
-              }
-            }
-            endsAt
-            room
-            startsAt
-            title
-            speakers {
-              name
-            }
-          }
-        }
-      }
-    `}
+    // query={graphql`
+    //   query ScheduleQuery {
+    //     sessionsData {
+    //       sessions {
+    //         alternative_id
+    //         categories {
+    //           categoryItems {
+    //             name
+    //           }
+    //         }
+    //         endsAt
+    //         room
+    //         startsAt
+    //         title
+    //         speakers {
+    //           name
+    //         }
+    //       }
+    //     }
+    //   }
+    // `}
     render={({ sessionsData: { sessions } }) => {
       const MAIN_BALLROOM = 'Main Ballroom'
 

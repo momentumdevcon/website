@@ -5,7 +5,7 @@
  */
 
 const path = require('path')
-const { paginate } = require('gatsby-awesome-pagination');
+const { paginate } = require('gatsby-awesome-pagination')
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
@@ -82,10 +82,10 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     items: posts, // An array of objects
     itemsPerPage: 4, // How many items you want per page
     pathPrefix: '/blog', // Creates pages like `/blog`, `/blog/2`, etc
-    component:path.resolve('src/templates/blogList.js'), // Just like `createPage()`
+    component: path.resolve('src/templates/blogList.js'), // Just like `createPage()`
   })
 
-  const sessions = graphql(`
+  /* const sessions = graphql(`
     {
       sessionizeData {
         speakers {
@@ -143,7 +143,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         },
       })
     })
-  })
+  }) */
 
-  return Promise.all([sessions])
+  // return Promise.all([sessions])
 }
