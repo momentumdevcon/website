@@ -1,16 +1,17 @@
-import React, { useState } from 'react';
-import '../assets/css/modal.css';
+import React, { useState } from 'react'
+import '../assets/css/modal.css'
 
-export const Modal = ({children, formState, updateFormState}) => {
-  const [modalStyle, setStyle] = useState('');
+export const Modal = ({ children, formState, updateFormState }) => {
+  const [modalStyle, setStyle] = useState('')
   if (typeof window !== 'undefined') {
-    window.onclick = ((e) => e.target.className === 'modal' ? setStyle('none') : '')
+    window.onclick = (e) =>
+      e.target.className === 'modal' ? setStyle('none') : ''
   }
 
   return (
     <React.Fragment>
-      <button 
-        id="modal-btn"
+      <button
+        className="banner-btn"
         onClick={() => {
           setStyle('block')
           updateFormState('')
@@ -18,9 +19,11 @@ export const Modal = ({children, formState, updateFormState}) => {
       >
         Send me email!
       </button>
-      <div className="modal" style={{display: modalStyle}}>
+      <div className="modal" style={{ display: modalStyle }}>
         <div className="modal-content">
-          <span className="close-btn" onClick={() => setStyle('none')}>&times;</span>
+          <span className="close-btn" onClick={() => setStyle('none')}>
+            &times;
+          </span>
           {formState ? formState : children}
         </div>
       </div>

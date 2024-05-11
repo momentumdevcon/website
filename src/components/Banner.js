@@ -12,7 +12,17 @@ export const Banner = () => (
         <p>Powered by The Circuit</p>
       </div>
       <p className="date">October 17, 2024</p>
-      <InterestForm />
+      <div style={{ display: 'flex', gap: '4px' }}>
+        <InterestForm />
+        <a
+          href="https://sessionize.com/momentum-2024/"
+          target="_blank"
+          rel="noreferrer"
+          className="button banner-btn"
+        >
+          Submit a Session
+        </a>
+      </div>
     </div>
   </section>
 )
