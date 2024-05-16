@@ -1,5 +1,5 @@
 const path = require('path')
-const SESSIONIZE_API = 'https://sessionize.com/api/v2/e3doimvz/view';
+const SESSIONIZE_API = 'https://sessionize.com/api/v2/p0ni4alx/view'
 
 module.exports = {
   siteMetadata: {

@@ -22,7 +22,7 @@
   color: black;
 }
 
-#modal-btn {
+.banner-btn {
   max-width: 100%;
   text-overflow: ellipsis;
   overflow: hidden;
