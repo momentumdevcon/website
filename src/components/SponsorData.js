@@ -44,6 +44,11 @@ export const sponsorData = {
       fileName: 'max.png',
       link: 'https://maxtrain.com/',
     },
+    {
+      company: 'CGI',
+      fileName: 'cgi.jpg',
+      link: 'https://www.cgi.com/',
+    }
   ],
   'Speaker Social': [],
   Lanyard: [],
