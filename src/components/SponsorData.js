@@ -19,6 +19,11 @@ export const sponsorData = {
       fileName: 'encore.png',
       link: 'https://encore.tech/',
     },
+    {
+      company: 'Golden Technology',
+      fileName: 'golden_technology.jpg',
+      link: 'https://goldenitinc.com/',
+    },
   ],
   'Lunch/Break': [
     {
@@ -48,12 +53,24 @@ export const sponsorData = {
       company: 'CGI',
       fileName: 'cgi.jpg',
       link: 'https://www.cgi.com/',
-    }
+    },
+    {
+      company: 'Red Hawk',
+      fileName: 'red_hawk.jpg',
+      link: 'https://www.redhawk-tech.com/',
+    },
   ],
   'Speaker Social': [],
   Lanyard: [],
   'Community Partners': [],
   Supporting: [],
+  Beverage: [
+    {
+      company: 'TQL',
+      fileName: 'tql.png',
+      link: 'https://www.tql.com/',
+    },
+  ],
 }
 
 export const sponsorImage = graphql`
