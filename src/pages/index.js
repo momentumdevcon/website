@@ -6,8 +6,9 @@ import {
   Banner,
   Layout,
   LatestBlogPost,
-  CallForPresentersClosed,
   WhatIsMomentum,
+  TicketsCTA,
+  CallForPresentersClosed,
 } from '../components'
 
 const HomeIndex = ({ data }) => (
@@ -15,6 +16,7 @@ const HomeIndex = ({ data }) => (
     <Helmet title="Momentum Developer Conference" meta={[...metaContent]} />
     <Banner />
     <div id="main">
+      <TicketsCTA />
       <CallForPresentersClosed />
       <WhatIsMomentum />
       <LatestBlogPost posts={data.allMarkdownRemark.edges} />

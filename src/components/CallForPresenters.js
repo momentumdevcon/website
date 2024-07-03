@@ -7,7 +7,7 @@ export const CallForPresentersClosed = () => (
         <h3>Call for Speakers Now Closed!</h3>
       </header>
       <p>
-        Our 2023 Call for Speakers is now closed. Thank you to everyone who took
+        Our 2024 Call for Speakers is now closed. Thank you to everyone who took
         the time and effort to submit their abstracts!
       </p>
     </article>
