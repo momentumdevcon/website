@@ -21,7 +21,7 @@ export const sponsorData = {
     },
     {
       company: 'Golden Technology',
-      fileName: 'golden_technology.jpg',
+      fileName: 'golden_technology.png',
       link: 'https://goldenitinc.com/',
     },
   ],
