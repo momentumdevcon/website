@@ -7,28 +7,28 @@ import { BlueLogo } from '../assets/images'
 
 export const SpeakersList = () => (
   <StaticQuery
-    // query={graphql`
-    //   query SpeakerListQuery {
-    //     sessionizeData {
-    //       speakers {
-    //         tagLine
-    //         profilePicture
-    //         fullName
-    //         firstName
-    //         lastName
-    //         sessions
-    //         links {
-    //           url
-    //           linkType
-    //         }
-    //       }
-    //       sessions {
-    //         alternative_id
-    //         title
-    //       }
-    //     }
-    //   }
-    // `}
+    query={graphql`
+      query SpeakerListQuery {
+        sessionizeData {
+          speakers {
+            tagLine
+            profilePicture
+            fullName
+            firstName
+            lastName
+            sessions
+            links {
+              url
+              linkType
+            }
+          }
+          sessions {
+            alternative_id
+            title
+          }
+        }
+      }
+    `}
     render={({ sessionizeData: { speakers, sessions } }) => {
       const sessionTitlesById = sessions
         .map((session) => Object.values(session))

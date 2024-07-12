@@ -65,27 +65,27 @@ const SpeakerTemplate = ({
 }
 export default SpeakerTemplate
 
-// export const query = graphql`
-//   query SpeakertQuery {
-//     sessionizeData {
-//       speakers {
-//         fullName
-//         firstName
-//         lastName
-//         tagLine
-//         bio
-//         profilePicture
-//         sessions
-//         links {
-//           url
-//           linkType
-//         }
-//       }
-//       sessions {
-//         alternative_id
-//         title
-//         description
-//       }
-//     }
-//   }
-// `
+export const query = graphql`
+  query SpeakertQuery {
+    sessionizeData {
+      speakers {
+        fullName
+        firstName
+        lastName
+        tagLine
+        bio
+        profilePicture
+        sessions
+        links {
+          url
+          linkType
+        }
+      }
+      sessions {
+        alternative_id
+        title
+        description
+      }
+    }
+  }
+`

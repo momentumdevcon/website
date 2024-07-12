@@ -7,26 +7,26 @@ import '../assets/css/session.css'
 
 export const SessionsList = () => (
   <StaticQuery
-    // query={graphql`
-    //   query SessionQuery {
-    //     sessionsData {
-    //       sessions {
-    //         alternative_id
-    //         speakers{
-    //           name
-    //         }
-    //         title
-    //         description
-    //         categories {
-    //           alternative_id
-    //           categoryItems {
-    //             name
-    //           }
-    //         }
-    //       }
-    //     }
-    //   }
-    // `}
+    query={graphql`
+      query SessionQuery {
+        sessionsData {
+          sessions {
+            alternative_id
+            speakers{
+              name
+            }
+            title
+            description
+            categories {
+              alternative_id
+              categoryItems {
+                name
+              }
+            }
+          }
+        }
+      }
+    `}
     render={({ sessionsData: { sessions } }) => (
       <div id="main" className="alt">
         <section id="one" className="sessionList">
@@ -45,17 +45,17 @@ export const SessionsList = () => (
             }
             const level =
               session.categories &&
-              session.categories.find((cat) => cat.alternative_id === LEVEL_ID)
+                session.categories.find((cat) => cat.alternative_id === LEVEL_ID)
                 ? session.categories.find(
-                    (cat) => cat.alternative_id === LEVEL_ID
-                  ).categoryItems[0].name
+                  (cat) => cat.alternative_id === LEVEL_ID
+                ).categoryItems[0].name
                 : ''
             const tags =
               session.categories &&
-              session.categories.find((cat) => cat.alternative_id === TAG_ID)
+                session.categories.find((cat) => cat.alternative_id === TAG_ID)
                 ? session.categories
-                    .find((cat) => cat.alternative_id === TAG_ID)
-                    .categoryItems.map((item) => item.name)
+                  .find((cat) => cat.alternative_id === TAG_ID)
+                  .categoryItems.map((item) => item.name)
                 : ''
             const speakers = session.speakers
               ? session.speakers.map((speaker) => speaker.name)
@@ -79,9 +79,7 @@ export const SessionsList = () => (
                       {getSpeakerNameLink(speakers[0])}
                       {speakers.length > 1 ? (
                         <span> and {getSpeakerNameLink(speakers[1])}</span>
-                      ) : (
-                        ''
-                      )}
+                      ) : ''}
                     </div>
                   </div>
                 </div>
@@ -95,9 +93,7 @@ export const SessionsList = () => (
                     <span>
                       <span className="info-prefix">Tags:</span>
                       {tags.map((tag, index) => (
-                        <span key={tag}>{`${
-                          index !== tags.length - 1 ? `${tag}, ` : tag
-                        }`}</span>
+                        <span key={tag}>{`${index !== tags.length - 1 ? `${tag}, ` : tag}`}</span>
                       ))}
                     </span>
                   ) : (

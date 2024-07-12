@@ -85,7 +85,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     component: path.resolve('src/templates/blogList.js'), // Just like `createPage()`
   })
 
-  /* const sessions = graphql(`
+  const sessions = graphql(`
     {
       sessionizeData {
         speakers {
@@ -143,7 +143,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         },
       })
     })
-  }) */
+  })
 
-  // return Promise.all([sessions])
+  return Promise.all([sessions])
 }

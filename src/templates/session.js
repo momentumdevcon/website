@@ -19,25 +19,25 @@ const SessionTemplate = ({
       : []
   const level =
     session &&
-    session.categories &&
-    session.categories.find((cat) => cat.alternative_id === LEVEL_ID)
+      session.categories &&
+      session.categories.find((cat) => cat.alternative_id === LEVEL_ID)
       ? session.categories.find((cat) => cat.alternative_id === LEVEL_ID)
-          .categoryItems[0].name
+        .categoryItems[0].name
       : ''
   const tags =
     session &&
-    session.categories &&
-    session.categories.find((cat) => cat.alternative_id === TAG_ID)
+      session.categories &&
+      session.categories.find((cat) => cat.alternative_id === TAG_ID)
       ? session.categories
-          .find((cat) => cat.alternative_id === TAG_ID)
-          .categoryItems.map((item) => item.name)
+        .find((cat) => cat.alternative_id === TAG_ID)
+        .categoryItems.map((item) => item.name)
       : ''
   const speaker1 =
     session && session.speakers && session.speakers[0]
       ? sessionizeData.speakers.find(
-          (speaker) =>
-            speaker.alternative_id === session.speakers[0].alternative_id
-        )
+        (speaker) =>
+          speaker.alternative_id === session.speakers[0].alternative_id
+      )
       : {}
 
   const pageDescription = `${title} presented by ${speakerNames.join(
@@ -70,9 +70,7 @@ const SessionTemplate = ({
           <span>
             <span className="info-prefix">Tags:</span>
             {tags.map((tag, index) => (
-              <span key={tag}>{`${
-                index !== tags.length - 1 ? `${tag}, ` : tag
-              }`}</span>
+              <span key={tag}>{`${index !== tags.length - 1 ? `${tag}, ` : tag}`}</span>
             ))}
           </span>
         ) : (
@@ -103,37 +101,37 @@ const SessionTemplate = ({
 }
 export default SessionTemplate
 
-// export const query = graphql`
-//   query NewSessionQuery {
-//     sessionizeData {
-//       speakers {
-//         alternative_id
-//         firstName
-//         lastName
-//         bio
-//         tagLine
-//         profilePicture
-//         isTopSpeaker
-//         fullName
-//       }
-//     }
-//     sessionsData {
-//       sessions {
-//         alternative_id
-//         description
-//         speakers {
-//           alternative_id
-//           name
-//         }
-//         categories {
-//           alternative_id
-//           categoryItems {
-//             name
-//           }
-//         }
-//         title
-//         isServiceSession
-//       }
-//     }
-//   }
-// `
+export const query = graphql`
+  query NewSessionQuery {
+    sessionizeData {
+      speakers {
+        alternative_id
+        firstName
+        lastName
+        bio
+        tagLine
+        profilePicture
+        isTopSpeaker
+        fullName
+      }
+    }
+    sessionsData {
+      sessions {
+        alternative_id
+        description
+        speakers {
+          alternative_id
+          name
+        }
+        categories {
+          alternative_id
+          categoryItems {
+            name
+          }
+        }
+        title
+        isServiceSession
+      }
+    }
+  }
+`

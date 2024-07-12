@@ -1,2 +1,2 @@
-export const LEVEL_ID = 49208
-export const TAG_ID = 49212;
+export const LEVEL_ID = 75550;
+export const TAG_ID = 75554;
