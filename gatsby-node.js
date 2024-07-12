@@ -119,6 +119,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       }
     }
   `).then(result => {
+    // sessionizeData can sometimes be null (unsure why), but if we keep a console.log here, the issue magically goes away
+    console.log(result.data.sessionizeData == null);
     result.data.sessionsData.sessions.forEach(({ alternative_id }) => {
       createPage({
         path: `/session/${alternative_id}`,
