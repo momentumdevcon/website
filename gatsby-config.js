@@ -2,6 +2,9 @@ const path = require('path')
 const SESSIONIZE_API = 'https://sessionize.com/api/v2/p0ni4alx/view'
 
 module.exports = {
+  // Gatsby default trailing slash behavior is 'always', which breaks `createPage` of our markdown pages
+  // because the markdown frontmatter `path` does not have trailingSlash ==> Set to "ignore"
+  trailingSlash: "ignore",
   siteMetadata: {
     title: 'Momentum Developer Conference',
     authors: [
