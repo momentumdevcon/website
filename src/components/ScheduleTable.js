@@ -1,5 +1,5 @@
 import React from 'react'
-import { StaticQuery, graphql, Link } from 'gatsby'
+import { StaticQuery, Link } from 'gatsby'
 import { timeInfo } from '../utils/formatTime'
 import '../assets/css/schedule.css'
 
@@ -33,10 +33,10 @@ export const ScheduleTable = () => (
         a === MAIN_BALLROOM
           ? -1
           : b === MAIN_BALLROOM
-          ? 1
-          : a.toLowerCase() < b.toLowerCase()
-          ? -1
-          : 1
+            ? 1
+            : a.toLowerCase() < b.toLowerCase()
+              ? -1
+              : 1
 
       const rooms = sessions
         .reduce(
