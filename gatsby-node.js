@@ -12,6 +12,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const blogTemplate = path.resolve('src/templates/blog.js')
   const markdownTemplate = path.resolve('src/templates/markdown.js')
 
+  // Create blog pages
   const blogsResult = await graphql(`
     {
       allMarkdownRemark(
@@ -29,7 +30,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     }
   `)
 
-  // Handle errors
   if (blogsResult.errors) {
     reporter.panicOnBuild('Error while running GraphQL query.')
     return
@@ -45,6 +45,16 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     })
   })
 
+  // Create the BlogList page with pagination
+  paginate({
+    createPage,
+    items: blogsResult.data.allMarkdownRemark.edges,
+    itemsPerPage: 4,
+    pathPrefix: '/blog', // Creates pages like `/blog`, `/blog/2`, etc
+    component: path.resolve('src/templates/blogList.js'), // Just like `createPage()`
+  })
+
+  // Create Markdown pages
   const markdownResult = await graphql(`
     {
       allMarkdownRemark(
@@ -62,7 +72,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     }
   `)
 
-  // Handle errors
   if (markdownResult.errors) {
     reporter.panicOnBuild('Error while running GraphQL query.')
     return
@@ -76,76 +85,88 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     })
   })
 
-  const posts = blogsResult.data.allMarkdownRemark.edges
-  paginate({
-    createPage, // The Gatsby `createPage` function
-    items: posts, // An array of objects
-    itemsPerPage: 4, // How many items you want per page
-    pathPrefix: '/blog', // Creates pages like `/blog`, `/blog/2`, etc
-    component: path.resolve('src/templates/blogList.js'), // Just like `createPage()`
-  })
 
-  const sessions = graphql(`
-    {
-      sessionizeData {
-        speakers {
-          alternative_id
-          firstName
-          lastName
-          bio
-          tagLine
-          profilePicture
-          isTopSpeaker
+  // Create speaker and sessions pages
+  const sessionsAndSpeakersResult = await graphql(`
+    query AllInfo {
+      allSpeakers(filter: {id: {ne: "dummy"}}) {
+        nodes {
           fullName
-        }
-      }
-      sessionsData {
-        sessions {
           alternative_id
-          description
-          speakers {
+          bio
+          firstName
+          isTopSpeaker
+          lastName
+          links {
+            linkType
+            title
+            url
+          }
+          sessions {
             alternative_id
             name
           }
-          categories {
+          tagLine
+          profilePicture
+        }
+      }
+      allSessions(filter: {id: {ne: "dummy"}}) {
+        nodes {
+          sessions {
+            title
+            status
+            description
+            categories {
+              alternative_id
+              name
+              categoryItems {
+                alternative_id
+                name
+              }
+            }
+            isConfirmed
+            isInformed
+            isPlenumSession
+            isServiceSession
             alternative_id
-            categoryItems {
+            speakers {
+              alternative_id
               name
             }
           }
-          title
-          isServiceSession
         }
       }
     }
-  `).then(result => {
-    // sessionizeData can sometimes be null (unsure why), but if we keep a console.log here, the issue magically goes away
-    console.log(result.data.sessionizeData == null);
-    result.data.sessionsData.sessions.forEach(({ alternative_id }) => {
-      createPage({
-        path: `/session/${alternative_id}`,
-        component: path.resolve('./src/templates/session.js'),
-        context: {
-          // Data passed to context is available
-          // in page queries as GraphQL variables.
-          slug: alternative_id,
-        },
-      })
-    })
+  `)
+  if (sessionsAndSpeakersResult.errors) {
+    reporter.panicOnBuild("Error while running speakers and sessions GraphQL query.")
+    return
+  }
 
-    result.data.sessionizeData.speakers.forEach(({ fullName }) => {
-      const slug = fullName.split(' ').join('_')
-      createPage({
-        path: `/speakers/${slug}`,
-        component: path.resolve('./src/templates/speaker.js'),
-        context: {
-          // Data passed to context is available
-          // in page queries as GraphQL variables.
-          slug,
-        },
-      })
+  const speakers = sessionsAndSpeakersResult.data.allSpeakers.nodes
+  const sessions = sessionsAndSpeakersResult.data.allSessions.nodes[0].sessions
+
+  speakers.forEach(({ fullName }) => {
+    const slug = fullName.split(' ').join('_')
+    createPage({
+      path: `/speakers/${slug}`,
+      component: path.resolve('./src/templates/speaker.js'),
+      context: {
+        slug,
+      },
     })
   })
 
-  return Promise.all([sessions])
+
+  sessions.forEach(({ alternative_id }) => {
+    createPage({
+      path: `/session/${alternative_id}`,
+      component: path.resolve('./src/templates/session.js'),
+      context: {
+        slug: alternative_id,
+      },
+    })
+  })
+
+
 }

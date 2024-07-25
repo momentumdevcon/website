@@ -6,10 +6,12 @@ import { LEVEL_ID, TAG_ID } from '../assets/data/levelAndTagId'
 import '../assets/css/session.css'
 
 const SessionTemplate = ({
-  data: { sessionsData, sessionizeData },
+  data: { allSessions, allSpeakers },
   pageContext: { slug },
 }) => {
-  const session = sessionsData.sessions.find(
+  allSessions = allSessions.nodes[0].sessions
+  allSpeakers = allSpeakers.nodes
+  const session = allSessions.find(
     (session) => session.alternative_id === slug
   )
   const title = session ? session.title : ''
@@ -34,7 +36,7 @@ const SessionTemplate = ({
       : ''
   const speaker1 =
     session && session.speakers && session.speakers[0]
-      ? sessionizeData.speakers.find(
+      ? allSpeakers.find(
         (speaker) =>
           speaker.alternative_id === session.speakers[0].alternative_id
       )
@@ -102,35 +104,33 @@ const SessionTemplate = ({
 export default SessionTemplate
 
 export const query = graphql`
-  query NewSessionQuery {
-    sessionizeData {
-      speakers {
+  query SessionPageQuery {
+    allSpeakers(filter: {id: {ne: "dummy"}}) {
+      nodes {
         alternative_id
         firstName
         lastName
-        bio
-        tagLine
-        profilePicture
-        isTopSpeaker
         fullName
       }
     }
-    sessionsData {
-      sessions {
-        alternative_id
-        description
-        speakers {
+    allSessions(filter: {id: {ne: "dummy"}}) {
+      nodes {
+        sessions {
           alternative_id
-          name
-        }
-        categories {
-          alternative_id
-          categoryItems {
+          description
+          speakers {
+            alternative_id
             name
           }
+          categories {
+            alternative_id
+            categoryItems {
+              name
+            }
+          }
+          title
+          isServiceSession
         }
-        title
-        isServiceSession
       }
     }
   }

@@ -6,27 +6,30 @@ import '../assets/css/schedule.css'
 export const ScheduleTable = () => (
   <StaticQuery
     // query={graphql`
-    //   query ScheduleQuery {
-    //     sessionsData {
-    //       sessions {
-    //         alternative_id
-    //         categories {
-    //           categoryItems {
+    //   query SessionsWithSchedule {
+    //     allSessions {
+    //       nodes {
+    //         sessions {
+    //           alternative_id
+    //           categories {
+    //             categoryItems {
+    //               name
+    //             }
+    //           }
+    //           endsAt
+    //           room
+    //           startsAt
+    //           title
+    //           speakers {
     //             name
     //           }
-    //         }
-    //         endsAt
-    //         room
-    //         startsAt
-    //         title
-    //         speakers {
-    //           name
     //         }
     //       }
     //     }
     //   }
     // `}
-    render={({ sessionsData: { sessions } }) => {
+    render={({ allSessions }) => {
+      const sessions = allSessions.nodes[0].sessions
       const MAIN_BALLROOM = 'Main Ballroom'
 
       const sortRooms = (a, b) =>
