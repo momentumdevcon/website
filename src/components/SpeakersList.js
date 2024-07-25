@@ -8,41 +8,47 @@ import { BlueLogo } from '../assets/images'
 export const SpeakersList = () => (
   <StaticQuery
     query={graphql`
-      query SpeakerListQuery {
-        sessionizeData {
-          speakers {
-            tagLine
-            profilePicture
-            fullName
+      query SpeakerList {
+        allSpeakers(filter: {id: {ne: "dummy"}}) {
+          nodes {
+            alternative_id
             firstName
             lastName
-            sessions
+            fullName
+            bio
+            tagLine
+            profilePicture
             links {
-              url
               linkType
+              title
+              url
+            }
+            sessions {
+              alternative_id
+              name
             }
           }
-          sessions {
-            alternative_id
-            title
+        }
+        allSessions(filter: {id: {ne: "dummy"}}) {
+          nodes {
+            sessions {
+              title
+              alternative_id
+            }
           }
         }
       }
     `}
-    render={({ sessionizeData: { speakers, sessions } }) => {
+    render={({ allSpeakers, allSessions }) => {
+      const sessions = allSessions.nodes[0].sessions
+      const speakers = allSpeakers.nodes
       const sessionTitlesById = sessions
-        .map((session) => Object.values(session))
         .reduce((acc, cur) => {
-          const shortTitle = cur[1].split('').slice(0, 35)
-          if (shortTitle.length !== cur[1].length) {
-            shortTitle.push('...')
-          }
+          const TITLE_CHAR_LIMIT = 35
+          const shortTitle = cur.title.length > TITLE_CHAR_LIMIT ? `${cur.title.substring(0, 35)}...` : cur.title
           return {
             ...acc,
-            [cur[0]]: {
-              shortTitle: shortTitle.join(''),
-              title: cur[1],
-            },
+            [cur.alternative_id]: { shortTitle, title: cur.title },
           }
         }, {})
 
@@ -79,7 +85,7 @@ export const SpeakersList = () => (
                       )}
                     </div>
                     <div className="session-links">
-                      {speaker.sessions.map((sessionId) => (
+                      {speaker.sessions.map(({ alternative_id: sessionId }) => (
                         <Link
                           title={sessionTitlesById[sessionId].title}
                           key={sessionId}
