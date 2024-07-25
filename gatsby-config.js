@@ -37,13 +37,12 @@ module.exports = {
       options: {
         entitiesArray: [
           {
-            url: `${SESSIONIZE_API}/all`,
+            url: `${SESSIONIZE_API}/speakers`,
             method: 'get',
             headers: {
               'Content-Type': 'application/json',
             },
-            typePrefix: 'sessionize__',
-            name: 'data',
+            name: 'speakers',
           },
           {
             url: `${SESSIONIZE_API}/sessions`,
@@ -51,8 +50,7 @@ module.exports = {
             headers: {
               'Content-Type': 'application/json',
             },
-            typePrefix: 'sessions__',
-            name: 'data',
+            name: 'sessions',
           },
         ],
       },
