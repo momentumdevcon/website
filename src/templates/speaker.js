@@ -7,22 +7,19 @@ import { BlueLogo } from '../assets/images'
 import '../assets/css/speaker.css'
 
 const SpeakerTemplate = ({
-  data: { sessionizeData },
+  data: { allSessions, allSpeakers },
   pageContext: { slug },
 }) => {
-  const speaker = sessionizeData.speakers.find((speaker) => {
-    const speakerSlug = getSpeakerSlug(speaker.fullName)
-    return speakerSlug === slug
-  })
-  const speakerSessions = sessionizeData.sessions.filter((session) =>
-    speaker.sessions.includes(parseInt(session.alternative_id))
+  allSessions = allSessions.nodes[0].sessions
+  allSpeakers = allSpeakers.nodes
+  const speaker = allSpeakers.find((speaker) => slug == getSpeakerSlug(speaker.fullName))
+  const speakerSessions = allSessions.filter((session) =>
+    speaker.sessions.map(s => String(s.alternative_id)).includes(session.alternative_id)
   )
   const sessionText = `Session${speakerSessions.length > 1 ? 's' : ''}:`
 
   const pageTitle = `${speaker.fullName} - Momentum 2023 Speaker`
-  const sessionList = speakerSessions
-    .map((session) => `"${session.title}"`)
-    .join(', ')
+  const sessionList = speakerSessions.map((session) => `"${session.title}"`).join(', ')
   return (
     <Wrapper
       title={speaker.fullName}
@@ -66,25 +63,32 @@ const SpeakerTemplate = ({
 export default SpeakerTemplate
 
 export const query = graphql`
-  query SpeakertQuery {
-    sessionizeData {
-      speakers {
-        fullName
+  query SpeakerPage {
+    allSpeakers(filter: {id: {ne: "dummy"}}) {
+      nodes {
+        alternative_id
         firstName
         lastName
-        tagLine
+        fullName
         bio
+        tagLine
         profilePicture
-        sessions
         links {
-          url
           linkType
+          title
+          url
+        }
+        sessions {
+          alternative_id
         }
       }
-      sessions {
-        alternative_id
-        title
-        description
+    }
+    allSessions(filter: {id: {ne: "dummy"}}) {
+      nodes {
+        sessions {
+          alternative_id
+          title
+        }
       }
     }
   }
