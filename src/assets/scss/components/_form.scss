@@ -100,9 +100,9 @@
 	}
 
 	.select-wrapper {
-		@include icon;
 		display: block;
 		position: relative;
+		@include icon;
 
 		&:before {
 			color: _palette(border);
@@ -148,7 +148,6 @@
 		z-index: -1;
 
 		& + label {
-			@include icon;
 			color: _palette(fg);
 			cursor: pointer;
 			display: inline-block;
@@ -156,6 +155,8 @@
 			padding-left: (_size(element-height) * 0.6) + 1em;
 			padding-right: 0.75em;
 			position: relative;
+
+			@include icon;
 
 			&:before {
 				background: _palette(border-bg);
