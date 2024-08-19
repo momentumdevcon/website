@@ -12,14 +12,20 @@ const SpeakerTemplate = ({
 }) => {
   allSessions = allSessions.nodes[0].sessions
   allSpeakers = allSpeakers.nodes
-  const speaker = allSpeakers.find((speaker) => slug == getSpeakerSlug(speaker.fullName))
+  const speaker = allSpeakers.find(
+    (speaker) => slug == getSpeakerSlug(speaker.fullName)
+  )
   const speakerSessions = allSessions.filter((session) =>
-    speaker.sessions.map(s => String(s.alternative_id)).includes(session.alternative_id)
+    speaker.sessions
+      .map((s) => String(s.alternative_id))
+      .includes(session.alternative_id)
   )
   const sessionText = `Session${speakerSessions.length > 1 ? 's' : ''}:`
 
-  const pageTitle = `${speaker.fullName} - Momentum 2023 Speaker`
-  const sessionList = speakerSessions.map((session) => `"${session.title}"`).join(', ')
+  const pageTitle = `${speaker.fullName} - Momentum 2024 Speaker`
+  const sessionList = speakerSessions
+    .map((session) => `"${session.title}"`)
+    .join(', ')
   return (
     <Wrapper
       title={speaker.fullName}
@@ -64,7 +70,7 @@ export default SpeakerTemplate
 
 export const query = graphql`
   query SpeakerPage {
-    allSpeakers(filter: {id: {ne: "dummy"}}) {
+    allSpeakers(filter: { id: { ne: "dummy" } }) {
       nodes {
         alternative_id
         firstName
@@ -83,7 +89,7 @@ export const query = graphql`
         }
       }
     }
-    allSessions(filter: {id: {ne: "dummy"}}) {
+    allSessions(filter: { id: { ne: "dummy" } }) {
       nodes {
         sessions {
           alternative_id
