@@ -1,12 +1,12 @@
 import React from 'react'
-import { Wrapper } from '../components'
+import { ScheduleTable, Wrapper } from '../components'
 import '../assets/css/schedule.css'
 
 const SchedulePage = () => (
   <Wrapper title="2023 Schedule">
     <div id="main" className="alt">
       <div className="inner">
-        {/* <ScheduleTable /> */}
+        <ScheduleTable />
       </div>
     </div>
   </Wrapper>

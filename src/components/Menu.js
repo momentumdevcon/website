@@ -10,9 +10,9 @@ export const Menu = ({ menuState }) => (
     <li>
       <Link to="/sessions">Sessions</Link>
     </li>
-    {/* <li>
+    <li>
       <Link to="/schedule">Schedule</Link>
-    </li> */}
+    </li>
     <li>
       <Link to="/tickets">Tickets</Link>
     </li>
