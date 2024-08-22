@@ -59,6 +59,21 @@ export const sponsorData = {
       fileName: 'red_hawk.jpg',
       link: 'https://www.redhawk-tech.com/',
     },
+    {
+      company: 'Ascendum',
+      fileName: 'ascendum.jpg',
+      link: 'https://www.ascendum.com/',
+    },
+    {
+      company: 'Checkpoint',
+      fileName: 'checkpoint.jpg',
+      link: 'https://www.checkpoint.com/',
+    },
+    {
+      company: 'Kroger',
+      fileName: 'kroger.png',
+      link: 'https://www.thekrogerco.com/',
+    },
   ],
   'Speaker Social': [],
   Lanyard: [],
