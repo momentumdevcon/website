@@ -36,10 +36,10 @@ export const ScheduleTable = () => (
         a === MAIN_BALLROOM
           ? -1
           : b === MAIN_BALLROOM
-          ? 1
-          : a.toLowerCase() < b.toLowerCase()
-          ? -1
-          : 1
+            ? 1
+            : a.toLowerCase() < b.toLowerCase()
+              ? -1
+              : 1
 
       const rooms = sessions
         .reduce(
