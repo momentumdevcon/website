@@ -58,5 +58,8 @@
   "repository": {
     "type": "git",
     "url": "https://gitlab.com/momentumdevcon/website"
+  },
+  "volta": {
+    "node": "20.15.0"
   }
 }
