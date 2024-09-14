@@ -48,56 +48,6 @@
     ]
   },
   {
-    "name": "Brandon Culp",
-    "photo": "brandon",
-    "links": [
-      {
-        "linkType": "Twitter",
-        "url": "https://twitter.com/bculp_"
-      },
-      {
-        "linkType": "LinkedIn",
-        "url": "https://www.linkedin.com/in/brandonculp/"
-      },
-      {
-        "linkType": "Company_Website",
-        "url": "https://BrandonCulp.com"
-      }
-    ]
-  },
-  {
-    "name": "Ryan Lynn",
-    "photo": "ryan",
-    "links": [
-      {
-        "linkType": "Twitter",
-        "url": "https://twitter.com/_rlynn_"
-      },
-      {
-        "linkType": "LinkedIn",
-        "url": "https://www.linkedin.com/in/ryanlynn523/"
-      }
-    ]
-  },
-  {
-    "name": "Jason Miazga",
-    "photo": "jason",
-    "links": [
-      {
-        "linkType": "Twitter",
-        "url": "https://twitter.com/jmiazga"
-      },
-      {
-        "linkType": "LinkedIn",
-        "url": "https://www.linkedin.com/in/jasonmiazga/"
-      },
-      {
-        "linkType": "Company_Website",
-        "url": "https://jasonmiazga.com"
-      }
-    ]
-  },
-  {
     "name": "Dev Agrawal",
     "photo": "dev",
     "links": [
@@ -112,6 +62,50 @@
       {
         "linkType": "Company_Website",
         "url": "https://devagr.me/"
+      }
+    ]
+  },
+  {
+    "name": "Karthik Kotha",
+    "photo": "karthik",
+    "links": [
+      {
+        "linkType": "LinkedIn",
+        "url": "https://www.linkedin.com/in/kothakarthik/"
+      }
+    ]
+  },
+  {
+    "name": "Charlie Hall",
+    "photo": "charlie",
+    "links": [
+      {
+        "linkType": "LinkedIn",
+        "url": "https://www.linkedin.com/in/charlie-hall-643665194/"
+      }
+    ]
+  },
+  {
+    "name": "Bao Huynh",
+    "photo": "bao",
+    "links": [
+      {
+        "linkType": "LinkedIn",
+        "url": "https://linkedin.com/in/bhuynhuc"
+      },
+      {
+        "linkType": "Company_Website",
+        "url": "https://bhuynh.dev/"
+      }
+    ]
+  },
+  {
+    "name": "Matthew Weil",
+    "photo": "matthew",
+    "links": [
+      {
+        "linkType": "LinkedIn",
+        "url": "https://www.linkedin.com/in/matthew-weil-a8b317253/"
       }
     ]
   }
