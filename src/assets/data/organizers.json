@@ -102,6 +102,10 @@
       {
         "linkType": "LinkedIn",
         "url": "https://linkedin.com/in/bhuynhuc"
+      },
+      {
+        "linkType": "Company_Website",
+        "url": "https://bhuynh.dev/"
       }
     ]
   },
