@@ -6,7 +6,7 @@ const TicketsPage = () => (
     <div id="main" className="alt">
       <section id="one">
         <div className="inner">
-          <h3>Early Bird Tickets Now Available!</h3>
+          <h3>Tickets Available Now!</h3>
           <TitoWidget source="tickets-page-widget" />
           <p>
             *If you encounter any issues with the integrated purchase

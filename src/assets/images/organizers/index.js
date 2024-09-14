@@ -6,6 +6,12 @@ import ryan from './ryan.jpg'
 import jason from './jason.jpg'
 import kat from './kat.jpeg'
 import dev from './dev.png'
+import bao from './bao.jpg'
+import charlie from './charlie.jpg'
+import karthik from './karthik.jpg'
+import ivy from './ivy.jpg'
+import matthew from './matthew.jpg'
+
 
 export const organizerPhotos = {
   brandon,
@@ -16,4 +22,9 @@ export const organizerPhotos = {
   ryan,
   taryn,
   tracy,
+  bao,
+  karthik,
+  charlie,
+  ivy,
+  matthew
 }
