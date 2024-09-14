@@ -77,6 +77,14 @@ export const sponsorData = {
   ],
   'Speaker Social': [],
   Lanyard: [],
+  Supporting: [],
+  Beverage: [
+    {
+      company: 'TQL',
+      fileName: 'tql.png',
+      link: 'https://www.tql.com/',
+    },
+  ],
   'Community Partners': [
     {
       company: 'CONDG',
@@ -97,14 +105,6 @@ export const sponsorData = {
     {
       company: 'Cincinnati Machine Learning Meetup',
       link: 'https://www.meetup.com/cincinnati-machine-learning-meetup/',
-    },
-  ],
-  Supporting: [],
-  Beverage: [
-    {
-      company: 'TQL',
-      fileName: 'tql.png',
-      link: 'https://www.tql.com/',
     },
   ],
 }
