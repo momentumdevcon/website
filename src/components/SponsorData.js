@@ -77,7 +77,28 @@ export const sponsorData = {
   ],
   'Speaker Social': [],
   Lanyard: [],
-  'Community Partners': [],
+  'Community Partners': [
+    {
+      company: 'CONDG',
+      link: 'https://www.meetup.com/central-ohio-net-developers-group-condg/',
+    },
+    {
+      company: 'API Security Meetup',
+      link: 'https://www.meetup.com/api-security-meetup/',
+    },
+    {
+      company: 'Cincinnati Data and Analytics',
+      link: 'https://www.meetup.com/cincinnati-data-and-analytics/',
+    },
+    {
+      company: 'getWITit',
+      link: 'https://getwitit.org/',
+    },
+    {
+      company: 'Cincinnati Machine Learning Meetup',
+      link: 'https://www.meetup.com/cincinnati-machine-learning-meetup/',
+    },
+  ],
   Supporting: [],
   Beverage: [
     {
