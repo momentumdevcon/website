@@ -9,7 +9,6 @@ import dev from './dev.png'
 import bao from './bao.jpg'
 import charlie from './charlie.jpg'
 import karthik from './karthik.jpg'
-import ivy from './ivy.jpg'
 import matthew from './matthew.jpg'
 
 
@@ -25,6 +24,5 @@ export const organizerPhotos = {
   bao,
   karthik,
   charlie,
-  ivy,
   matthew
 }
