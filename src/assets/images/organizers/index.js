@@ -10,6 +10,8 @@ import bao from './bao.jpg'
 import charlie from './charlie.jpg'
 import karthik from './karthik.jpg'
 import matthew from './matthew.jpg'
+import ivy from './ivy.jpg'
+import matt from './matt.png'
 
 
 export const organizerPhotos = {
@@ -24,5 +26,7 @@ export const organizerPhotos = {
   bao,
   karthik,
   charlie,
-  matthew
+  matthew,
+  ivy,
+  matt
 }

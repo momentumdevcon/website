@@ -48,6 +48,34 @@
     ]
   },
   {
+    "name": "Matt Eland",
+    "photo": "matt",
+    "links": [
+      {
+        "linkType": "Twitter",
+        "url": "https://x.com/integerman"
+      },
+      {
+        "linkType": "LinkedIn",
+        "url": "https://www.linkedin.com/in/matteland/"
+      },
+      {
+        "linkType": "Company_Website",
+        "url": "https://matteland.dev/"
+      }
+    ]
+  },
+  {
+    "name": "Ivy Gaydosh",
+    "photo": "ivy",
+    "links": [
+      {
+        "linkType": "LinkedIn",
+        "url": "https://www.linkedin.com/in/ivy-gaydosh-ab209b108"
+      }
+    ]
+  },
+  {
     "name": "Dev Agrawal",
     "photo": "dev",
     "links": [
