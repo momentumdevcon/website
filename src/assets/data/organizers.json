@@ -34,6 +34,16 @@
     ]
   },
   {
+    "name": "Ryan Hale",
+    "photo": "ryan",
+    "links": [
+      {
+        "linkType": "LinkedIn",
+        "url": "https://www.linkedin.com/in/ryan-hale-8491aa8/"
+      }
+    ]
+  },
+  {
     "name": "Kat Fairbanks",
     "photo": "kat",
     "links": [
