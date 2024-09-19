@@ -34,6 +34,16 @@
     ]
   },
   {
+    "name": "Ryan Hale",
+    "photo": "ryan",
+    "links": [
+      {
+        "linkType": "LinkedIn",
+        "url": "https://www.linkedin.com/in/ryan-hale-8491aa8/"
+      }
+    ]
+  },
+  {
     "name": "Kat Fairbanks",
     "photo": "kat",
     "links": [
@@ -44,6 +54,34 @@
       {
         "linkType": "LinkedIn",
         "url": "https://www.linkedin.com/in/katzenbar/"
+      }
+    ]
+  },
+  {
+    "name": "Matt Eland",
+    "photo": "matt",
+    "links": [
+      {
+        "linkType": "Twitter",
+        "url": "https://x.com/integerman"
+      },
+      {
+        "linkType": "LinkedIn",
+        "url": "https://www.linkedin.com/in/matteland/"
+      },
+      {
+        "linkType": "Company_Website",
+        "url": "https://matteland.dev/"
+      }
+    ]
+  },
+  {
+    "name": "Ivy Gaydosh",
+    "photo": "ivy",
+    "links": [
+      {
+        "linkType": "LinkedIn",
+        "url": "https://www.linkedin.com/in/ivy-gaydosh-ab209b108"
       }
     ]
   },
