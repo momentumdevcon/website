@@ -12,6 +12,7 @@ import matthew from './matthew.jpg'
 import ivy from './ivy.jpg'
 import matt from './matt.png'
 import ryan from './ryan.jpeg'
+import carly from './carly.png'
 
 
 export const organizerPhotos = {
@@ -29,5 +30,6 @@ export const organizerPhotos = {
   matthew,
   ivy,
   matt,
-  ryan
+  ryan,
+  carly
 }
