@@ -85,6 +85,18 @@ export const sponsorData = {
       link: 'https://www.tql.com/',
     },
   ],
+  'After Party': [
+    {
+      company: 'Atomic Robot',
+      fileName: 'atomicrobot.jpg',
+      link: 'https://atomicrobot.com/',
+    },
+    {
+      company: 'Seven Hills Technology',
+      fileName: 'sevenhills.png',
+      link: 'https://sevenhillstechnology.com/',
+    }
+  ],
   'Community Partners': [
     {
       company: 'CONDG',
