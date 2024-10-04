@@ -30,11 +30,11 @@
 .sponsors {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: start;
   margin-bottom: 5em;
   margin-top: 2em;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 1em;
 }
 
 .sponsors.communityPartners {
@@ -58,6 +58,8 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  white-space: pre-wrap;
+  text-align: center;
 }
 
 .sponsor-circle > a > .gatsby-image-wrapper > img {

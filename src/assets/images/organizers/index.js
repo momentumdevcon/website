@@ -21,7 +21,6 @@ export const organizerPhotos = {
   jason,
   kat,
   michael,
-  ryan,
   taryn,
   tracy,
   bao,

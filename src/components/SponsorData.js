@@ -24,6 +24,11 @@ export const sponsorData = {
       fileName: 'golden_technology.png',
       link: 'https://goldenitinc.com/',
     },
+    {
+      company: 'Western and Southern\nFinancial Group',
+      fileName: 'western_southern.png',
+      link: 'https://www.westernsouthern.com/',
+    },
   ],
   'Lunch/Break': [
     {
@@ -95,7 +100,7 @@ export const sponsorData = {
       company: 'Seven Hills Technology',
       fileName: 'sevenhills.png',
       link: 'https://sevenhillstechnology.com/',
-    }
+    },
   ],
   'Community Partners': [
     {
