@@ -1,6 +1,6 @@
 ---
 template: 'blog'
-slug: 'attendee-advice'
+slug: 'attendee-advice-2024'
 title: 'Attendee Advice'
 author: 'Michael Richardson'
 publishedDate: '2024-10-12'
