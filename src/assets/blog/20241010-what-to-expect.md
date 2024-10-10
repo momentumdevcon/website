@@ -15,6 +15,7 @@ The schedule for Momentum 2024 is nearly identical to Momentum 2023.
 - Breaks between sessions are 20 minutes long
 - Lunch is offered for 2-hours (11:10-1:10) and there is no "lunch break".
 - The only sessions in the "main room" are the Opening and Closing Remarks, plus lunch.
+- We've added an after-party!
 
 ## Conference Schedule
 
@@ -31,7 +32,7 @@ The best way to kick off Momentum 2024 is gathered with hundreds of other attend
 
 Momentum 2024 has 35 50-minute sessions, scheduled in 7 time slots with 5 simultaneous sessions each. There is a 20 minute break between time slots. **There is no lunch break.** I will explain more about this in the next section.
 
-Review the schedule before you arrive, so that you can plan for the talks you most want to attend. Accept that your plan will probably change. 🤷‍♂️
+Review [the schedule](https://momentumdevcon.com/schedule) before you arrive, so that you can plan for the talks you most want to attend. Accept that your plan will probably change. 🤷‍♂️
 Some popular sessions may reach capacity. If a session is particularly important to you, _arrive early to claim a good seat._
 
 ### Closing Remarks
@@ -40,11 +41,11 @@ Win free stuff! Reflect on what you learned! Celebrate a successful Momentum!
 
 To end the day, we'll meet in the main ballroom at 5:10 for Closing Remarks.
 
-I know that this is the final session of a long, tiring day. I will keep it short and sweet.
+I know that you'll be eager to get to the after-party! We will keep it short and sweet.
 
 ### After-party
 
-Come celebrate with us at Brewdog!
+Come celebrate with us at [Brewdog Cincinnati](https://maps.app.goo.gl/FrgpyDJhRP65iKM76)!
 
 Immediately after the closing remarks, walk across the street to Brewdog for delicious (free!) food and great company. We'll have volunteers conveniently stationed to steer you on your way. Your conference badge gets you in the door, so bring it with you to Brewdog.
 
@@ -58,9 +59,9 @@ I love good food. I hope you love good food too. Here's the times when you can g
 
 | Meal        | Start Time  | End Time
 | ----------- | ----------- | --------
-| Breakfast   | 7:30 AM     | 9:30 AM
+| Breakfast   | 8:00 AM     | 9:30 AM
 | Lunch       | 11:10 AM    | 1:10 PM
-| Snack       | 1:30 PM     | 3:00 PM
+| After-party | 5:30 PM     | 8:00 PM
 
 ### Lunch
 
@@ -82,7 +83,7 @@ Once you’ve finished lunch, you may want to join a session that’s already in
 
 ## Sponsors
 
-There are over a dozen sponsor booths, staffed by friendly people, lining the main hallway. Many of them will be giving away free stuff! Our sponsors help keep Momentum affordable and fun, and I am very thankful for that. Grab a fidget spinner or a t-shirt then take a moment to say “Hi!” and thank them for their support.
+There are over a dozen sponsor booths, staffed by friendly people, lining the main hallway. Many of them will be giving away free stuff! [Our sponsors](https://momentumdevcon.com/sponsors) help keep Momentum affordable and fun, and I am very thankful for that. Grab a fidget spinner or a t-shirt then take a moment to say “Hi!” and thank them for their support.
 
 ### Meet the Sponsors
 
