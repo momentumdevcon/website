@@ -19,9 +19,9 @@ export const Menu = ({ menuState }) => (
     <li>
       <Link to="/sponsors">Sponsors</Link>
     </li>
-    {/* <li>
+    {<li>
       <Link to="/food">Food</Link>
-    </li> */}
+    </li> }
     <li>
       <Link to="/organizers">Organizers</Link>
     </li>
