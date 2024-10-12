@@ -3,16 +3,39 @@
     "meal": "Breakfast",
     "dishes": [
       {
-        "dish": "Baked Goods",
-        "items": [
-          "Miniature Danish, Butter Croissants, Blueberry Muffins, Banana Nut Muffins, Pecan-Cinnamon Streusel"
+        "dish": "Fruit",
+        "items":[
+          "Fresh Sliced Fruit (GF)",
+          "Whole Fruit (GF)"
         ]
+      },
+      {
+        "dish": "Frittata",
+        "items":[
+          "Fresh Baby Spinach & Potato Frittata (GF) containing Blistered Tomato & Roasted Broccoli",
+          "Vermont White Cheddar Cheese Frittata (GF)"
+        ]
+      },
+      {
+        "dish": "Vanilla Honey Yogurt (GF)",
+        "items":[
+          "Granola",
+          "Mixed Nuts and Dried Fruit"
+        ]
+      },
+      {
+        "dish": "Butter Croisants",
+        "items":[]
+      },
+      {
+        "dish": "Butter, Fruit Preserves, Berry Compote",
+        "items":[]
       },
       {
         "dish": "Drinks",
         "items": [
-          "Regular/Decaf Coffee",
-          "Tea",
+          "Coffee",
+          "Assorted Teas",
           "Orange Juice",
           "Cranberry Juice",
           "Apple Juice"
@@ -26,64 +49,27 @@
       {
         "dish": "Salads",
         "items": [
-          "Baby Field Greens Salad, Sliced Radish, Carrot, Cucumbers, Garlic Croutons, Ranch & Honey Mustard Dressings",
-          "Ripe Tomato & Onion Salad, Sweet Basil, Red Wine Vinaigrette",
+          "Field Greens Salad (GF) with Grape Tomatoes, English Cucumbers, Shaved Carrots, and Crisp Radish",
+          "French Potato Salad (Vegan/GF) with Celery, Red Onion, Dill, Whole Grain Mustard, Sherry Vinegar, and Parsley",
           "Creamy Buttermilk Coleslaw, Macaroni Salad"
         ]
       },
       {
-        "dish": "Vegetarian/Vegan",
+        "dish": "Soup",
         "items": [
-          "Hot Zucchini, Squash, and Fennel in Tomato Pomodoro",
-          "Chilled Roasted Portobello, Artichokes, Zucchini & Squash in Herbed Balsamic Reduction"
+          "Tuscan Vegetable Soup (Vegan/GF) containing Tomato Broth, Kale, Zucchini, and White Cannellini Beans"
         ]
       },
       {
         "dish": "Create Your Own Sandwich",
         "items": [
-          "Boar's Head Meats: London Broil Roast Beef, Tavern Ham, Oven-Roasted Turkey Breast, Albacore Tuna Salad",
-          "Cheeses: American, Swiss, Aged Cheddar",
-          "Toppings: Leaf Lettuce, Ripe Tomato, Red Onion, Pickle Chips & Spears",
-          "Sauces: Yellow Mustard, Brown Mustard, Mayonnaise, Horseradish Cream",
-          "Breads: Sourdough, Demi Baguette, Flour Tortillas, Croissant, Whole-Grain"
+          "Deli Meats: Roasted Turkey, Chicken, Roast Beef, Waldorf Chicken Salad",
+          "Cheeses: Swiss, Cheddar and Aged Provolone",
+          "Condiments and Baked Breads",
+          "Gluten Free Bread and Lettuce Cups (GF)"
         ]
-      },
-      {
-        "dish": "Sides",
-        "items": ["House-Fried Kettle Chips, Sea Salt & Black Pepper"]
-      },
-      {
-        "dish": "Desserts",
-        "items": [
-          "Double-Chocolate Brownies, Butterscotch Blondies, Lemon Bars, Red Velvet Cupcakes",
-          "Cookies: Chocolate Chip, Peanut Butter, Oatmeal Raisin"
-        ]
-      },
-      {
-        "dish": "Drinks",
-        "items": ["Soft Drinks", "Bottled Water", "Coffee", "Tea"]
       }
-    ]
-  },
-  {
-    "meal": "Snack",
-    "dishes": [
-      {
-        "dish": "Chips",
-        "items": ["Tortilla", "Pita", "Kettle", "Pretzel Rods"]
-      },
-      {
-        "dish": "Dips",
-        "items": ["French Onion", "Roasted Salsa", "Traditional Hummus"]
-      },
-      {
-        "dish": "Cupcakes",
-        "items": ["Red Velvet", "Double-Chocolate"]
-      },
-      {
-        "dish": "Miniature Tarts",
-        "items": ["Blueberry-Lemon", "White Chocolate Mousse", "Candied Apple"]
-      }
+      
     ]
   }
 ]
