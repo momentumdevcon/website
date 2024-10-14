@@ -1,6 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import { Wrapper } from '../components/'
+import { Link } from 'gatsby'
 import '../assets/css/blog.css'
 
 export default function BasicTemplate({ data }) {
@@ -11,11 +12,13 @@ export default function BasicTemplate({ data }) {
     <Wrapper title={frontmatter.title}>
       <div className="container alt" id="main">
         <div className="inner">
+          <Link to='/blog'>Back to Blogs</Link> <br /><br />
           <div className="blog-author">
             By {frontmatter.author} &mdash;{' '}
             {frontmatter.publishedDate}
           </div>
           <div dangerouslySetInnerHTML={{ __html: html }} />
+          <Link to='/blog'>Back to Blogs</Link>
         </div>
       </div>
     </Wrapper>

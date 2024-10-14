@@ -7,6 +7,7 @@ publishedDate: '2024-10-10'
 published: 'true'
 summary: 'Planning for your day at Momentum? This guide is a great place to start!'
 ---
+[Checkout this article on advice for attendees.](/blog/attendee-advice)
 
 # TL;DR
 
