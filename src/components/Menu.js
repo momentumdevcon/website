@@ -26,6 +26,9 @@ export const Menu = ({ menuState }) => (
       <Link to="/organizers">Organizers</Link>
     </li>
     <li>
+      <Link to="/blog">Blog</Link>
+    </li>
+    <li>
       <Link to="/codeOfConduct">Code of Conduct</Link>
     </li>
   </ul>
