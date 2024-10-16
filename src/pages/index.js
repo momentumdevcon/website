@@ -9,13 +9,15 @@ import {
   WhatIsMomentum,
   TicketsCTA,
   CallForPresentersClosed,
+  ThankYou,
 } from '../components'
 const HomeIndex = ({ data }) => (
   <Layout>    
     <Helmet title="Momentum Developer Conference" meta={[...metaContent]} />
     <Banner />
     <div id="main">
-      <TicketsCTA />
+      <ThankYou/>
+      {/*<TicketsCTA />*/}
       {/*<CallForPresentersClosed /> */}
       <WhatIsMomentum />
       <LatestBlogPost posts={data.allMarkdownRemark.edges} />
