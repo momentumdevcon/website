@@ -12,7 +12,11 @@ summary: 'Learn about the Momentum App and how it can enhance your Momentum expe
 
 You can access the app at [app.momentumdevcon.com](https://app.momentumdevcon.com)
 
-## Live Schedule
+The Momentum App empowers you with the following features:
+
+## Features List
+
+### Live Schedule
 
 <img src="/blog-images/app-schedule.png" alt="App Schedule" width="330px">
 <img src="/blog-images/app-schedule-live.png" alt="Live Schedule" width="330px">
@@ -20,7 +24,7 @@ You can access the app at [app.momentumdevcon.com](https://app.momentumdevcon.co
 The primary feature of the app is the schedule. Besides showing the details of each session in a timeslot, this page also gives you live updates of which time slot is starting soon, in progress, or already ended. You can tap on the session to see more details about the session and the speaker presenting it.
 
 
-## Bookmarks
+### Bookmarks
 
 <img src="/blog-images/app-bookmark.png" alt="Bookmarking Sessions" width="330px">
 <img src="/blog-images/app-unbookmark.png" alt="Removing Bookmarks" width="330px">
@@ -28,15 +32,14 @@ The primary feature of the app is the schedule. Besides showing the details of e
 The bookmark feature helps you keep track of sessions that interest you. We encourage you to plan which sessions you want to attend before the conference!
 
 
-## Feedback
-
+### Feedback
 
 <img src="/blog-images/app-feedback-rating.png" alt="Rating Sessions" width="330px">
 <img src="/blog-images/app-feedback-review.png" alt="Reviewing Sessions" width="330px">
 
 We want to continue bringing quality content to Momentum, and you can help us by providing feedback for the sessions you attend. The session details page comes with a feedback form that can help you with that.
 
-## Networking
+### Networking
 
 <img src="/blog-images/app-networking.png" alt="QR code for networking" width="330px">
 
