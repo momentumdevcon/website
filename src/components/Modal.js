@@ -12,7 +12,7 @@ export const Modal = ({ children, formState, updateFormState }) => {
     <React.Fragment>
       <div className="container">
         <Link
-          to="/blog/momentum-app-2024"
+          to="https://app.momentumdevcon.com/"
           style={{ textDecoration: 'none', borderBottom: 'none', paddingRight: '15px', paddingBottom: '10px' }}
           target="_blank"
         >
