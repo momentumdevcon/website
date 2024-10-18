@@ -2,6 +2,7 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
 import { metaContent } from '../assets/data/metaContent.js'
+
 import {
   Banner,
   Layout,
@@ -11,8 +12,9 @@ import {
   CallForPresentersClosed,
   ThankYou,
 } from '../components'
+
 const HomeIndex = ({ data }) => (
-  <Layout>    
+  <Layout>
     <Helmet title="Momentum Developer Conference" meta={[...metaContent]} />
     <Banner />
     <div id="main">

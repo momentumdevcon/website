@@ -1,17 +1,16 @@
 import React, { useState } from 'react'
-import { Link } from 'gatsby';
+import { Link } from 'gatsby'
 import '../assets/css/modal.css'
 
 export const Modal = ({ children, formState, updateFormState }) => {
   const [modalStyle, setStyle] = useState('')
   if (typeof window !== 'undefined') {
-    window.onclick = (e) =>
-      e.target.className === 'modal' ? setStyle('none') : ''
+    window.onclick = (e) => (e.target.className === 'modal' ? setStyle('none') : '')
   }
-
 
   return (
     <React.Fragment>
+
       
       <div className='container'>
       <Link to="https://app.momentumdevcon.com/" style={{ textDecoration: 'none', borderBottom: 'none', paddingRight: '15px', paddingBottom: '10px'}} target="_blank">
@@ -32,6 +31,7 @@ export const Modal = ({ children, formState, updateFormState }) => {
       >
         Send me email!
       </button>
+
       </div>
       <div className="modal" style={{ display: modalStyle }}>
         <div className="modal-content">
