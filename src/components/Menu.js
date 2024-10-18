@@ -13,9 +13,11 @@ export const Menu = ({ menuState }) => (
     <li>
       <Link to="/schedule">Schedule</Link>
     </li>
+    {/*
     <li>
       <Link to="/tickets">Tickets</Link>
     </li>
+    */}
     <li>
       <Link to="/sponsors">Sponsors</Link>
     </li>
