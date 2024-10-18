@@ -13,6 +13,9 @@ export const Modal = ({ children, formState, updateFormState }) => {
 
       
       <div className='container'>
+      <Link to="feedback.momentumdevcon.com" style={{ textDecoration: 'none', borderBottom: 'none', paddingRight: '15px', paddingBottom: '10px'}} target="_blank">
+      <button className='banner-btn'>Provide Feedback</button>
+      </Link>
       <Link to="https://app.momentumdevcon.com/" style={{ textDecoration: 'none', borderBottom: 'none', paddingRight: '15px', paddingBottom: '10px'}} target="_blank">
       <button className='banner-btn'>Momentum App</button>
       </Link>
