@@ -3,23 +3,13 @@ import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
 import { metaContent } from '../assets/data/metaContent.js'
 
-import {
-  Banner,
-  Layout,
-  LatestBlogPost,
-  WhatIsMomentum,
-  TicketsCTA,
-  CallForPresentersClosed,
-  ThankYou,
-} from '../components'
+import { Banner, Layout, LatestBlogPost, WhatIsMomentum } from '../components'
 
 const HomeIndex = ({ data }) => (
   <Layout>
     <Helmet title="Momentum Developer Conference" meta={[...metaContent]} />
     <Banner />
     <div id="main">
-      {/*<TicketsCTA />*/}
-      {/*<CallForPresentersClosed /> */}
       <WhatIsMomentum />
       <LatestBlogPost posts={data.allMarkdownRemark.edges} />
     </div>

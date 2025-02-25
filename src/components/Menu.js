@@ -33,6 +33,9 @@ export const Menu = ({ menuState }) => (
     <li>
       <Link to="/codeOfConduct">Code of Conduct</Link>
     </li>
+    <li>
+      <a href="https://2024.momentumdevcon.com">2024 Site</a>
+    </li>
   </ul>
 )
 
