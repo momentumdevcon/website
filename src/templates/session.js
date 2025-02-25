@@ -5,55 +5,33 @@ import { getSpeakerNameLink } from '../utils/getSpeakerNameLink'
 import { LEVEL_ID, TAG_ID } from '../assets/data/levelAndTagId'
 import '../assets/css/session.css'
 
-const SessionTemplate = ({
-  data: { allSessions, allSpeakers },
-  pageContext: { slug },
-}) => {
+const SessionTemplate = ({ data: { allSessions, allSpeakers }, pageContext: { slug } }) => {
   allSessions = allSessions.nodes[0].sessions
   allSpeakers = allSpeakers.nodes
   const session = allSessions.find((session) => session.alternative_id === slug)
   const title = session ? session.title : ''
-  const speakerNames =
-    session && session.speakers
-      ? session.speakers.map((speaker) => speaker.name)
-      : []
+  const speakerNames = session && session.speakers ? session.speakers.map((speaker) => speaker.name) : []
   const level =
-    session &&
-    session.categories &&
-    session.categories.find((cat) => cat.alternative_id === LEVEL_ID)
-      ? session.categories.find((cat) => cat.alternative_id === LEVEL_ID)
-        .categoryItems[0].name
+    session && session.categories && session.categories.find((cat) => cat.alternative_id === LEVEL_ID)
+      ? session.categories.find((cat) => cat.alternative_id === LEVEL_ID).categoryItems[0].name
       : ''
   const tags =
-    session &&
-    session.categories &&
-    session.categories.find((cat) => cat.alternative_id === TAG_ID)
-      ? session.categories
-        .find((cat) => cat.alternative_id === TAG_ID)
-        .categoryItems.map((item) => item.name)
+    session && session.categories && session.categories.find((cat) => cat.alternative_id === TAG_ID)
+      ? session.categories.find((cat) => cat.alternative_id === TAG_ID).categoryItems.map((item) => item.name)
       : ''
   const speaker1 =
     session && session.speakers && session.speakers[0]
-      ? allSpeakers.find(
-        (speaker) =>
-          speaker.alternative_id === session.speakers[0].alternative_id
-      )
+      ? allSpeakers.find((speaker) => speaker.alternative_id === session.speakers[0].alternative_id)
       : {}
 
-  const pageDescription = `${title} presented by ${speakerNames.join(
-    ', '
-  )} at Momentum 2024`
+  const pageDescription = `${title} presented by ${speakerNames.join(', ')} at Momentum 2025`
 
   const PresenterInfo = () =>
     speakerNames.length > 0 ? (
       <div className="presenter">
         <span className="info-prefix">Presented by:</span>
         {getSpeakerNameLink(speakerNames[0])}
-        {speakerNames.length > 1 ? (
-          <span> and {getSpeakerNameLink(speakerNames[1])}</span>
-        ) : (
-          ''
-        )}
+        {speakerNames.length > 1 ? <span> and {getSpeakerNameLink(speakerNames[1])}</span> : ''}
       </div>
     ) : (
       ''
@@ -70,9 +48,7 @@ const SessionTemplate = ({
           <span>
             <span className="info-prefix">Tags:</span>
             {tags.map((tag, index) => (
-              <span key={tag}>{`${
-                index !== tags.length - 1 ? `${tag}, ` : tag
-              }`}</span>
+              <span key={tag}>{`${index !== tags.length - 1 ? `${tag}, ` : tag}`}</span>
             ))}
           </span>
         ) : (
@@ -84,11 +60,7 @@ const SessionTemplate = ({
     )
 
   return (
-    <Wrapper
-      title={title}
-      metaImage={speaker1.profilePicture}
-      metaDescription={pageDescription}
-    >
+    <Wrapper title={title} metaImage={speaker1.profilePicture} metaDescription={pageDescription}>
       <div id="main" className="alt">
         <section id="one">
           <div className="inner">

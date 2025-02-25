@@ -6,17 +6,16 @@ export const TitoWidget = ({ source }) => (
     <Helmet>
       <script src="https://js.tito.io/v2" />
     </Helmet>
-    <tito-widget event="the-circuit/momentum-2024" source={source} />
+    <tito-widget event="the-circuit/momentum-2025" source={source} />
     <h4>Momentum is a 21-and-up event!</h4>
     <p>
-      We would love to welcome younger developers to our conference but the Hard
-      Rock Casino does not admit anyone under 21 and participants must pass
-      through the casino.
+      We would love to welcome younger developers to our conference but the Hard Rock Casino does not admit anyone under
+      21 and participants must pass through the casino.
     </p>
     <h4>Payment Options</h4>
     <p>
-      Orders may be paid through PayPal or by invoice. PayPal checkout allows
-      payment via credit/debit card and does not require PayPal login.
+      Orders may be paid through PayPal or by invoice. PayPal checkout allows payment via credit/debit card and does not
+      require PayPal login.
     </p>
   </>
 )

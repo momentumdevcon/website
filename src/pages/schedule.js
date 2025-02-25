@@ -3,7 +3,7 @@ import { ScheduleTable, Wrapper } from '../components'
 import '../assets/css/schedule.css'
 
 const SchedulePage = () => (
-  <Wrapper title="2024 Schedule">
+  <Wrapper title="2025 Schedule">
     <div id="main" className="alt">
       <div className="inner">
         <ScheduleTable />
