@@ -9,7 +9,12 @@ export const Banner = () => (
         <h1>Momentum Developer Conference</h1>
       </header>
       <div className="content">
-        <p>Powered by The Circuit</p>
+        <p>
+          Powered by{' '}
+          <a href="https://www.thecircuit.net/" target="_blank">
+            The Circuit
+          </a>
+        </p>
       </div>
       <p className="date">October 16, 2025</p>
       <div style={{ display: 'flex', gap: '4px' }}>
