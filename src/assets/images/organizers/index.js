@@ -1,4 +1,7 @@
 import michael from './michael.jpg'
+import rahul from './Rahul.jpeg'
+import jess from './Jess.jpg'
+import ryane from './ryan casual.jpeg'
 import taryn from './taryn.jpg'
 import tracy from './tracy.jpg'
 import brandon from './brandon.jpg'
@@ -17,6 +20,9 @@ import carly from './carly.png'
 
 export const organizerPhotos = {
   brandon,
+  rahul,
+  ryane,
+  jess,
   dev,
   jason,
   kat,
