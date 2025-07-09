@@ -10,6 +10,16 @@
     ]
   },
   {
+    "name": "Rahul Bawa",
+    "photo": "Rahul",
+    "links": [
+      {
+        "linkType": "LinkedIn",
+        "url": "https://www.linkedin.com/in/rahulbawa/"
+      }
+    ]
+  },
+  {
     "name": "Michael Richardson",
     "photo": "michael",
     "links": [
@@ -24,39 +34,27 @@
     ]
   },
   {
+    "name": "Jessica Slone",
+    "photo": "Jess",
+    "links": [
+      {
+        "linkType": "LinkedIn",
+        "url": "https://www.linkedin.com/in/jessica-slone/"
+      }
+    ]
+  },
+  {
     "name": "Taryn Ruberg",
     "photo": "taryn",
     "links": [
       {
         "linkType": "LinkedIn",
-        "url": "https://www.linkedin.com/in/christy-berning-595b53a2/"
+        "url": "https://www.linkedin.com/in/taryn-ruberg/"
       }
     ]
   },
-  {
-    "name": "Ryan Hale",
-    "photo": "ryan",
-    "links": [
-      {
-        "linkType": "LinkedIn",
-        "url": "https://www.linkedin.com/in/ryan-hale-8491aa8/"
-      }
-    ]
-  },
-  {
-    "name": "Kat Fairbanks",
-    "photo": "kat",
-    "links": [
-      {
-        "linkType": "Twitter",
-        "url": "https://twitter.com/DerKatzenbar"
-      },
-      {
-        "linkType": "LinkedIn",
-        "url": "https://www.linkedin.com/in/katzenbar/"
-      }
-    ]
-  },
+
+
   {
     "name": "Matt Eland",
     "photo": "matt",
@@ -75,44 +73,9 @@
       }
     ]
   },
-  {
-    "name": "Ivy Gaydosh",
-    "photo": "ivy",
-    "links": [
-      {
-        "linkType": "LinkedIn",
-        "url": "https://www.linkedin.com/in/ivy-gaydosh-ab209b108"
-      }
-    ]
-  },
-  {
-    "name": "Dev Agrawal",
-    "photo": "dev",
-    "links": [
-      {
-        "linkType": "Twitter",
-        "url": "https://twitter.com/devagrawal09"
-      },
-      {
-        "linkType": "LinkedIn",
-        "url": "https://www.linkedin.com/in/dev-agrawal-88449b157/"
-      },
-      {
-        "linkType": "Company_Website",
-        "url": "https://devagr.me/"
-      }
-    ]
-  },
-  {
-    "name": "Karthik Kotha",
-    "photo": "karthik",
-    "links": [
-      {
-        "linkType": "LinkedIn",
-        "url": "https://www.linkedin.com/in/kothakarthik/"
-      }
-    ]
-  },
+ 
+  
+ 
   {
     "name": "Carly Schumacher",
     "photo": "carly",
@@ -134,19 +97,16 @@
     ]
   },
   {
-    "name": "Bao Huynh",
-    "photo": "bao",
+    "name": "Ryan Echternacht",
+    "photo": "ryan casual",
     "links": [
       {
         "linkType": "LinkedIn",
-        "url": "https://linkedin.com/in/bhuynhuc"
-      },
-      {
-        "linkType": "Company_Website",
-        "url": "https://bhuynh.dev/"
+        "url": "https://www.linkedin.com/in/ryan-echternacht/"
       }
     ]
   },
+ 
   {
     "name": "Matthew Weil",
     "photo": "matthew",
