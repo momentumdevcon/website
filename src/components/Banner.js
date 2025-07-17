@@ -17,13 +17,7 @@ export const Banner = () => (
         </p>
       </div>
       <p className="date">October 16, 2025</p>
-      <div id="whova-regform-widget" data-reactroot=""></div>
-      <div id="whova-regform-seo-widget" data-reactroot="">
-        Powered By <a class="brandlink" target="_blank" href="https://whova.com"><b>Whova</b></a>
-        <br/>
-        <a class="brandanchorlink" target="_blank" href="https://whova.com/event-registration-software">Conference registration system</a>
-        </div>
-        <script src="https://whova.com/static/frontend/xems/js/whova-regform-widget.js?eid=HYDIeQD2e6sV8sR@9Ok4&amp;host=https://whova.com&amp;registration=attendee&amp;regpagetoken=" type="text/javascript" id="whova-embeded-regform-script" data-reactroot=""></script>
+      <a style="text-decoration:none;border-radius:3px;padding:10px;width:200px;font-family:Helvetica;line-height:1.6;font-weight:400;font-size:16px;display:block;text-align:center;background-color:#2dacee;color:#FFFFFF" target="_blank" rel="noreferrer" href="https://whova.com/portal/registration/HYDIeQD2e6sV8sR@9Ok4/" data-reactroot="">Register Now on Whova</a>    
       <div style={{ display: 'flex', gap: '4px' }}>
         <InterestForm />
       </div>
