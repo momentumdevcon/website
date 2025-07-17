@@ -29,6 +29,19 @@ export const Modal = ({ children, formState, updateFormState }) => {
       <Link to="/blog/what-to-expect-2025" style={{ textDecoration: 'none', borderBottom: 'none', paddingRight: '15px', paddingBottom: '10px'  }}>
       <button  className='banner-btn'>What To Expect</button>
       </Link>*/}
+          <a
+    href="https://whova.com/portal/registration/HYDIeQD2e6sV8sR@9Ok4/"
+    target="_blank"
+    rel="noopener noreferrer"
+    style={{
+      textDecoration: 'none',
+      borderBottom: 'none',
+      paddingRight: '15px',
+      paddingBottom: '10px',
+    }}
+  >
+    <button className="banner-btn">Register Now!</button>
+  </a>
       {
       <Link to="mailto:sponsors@momentumdevcon.com" style={{ textDecoration: 'none', borderBottom: 'none', paddingRight: '15px', paddingBottom: '10px'  }}>
       <button  className='banner-btn'>Inquire about sponsorship</button>
