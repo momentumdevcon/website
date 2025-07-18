@@ -32,3 +32,11 @@ Eat good food. Not too much.
 Have a coffee. Not 12.
 
 Take a break if you need it. Make time to connect and relax.
+
+# FAQs
+
+## Should I bring my laptop?
+
+You certainly don't need it. We don't have any workshop-style sessions this year, so there is no expectation for attendees to bring a computer. 
+
+Some attendees like to bring their laptop for taking notes. However, that's a lot of weight to haul around all day. Instead, you may want to consider "travelling light". A paper notebook or a tablet may do the job.
