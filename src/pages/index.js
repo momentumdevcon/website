@@ -10,7 +10,7 @@ const HomeIndex = ({ data }) => (
     <Helmet title="Momentum Developer Conference" meta={[...metaContent]} />
     <Banner />
     <div id="main">
-    <WhatIsMomentum />
+      <WhatIsMomentum />
       <LatestBlogPost posts={data.allMarkdownRemark.edges} />
     </div>
   </Layout>

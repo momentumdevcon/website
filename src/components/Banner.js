@@ -11,7 +11,7 @@ export const Banner = () => (
       <div className="content">
         <p>
           Powered by{' '}
-          <a href="https://www.thecircuit.net/" target="_blank">
+          <a href="https://www.thecircuit.net/" target="_blank" rel="noreferrer">
             The Circuit
           </a>
         </p>

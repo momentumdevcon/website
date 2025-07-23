@@ -30,7 +30,7 @@ export const Header = () => {
       <Menu menuState={menuState} />
       <div style={{ display: 'flex', justifyContent: 'center' }}>
         <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-          <a href="https://www.thecircuit.net/" target="_blank" style={{ border: 'none', height: '45px' }}>
+          <a href="https://www.thecircuit.net/" target="_blank" style={{ border: 'none', height: '45px' }} rel="noreferrer">
             <img src={circuitLogo} alt="logo" className="logo icon" style={{ height: '45px' }} />
           </a>
         </div>
