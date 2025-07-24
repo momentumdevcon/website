@@ -3,17 +3,68 @@ import { graphql } from 'gatsby'
 
 export const sponsorData = {
   Headlining: [],
-  Room: [],
-  'Lunch/Break': [],
+  Room: [
+    {
+      company: 'Fifth Third Bank',
+      fileName: 'fifthThird.png',
+      link: 'https://www.53.com/content/fifth-third/en.html',
+    },
+  ],
+  'Lunch/Break': [
+    {
+      company: 'Eliassen Group',
+      fileName: 'eliassen.png',
+      link: 'https://www.eliassen.com/',
+    },
+    {
+      company: 'Western & Southern',
+      fileName: 'westernsouthern.jpg',
+      link: 'https://www.westernsouthern.com/',
+    }
+  ],
   Game: [],
-  Booth: [],
+  Booth: [
+    {
+      company: 'Ingage',
+      fileName: 'ingage.png',
+      link: 'https://www.ingagepartners.com/',
+    },
+    {
+      company: 'Encore Talent',
+      fileName: 'encore.png',
+      link: 'https://helloencore.com/',
+    },
+    {
+      company: 'MAX Technical Training',
+      fileName: 'max.png',
+      link: 'https://maxtrain.com/',
+    },
+    {
+      company: 'CGI',
+      fileName: 'cgi.jpg',
+      link: 'https://www.cgi.com/',
+    },
+    {
+      company: 'Agility Partners',
+      fileName: 'agilitypartners.jpg',
+      link: 'https://agilitypartners.io/',
+    },
+    
+    
+  ],
   'Speaker Social': [],
   Lanyard: [],
-  Supporting: [],
-  Beverage: [],
-  'After Party': [],
   'Community Partners': [],
+  Supporting: [],
+  Beverage: [
+    {
+      company: 'TQL',
+      fileName: 'tql.png',
+      link: 'https://www.tql.com/',
+    },
+  ],
 }
+
 
 export const sponsorImage = graphql`
   fragment sponsorImage on File {
