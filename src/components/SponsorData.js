@@ -25,6 +25,11 @@ export const sponsorData = {
   Game: [],
   Booth: [
     {
+      company: 'Afidence',
+      fileName: 'afidence.jpg',
+      link: 'https://afidence.com/',
+    },
+    {
       company: 'Ingage',
       fileName: 'ingage.png',
       link: 'https://www.ingagepartners.com/',
