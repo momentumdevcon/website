@@ -57,7 +57,18 @@ export const sponsorData = {
     
     
   ],
-  'Speaker Social': [],
+  Raffle: [
+    {
+    company: 'Cincinnati Zoo',
+    fileName: 'zoo.jpg',
+    link: 'https://cincinnatizoo.org/'
+    },
+    {
+      company: 'American Sign Museum',
+      fileName: 'asmlogo.png',
+      link: 'https://www.americansignmuseum.org/'
+    }
+  ],
   Lanyard: [],
   'Community Partners': [],
   Supporting: [],
