@@ -4,6 +4,7 @@ import { graphql } from 'gatsby'
 import { metaContent } from '../assets/data/metaContent.js'
 
 import { Banner, Layout, LatestBlogPost, WhatIsMomentum, TicketsCTA } from '../components'
+import { LightningTalk } from '../components/LightningTalk.js'
 
 const HomeIndex = ({ data }) => (
   <Layout>
@@ -11,6 +12,7 @@ const HomeIndex = ({ data }) => (
     <Banner />
     <div id="main">
   <TicketsCTA />
+  <LightningTalk />
   <WhatIsMomentum />
   <LatestBlogPost posts={data.allMarkdownRemark.edges} />
 </div>
