@@ -1,33 +1,33 @@
 import React from 'react'
-import { StaticQuery, Link } from 'gatsby'
+import { StaticQuery, Link, graphql } from 'gatsby'
 import { timeInfo } from '../utils/formatTime'
 import '../assets/css/schedule.css'
 
 export const ScheduleTable = () => (
   <StaticQuery
-    // query={graphql`
-    //   query SessionsWithSchedule {
-    //     allSessions {
-    //       nodes {
-    //         sessions {
-    //           alternative_id
-    //           categories {
-    //             categoryItems {
-    //               name
-    //             }
-    //           }
-    //           endsAt
-    //           room
-    //           startsAt
-    //           title
-    //           speakers {
-    //             name
-    //           }
-    //         }
-    //       }
-    //     }
-    //   }
-    // `}
+  query={graphql`
+    query SessionsWithSchedule {
+      allSessions {
+        nodes {
+          sessions {
+            alternative_id
+            categories {
+              categoryItems {
+                name
+              }
+            }
+            endsAt
+            room
+            startsAt
+            title
+            speakers {
+              name
+            }
+          }
+        }
+      }
+    }
+  `}
     render={({ allSessions }) => {
       const sessions = allSessions.nodes[0].sessions
       const MAIN_BALLROOM = 'Main Ballroom'
