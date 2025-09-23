@@ -12,7 +12,6 @@ const HomeIndex = ({ data }) => (
     <Banner />
     <div id="main">
   <TicketsCTA />
-  <LightningTalk />
   <WhatIsMomentum />
   <LatestBlogPost posts={data.allMarkdownRemark.edges} />
 </div>
