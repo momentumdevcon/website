@@ -5,7 +5,7 @@ import '../assets/css/schedule.css'
 
 export const ScheduleTable = () => (
   <StaticQuery
-  query={graphql`
+    query={graphql`
     query SessionsWithSchedule {
       allSessions {
         nodes {
