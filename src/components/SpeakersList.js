@@ -42,6 +42,23 @@ export const SpeakersList = () => (
     render={({ allSpeakers, allSessions }) => {
       const sessions = allSessions.nodes[0].sessions
       const speakers = allSpeakers.nodes
+        .map((speaker) => {
+          const firstName = speaker.firstName ? speaker.firstName.trim() : speaker.firstName
+          const lastName = speaker.lastName ? speaker.lastName.trim() : speaker.lastName
+          const fullName = speaker.fullName ? speaker.fullName.trim() : speaker.fullName
+
+          return {
+            ...speaker,
+            firstName,
+            lastName,
+            fullName,
+          }
+        })
+        .sort((a, b) => {
+          const nameA = a.fullName ? a.fullName.toLowerCase() : ''
+          const nameB = b.fullName ? b.fullName.toLowerCase() : ''
+          return nameA.localeCompare(nameB)
+        })
       const sessionTitlesById = sessions
         .reduce((acc, cur) => {
           const TITLE_CHAR_LIMIT = 35

@@ -1,1 +1,2 @@
-export const getSpeakerSlug = (name) => name ? name.split(' ').join('_') : '';
+export const getSpeakerSlug = (name) =>
+  name ? name.trim().split(/\s+/).join('_') : ''
