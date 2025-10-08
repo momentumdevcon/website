@@ -67,6 +67,16 @@ export const sponsorData = {
       company: 'American Sign Museum',
       fileName: 'asmlogo.png',
       link: 'https://www.americansignmuseum.org/'
+    },
+    {
+      company: 'Breadkrumb',
+      fileName: 'breadkrumb.png',
+      link: 'https://breadkrumb.com/'
+    },
+    {
+      company: 'Woodburn Games',
+      fileName: 'woodburn.png',
+      link: 'https://www.woodburngames.com/'
     }
   ],
   Lanyard: [],
