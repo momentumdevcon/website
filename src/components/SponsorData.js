@@ -59,9 +59,9 @@ export const sponsorData = {
   ],
   Raffle: [
     {
-    company: 'Cincinnati Zoo',
-    fileName: 'zoo.jpg',
-    link: 'https://cincinnatizoo.org/'
+      company: 'Cincinnati Zoo',
+      fileName: 'zoo.jpg',
+      link: 'https://cincinnatizoo.org/'
     },
     {
       company: 'American Sign Museum',
