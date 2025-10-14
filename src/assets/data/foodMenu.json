@@ -3,42 +3,19 @@
     "meal": "Breakfast",
     "dishes": [
       {
-        "dish": "Fruit",
+        "dish": "Pastries",
         "items":[
-          "Fresh Sliced Fruit (GF)",
-          "Whole Fruit (GF)"
+          "Butter Croissants, Blueberry Muffins, Cranberry Coffee Cake, Tea Breads, Apple Turnovers, Chocolate Croissants"
         ]
       },
       {
-        "dish": "Frittata",
-        "items":[
-          "Fresh Baby Spinach & Potato Frittata (GF) containing Blistered Tomato & Roasted Broccoli",
-          "Vermont White Cheddar Cheese Frittata (GF)"
-        ]
-      },
-      {
-        "dish": "Vanilla Honey Yogurt (GF)",
-        "items":[
-          "Granola",
-          "Mixed Nuts and Dried Fruit"
-        ]
-      },
-      {
-        "dish": "Butter Croisants",
-        "items":[]
-      },
-      {
-        "dish": "Butter, Fruit Preserves, Berry Compote",
+        "dish": "Butter, Fruit Preserves",
         "items":[]
       },
       {
         "dish": "Drinks",
         "items": [
-          "Coffee",
-          "Assorted Teas",
-          "Orange Juice",
-          "Cranberry Juice",
-          "Apple Juice"
+          "Chilled Juices"
         ]
       }
     ]
@@ -47,29 +24,29 @@
     "meal": "Lunch",
     "dishes": [
       {
-        "dish": "Salads",
+        "dish": "Boxed Lunch",
         "items": [
-          "Field Greens Salad (GF) with Grape Tomatoes, English Cucumbers, Shaved Carrots, and Crisp Radish",
-          "French Potato Salad (Vegan/GF) with Celery, Red Onion, Dill, Whole Grain Mustard, Sherry Vinegar, and Parsley",
-          "Creamy Buttermilk Coleslaw, Macaroni Salad"
+          "All boxed lunches include a pasta salad, house-made cookie, whole fruit, chips, a soft drink or bottled water"
         ]
       },
       {
-        "dish": "Soup",
+        "dish": "Middle Eastern Turkey",
         "items": [
-          "Tuscan Vegetable Soup (Vegan/GF) containing Tomato Broth, Kale, Zucchini, and White Cannellini Beans"
+          "House-roasted turkey, roasted garlic hummus, lightly dressed Fattoush salad, sesame roll"
         ]
       },
       {
-        "dish": "Create Your Own Sandwich",
+        "dish": "Country Ham",
         "items": [
-          "Deli Meats: Roasted Turkey, Chicken, Roast Beef, Waldorf Chicken Salad",
-          "Cheeses: Swiss, Cheddar and Aged Provolone",
-          "Condiments and Baked Breads",
-          "Gluten Free Bread and Lettuce Cups (GF)"
+          "Gruyère, Honey Dijon mustard, brioche"
+        ]
+      },
+       {
+        "dish": "Grilled Garden Vegetables",
+        "items": [
+          "Zucchini, squash, eggplant, mixed mushrooms, lightly dressed spinach, focaccia"
         ]
       }
-      
     ]
   }
 ]
