@@ -10,12 +10,12 @@ const HomeIndex = ({ data }) => (
     <Helmet title="Momentum Developer Conference" meta={[...metaContent]} />
     <Banner />
     <div id="main">
-    {/*<WhovaCallout />
+      {/*<WhovaCallout />
     <TicketsCTA />*/}
-    <ThankYou />
-    <WhatIsMomentum />
-    <LatestBlogPost posts={data.allMarkdownRemark.edges} />
-</div>
+      <ThankYou />
+      <WhatIsMomentum />
+      <LatestBlogPost posts={data.allMarkdownRemark.edges} />
+    </div>
   </Layout>
 )
 

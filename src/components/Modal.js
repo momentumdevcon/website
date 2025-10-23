@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { Link } from 'gatsby'
 import '../assets/css/modal.css'
 
 export const Modal = ({ children, formState, updateFormState }) => {
@@ -29,7 +28,7 @@ export const Modal = ({ children, formState, updateFormState }) => {
       <Link to="/blog/what-to-expect-2025" style={{ textDecoration: 'none', borderBottom: 'none', paddingRight: '15px', paddingBottom: '10px'  }}>
       <button  className='banner-btn'>What To Expect</button>
       </Link>*/}
-      {/*
+        {/*
         <a
           href="https://whova.com/portal/registration/HYDIeQD2e6sV8sR@9Ok4/"
           target="_blank"
