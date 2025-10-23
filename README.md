@@ -43,6 +43,11 @@ On Sessionize, copy the previous year's query into this year's query
 Update the URL in gatsby-config.js
 Update the tags/level codes for this year in src/assets/data/levelAndTagId.js
 
+### Annual Conference Website Archive
+Cut a branch named for the year (e.g. "2025")
+Specify in Netlify that this branch should be deployed as well.
+Create a CNAME record with our DNS provider, currently Cloudflare, pointing to the deployed branch
+
 ## Best Practices
 ### Named Exports
 All exports (besides Pages & Templates) should be named rather than default. This allows components to be easily searched for across the project and adds consistency to the code base. Pages and templates are default exports because they're required by Gatsby.
