@@ -45,12 +45,19 @@ Update the tags/level codes for this year in src/assets/data/levelAndTagId.js
 
 ### Annual Conference Website Archive
 Go to Netlify using the momentum credentials and open momentumdevcon.com
+
 [Netlify Branch Deploy Settings](https://app.netlify.com/projects/momentumdevcon/configuration/deploys#branches-and-deploy-contexts)
+
 Hit Configure and then add the new branch name to the additional branches then hit save
+
 Cut a branch named for the year (e.g. "2025") from updated main
+
 Confirm that Netlify deploys the new branch 
+
 [Add the new subdomain here](https://app.netlify.com/projects/momentumdevcon/domain-management#branch-subdomains)
+
 Create a CNAME record with our DNS provider, currently Cloudflare, pointing to the deployed branch
+
 [Renew the Certificate](https://app.netlify.com/projects/momentumdevcon/domain-management#ssl-tls-certificate)
     - this will add the new subdomain to the certificate
     
