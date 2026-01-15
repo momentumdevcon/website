@@ -16,7 +16,7 @@ export const Banner = () => (
           </a>
         </p>
       </div>
-      <p className="date">October 16, 2025</p>
+      <p className="date">October 15, 2026</p>
       <div style={{ display: 'flex', gap: '4px' }}>
         <InterestForm />
       </div>
