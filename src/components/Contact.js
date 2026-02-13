@@ -42,6 +42,9 @@ export const Contact = () => (
         <h3>Prior Years</h3>
         <ul>
           <li>
+            <a href="https://2025.momentumdevcon.com">2025</a>
+          </li>
+          <li>
             <a href="https://2024.momentumdevcon.com">2024</a>
           </li>
           <li>

@@ -1,4 +1,6 @@
 import React from 'react'
+import Link from 'react';
+
 
 export const ThankYou = () => (
   <section id="one" className="tiles whatIsMomentumTiles">
@@ -13,6 +15,11 @@ export const ThankYou = () => (
         received. It's our hope that you'll journey with us as Momentum continues to grow in size, prestige, and
         influence. Plan to join us next October!
       </p>
+      <a href="https://2025.momentumdevcon.com" target="_blank" style={{textDecoration: 'none', borderBottom:'none'}}>
+      <button className="banner-btn">
+           Check out 2025! 
+        </button>
+        </a>
     </article>
   </section>
 )
