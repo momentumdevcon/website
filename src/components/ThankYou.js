@@ -14,10 +14,10 @@ export const ThankYou = () => (
         influence. Plan to join us next October!
       </p>
       <a href="https://2025.momentumdevcon.com" target="_blank" rel="noopener noreferrer" style={{textDecoration: 'none', borderBottom:'none'}}>
-      <button className="banner-btn">
+        <button className="banner-btn">
            Check out 2025! 
         </button>
-        </a>
+      </a>
     </article>
   </section>
 )
