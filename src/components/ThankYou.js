@@ -13,11 +13,27 @@ export const ThankYou = () => (
         received. It's our hope that you'll journey with us as Momentum continues to grow in size, prestige, and
         influence. Plan to join us next October!
       </p>
-      <a href="https://2025.momentumdevcon.com" target="_blank" rel="noopener noreferrer" style={{textDecoration: 'none', borderBottom:'none'}}>
-        <button className="banner-btn">
-           Check out 2025! 
-        </button>
-      </a>
+      <p>
+        In the meantime, we're building something for the Cincinnati tech community and we need your input. 
+        AI adoption is moving fast, but most of the data out there is national or enterprise-focused. We want to 
+        know what's actually happening on the ground here in Cincinnati. We're running a short survey (about 5 minutes) on 
+        AI usage and adoption across Cincinnati-area companies, and we'll be publishing the results publicly to help 
+        shape programming at local conferences and meetups, including Momentum Dev Con this October.
+      </p>
+
+      <div style={{
+        display: 'flex',
+        flexWrap: 'wrap',
+        gap: '16px'
+      }}>
+        <a href="https://forms.gle/36Wc62gaSBzLrLaEA" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', borderBottom: 'none' }}>
+          <button className="banner-btn">AI Adoption Survey</button>
+        </a>
+
+        <a href="https://2025.momentumdevcon.com" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', borderBottom: 'none' }}>
+          <button className="banner-btn">Check out 2025!</button>
+        </a>
+      </div>
     </article>
   </section>
 )
