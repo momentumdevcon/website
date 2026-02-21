@@ -30,7 +30,7 @@ export const sponsorData = {
 
 
   ],
-  "Platform": [
+  'Platform': [
   ],
 
 }
