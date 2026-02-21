@@ -2,13 +2,20 @@ import { graphql } from 'gatsby'
 // Headlining, Room, Lunch or Break, Game Room, Booth, Speaker Social, Lanyard
 
 export const sponsorData = {
-  Headlining: [],
-  Room: [
+  'Thought Leadership': [
+    {
+      company: 'Fifth Third',
+      fileName: 'FifthThird.png',
+      link: 'https://www.53.com/content/fifth-third/en.html',
+    },
   ],
-  'Lunch/Break': [
-
+  'Experience': [
+    {
+      company: 'TQL',
+      fileName: 'tql.png',
+      link: 'https://www.tql.com/',
+    },
   ],
-  Game: [],
   Booth: [
     {
       company: 'Afidence',
@@ -20,21 +27,12 @@ export const sponsorData = {
       fileName: 'max.png',
       link: 'https://maxtrain.com/',
     },
-    
-    
+
+
   ],
-  Raffle: [
+  "Platform": [
   ],
-  Lanyard: [],
-  'Community Partners': [],
-  Supporting: [],
-  Beverage: [
-    {
-      company: 'TQL',
-      fileName: 'tql.png',
-      link: 'https://www.tql.com/',
-    },
-  ],
+
 }
 
 
