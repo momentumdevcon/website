@@ -5,7 +5,7 @@ export const sponsorData = {
   'Thought Leadership': [
     {
       company: 'Fifth Third',
-      fileName: 'FifthThird.png',
+      fileName: 'fifthThird.png',
       link: 'https://www.53.com/content/fifth-third/en.html',
     },
   ],
