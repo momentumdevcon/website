@@ -43,10 +43,12 @@ export const Modal = ({ children, formState, updateFormState }) => {
           <button className="banner-btn">Register Now!</button>
         </a>
         */}
-        {/*
-          <Link to="mailto:sponsors@momentumdevcon.com" style={{ textDecoration: 'none', borderBottom: 'none', paddingRight: '15px', paddingBottom: '10px'  }}>
-            <button  className='banner-btn'>Inquire about sponsorship</button>
-          </Link>*/}
+        <a
+          href="mailto:sponsors@momentumdevcon.com"
+          style={{ textDecoration: 'none', borderBottom: 'none', paddingRight: '15px', paddingBottom: '10px' }}
+        >
+          <button className='banner-btn'>Start a Sponsorship Conversation</button>
+        </a>
 
         <button
           className="banner-btn"
