@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { Link } from 'gatsby'
 import '../assets/css/modal.css'
 
 export const Modal = ({ children, formState, updateFormState }) => {
