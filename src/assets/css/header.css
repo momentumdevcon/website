@@ -10,6 +10,9 @@
   text-transform: uppercase;
   top: 0;
   width: 100%;
+  max-width: 100vw; /* Prevent overflow */
+  overflow-x: hidden; /* Hide any overflow */
+  box-sizing: border-box;
   z-index: 1000;
   background-color: #303658;
 }
@@ -111,7 +114,8 @@
 
   .menu-links {
     display: flex;
-    width: 86%;
+    flex: 1; /* Use remaining space instead of fixed % */
+    max-width: 86%;
     font-size: 0.8rem;
     margin-top: 0px;
     position: unset;
@@ -119,7 +123,8 @@
 
   .menu-links.Open {
     display: flex;
-    width: 86%;
+    flex: 1; /* Use remaining space instead of fixed % */
+    max-width: 86%;
     position: unset;
     transform: none;
     transition: none;

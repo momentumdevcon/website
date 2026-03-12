@@ -1,0 +1,27 @@
+/* Footer responsive layout */
+.footer-content {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  gap: 20px;
+}
+
+.footer-logo {
+  height: 100px;
+  flex-shrink: 0; /* Prevent logo from shrinking */
+}
+
+/* Mobile: Stack vertically */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .footer-logo {
+    height: 80px; /* Smaller on mobile */
+    margin-top: 20px;
+  }
+}
