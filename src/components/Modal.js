@@ -43,22 +43,42 @@ export const Modal = ({ children, formState, updateFormState }) => {
           <button className="banner-btn">Register Now!</button>
         </a>
         */}
-        <a
-          href="mailto:sponsors@momentumdevcon.com"
-          style={{ textDecoration: 'none', borderBottom: 'none', paddingRight: '15px', paddingBottom: '10px' }}
-        >
-          <button className='banner-btn'>Start a Sponsorship Conversation</button>
-        </a>
 
-        <button
-          className="banner-btn"
-          onClick={() => {
-            setStyle('block')
-            updateFormState('')
-          }}
-        >
-          Send me email!
-        </button>
+        {/* Responsive button container */}
+        <div style={{
+          display: 'flex',
+          flexWrap: 'wrap',
+          gap: '15px',
+          justifyContent: 'center',
+          alignItems: 'center'
+        }}>
+          <a
+            href="mailto:sponsors@momentumdevcon.com"
+            style={{ textDecoration: 'none', borderBottom: 'none' }}
+          >
+            <button className='banner-btn'>Start a Sponsorship<br />Conversation</button>
+          </a>
+
+          <button
+            className="banner-btn"
+            onClick={() => {
+              setStyle('block')
+              updateFormState('')
+            }}
+          >
+            Sign up for updates
+          </button>
+
+          <a
+            href="https://forms.gle/RpxGpGPZbMB14Upg6"
+            target="_blank"
+            rel="noreferrer"
+            style={{ textDecoration: 'none', borderBottom: 'none' }}
+          >
+            <button className='banner-btn'>Become a Volunteer/Reviewer</button>
+          </a>
+        </div>
+
       </div>
       <div className="modal" style={{ display: modalStyle }}>
         <div className="modal-content">

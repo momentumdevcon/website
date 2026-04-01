@@ -8,12 +8,22 @@ export const sponsorData = {
       fileName: 'fifthThird.png',
       link: 'https://www.53.com/content/fifth-third/en.html',
     },
+    {
+      company: 'Western Southern',
+      fileName: 'western_southern.png',
+      link: 'https://www.westernsouthern.com/',
+    },
   ],
   'Experience': [
     {
       company: 'TQL',
       fileName: 'tql.png',
       link: 'https://www.tql.com/',
+    },
+    {
+      company: 'Kroger',
+      fileName: 'kroger-cart.png',
+      link: 'https://www.thekrogerco.com/',
     },
   ],
   Booth: [
