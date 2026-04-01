@@ -70,7 +70,9 @@ export const Modal = ({ children, formState, updateFormState }) => {
           </button>
 
           <a
-            href="https://forms.gle/RpxGpGPZbMB14Upg6" target="_blank"
+            href="https://forms.gle/RpxGpGPZbMB14Upg6"
+            target="_blank"
+            rel="noreferrer"
             style={{ textDecoration: 'none', borderBottom: 'none' }}
           >
             <button className='banner-btn'>Become a Volunteer/Reviewer</button>
