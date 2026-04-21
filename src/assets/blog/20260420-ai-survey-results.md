@@ -20,7 +20,7 @@ This post summarizes our key findings from the many of you that helped that init
 
 ## TL;DR? 
 
-Momentum is still going to be awesome and have a variety of content. We ran this survey to make sure the the talks we’re attracting and selecting are inline with our communities interest, especially with regards to AI. This is our understanding of the survey results and we’ll post soon about how this will (or won’t) affect our call for speakers. 
+Momentum is still going to be awesome and have a variety of content. We ran this survey to make sure the talks we’re attracting and selecting are in line with our community's interest, especially with regards to AI. This is our understanding of the survey results and we’ll post soon about how this will (or won’t) affect our call for speakers. 
 
 ## Key Results
 
