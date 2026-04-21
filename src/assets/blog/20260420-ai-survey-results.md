@@ -1,6 +1,6 @@
 ---
 template: 'blog'
-slug: 'ai-survery-results-2026'
+slug: 'ai-survey-results-2026'
 title: 'Scared, Exiting, and Prompting away'
 author: 'Matthew-Hope Eland'
 publishedDate: '2026-04-20'
@@ -14,7 +14,7 @@ To help with this effort one of our organizers, Ryan Echternacht, created a Grea
 
 The [survey is still open](https://docs.google.com/forms/d/e/1FAIpQLSc-4nxINVvxb9VVLize91QJ1kIVDhAOB3GLVCjFYD_yeXGXyw/viewform), if you’d like to participate. 
 
-![survey is open](/blog-images/ai-survery-results-2026/survery-overview.png)
+![survey is open](/blog-images/ai-survey-results-2026/survey-overview.png)
 
 This post summarizes our key findings from the many of you that helped that initiative by providing your thoughts and talks about what, if anything, we plan to change for Momentum 26 - besides the lunch sandwich logistics!
 
@@ -38,13 +38,13 @@ As of early this year, the majority of respondents were using AI on at least a d
 
 This tracks well with the observations of our leadership team: many developers love to try out the latest and greatest, whether in their day-to-day work or in their hobbyist endeavors, while others point to the many flaws and pitfalls of AI agents, which are inherently non-thinking in nature, attempting to perform development or development-adjacent work that inherently benefits from careful thought and experience.
 
-![daily ai use](/blog-images/ai-survery-results-2026/daily-ai-use.png)
+![daily ai use](/blog-images/ai-survey-results-2026/daily-ai-use.png)
 
 Whether or not you’re using AI right now, we do see many organizations and individuals looking for ways to incorporate AI more into their workloads, whether this is to stay informed, increase productivity, satisfy leadership / investors, or simply to develop skills.
 
 Roughly ⅔ of attendees surveyed expected the use of AI to grow in their organizations with ⅓ of respondents predicting a significant amount of growth.
 
-![ai use change](/blog-images/ai-survery-results-2026/ai-use-change.png)
+![ai use change](/blog-images/ai-survey-results-2026/ai-use-change.png)
 
 So, this begs the question: who’s driving the change towards additional AI usage? Obviously models and tools are getting better, but what’s the driving force within organizations?
 
@@ -68,7 +68,7 @@ There’s a very real concern with technologists that we may be turning off our 
 
 Beyond this, many developers are truly concerned about what our new agentic AI development tools will mean to the skills of new or existing software developers who develop an over-reliance on capable models and tools and who may not truly develop or maintain the software craftsmanship skills needed to be effective engineers for their organizations.
 
-![ai concerns](/blog-images/ai-survery-results-2026/ai-concerns.png)
+![ai concerns](/blog-images/ai-survey-results-2026/ai-concerns.png)
 
 Additionally, respondents are worried that their existing skills and knowledge will become obsolete as AI can instantaneously retrieve knowledge and talents resembling their own at a casual examination, leading to concerns about job security and a scarcity of new opportunities.
 
@@ -96,11 +96,11 @@ It’s clear that Momentum should cover AI in at least as much depth as we’ve 
 
 From our analysis, the answer to at least this last one is a clear and resounding “no way!” with the greatest chunk of respondents being less interested in Momentum if Momentum were specifically branded as an AI conference - which confirmed many of our suspicions on the leadership team coming into this survey project.
 
-![ai marketing](/blog-images/ai-survery-results-2026/ai-marketing.png)
+![ai marketing](/blog-images/ai-survey-results-2026/ai-marketing.png)
 
 But what’s the right amount? We’ve previously had a full track (one session per hour) covering AI topics the last few years and while we felt we probably shouldn’t reduce this, a modest portion of attendees thought we should potentially cut back or eliminate AI-related content and focus instead on pure craftsmanship topics.
 
-![ai at local dev events](/blog-images/ai-survery-results-2026/ai-at-local-dev-events.png)
+![ai at local dev events](/blog-images/ai-survey-results-2026/ai-at-local-dev-events.png)
 
 On the other hand, the barely majority stake wanted about the same amount of focus on AI versus prior years with another vocal crowd asking for more sessions covering AI.
 
@@ -114,7 +114,7 @@ One of our key insights is that attendees want to see practical examples of usin
 
 Our audience uses a variety of tools and libraries at the moment with many attendees using more than one platform or tool. 
 
-![ai tool use](/blog-images/ai-survery-results-2026/ai-tool-use.png)
+![ai tool use](/blog-images/ai-survey-results-2026/ai-tool-use.png)
 
 We expect the landscape of tools to continue to shift and grow over the months leading up to the conference as these tools continue to evolve, compete, and standardize.
 
