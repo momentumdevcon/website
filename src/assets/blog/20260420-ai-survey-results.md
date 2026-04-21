@@ -2,7 +2,7 @@
 template: 'blog'
 slug: 'ai-survey-results-2026'
 title: 'Scared, Exiting, and Prompting away'
-author: 'Matthew-Hope Eland'
+author: 'Matthew-Hope Eland and Ryan Echternacht'
 publishedDate: '2026-04-20'
 published: 'true'
 summary: 'AI Adoption survey results from the Cincinnati tech community'
