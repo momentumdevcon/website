@@ -11,7 +11,7 @@
   top: 0;
   width: 100%;
   max-width: 100vw; /* Prevent overflow */
-  overflow-x: hidden; /* Hide any overflow */
+  overflow: hidden; /* Hide any overflow */
   box-sizing: border-box;
   z-index: 1000;
   background-color: #303658;
