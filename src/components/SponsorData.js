@@ -13,6 +13,11 @@ export const sponsorData = {
       fileName: 'western_southern.png',
       link: 'https://www.westernsouthern.com/',
     },
+    {
+      company: 'Eliassen Group',
+      fileName: 'eliassen.png',
+      link: 'https://www.eliassen.com/',
+    },
   ],
   'Experience': [
     {
