@@ -53,8 +53,6 @@
       }
     ]
   },
-
-
   {
     "name": "Matt Eland",
     "photo": "matt",
@@ -73,9 +71,6 @@
       }
     ]
   },
- 
-  
- 
   {
     "name": "Carly Schumacher",
     "photo": "carly",
@@ -83,16 +78,6 @@
       {
         "linkType": "LinkedIn",
         "url": "https://www.linkedin.com/in/cschumacher1/"
-      }
-    ]
-  },
-  {
-    "name": "Charlie Hall",
-    "photo": "charlie",
-    "links": [
-      {
-        "linkType": "LinkedIn",
-        "url": "https://www.linkedin.com/in/charlie-hall-643665194/"
       }
     ]
   },
@@ -106,7 +91,6 @@
       }
     ]
   },
- 
   {
     "name": "Matthew Weil",
     "photo": "matthew",
