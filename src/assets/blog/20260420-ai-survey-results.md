@@ -126,3 +126,5 @@ We hope you found the insights we’ve shared in this Greater Cincinnati AI Adop
 We’re tremendously excited about Momentum 26 and are actively recruiting sponsors, volunteers, and preparing for our Call for Speakers which will last the month of May, followed by session review and acceptances in June prior to the conference on October 15th.
 
 We hope to see you there and we’re so excited to see you this fall as technology and the greater Cincinnati area continue to grow and evolve.
+
+*If you haven't yet, checkout our [followup article](https://momentumdevcon.com/blog/ai-survey-results-2026-reflections) with our thoughts on how AI and AI based talks should be represented at Momentum*

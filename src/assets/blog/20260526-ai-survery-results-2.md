@@ -46,3 +46,5 @@ We expect the AI sessions to be competitive and we want every selected talk to e
 You don’t need to do all of these suggested areas, or even any of them, but we do expect the AI tooling content we select to be some of our most agonizing choices this year, so we encourage you - if you’re submitting content related to AI, get practical, get interactive, and give us something that’s going to truly wow our reviewers and our attendees.
 
 But if AI isn’t your thing, that’s great - most talks accepted this year won’t be purely AI focused. The best talk is the one that you’re excited to give and will pour yourself into preparing. Bring us that energy, whatever the topic.
+
+*If you haven't yet, checkout our [original article](https://momentumdevcon.com/blog/ai-survey-results-2026) with a deep dive into the survey results*
