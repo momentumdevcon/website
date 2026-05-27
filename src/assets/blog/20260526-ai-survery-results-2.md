@@ -2,7 +2,7 @@
 template: 'blog'
 slug: 'ai-survey-results-2026-reflections'
 title: 'Looking Forward to Momentum 2026'
-author: 'Ryan Echternacht'
+author: 'Ryan Echternacht and Matthew-Hope Eland'
 publishedDate: '2026-05-26'
 published: 'true'
 summary: 'How much AI-focused content do we want in Momentum 2026?'
