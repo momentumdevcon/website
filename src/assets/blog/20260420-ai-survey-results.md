@@ -8,6 +8,8 @@ published: 'true'
 summary: 'AI Adoption survey results from the Cincinnati tech community'
 ---
 
+*We've also released [a followup article](https://momentumdevcon.com/blog/ai-survey-results-2026-reflections) with our thoughts on how AI and AI based talks should be represented at Momentum*
+
 Momentum 2025 was just half a year ago and yet we’ve seen a marked rise in the capabilities of LLMs and the maturity of agentic AI development tools such as Cursor, Copilot, Claude, Codex, Antigravity, and others. At Momentum we believe that this is a critical industry shift to be aware of and informed of and felt the need to gather attendee thoughts on how prevalent AI should factor into Momentum 2026, coming October 15th this year.
 
 To help with this effort one of our organizers, Ryan Echternacht, created a Greater Cincinnati AI Adoption Survey initiative to gather attendee thoughts in a standardized form and perform some analysis on the results.

@@ -1,6 +1,6 @@
 ---
 template: 'blog'
-slug: 'ai-survey-results-2026'
+slug: 'ai-survey-results-2026-reflections'
 title: 'Looking Forward to Momentum 2026'
 author: 'Ryan Echternacht'
 publishedDate: '2026-05-26'
@@ -8,7 +8,7 @@ published: 'true'
 summary: 'How much AI-focused content do we want in Momentum 2026?'
 ---
 
-Last month, we released the results of our [Greater Cincinnati AI Adoption Survey](https://momentumdevcon.com/blog/ai-survey-results-2026), where we discussed the impact AI is having on developers in our community. It was clear that our developers are eager for practical, hands on input for how to better leverage AI as well as interested in the long term effects AI will have on software development as a craft. 
+Last month, we released the [results of our Greater Cincinnati AI Adoption Survey](https://momentumdevcon.com/blog/ai-survey-results-2026), where we discussed the impact AI is having on developers in our community. It was clear that our developers are eager for practical, hands on input for how to better leverage AI as well as interested in the long term effects AI will have on software development as a craft. 
 
 “How much AI-focused content do we want in Momentum 2026?” has been an important question we’ve reflected on as we plan Momentum 2026 and prepared for our Call for Speakers ([open through May 31st](https://sessionize.com/momentum-2026/)). These survey results have played an important role in that process. 
 
