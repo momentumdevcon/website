@@ -59,7 +59,7 @@ exports.sourceNodes = async ({ actions, createNodeId, createContentDigest, repor
         parent: null,
         children: [],
         internal: {
-          type: 'speakers',
+          type: 'SessionizeSpeaker',
           contentDigest: createContentDigest(speaker),
         },
       })
@@ -72,7 +72,7 @@ exports.sourceNodes = async ({ actions, createNodeId, createContentDigest, repor
         parent: null,
         children: [],
         internal: {
-          type: 'sessions',
+          type: 'SessionizeSessionGroup',
           contentDigest: createContentDigest(sessionGroup),
         },
       })
@@ -166,7 +166,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   // Create speaker and sessions pages
   const sessionsAndSpeakersResult = await graphql(`
     query AllInfo {
-      allSpeakers(filter: {id: {ne: "dummy"}}) {
+      allSessionizeSpeaker(filter: {id: {ne: "dummy"}}) {
         nodes {
           fullName
           alternative_id
@@ -187,7 +187,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           profilePicture
         }
       }
-      allSessions(filter: {id: {ne: "dummy"}}) {
+      allSessionizeSessionGroup(filter: {id: {ne: "dummy"}}) {
         nodes {
           sessions {
             title
@@ -220,8 +220,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     return
   }
 
-  const speakers = sessionsAndSpeakersResult.data.allSpeakers.nodes
-  const sessions = sessionsAndSpeakersResult.data.allSessions.nodes[0].sessions
+  const speakers = sessionsAndSpeakersResult.data.allSessionizeSpeaker.nodes
+  const sessions = sessionsAndSpeakersResult.data.allSessionizeSessionGroup.nodes[0].sessions
 
   speakers.forEach(({ fullName }) => {
     const slug = fullName.split(' ').join('_')

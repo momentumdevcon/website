@@ -6,11 +6,11 @@ import { getSpeakerSlug } from '../utils/getSpeakerSlug'
 import { BlueLogo } from '../assets/images'
 import '../assets/css/speaker.css'
 
-const SpeakerTemplate = ({ data: { allSessions, allSpeakers }, pageContext: { slug } }) => {
-  allSessions = allSessions.nodes[0].sessions
-  allSpeakers = allSpeakers.nodes
-  const speaker = allSpeakers.find((speaker) => slug == getSpeakerSlug(speaker.fullName))
-  const speakerSessions = allSessions.filter((session) =>
+const SpeakerTemplate = ({ data: { allSessionizeSessionGroup, allSessionizeSpeaker }, pageContext: { slug } }) => {
+  allSessionizeSessionGroup = allSessionizeSessionGroup.nodes[0].sessions
+  allSessionizeSpeaker = allSessionizeSpeaker.nodes
+  const speaker = allSessionizeSpeaker.find((speaker) => slug == getSpeakerSlug(speaker.fullName))
+  const speakerSessions = allSessionizeSessionGroup.filter((session) =>
     speaker.sessions.map((s) => String(s.alternative_id)).includes(session.alternative_id)
   )
   const sessionText = `Session${speakerSessions.length > 1 ? 's' : ''}:`
@@ -53,7 +53,7 @@ export default SpeakerTemplate
 
 export const query = graphql`
   query SpeakerPage {
-    allSpeakers(filter: { id: { ne: "dummy" } }) {
+    allSessionizeSpeaker(filter: { id: { ne: "dummy" } }) {
       nodes {
         alternative_id
         firstName
@@ -72,7 +72,7 @@ export const query = graphql`
         }
       }
     }
-    allSessions(filter: { id: { ne: "dummy" } }) {
+    allSessionizeSessionGroup(filter: { id: { ne: "dummy" } }) {
       nodes {
         sessions {
           alternative_id

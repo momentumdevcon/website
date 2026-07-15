@@ -5,10 +5,10 @@ import { getSpeakerNameLink } from '../utils/getSpeakerNameLink'
 import { LEVEL_ID, TAG_ID } from '../assets/data/levelAndTagId'
 import '../assets/css/session.css'
 
-const SessionTemplate = ({ data: { allSessions, allSpeakers }, pageContext: { slug } }) => {
-  allSessions = allSessions.nodes[0].sessions
-  allSpeakers = allSpeakers.nodes
-  const session = allSessions.find((session) => session.alternative_id === slug)
+const SessionTemplate = ({ data: { allSessionizeSessionGroup, allSessionizeSpeaker }, pageContext: { slug } }) => {
+  allSessionizeSessionGroup = allSessionizeSessionGroup.nodes[0].sessions
+  allSessionizeSpeaker = allSessionizeSpeaker.nodes
+  const session = allSessionizeSessionGroup.find((session) => session.alternative_id === slug)
   const title = session ? session.title : ''
   const speakerNames = session && session.speakers ? session.speakers.map((speaker) => speaker.name) : []
   const level =
@@ -21,7 +21,7 @@ const SessionTemplate = ({ data: { allSessions, allSpeakers }, pageContext: { sl
       : ''
   const speaker1 =
     session && session.speakers && session.speakers[0]
-      ? allSpeakers.find((speaker) => speaker.alternative_id === session.speakers[0].alternative_id)
+      ? allSessionizeSpeaker.find((speaker) => speaker.alternative_id === session.speakers[0].alternative_id)
       : {}
 
   const pageDescription = `${title} presented by ${speakerNames.join(', ')} at Momentum 2026`
@@ -77,7 +77,7 @@ export default SessionTemplate
 
 export const query = graphql`
   query SessionPageQuery {
-    allSpeakers(filter: { id: { ne: "dummy" } }) {
+    allSessionizeSpeaker(filter: { id: { ne: "dummy" } }) {
       nodes {
         alternative_id
         firstName
@@ -85,7 +85,7 @@ export const query = graphql`
         fullName
       }
     }
-    allSessions(filter: { id: { ne: "dummy" } }) {
+    allSessionizeSessionGroup(filter: { id: { ne: "dummy" } }) {
       nodes {
         sessions {
           alternative_id

@@ -9,7 +9,7 @@ export const SessionsList = () => (
   <StaticQuery
     query={graphql`
       query SessionList {
-        allSessions(filter: {id: {ne: "dummy"}}) {
+        allSessionizeSessionGroup(filter: {id: {ne: "dummy"}}) {
           nodes {
             sessions {
               alternative_id
@@ -29,8 +29,8 @@ export const SessionsList = () => (
         }
       }
     `}
-    render={({ allSessions }) => {
-      const sessions = allSessions.nodes[0].sessions
+    render={({ allSessionizeSessionGroup }) => {
+      const sessions = allSessionizeSessionGroup.nodes[0].sessions
       return (
         <div id="main" className="alt">
           <section id="one" className="sessionList">
