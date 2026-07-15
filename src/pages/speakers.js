@@ -2,7 +2,7 @@ import React from 'react'
 import { SpeakersList, Wrapper } from '../components'
 
 const SpeakersPage = () => (
-  <Wrapper title="2025 Speakers">
+  <Wrapper title="2026 Speakers">
     <div id="main" className="alt">
       <section id="one">
         <div className="inner">

@@ -24,7 +24,7 @@ const SessionTemplate = ({ data: { allSessions, allSpeakers }, pageContext: { sl
       ? allSpeakers.find((speaker) => speaker.alternative_id === session.speakers[0].alternative_id)
       : {}
 
-  const pageDescription = `${title} presented by ${speakerNames.join(', ')} at Momentum 2025`
+  const pageDescription = `${title} presented by ${speakerNames.join(', ')} at Momentum 2026`
 
   const PresenterInfo = () =>
     speakerNames.length > 0 ? (

@@ -15,7 +15,7 @@ const SpeakerTemplate = ({ data: { allSessions, allSpeakers }, pageContext: { sl
   )
   const sessionText = `Session${speakerSessions.length > 1 ? 's' : ''}:`
 
-  const pageTitle = `${speaker.fullName} - Momentum 2025 Speaker`
+  const pageTitle = `${speaker.fullName} - Momentum 2026 Speaker`
   const sessionList = speakerSessions.map((session) => `"${session.title}"`).join(', ')
   return (
     <Wrapper

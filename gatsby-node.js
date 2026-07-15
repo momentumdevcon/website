@@ -5,6 +5,83 @@
  */
 
 const path = require('path')
+const { execFile } = require('child_process')
+const { promisify } = require('util')
+
+const execFileAsync = promisify(execFile)
+
+const SESSIONIZE_API = 'https://sessionize.com/api/v2/trh93sgi/view'
+
+const normalizeSessionizeIds = (value) => {
+  if (Array.isArray(value)) {
+    return value.map(normalizeSessionizeIds)
+  }
+
+  if (value && typeof value === 'object') {
+    return Object.entries(value).reduce((acc, [key, childValue]) => {
+      const normalizedKey = key === 'id' ? 'alternative_id' : key
+      acc[normalizedKey] = normalizeSessionizeIds(childValue)
+      return acc
+    }, {})
+  }
+
+  return value
+}
+
+const fetchSessionizeData = async (endpoint) => {
+  const url = `${SESSIONIZE_API}/${endpoint}`
+  const { stdout } = await execFileAsync('curl', [
+    '--fail',
+    '--silent',
+    '--show-error',
+    '--location',
+    '--header',
+    'Content-Type: application/json',
+    url,
+  ], { maxBuffer: 1024 * 1024 * 10 })
+
+  return normalizeSessionizeIds(JSON.parse(stdout))
+}
+
+exports.sourceNodes = async ({ actions, createNodeId, createContentDigest, reporter }) => {
+  const { createNode } = actions
+
+  try {
+    const [speakers, sessionGroups] = await Promise.all([
+      fetchSessionizeData('speakers'),
+      fetchSessionizeData('sessions'),
+    ])
+
+    speakers.forEach((speaker) => {
+      createNode({
+        ...speaker,
+        id: createNodeId(`sessionize-speaker-${speaker.alternative_id}`),
+        parent: null,
+        children: [],
+        internal: {
+          type: 'speakers',
+          contentDigest: createContentDigest(speaker),
+        },
+      })
+    })
+
+    sessionGroups.forEach((sessionGroup) => {
+      createNode({
+        ...sessionGroup,
+        id: createNodeId(`sessionize-session-group-${sessionGroup.alternative_id}`),
+        parent: null,
+        children: [],
+        internal: {
+          type: 'sessions',
+          contentDigest: createContentDigest(sessionGroup),
+        },
+      })
+    })
+  } catch (error) {
+    reporter.panicOnBuild('Error while loading Sessionize data.', error)
+  }
+}
+
 const { paginate } = require('gatsby-awesome-pagination')
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
