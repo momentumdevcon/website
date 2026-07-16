@@ -18,6 +18,16 @@ export const sponsorData = {
       fileName: 'eliassen.png',
       link: 'https://www.eliassen.com/',
     },
+    {
+      company: 'Callibrity',
+      fileName: 'callibrity.png',
+      link: 'https://www.callibrity.com/',
+    },
+    {
+      company: 'Leapwork',
+      fileName: 'leapwork.png',
+      link: 'https://leapwork.com/',
+    },
   ],
   'Experience': [
     {
