@@ -4,6 +4,7 @@ import { generateSocialLink } from '../utils/generateSocialLink'
 import '../assets/css/speakers.css'
 import { getSpeakerSlug } from '../utils/getSpeakerSlug'
 import { BlueLogo } from '../assets/images'
+import { getSessionizeSessions } from '../utils/getSessionizeSessions'
 
 export const SpeakersList = () => (
   <StaticQuery
@@ -40,7 +41,7 @@ export const SpeakersList = () => (
       }
     `}
     render={({ allSessionizeSpeaker, allSessionizeSessionGroup }) => {
-      const sessions = allSessionizeSessionGroup.nodes[0].sessions
+      const sessions = getSessionizeSessions(allSessionizeSessionGroup)
       const speakers = allSessionizeSpeaker.nodes
         .map((speaker) => {
           const firstName = speaker.firstName ? speaker.firstName.trim() : speaker.firstName

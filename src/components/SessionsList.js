@@ -2,6 +2,7 @@ import React from 'react'
 import { StaticQuery, graphql, Link } from 'gatsby'
 import { getSpeakerNameLink } from '../utils/getSpeakerNameLink'
 import { LEVEL_ID, TAG_ID } from '../assets/data/levelAndTagId'
+import { getSessionizeSessions } from '../utils/getSessionizeSessions'
 import '../assets/css/sessions.css'
 import '../assets/css/session.css'
 
@@ -30,7 +31,7 @@ export const SessionsList = () => (
       }
     `}
     render={({ allSessionizeSessionGroup }) => {
-      const sessions = allSessionizeSessionGroup.nodes[0].sessions
+      const sessions = getSessionizeSessions(allSessionizeSessionGroup)
       return (
         <div id="main" className="alt">
           <section id="one" className="sessionList">

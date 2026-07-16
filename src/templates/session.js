@@ -3,10 +3,11 @@ import { graphql } from 'gatsby'
 import { Wrapper } from '../components'
 import { getSpeakerNameLink } from '../utils/getSpeakerNameLink'
 import { LEVEL_ID, TAG_ID } from '../assets/data/levelAndTagId'
+import { getSessionizeSessions } from '../utils/getSessionizeSessions'
 import '../assets/css/session.css'
 
 const SessionTemplate = ({ data: { allSessionizeSessionGroup, allSessionizeSpeaker }, pageContext: { slug } }) => {
-  allSessionizeSessionGroup = allSessionizeSessionGroup.nodes[0].sessions
+  allSessionizeSessionGroup = getSessionizeSessions(allSessionizeSessionGroup)
   allSessionizeSpeaker = allSessionizeSpeaker.nodes
   const session = allSessionizeSessionGroup.find((session) => session.alternative_id === slug)
   const title = session ? session.title : ''
@@ -22,7 +23,7 @@ const SessionTemplate = ({ data: { allSessionizeSessionGroup, allSessionizeSpeak
   const speaker1 =
     session && session.speakers && session.speakers[0]
       ? allSessionizeSpeaker.find((speaker) => speaker.alternative_id === session.speakers[0].alternative_id)
-      : {}
+      : null
 
   const pageDescription = `${title} presented by ${speakerNames.join(', ')} at Momentum 2026`
 
@@ -60,7 +61,7 @@ const SessionTemplate = ({ data: { allSessionizeSessionGroup, allSessionizeSpeak
     )
 
   return (
-    <Wrapper title={title} metaImage={speaker1.profilePicture} metaDescription={pageDescription}>
+    <Wrapper title={title} metaImage={speaker1 && speaker1.profilePicture} metaDescription={pageDescription}>
       <div id="main" className="alt">
         <section id="one">
           <div className="inner">
@@ -83,6 +84,7 @@ export const query = graphql`
         firstName
         lastName
         fullName
+        profilePicture
       }
     }
     allSessionizeSessionGroup(filter: { id: { ne: "dummy" } }) {

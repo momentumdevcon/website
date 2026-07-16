@@ -4,12 +4,24 @@ import { Wrapper } from '../components/'
 import { generateSocialLink } from '../utils/generateSocialLink'
 import { getSpeakerSlug } from '../utils/getSpeakerSlug'
 import { BlueLogo } from '../assets/images'
+import { getSessionizeSessions } from '../utils/getSessionizeSessions'
 import '../assets/css/speaker.css'
 
 const SpeakerTemplate = ({ data: { allSessionizeSessionGroup, allSessionizeSpeaker }, pageContext: { slug } }) => {
-  allSessionizeSessionGroup = allSessionizeSessionGroup.nodes[0].sessions
+  allSessionizeSessionGroup = getSessionizeSessions(allSessionizeSessionGroup)
   allSessionizeSpeaker = allSessionizeSpeaker.nodes
-  const speaker = allSessionizeSpeaker.find((speaker) => slug == getSpeakerSlug(speaker.fullName))
+  const speaker = allSessionizeSpeaker.find((speaker) => slug === getSpeakerSlug(speaker.fullName))
+
+  if (!speaker) {
+    return (
+      <Wrapper title="Speaker not found">
+        <div id="main" className="alt">
+          <div className="inner">Speaker information is unavailable.</div>
+        </div>
+      </Wrapper>
+    )
+  }
+
   const speakerSessions = allSessionizeSessionGroup.filter((session) =>
     speaker.sessions.map((s) => String(s.alternative_id)).includes(session.alternative_id)
   )

@@ -5,12 +5,10 @@
  */
 
 const path = require('path')
-const { execFile } = require('child_process')
-const { promisify } = require('util')
-
-const execFileAsync = promisify(execFile)
+const { getSessionizeSessions } = require('./src/utils/getSessionizeSessions')
 
 const SESSIONIZE_API = 'https://sessionize.com/api/v2/trh93sgi/view'
+const SESSIONIZE_REQUEST_TIMEOUT_MS = 15000
 
 const normalizeSessionizeIds = (value) => {
   if (Array.isArray(value)) {
@@ -30,17 +28,20 @@ const normalizeSessionizeIds = (value) => {
 
 const fetchSessionizeData = async (endpoint) => {
   const url = `${SESSIONIZE_API}/${endpoint}`
-  const { stdout } = await execFileAsync('curl', [
-    '--fail',
-    '--silent',
-    '--show-error',
-    '--location',
-    '--header',
-    'Content-Type: application/json',
-    url,
-  ], { maxBuffer: 1024 * 1024 * 10 })
+  const response = await fetch(url, {
+    headers: {
+      Accept: 'application/json',
+    },
+    signal: AbortSignal.timeout(SESSIONIZE_REQUEST_TIMEOUT_MS),
+  })
 
-  return normalizeSessionizeIds(JSON.parse(stdout))
+  if (!response.ok) {
+    throw new Error(
+      `Sessionize request for ${endpoint} failed with ${response.status} ${response.statusText}`
+    )
+  }
+
+  return normalizeSessionizeIds(await response.json())
 }
 
 exports.sourceNodes = async ({ actions, createNodeId, createContentDigest, reporter }) => {
@@ -65,10 +66,15 @@ exports.sourceNodes = async ({ actions, createNodeId, createContentDigest, repor
       })
     })
 
-    sessionGroups.forEach((sessionGroup) => {
+    sessionGroups.forEach((sessionGroup, index) => {
+      const sessionGroupKey =
+        sessionGroup.groupId || sessionGroup.groupName || 'default'
+
       createNode({
         ...sessionGroup,
-        id: createNodeId(`sessionize-session-group-${sessionGroup.alternative_id}`),
+        id: createNodeId(
+          `sessionize-session-group-${sessionGroupKey}-${index}`
+        ),
         parent: null,
         children: [],
         internal: {
@@ -221,10 +227,12 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   }
 
   const speakers = sessionsAndSpeakersResult.data.allSessionizeSpeaker.nodes
-  const sessions = sessionsAndSpeakersResult.data.allSessionizeSessionGroup.nodes[0].sessions
+  const sessions = getSessionizeSessions(
+    sessionsAndSpeakersResult.data.allSessionizeSessionGroup
+  )
 
   speakers.forEach(({ fullName }) => {
-    const slug = fullName.split(' ').join('_')
+    const slug = fullName.trim().split(/\s+/).join('_')
     createPage({
       path: `/speakers/${slug}`,
       component: path.resolve('./src/templates/speaker.js'),
