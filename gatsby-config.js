@@ -1,5 +1,4 @@
 const path = require('path')
-const SESSIONIZE_API = 'https://sessionize.com/api/v2/w2rias17/view'
 
 module.exports = {
   // Gatsby default trailing slash behavior is 'always', which breaks `createPage` of our markdown pages
@@ -32,29 +31,6 @@ module.exports = {
     },
     'gatsby-plugin-sass',
     'gatsby-plugin-remove-serviceworker',
-    {
-      resolve: 'gatsby-source-apiserver',
-      options: {
-        entitiesArray: [
-          {
-            url: `${SESSIONIZE_API}/speakers`,
-            method: 'get',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            name: 'speakers',
-          },
-          {
-            url: `${SESSIONIZE_API}/sessions`,
-            method: 'get',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            name: 'sessions',
-          },
-        ],
-      },
-    },
     {
       resolve: 'gatsby-plugin-gtag',
       options: {

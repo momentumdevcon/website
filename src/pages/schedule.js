@@ -1,12 +1,15 @@
 import React from 'react'
-import { Wrapper, ScheduleTable } from '../components'
+import { Wrapper } from '../components'
 import '../assets/css/schedule.css'
 
 const SchedulePage = () => (
-  <Wrapper title="2025 Schedule">
+  <Wrapper title="2026 Schedule Coming Soon">
     <div id="main" className="alt">
       <div className="inner">
-        <ScheduleTable />
+        <p>
+          The Momentum 2026 schedule will be announced soon. Please check back
+          later for the full schedule.
+        </p>
       </div>
     </div>
   </Wrapper>

@@ -4,18 +4,30 @@ import { Wrapper } from '../components/'
 import { generateSocialLink } from '../utils/generateSocialLink'
 import { getSpeakerSlug } from '../utils/getSpeakerSlug'
 import { BlueLogo } from '../assets/images'
+import { getSessionizeSessions } from '../utils/getSessionizeSessions'
 import '../assets/css/speaker.css'
 
-const SpeakerTemplate = ({ data: { allSessions, allSpeakers }, pageContext: { slug } }) => {
-  allSessions = allSessions.nodes[0].sessions
-  allSpeakers = allSpeakers.nodes
-  const speaker = allSpeakers.find((speaker) => slug == getSpeakerSlug(speaker.fullName))
-  const speakerSessions = allSessions.filter((session) =>
+const SpeakerTemplate = ({ data: { allSessionizeSessionGroup, allSessionizeSpeaker }, pageContext: { slug } }) => {
+  allSessionizeSessionGroup = getSessionizeSessions(allSessionizeSessionGroup)
+  allSessionizeSpeaker = allSessionizeSpeaker.nodes
+  const speaker = allSessionizeSpeaker.find((speaker) => slug === getSpeakerSlug(speaker.fullName))
+
+  if (!speaker) {
+    return (
+      <Wrapper title="Speaker not found">
+        <div id="main" className="alt">
+          <div className="inner">Speaker information is unavailable.</div>
+        </div>
+      </Wrapper>
+    )
+  }
+
+  const speakerSessions = allSessionizeSessionGroup.filter((session) =>
     speaker.sessions.map((s) => String(s.alternative_id)).includes(session.alternative_id)
   )
   const sessionText = `Session${speakerSessions.length > 1 ? 's' : ''}:`
 
-  const pageTitle = `${speaker.fullName} - Momentum 2025 Speaker`
+  const pageTitle = `${speaker.fullName} - Momentum 2026 Speaker`
   const sessionList = speakerSessions.map((session) => `"${session.title}"`).join(', ')
   return (
     <Wrapper
@@ -53,7 +65,7 @@ export default SpeakerTemplate
 
 export const query = graphql`
   query SpeakerPage {
-    allSpeakers(filter: { id: { ne: "dummy" } }) {
+    allSessionizeSpeaker(filter: { id: { ne: "dummy" } }) {
       nodes {
         alternative_id
         firstName
@@ -72,7 +84,7 @@ export const query = graphql`
         }
       }
     }
-    allSessions(filter: { id: { ne: "dummy" } }) {
+    allSessionizeSessionGroup(filter: { id: { ne: "dummy" } }) {
       nodes {
         sessions {
           alternative_id

@@ -4,12 +4,13 @@ import { generateSocialLink } from '../utils/generateSocialLink'
 import '../assets/css/speakers.css'
 import { getSpeakerSlug } from '../utils/getSpeakerSlug'
 import { BlueLogo } from '../assets/images'
+import { getSessionizeSessions } from '../utils/getSessionizeSessions'
 
 export const SpeakersList = () => (
   <StaticQuery
     query={graphql`
       query SpeakerList {
-        allSpeakers(filter: {id: {ne: "dummy"}}) {
+        allSessionizeSpeaker(filter: {id: {ne: "dummy"}}) {
           nodes {
             alternative_id
             firstName
@@ -29,7 +30,7 @@ export const SpeakersList = () => (
             }
           }
         }
-        allSessions(filter: {id: {ne: "dummy"}}) {
+        allSessionizeSessionGroup(filter: {id: {ne: "dummy"}}) {
           nodes {
             sessions {
               title
@@ -39,9 +40,9 @@ export const SpeakersList = () => (
         }
       }
     `}
-    render={({ allSpeakers, allSessions }) => {
-      const sessions = allSessions.nodes[0].sessions
-      const speakers = allSpeakers.nodes
+    render={({ allSessionizeSpeaker, allSessionizeSessionGroup }) => {
+      const sessions = getSessionizeSessions(allSessionizeSessionGroup)
+      const speakers = allSessionizeSpeaker.nodes
         .map((speaker) => {
           const firstName = speaker.firstName ? speaker.firstName.trim() : speaker.firstName
           const lastName = speaker.lastName ? speaker.lastName.trim() : speaker.lastName

@@ -2,6 +2,7 @@ import React from 'react'
 import { StaticQuery, graphql, Link } from 'gatsby'
 import { getSpeakerNameLink } from '../utils/getSpeakerNameLink'
 import { LEVEL_ID, TAG_ID } from '../assets/data/levelAndTagId'
+import { getSessionizeSessions } from '../utils/getSessionizeSessions'
 import '../assets/css/sessions.css'
 import '../assets/css/session.css'
 
@@ -9,7 +10,7 @@ export const SessionsList = () => (
   <StaticQuery
     query={graphql`
       query SessionList {
-        allSessions(filter: {id: {ne: "dummy"}}) {
+        allSessionizeSessionGroup(filter: {id: {ne: "dummy"}}) {
           nodes {
             sessions {
               alternative_id
@@ -29,8 +30,8 @@ export const SessionsList = () => (
         }
       }
     `}
-    render={({ allSessions }) => {
-      const sessions = allSessions.nodes[0].sessions
+    render={({ allSessionizeSessionGroup }) => {
+      const sessions = getSessionizeSessions(allSessionizeSessionGroup)
       return (
         <div id="main" className="alt">
           <section id="one" className="sessionList">

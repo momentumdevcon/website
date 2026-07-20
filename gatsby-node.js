@@ -5,6 +5,89 @@
  */
 
 const path = require('path')
+const { getSessionizeSessions } = require('./src/utils/getSessionizeSessions')
+
+const SESSIONIZE_API = 'https://sessionize.com/api/v2/trh93sgi/view'
+const SESSIONIZE_REQUEST_TIMEOUT_MS = 15000
+
+const normalizeSessionizeIds = (value) => {
+  if (Array.isArray(value)) {
+    return value.map(normalizeSessionizeIds)
+  }
+
+  if (value && typeof value === 'object') {
+    return Object.entries(value).reduce((acc, [key, childValue]) => {
+      const normalizedKey = key === 'id' ? 'alternative_id' : key
+      acc[normalizedKey] = normalizeSessionizeIds(childValue)
+      return acc
+    }, {})
+  }
+
+  return value
+}
+
+const fetchSessionizeData = async (endpoint) => {
+  const url = `${SESSIONIZE_API}/${endpoint}`
+  const response = await fetch(url, {
+    headers: {
+      Accept: 'application/json',
+    },
+    signal: AbortSignal.timeout(SESSIONIZE_REQUEST_TIMEOUT_MS),
+  })
+
+  if (!response.ok) {
+    throw new Error(
+      `Sessionize request for ${endpoint} failed with ${response.status} ${response.statusText}`
+    )
+  }
+
+  return normalizeSessionizeIds(await response.json())
+}
+
+exports.sourceNodes = async ({ actions, createNodeId, createContentDigest, reporter }) => {
+  const { createNode } = actions
+
+  try {
+    const [speakers, sessionGroups] = await Promise.all([
+      fetchSessionizeData('speakers'),
+      fetchSessionizeData('sessions'),
+    ])
+
+    speakers.forEach((speaker) => {
+      createNode({
+        ...speaker,
+        id: createNodeId(`sessionize-speaker-${speaker.alternative_id}`),
+        parent: null,
+        children: [],
+        internal: {
+          type: 'SessionizeSpeaker',
+          contentDigest: createContentDigest(speaker),
+        },
+      })
+    })
+
+    sessionGroups.forEach((sessionGroup, index) => {
+      const sessionGroupKey =
+        sessionGroup.groupId || sessionGroup.groupName || 'default'
+
+      createNode({
+        ...sessionGroup,
+        id: createNodeId(
+          `sessionize-session-group-${sessionGroupKey}-${index}`
+        ),
+        parent: null,
+        children: [],
+        internal: {
+          type: 'SessionizeSessionGroup',
+          contentDigest: createContentDigest(sessionGroup),
+        },
+      })
+    })
+  } catch (error) {
+    reporter.panicOnBuild('Error while loading Sessionize data.', error)
+  }
+}
+
 const { paginate } = require('gatsby-awesome-pagination')
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
@@ -89,7 +172,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   // Create speaker and sessions pages
   const sessionsAndSpeakersResult = await graphql(`
     query AllInfo {
-      allSpeakers(filter: {id: {ne: "dummy"}}) {
+      allSessionizeSpeaker(filter: {id: {ne: "dummy"}}) {
         nodes {
           fullName
           alternative_id
@@ -110,7 +193,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           profilePicture
         }
       }
-      allSessions(filter: {id: {ne: "dummy"}}) {
+      allSessionizeSessionGroup(filter: {id: {ne: "dummy"}}) {
         nodes {
           sessions {
             title
@@ -143,11 +226,13 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     return
   }
 
-  const speakers = sessionsAndSpeakersResult.data.allSpeakers.nodes
-  const sessions = sessionsAndSpeakersResult.data.allSessions.nodes[0].sessions
+  const speakers = sessionsAndSpeakersResult.data.allSessionizeSpeaker.nodes
+  const sessions = getSessionizeSessions(
+    sessionsAndSpeakersResult.data.allSessionizeSessionGroup
+  )
 
   speakers.forEach(({ fullName }) => {
-    const slug = fullName.split(' ').join('_')
+    const slug = fullName.trim().split(/\s+/).join('_')
     createPage({
       path: `/speakers/${slug}`,
       component: path.resolve('./src/templates/speaker.js'),
