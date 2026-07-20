@@ -20,8 +20,21 @@
     flex-direction: column;
   }
 
-  #banner .banner-actions .button {
-    padding: 0 1em;
+  #banner .banner-actions > .button,
+  #banner .banner-actions > .container,
+  #banner .banner-secondary-actions,
+  #banner .banner-secondary-actions > a,
+  #banner .banner-secondary-actions > button,
+  #banner .banner-secondary-actions > a > button {
+    box-sizing: border-box;
     width: 100%;
+  }
+
+  #banner .banner-secondary-actions {
+    flex-direction: column;
+  }
+
+  #banner .banner-actions > .button {
+    padding: 0 1em;
   }
 }
