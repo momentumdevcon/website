@@ -1,34 +1,27 @@
 import React from 'react'
+import { Link } from 'gatsby'
+import { ticketsAreAvailable } from '../assets/data/ticketing'
 
 export const TicketsCTA = () => (
-  <section id="one" className="tiles whatIsMomentumTiles">
+  <section id="tickets-on-sale" className="tickets-cta">
     <article>
-      <header className="major">
-        <h3>Tickets Available Now!</h3>
-      </header>
-      <a
-        style={{
-          textDecoration: 'none',
-          borderRadius: '3px',
-          padding: '10px',
-          width: '300px',
-          fontFamily: 'Helvetica',
-          lineHeight: 1.5,
-          fontWeight: 400,
-          fontSize: '16px',
-          display: 'block',
-          textAlign: 'center',
-          backgroundColor: '#2dacee',
-          color: '#FFFFFF',
-          borderBottom: 'none',
-          paddingBottom: '10px',
-        }}
-        target="_blank"
-        rel="noreferrer"
-        href="https://whova.com/portal/registration/HYDIeQD2e6sV8sR@9Ok4/"
-      >
-        Register Now on Whova
-      </a>
+      <p className="tickets-cta__eyebrow">
+        {ticketsAreAvailable ? 'Registration is open' : 'Ticket sales are opening'}
+      </p>
+      <h2>
+        {ticketsAreAvailable
+          ? 'Momentum 2026 tickets are available now'
+          : 'Momentum 2026 tickets are almost here'}
+      </h2>
+      <p>
+        Join Cincinnati's developer community at the Hard Rock Casino on October 15.
+        {ticketsAreAvailable
+          ? ' Reserve your spot today.'
+          : ' Registration will be available through Whova shortly.'}
+      </p>
+      <Link className="button special next" to="/tickets">
+        {ticketsAreAvailable ? 'Get tickets' : 'View ticket details'}
+      </Link>
     </article>
   </section>
 )
