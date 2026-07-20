@@ -45,7 +45,7 @@ export const Modal = ({ children, formState, updateFormState }) => {
         */}
 
         {/* Responsive button container */}
-        <div style={{
+        <div className="banner-secondary-actions" style={{
           display: 'flex',
           flexWrap: 'wrap',
           gap: '15px',
