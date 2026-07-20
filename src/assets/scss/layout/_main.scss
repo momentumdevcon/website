@@ -111,6 +111,38 @@
       }
     }
   }
+
+  .tickets-cta {
+    background: linear-gradient(120deg, _palette(accent2), _palette(accent3));
+    padding: 4em 0;
+
+    article {
+      margin: 0 auto;
+      max-width: _size(inner);
+      width: calc(100% - 6em);
+
+      @include breakpoint(small) {
+        width: calc(100% - 3em);
+      }
+    }
+
+    h2 {
+      margin-bottom: 0.5em;
+    }
+
+    p:not(.tickets-cta__eyebrow) {
+      font-size: 1.15em;
+      max-width: 42em;
+    }
+  }
+
+  .tickets-cta__eyebrow {
+    font-size: 0.8em;
+    font-weight: _font(weight-bold);
+    letter-spacing: _font(letter-spacing-alt);
+    margin-bottom: 0.75em;
+    text-transform: uppercase;
+  }
   
 
   .sponsors {

@@ -2,3 +2,26 @@
   font-size: 32px;
   font-weight: 600;
 }
+
+#banner .banner-actions {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+#banner .banner-actions .button {
+  margin: 0;
+}
+
+@media screen and (max-width: 480px) {
+  #banner .banner-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  #banner .banner-actions .button {
+    padding: 0 1em;
+    width: 100%;
+  }
+}

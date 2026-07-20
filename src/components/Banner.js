@@ -1,5 +1,7 @@
 import React from 'react'
+import { Link } from 'gatsby'
 import { InterestForm } from '.'
+import { ticketsAreAvailable } from '../assets/data/ticketing'
 import '../assets/css/banner.css'
 
 export const Banner = () => (
@@ -17,7 +19,10 @@ export const Banner = () => (
         </p>
       </div>
       <p className="date">October 15, 2026</p>
-      <div style={{ display: 'flex', gap: '4px' }}>
+      <div className="banner-actions">
+        <Link className="button special" to="/tickets">
+          {ticketsAreAvailable ? 'Get tickets' : 'Ticket details'}
+        </Link>
         <InterestForm />
       </div>
     </div>
