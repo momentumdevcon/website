@@ -143,6 +143,111 @@
     margin-bottom: 0.75em;
     text-transform: uppercase;
   }
+
+  // The pricing table sits on the section's accent gradient. A light translucent wash rather
+  // than a solid fill, so the purple-to-salmon gradient reads through and the table looks part
+  // of the banner instead of a card dropped on top. 25% is deliberate: it keeps white body text
+  // at ~3.6:1 over the salmon end (vs ~2.4:1 on the bare gradient) while staying see-through.
+  .tickets-cta__pricing {
+    background-color: transparentize(_palette(bg), 0.75);
+    border: solid 1px transparentize(_palette(fg), 0.88);
+    border-radius: _size(border-radius);
+    margin-bottom: _size(element-margin);
+    max-width: 42em;
+    padding: 0.5em 1.25em 1.25em;
+
+    table {
+      margin: 0;
+    }
+
+    // Echoes .tickets-cta__eyebrow so the header reads as part of the section's type system.
+    th {
+      color: transparentize(_palette(fg-bold), 0.25);
+      font-size: 0.7em;
+      letter-spacing: _font(letter-spacing-alt);
+      padding-bottom: 1em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    thead {
+      border-bottom-color: transparentize(_palette(fg), 0.85);
+    }
+
+    td {
+      font-size: 0.9em;
+      vertical-align: middle;
+    }
+
+    // Price column: tabular figures keep the dollar amounts aligned.
+    td:nth-child(2) {
+      font-weight: _font(weight-bold);
+      white-space: nowrap;
+    }
+
+    td:nth-child(3) {
+      white-space: nowrap;
+    }
+
+    // Drops the theme's zebra striping, which reads as muddy over the gradient. This sits
+    // under #main so it outranks the theme's `table tbody tr:nth-child(2n+1)` on its own.
+    tbody tr {
+      background-color: transparent;
+      border-color: transparentize(_palette(fg), 0.88);
+    }
+
+    // Must stay after the `tbody tr` rule above: same specificity, so source order decides.
+    // A brighter wash of the same white rather than a separate accent, so the highlight
+    // stays keyed to whatever part of the gradient it happens to sit on.
+    tbody tr.tickets-cta__tier--active {
+      background-color: transparentize(_palette(fg), 0.87);
+
+      td {
+        color: _palette(fg-bold);
+      }
+    }
+
+    // Sale window has closed. Dimmed rather than removed so the full schedule stays visible.
+    tbody tr.tickets-cta__tier--past {
+      opacity: 0.45;
+
+      td:nth-child(2) {
+        text-decoration: line-through;
+      }
+    }
+  }
+
+  // Solid white rather than _palette(highlight): the cyan fights the warm end of the
+  // gradient, while white stays neutral across the whole sweep.
+  .tickets-cta__badge {
+    background-color: _palette(fg-bold);
+    border-radius: _size(border-radius);
+    color: _palette(bg);
+    display: inline-block;
+    font-size: 0.7em;
+    font-weight: _font(weight-bold);
+    letter-spacing: _font(letter-spacing-alt);
+    line-height: 1.8;
+    margin-left: 0.75em;
+    padding: 0 0.6em;
+    text-transform: uppercase;
+    vertical-align: middle;
+    white-space: nowrap;
+  }
+
+  @include breakpoint(small) {
+    .tickets-cta__pricing {
+      padding: 0.5em 0.75em 0.75em;
+    }
+
+    // Stack the badge under the tier name so the row doesn't force horizontal scrolling.
+    .tickets-cta__badge {
+      display: block;
+      margin-left: 0;
+      margin-top: 0.35em;
+      width: fit-content;
+    }
+  }
   
 
   .sponsors {
