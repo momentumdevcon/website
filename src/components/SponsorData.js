@@ -52,6 +52,11 @@ export const sponsorData = {
       fileName: 'max.png',
       link: 'https://maxtrain.com/',
     },
+    {
+      company: 'Redis',
+      fileName: 'redis.png',
+      link: 'https://redis.io/',
+    },
 
 
   ],

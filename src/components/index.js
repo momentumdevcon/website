@@ -22,5 +22,6 @@ export {
   CallForPresentersOpen,
 } from './CallForPresenters'
 export { TicketsCTA } from './TicketsCTA'
+export { TicketsPopup } from './TicketsPopup'
 export { TitoWidget } from './TitoWidget'
 export { ThankYou } from './ThankYou'

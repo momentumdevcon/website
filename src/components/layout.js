@@ -3,6 +3,7 @@ import React from 'react'
 import '../assets/scss/main.scss'
 import { Header } from './Header'
 import { Footer } from './Footer'
+import { TicketsPopup } from './TicketsPopup'
 
 export class Layout extends React.Component {
   constructor(props) {
@@ -33,6 +34,7 @@ export class Layout extends React.Component {
           <Header />
           {children}
           <Footer />
+          <TicketsPopup />
         </div>
       </div>
     )
