@@ -62,9 +62,9 @@
 @media(max-width: 980px) {
   .table-grid__row:first-child + .table-grid__row .table-grid__cell--header {
     border-top-width: 1px;
-  } 
+  }
 }
- 
+
 .table-grid__cell {
   display: flex;
   flex-direction: column;
@@ -88,6 +88,27 @@
   justify-content: center;
   color: white;
   font-size: 1.4em;
+}
+
+.table-grid__cell--time {
+  font-size: 1em;
+}
+
+/* The banner cell replaces the room columns. It holds a session that sits
+   outside those columns, such as lunch or the keynote.
+   ScheduleTable.js sets --room-span from the room count. This keeps the time
+   column the same width as in the room rows. */
+.table-grid__row--banner {
+  grid-template-columns: minmax(14.28%, 1fr) var(--room-span, 1fr);
+}
+
+.table-grid__cell--banner {
+  justify-content: center;
+}
+
+.table-grid__cell-room {
+  font-size: 0.9em;
+  font-style: italic;
 }
 
 /* These will be hidden by default and be revealed on smaller screens. See media query below */
@@ -150,24 +171,24 @@
 }
 
 @media screen and (min-width: 600px) and (max-width: 980px) {
-  
+
   /* Utility class to hide elements while the screen is small */
   .hide-md {
     display: none;
   }
-  
+
   /* Adds a gap between the table rows */
   .table-grid {
     grid-gap: 1em;
   }
-  
+
   /* Stack the cells vertically */
   .table-grid__row {
     /* Each row has 3 columns  */
     grid-auto-flow: row;
     grid-template-columns: 1fr 1fr 1fr;
   }
-  
+
   /* Make the room labels appear */
   .table-grid__cell-label {
     display: block;
@@ -183,24 +204,31 @@
 /* I picked 600px randomly. Choose a breakpoint that makes sense for you */
 
 @media screen and (max-width: 600px) {
-  
+
   /* Utility class to hide elements while the screen is small */
   .hide-sm {
     display: none;
   }
-  
+
   /* Adds a gap between the table rows */
   .table-grid {
     grid-gap: 1em;
   }
-  
+
   /* Stack the cells vertically */
   .table-grid__row {
     grid-auto-flow: row;
   }
-  
+
   /* Make the room labels appear */
   .table-grid__cell-label {
     display: block;
+  }
+}
+
+/* Below 980px the rows stack. The banner row has two cells, so give it one column. */
+@media(max-width: 980px) {
+  .table-grid__row--banner {
+    grid-template-columns: 1fr;
   }
 }

@@ -295,15 +295,19 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   })
 
 
-  sessions.forEach(({ alternative_id }) => {
-    createPage({
-      path: `/session/${alternative_id}`,
-      component: path.resolve('./src/templates/session.js'),
-      context: {
-        slug: alternative_id,
-      },
+  // Service sessions are breaks, lunch and registration. They belong on the
+  // schedule, not on a page of their own.
+  sessions
+    .filter(({ isServiceSession }) => !isServiceSession)
+    .forEach(({ alternative_id }) => {
+      createPage({
+        path: `/session/${alternative_id}`,
+        component: path.resolve('./src/templates/session.js'),
+        context: {
+          slug: alternative_id,
+        },
+      })
     })
-  })
 
 
 }
