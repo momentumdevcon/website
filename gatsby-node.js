@@ -7,7 +7,7 @@
 const path = require('path')
 const { getSessionizeSessions } = require('./src/utils/getSessionizeSessions')
 
-const SESSIONIZE_API = 'https://sessionize.com/api/v2/trh93sgi/view'
+const SESSIONIZE_API = 'https://sessionize.com/api/v2/oildqvig/view'
 const SESSIONIZE_REQUEST_TIMEOUT_MS = 15000
 
 const normalizeSessionizeIds = (value) => {
