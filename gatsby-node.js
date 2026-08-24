@@ -6,6 +6,7 @@
 
 const path = require('path')
 const { getSessionizeSessions } = require('./src/utils/getSessionizeSessions')
+const { getLightningTalkBlock } = require('./src/utils/lightningTalks')
 
 const SESSIONIZE_API = 'https://sessionize.com/api/v2/oildqvig/view'
 const SESSIONIZE_REQUEST_TIMEOUT_MS = 15000
@@ -263,6 +264,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             isInformed
             isPlenumSession
             isServiceSession
+            startsAt
+            endsAt
             alternative_id
             speakers {
               alternative_id
@@ -295,10 +298,17 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   })
 
 
-  // Service sessions are breaks, lunch and registration. They belong on the
-  // schedule, not on a page of their own.
+  // The lightning talk block is the one service session with a page. Its talks
+  // are off the schedule grid, so the page lists them.
+  const lightningBlock = getLightningTalkBlock(sessions)
+
   sessions
-    .filter(({ isServiceSession }) => !isServiceSession)
+    .filter(
+      (session) =>
+        !session.isServiceSession ||
+        (lightningBlock &&
+          session.alternative_id === lightningBlock.alternative_id)
+    )
     .forEach(({ alternative_id }) => {
       createPage({
         path: `/session/${alternative_id}`,

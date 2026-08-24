@@ -4,6 +4,7 @@ import { getSpeakerNameLinks } from '../utils/getSpeakerNameLink'
 import { LEVEL_ID, TAG_ID } from '../assets/data/levelAndTagId'
 import { getSessionizeSessions } from '../utils/getSessionizeSessions'
 import { getCategoryItems } from '../utils/getCategoryItems'
+import { isLightningTalk } from '../utils/lightningTalks'
 import '../assets/css/sessions.css'
 import '../assets/css/session.css'
 
@@ -24,6 +25,7 @@ export const SessionsList = () => (
               categories {
                 alternative_id
                 categoryItems {
+                  alternative_id
                   name
                 }
               }
@@ -50,6 +52,7 @@ export const SessionsList = () => (
               const shortDesc = description.length > DESC_CHAR_LIMIT ? `${description.substring(0, DESC_CHAR_LIMIT)}...` : description
               const level = getCategoryItems(session, LEVEL_ID)[0] || ''
               const tags = getCategoryItems(session, TAG_ID)
+              const lightning = isLightningTalk(session)
               const speakers = session.speakers
                 ? session.speakers.map((speaker) => speaker.name)
                 : []
@@ -74,12 +77,19 @@ export const SessionsList = () => (
                     ) : ''}
                   </div>
                   <div className="description">{shortDesc}</div>
-                  {level || tags.length > 0 ? (
+                  {lightning || level || tags.length > 0 ? (
                     <div className="levelTags">
-                      {level ? (
+                      {lightning || level ? (
                         <span>
-                          <span className="info-prefix">Level: </span>
-                          {level}
+                          {lightning ? (
+                            <span className="lightningTalkLabel">Lightning Talk</span>
+                          ) : ''}
+                          {level ? (
+                            <React.Fragment>
+                              <span className="info-prefix">Level: </span>
+                              {level}
+                            </React.Fragment>
+                          ) : ''}
                         </span>
                       ) : ''}
                       {tags.length > 0 ? (

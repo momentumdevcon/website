@@ -1,2 +1,8 @@
-export const LEVEL_ID = 114047;
-export const TAG_ID = 114050;
+/* eslint-env node */
+
+const LEVEL_ID = 114047
+const TAG_ID = 114050
+const SESSION_TYPE_ID = 130599
+const LIGHTNING_TALK_ID = 472840
+
+module.exports = { LEVEL_ID, TAG_ID, SESSION_TYPE_ID, LIGHTNING_TALK_ID }

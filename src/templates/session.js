@@ -1,10 +1,11 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import { Wrapper } from '../components'
 import { getSpeakerNameLinks } from '../utils/getSpeakerNameLink'
 import { LEVEL_ID, TAG_ID } from '../assets/data/levelAndTagId'
 import { getSessionizeSessions } from '../utils/getSessionizeSessions'
 import { getCategoryItems } from '../utils/getCategoryItems'
+import { getLightningTalksIn, isLightningTalk } from '../utils/lightningTalks'
 import '../assets/css/session.css'
 
 const SessionTemplate = ({ data: { allSessionizeSessionGroup, allSessionizeSpeaker }, pageContext: { slug } }) => {
@@ -20,6 +21,8 @@ const SessionTemplate = ({ data: { allSessionizeSessionGroup, allSessionizeSpeak
       ? allSessionizeSpeaker.find((speaker) => speaker.alternative_id === session.speakers[0].alternative_id)
       : null
 
+  const lightningTalks = getLightningTalksIn(allSessionizeSessionGroup, session)
+
   const pageDescription = speakerNames.length
     ? `${title} presented by ${speakerNames.join(', ')} at Momentum 2026`
     : `${title} at Momentum 2026`
@@ -34,10 +37,34 @@ const SessionTemplate = ({ data: { allSessionizeSessionGroup, allSessionizeSpeak
       ''
     )
 
+  const LightningTalks = () =>
+    lightningTalks.length > 0 ? (
+      <div className="lightningTalks">
+        <h2>Talks</h2>
+        {lightningTalks.map((talk) => (
+          <div className="lightningTalk" key={talk.alternative_id}>
+            <Link to={`/session/${talk.alternative_id}`}>{talk.title}</Link>
+            <div className="lightningTalkSpeakers">
+              {getSpeakerNameLinks(
+                (talk.speakers || []).map((speaker) => speaker.name)
+              )}
+            </div>
+          </div>
+        ))}
+      </div>
+    ) : (
+      ''
+    )
+
+  const lightning = isLightningTalk(session)
+
   const LevelTags = () =>
-    level || tags.length > 0 ? (
+    lightning || level || tags.length > 0 ? (
       <div className="levelTags">
         <span>
+          {lightning ? (
+            <span className="lightningTalkLabel">Lightning Talk</span>
+          ) : ''}
           <span className="info-prefix">Level: </span>
           {level}
         </span>
@@ -63,6 +90,7 @@ const SessionTemplate = ({ data: { allSessionizeSessionGroup, allSessionizeSpeak
           <div className="inner">
             <PresenterInfo />
             <div className="description">{session && session.description}</div>
+            <LightningTalks />
             <LevelTags />
           </div>
         </section>
@@ -87,6 +115,8 @@ export const query = graphql`
       nodes {
         sessions {
           alternative_id
+          startsAt
+          endsAt
           description
           speakers {
             alternative_id
@@ -95,6 +125,7 @@ export const query = graphql`
           categories {
             alternative_id
             categoryItems {
+              alternative_id
               name
             }
           }

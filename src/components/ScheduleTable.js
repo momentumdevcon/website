@@ -5,6 +5,10 @@ import { getSessionizeSessions } from '../utils/getSessionizeSessions'
 import { getSpeakerSlug } from '../utils/getSpeakerSlug'
 import { LEVEL_ID, TAG_ID } from '../assets/data/levelAndTagId'
 import { getCategoryItems } from '../utils/getCategoryItems'
+import {
+  isLightningTalk,
+  getLightningTalkBlock,
+} from '../utils/lightningTalks'
 import '../assets/css/schedule.css'
 
 export const ScheduleTable = () => (
@@ -18,6 +22,7 @@ export const ScheduleTable = () => (
             categories {
               alternative_id
               categoryItems {
+                alternative_id
                 name
               }
             }
@@ -36,9 +41,14 @@ export const ScheduleTable = () => (
   `}
     render={({ allSessionizeSessionGroup }) => {
       // Sessionize leaves startsAt and room null until the schedule is public.
-      const scheduled = getSessionizeSessions(allSessionizeSessionGroup).filter(
+      const published = getSessionizeSessions(allSessionizeSessionGroup).filter(
         (session) => session.startsAt && session.room
       )
+
+      // Keep each lightning talk off the grid. The block row links to a page
+      // that lists them.
+      const lightningBlock = getLightningTalkBlock(published)
+      const scheduled = published.filter((session) => !isLightningTalk(session))
 
       if (scheduled.length === 0) {
         return (
@@ -86,6 +96,12 @@ export const ScheduleTable = () => (
         .concat(startTimes.map((time) => ({ time })))
         .sort((a, b) => a.time.localeCompare(b.time) || rank(a) - rank(b))
 
+      // Keep this in step with the page filter in gatsby-node.js.
+      const hasPage = (session) =>
+        !session.isServiceSession ||
+        (lightningBlock &&
+          session.alternative_id === lightningBlock.alternative_id)
+
       const bannerRow = (session) => (
         <div
           className="table-grid__row table-grid__row--banner"
@@ -96,12 +112,12 @@ export const ScheduleTable = () => (
             {formatTimeRange(session.startsAt, session.endsAt)}
           </div>
           <div className="table-grid__cell table-grid__cell--banner">
-            {session.isServiceSession ? (
-              <span className="table-grid__cell-body">{session.title}</span>
-            ) : (
+            {hasPage(session) ? (
               <Link to={`/session/${session.alternative_id}`}>
                 <span className="table-grid__cell-body">{session.title}</span>
               </Link>
+            ) : (
+              <span className="table-grid__cell-body">{session.title}</span>
             )}
             {(session.speakers || []).map((speaker) => (
               <Link
