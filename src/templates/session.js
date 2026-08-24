@@ -4,6 +4,7 @@ import { Wrapper } from '../components'
 import { getSpeakerNameLink } from '../utils/getSpeakerNameLink'
 import { LEVEL_ID, TAG_ID } from '../assets/data/levelAndTagId'
 import { getSessionizeSessions } from '../utils/getSessionizeSessions'
+import { getCategoryItems } from '../utils/getCategoryItems'
 import '../assets/css/session.css'
 
 const SessionTemplate = ({ data: { allSessionizeSessionGroup, allSessionizeSpeaker }, pageContext: { slug } }) => {
@@ -12,20 +13,16 @@ const SessionTemplate = ({ data: { allSessionizeSessionGroup, allSessionizeSpeak
   const session = allSessionizeSessionGroup.find((session) => session.alternative_id === slug)
   const title = session ? session.title : ''
   const speakerNames = session && session.speakers ? session.speakers.map((speaker) => speaker.name) : []
-  const level =
-    session && session.categories && session.categories.find((cat) => cat.alternative_id === LEVEL_ID)
-      ? session.categories.find((cat) => cat.alternative_id === LEVEL_ID).categoryItems[0].name
-      : ''
-  const tags =
-    session && session.categories && session.categories.find((cat) => cat.alternative_id === TAG_ID)
-      ? session.categories.find((cat) => cat.alternative_id === TAG_ID).categoryItems.map((item) => item.name)
-      : ''
+  const level = getCategoryItems(session, LEVEL_ID)[0] || ''
+  const tags = getCategoryItems(session, TAG_ID)
   const speaker1 =
     session && session.speakers && session.speakers[0]
       ? allSessionizeSpeaker.find((speaker) => speaker.alternative_id === session.speakers[0].alternative_id)
       : null
 
-  const pageDescription = `${title} presented by ${speakerNames.join(', ')} at Momentum 2026`
+  const pageDescription = speakerNames.length
+    ? `${title} presented by ${speakerNames.join(', ')} at Momentum 2026`
+    : `${title} at Momentum 2026`
 
   const PresenterInfo = () =>
     speakerNames.length > 0 ? (
@@ -39,13 +36,13 @@ const SessionTemplate = ({ data: { allSessionizeSessionGroup, allSessionizeSpeak
     )
 
   const LevelTags = () =>
-    tags && tags.length > 0 ? (
+    level || tags.length > 0 ? (
       <div className="levelTags">
         <span>
           <span className="info-prefix">Level: </span>
           {level}
         </span>
-        {tags && tags.length > 0 ? (
+        {tags.length > 0 ? (
           <span>
             <span className="info-prefix">Tags:</span>
             {tags.map((tag, index) => (
