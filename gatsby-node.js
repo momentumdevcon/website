@@ -44,6 +44,58 @@ const fetchSessionizeData = async (endpoint) => {
   return normalizeSessionizeIds(await response.json())
 }
 
+/**
+ * Sessionize sends null startsAt, endsAt and room until the schedule is public.
+ * Gatsby does not infer a field that is null in every node, so queries fail.
+ *
+ * - Declare the session shape so the fields exist before the schedule is public.
+ * - Keep startsAt and endsAt as String. Sessionize sends no time zone. With a
+ *   Date field, Gatsby adds UTC and the schedule shows the wrong clock times.
+ */
+exports.createSchemaCustomization = ({ actions }) => {
+  actions.createTypes(`
+    type SessionizeSessionGroup implements Node {
+      groupId: String
+      groupName: String
+      sessions: [SessionizeSession!]
+    }
+
+    type SessionizeSession {
+      alternative_id: String
+      title: String
+      description: String
+      startsAt: String
+      endsAt: String
+      room: String
+      roomId: Int
+      status: String
+      isConfirmed: Boolean
+      isInformed: Boolean
+      isPlenumSession: Boolean
+      isServiceSession: Boolean
+      speakers: [SessionizeSessionSpeaker!]
+      categories: [SessionizeSessionCategory!]
+    }
+
+    type SessionizeSessionSpeaker {
+      alternative_id: String
+      name: String
+    }
+
+    type SessionizeSessionCategory {
+      alternative_id: Int
+      name: String
+      sort: Int
+      categoryItems: [SessionizeSessionCategoryItem!]
+    }
+
+    type SessionizeSessionCategoryItem {
+      alternative_id: Int
+      name: String
+    }
+  `)
+}
+
 exports.sourceNodes = async ({ actions, createNodeId, createContentDigest, reporter }) => {
   const { createNode } = actions
 
