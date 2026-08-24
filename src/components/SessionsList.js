@@ -1,6 +1,6 @@
 import React from 'react'
 import { StaticQuery, graphql, Link } from 'gatsby'
-import { getSpeakerNameLink } from '../utils/getSpeakerNameLink'
+import { getSpeakerNameLinks } from '../utils/getSpeakerNameLink'
 import { LEVEL_ID, TAG_ID } from '../assets/data/levelAndTagId'
 import { getSessionizeSessions } from '../utils/getSessionizeSessions'
 import { getCategoryItems } from '../utils/getCategoryItems'
@@ -69,10 +69,7 @@ export const SessionsList = () => (
                     {speakers.length > 0 ? (
                       <div className="speakerLink">
                         <div className="presentedBy">Presented by:</div>
-                        <div>
-                          {getSpeakerNameLink(speakers[0])}
-                          {speakers.length > 1 ? (<span> and {getSpeakerNameLink(speakers[1])}</span>) : ''}
-                        </div>
+                        <div>{getSpeakerNameLinks(speakers)}</div>
                       </div>
                     ) : ''}
                   </div>

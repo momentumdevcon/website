@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import { Wrapper } from '../components'
-import { getSpeakerNameLink } from '../utils/getSpeakerNameLink'
+import { getSpeakerNameLinks } from '../utils/getSpeakerNameLink'
 import { LEVEL_ID, TAG_ID } from '../assets/data/levelAndTagId'
 import { getSessionizeSessions } from '../utils/getSessionizeSessions'
 import { getCategoryItems } from '../utils/getCategoryItems'
@@ -28,8 +28,7 @@ const SessionTemplate = ({ data: { allSessionizeSessionGroup, allSessionizeSpeak
     speakerNames.length > 0 ? (
       <div className="presenter">
         <span className="info-prefix">Presented by:</span>
-        {getSpeakerNameLink(speakerNames[0])}
-        {speakerNames.length > 1 ? <span> and {getSpeakerNameLink(speakerNames[1])}</span> : ''}
+        {getSpeakerNameLinks(speakerNames)}
       </div>
     ) : (
       ''
