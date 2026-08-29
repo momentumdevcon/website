@@ -1,21 +1,9 @@
 /* eslint-env node */
 
-const {
-  SESSION_TYPE_ID,
-  LIGHTNING_TALK_ID,
-} = require('../assets/data/levelAndTagId')
+const { isLightningTalk } = require('./sessionSections')
 
-const isLightningTalk = (session) =>
-  ((session && session.categories) || []).some(
-    (category) =>
-      category.alternative_id === SESSION_TYPE_ID &&
-      (category.categoryItems || []).some(
-        (item) => item.alternative_id === LIGHTNING_TALK_ID
-      )
-  )
-
-// Sessionize gives no link between a lightning talk and its block. The block
-// is the service session whose time range holds every lightning talk.
+// Sessionize gives no link from a talk to its block, so the block is found as
+// the service session whose time range holds every lightning talk.
 const getLightningTalkBlock = (sessions) => {
   const talks = sessions.filter(isLightningTalk)
 
@@ -43,4 +31,4 @@ const getLightningTalksIn = (sessions, block) =>
       .sort((a, b) => a.startsAt.localeCompare(b.startsAt))
     : []
 
-module.exports = { isLightningTalk, getLightningTalkBlock, getLightningTalksIn }
+module.exports = { getLightningTalkBlock, getLightningTalksIn }

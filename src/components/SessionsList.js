@@ -4,7 +4,7 @@ import { getSpeakerNameLinks } from '../utils/getSpeakerNameLink'
 import { LEVEL_ID, TAG_ID } from '../assets/data/levelAndTagId'
 import { getSessionizeSessions } from '../utils/getSessionizeSessions'
 import { getCategoryItems } from '../utils/getCategoryItems'
-import { isLightningTalk } from '../utils/lightningTalks'
+import { isLightningTalk } from '../utils/sessionSections'
 import '../assets/css/sessions.css'
 import '../assets/css/session.css'
 

@@ -5,10 +5,8 @@ import { getSessionizeSessions } from '../utils/getSessionizeSessions'
 import { getSpeakerSlug } from '../utils/getSpeakerSlug'
 import { LEVEL_ID, TAG_ID } from '../assets/data/levelAndTagId'
 import { getCategoryItems } from '../utils/getCategoryItems'
-import {
-  isLightningTalk,
-  getLightningTalkBlock,
-} from '../utils/lightningTalks'
+import { getLightningTalkBlock } from '../utils/lightningTalks'
+import { isLightningTalk } from '../utils/sessionSections'
 import '../assets/css/schedule.css'
 
 export const ScheduleTable = () => (
@@ -45,8 +43,7 @@ export const ScheduleTable = () => (
         (session) => session.startsAt && session.room
       )
 
-      // Keep each lightning talk off the grid. The block row links to a page
-      // that lists them.
+      // Lightning talks stay off the grid; the block row links to a page listing them.
       const lightningBlock = getLightningTalkBlock(published)
       const scheduled = published.filter((session) => !isLightningTalk(session))
 
@@ -59,11 +56,9 @@ export const ScheduleTable = () => (
         )
       }
 
-      // A banner session spans the grid instead of one room column:
-      // - a service session, such as registration or lunch
-      // - the only session at its start time, such as the keynote
-      // Without this, the keynote room adds a column that is empty in every
-      // other row.
+      // A banner spans the grid instead of taking one room column: service
+      // sessions, and any session alone in its slot. Without it the keynote's
+      // room would add a column empty in every other row.
       const slotSizes = scheduled.reduce(
         (acc, cur) =>
           Object.assign(acc, { [cur.startsAt]: (acc[cur.startsAt] || 0) + 1 }),
