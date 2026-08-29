@@ -19,3 +19,12 @@
   font-weight: bold;
   margin-right: 4px;
 }
+
+.sessionList .section-heading {
+  padding-top: 1em;
+}
+
+/* The next section's top border already separates them; avoids a double rule. */
+.sessionList .session:last-child {
+  border-bottom: none;
+}

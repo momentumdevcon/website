@@ -1,12 +1,72 @@
 import React from 'react'
 import { StaticQuery, graphql, Link } from 'gatsby'
+import { SectionHeading } from './SectionHeading'
 import { getSpeakerNameLinks } from '../utils/getSpeakerNameLink'
 import { LEVEL_ID, TAG_ID } from '../assets/data/levelAndTagId'
 import { getSessionizeSessions } from '../utils/getSessionizeSessions'
 import { getCategoryItems } from '../utils/getCategoryItems'
-import { isLightningTalk } from '../utils/sessionSections'
+import { groupSessionsIntoSections } from '../utils/sessionSections'
 import '../assets/css/sessions.css'
 import '../assets/css/session.css'
+
+const Session = ({ session }) => {
+  const TITLE_CHAR_LIMIT = 80
+  const DESC_CHAR_LIMIT = 340
+  const shortTitle = session.title.length > TITLE_CHAR_LIMIT ? `${session.title.substring(0, TITLE_CHAR_LIMIT)}...` : session.title
+  const description = session.description || ''
+  const shortDesc = description.length > DESC_CHAR_LIMIT ? `${description.substring(0, DESC_CHAR_LIMIT)}...` : description
+  const level = getCategoryItems(session, LEVEL_ID)[0] || ''
+  const tags = getCategoryItems(session, TAG_ID)
+  const speakers = session.speakers
+    ? session.speakers.map((speaker) => speaker.name)
+    : []
+
+  return (
+    <div className="inner session">
+      <div className="sessionTitle">
+        <h2>
+          <Link
+            title={session.title}
+            className="title"
+            to={`/session/${session.alternative_id}`}
+          >
+            {shortTitle}
+          </Link>
+        </h2>
+        {speakers.length > 0 ? (
+          <div className="speakerLink">
+            <div className="presentedBy">Presented by:</div>
+            <div>{getSpeakerNameLinks(speakers)}</div>
+          </div>
+        ) : ''}
+      </div>
+      <div className="description">{shortDesc}</div>
+      {level || tags.length > 0 ? (
+        <div className="levelTags">
+          {level ? (
+            <span>
+              <span className="info-prefix">Level: </span>
+              {level}
+            </span>
+          ) : ''}
+          {tags.length > 0 ? (
+            <span>
+              <span className="info-prefix">Tags:</span>
+              {tags.map((tag, index) => (
+                <React.Fragment key={tag}>
+                  <span>{tag}</span>
+                  {index !== tags.length - 1 ? ', ' : ''}
+                </React.Fragment>
+              ))}
+            </span>
+          ) : (
+            ''
+          )}
+        </div>
+      ) : ''}
+    </div>
+  )
+}
 
 export const SessionsList = () => (
   <StaticQuery
@@ -35,82 +95,23 @@ export const SessionsList = () => (
       }
     `}
     render={({ allSessionizeSessionGroup }) => {
-      // Service sessions have no speaker and no level, so they would show here
-      // as empty cards. They include lunch, opening remarks and the lightning
-      // talk block.
+      // Service sessions (lunch, opening remarks, the lightning talk block) have
+      // no speaker or level, so they would render as empty cards.
       const sessions = getSessionizeSessions(allSessionizeSessionGroup).filter(
         (session) => !session.isServiceSession
       )
+      const sections = groupSessionsIntoSections(sessions)
+
       return (
         <div id="main" className="alt">
-          <section id="one" className="sessionList">
-            {sessions.map((session) => {
-              const TITLE_CHAR_LIMIT = 80
-              const DESC_CHAR_LIMIT = 340
-              const shortTitle = session.title.length > TITLE_CHAR_LIMIT ? `${session.title.substring(0, TITLE_CHAR_LIMIT)}...` : session.title
-              const description = session.description || ''
-              const shortDesc = description.length > DESC_CHAR_LIMIT ? `${description.substring(0, DESC_CHAR_LIMIT)}...` : description
-              const level = getCategoryItems(session, LEVEL_ID)[0] || ''
-              const tags = getCategoryItems(session, TAG_ID)
-              const lightning = isLightningTalk(session)
-              const speakers = session.speakers
-                ? session.speakers.map((speaker) => speaker.name)
-                : []
-
-              return (
-                <div className="inner session" key={session.alternative_id}>
-                  <div className="sessionTitle">
-                    <h2>
-                      <Link
-                        title={session.title}
-                        className="title"
-                        to={`/session/${session.alternative_id}`}
-                      >
-                        {shortTitle}
-                      </Link>
-                    </h2>
-                    {speakers.length > 0 ? (
-                      <div className="speakerLink">
-                        <div className="presentedBy">Presented by:</div>
-                        <div>{getSpeakerNameLinks(speakers)}</div>
-                      </div>
-                    ) : ''}
-                  </div>
-                  <div className="description">{shortDesc}</div>
-                  {lightning || level || tags.length > 0 ? (
-                    <div className="levelTags">
-                      {lightning || level ? (
-                        <span>
-                          {lightning ? (
-                            <span className="lightningTalkLabel">Lightning Talk</span>
-                          ) : ''}
-                          {level ? (
-                            <React.Fragment>
-                              <span className="info-prefix">Level: </span>
-                              {level}
-                            </React.Fragment>
-                          ) : ''}
-                        </span>
-                      ) : ''}
-                      {tags.length > 0 ? (
-                        <span>
-                          <span className="info-prefix">Tags:</span>
-                          {tags.map((tag, index) => (
-                            <React.Fragment key={tag}>
-                              <span>{tag}</span>
-                              {index !== tags.length - 1 ? ', ' : ''}
-                            </React.Fragment>
-                          ))}
-                        </span>
-                      ) : (
-                        ''
-                      )}
-                    </div>
-                  ) : ''}
-                </div>
-              )
-            })}
-          </section>
+          {sections.map(({ key, title, sessions }) => (
+            <section id={key} className="sessionList" key={key}>
+              <SectionHeading>{title}</SectionHeading>
+              {sessions.map((session) => (
+                <Session session={session} key={session.alternative_id} />
+              ))}
+            </section>
+          ))}
         </div>
       )
     }}
