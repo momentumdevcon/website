@@ -97,9 +97,9 @@ export const SessionsList = () => (
     render={({ allSessionizeSessionGroup }) => {
       // Service sessions (lunch, opening remarks, the lightning talk block) have
       // no speaker or level, so they would render as empty cards.
-      const sessions = getSessionizeSessions(allSessionizeSessionGroup).filter(
-        (session) => !session.isServiceSession
-      )
+      const sessions = getSessionizeSessions(allSessionizeSessionGroup)
+        .filter((session) => !session.isServiceSession)
+        .sort((a, b) => a.title.localeCompare(b.title))
       const sections = groupSessionsIntoSections(sessions)
 
       return (
