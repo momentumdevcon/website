@@ -106,7 +106,7 @@ export const SessionsList = () => (
         <div id="main" className="alt">
           {sections.map(({ key, title, sessions }) => (
             <section id={key} className="sessionList" key={key}>
-              <SectionHeading>{title}</SectionHeading>
+              <SectionHeading className="inner">{title}</SectionHeading>
               {sessions.map((session) => (
                 <Session session={session} key={session.alternative_id} />
               ))}

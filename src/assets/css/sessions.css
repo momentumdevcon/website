@@ -20,8 +20,18 @@
   margin-right: 4px;
 }
 
-.sessionList .section-heading {
-  padding-top: 1em;
+/* .inner puts the heading in the cards' column. The #main prefix is needed to
+   outrank the .inner mixin's own padding. */
+#main .sessionList .section-heading {
+  padding: 2em 0 0;
+}
+
+.sessionList .section-heading > h1 {
+  text-align: left;
+}
+
+.sessionList .section-heading .line {
+  width: 100%;
 }
 
 /* The next section's top border already separates them; avoids a double rule. */
