@@ -4,6 +4,11 @@
   align-items: center;
 }
 
+/* No border between sections here, so spacing does the separating. */
+.speakerContainer > section + section {
+  margin-top: 3em;
+}
+
 .session-links {
   display: flex;
   flex-direction: column;
