@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import { GatsbyImage } from 'gatsby-plugin-image'
-import { sponsorData, Wrapper } from '../components'
+import { SectionHeading, sponsorData, Wrapper } from '../components'
 import '../assets/css/sponsors.css'
 
 const Sponsors = ({ data }) => {
@@ -13,8 +13,7 @@ const Sponsors = ({ data }) => {
           .map((sponsorLevel) => {
             return (
               <div className="sponsor-level" key={sponsorLevel}>
-                <h1>{sponsorLevel}</h1>
-                <div className="line" />
+                <SectionHeading>{sponsorLevel}</SectionHeading>
                 <div className={`sponsors ${sponsorLevel === 'Community Partners' ? 'communityPartners' : ''}`}>
                   {sponsorData[sponsorLevel].map(({ company, fileName, link }) => (
                     <div className="sponsor" key={company}>
