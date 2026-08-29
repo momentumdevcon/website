@@ -1,5 +1,5 @@
-// Sessionize sends a category even when it holds no items. A hand-entered
-// session can have an empty Level. An unchecked index then breaks the build.
+// Sessionize sends a category even when it has no items (a hand-entered session
+// can have an empty Level), so an unchecked index breaks the build.
 export const getCategoryItems = (session, categoryId) => {
   const category = ((session && session.categories) || []).find(
     (cat) => cat.alternative_id === categoryId

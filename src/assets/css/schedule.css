@@ -94,10 +94,8 @@
   font-size: 1em;
 }
 
-/* The banner cell replaces the room columns. It holds a session that sits
-   outside those columns, such as lunch or the keynote.
-   ScheduleTable.js sets --room-span from the room count. This keeps the time
-   column the same width as in the room rows. */
+/* A banner row spans the room columns (lunch, the keynote). ScheduleTable.js
+   sets --room-span so the time column matches the room rows. */
 .table-grid__row--banner {
   grid-template-columns: minmax(14.28%, 1fr) var(--room-span, 1fr);
 }

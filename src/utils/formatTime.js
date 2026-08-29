@@ -1,6 +1,5 @@
-// The schedule time column is narrow. Non-breaking spaces keep "9:20 AM"
-// together and hold the dash to the start time. A range then breaks only
-// once, after the dash.
+// The schedule's time column is narrow. Non-breaking spaces keep "9:20 AM"
+// whole and tie the dash to the start time, so a range wraps only after it.
 const NBSP = '\u00A0'
 
 export const formatTimeOfDay = (time) =>
@@ -10,9 +9,8 @@ export const formatTimeOfDay = (time) =>
       minute: 'numeric',
       hour12: true,
     })
-    // Node puts a normal space before AM. Newer browsers put a narrow no-break
-    // space. Match all whitespace so both render the same text and hydration
-    // does not fail.
+    // Node uses a normal space before AM, newer browsers a narrow no-break space.
+    // Matching all whitespace keeps server and client output equal for hydration.
     .replace(/\s/g, NBSP)
 
 export const formatTimeRange = (startTime, endTime) =>

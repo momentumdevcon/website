@@ -45,14 +45,9 @@ const fetchSessionizeData = async (endpoint) => {
   return normalizeSessionizeIds(await response.json())
 }
 
-/**
- * Sessionize sends null startsAt, endsAt and room until the schedule is public.
- * Gatsby does not infer a field that is null in every node, so queries fail.
- *
- * - Declare the session shape so the fields exist before the schedule is public.
- * - Keep startsAt and endsAt as String. Sessionize sends no time zone. With a
- *   Date field, Gatsby adds UTC and the schedule shows the wrong clock times.
- */
+// Sessionize nulls startsAt, endsAt and room until the schedule is public, and
+// Gatsby cannot infer a field that is null in every node. Times stay String:
+// Sessionize sends no time zone, and a Date field would add UTC and shift them.
 exports.createSchemaCustomization = ({ actions }) => {
   actions.createTypes(`
     type SessionizeSessionGroup implements Node {
@@ -298,8 +293,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   })
 
 
-  // The lightning talk block is the one service session with a page. Its talks
-  // are off the schedule grid, so the page lists them.
+  // The lightning talk block gets a page: its talks are off the schedule grid.
   const lightningBlock = getLightningTalkBlock(sessions)
 
   sessions
