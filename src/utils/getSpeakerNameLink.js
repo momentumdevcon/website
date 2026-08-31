@@ -7,3 +7,12 @@ export const getSpeakerNameLink = (name) => (
     {name}
   </Link>
 )
+
+// Output: "Ada", "Ada and Grace", "Ada, Grace and Radia"
+export const getSpeakerNameLinks = (names) =>
+  names.map((name, index) => (
+    <React.Fragment key={name}>
+      {index === 0 ? '' : index === names.length - 1 ? ' and ' : ', '}
+      {getSpeakerNameLink(name)}
+    </React.Fragment>
+  ))

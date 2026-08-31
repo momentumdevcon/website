@@ -6,8 +6,9 @@
 
 const path = require('path')
 const { getSessionizeSessions } = require('./src/utils/getSessionizeSessions')
+const { getLightningTalkBlock } = require('./src/utils/lightningTalks')
 
-const SESSIONIZE_API = 'https://sessionize.com/api/v2/trh93sgi/view'
+const SESSIONIZE_API = 'https://sessionize.com/api/v2/oildqvig/view'
 const SESSIONIZE_REQUEST_TIMEOUT_MS = 15000
 
 const normalizeSessionizeIds = (value) => {
@@ -42,6 +43,53 @@ const fetchSessionizeData = async (endpoint) => {
   }
 
   return normalizeSessionizeIds(await response.json())
+}
+
+// Sessionize nulls startsAt, endsAt and room until the schedule is public, and
+// Gatsby cannot infer a field that is null in every node. Times stay String:
+// Sessionize sends no time zone, and a Date field would add UTC and shift them.
+exports.createSchemaCustomization = ({ actions }) => {
+  actions.createTypes(`
+    type SessionizeSessionGroup implements Node {
+      groupId: String
+      groupName: String
+      sessions: [SessionizeSession!]
+    }
+
+    type SessionizeSession {
+      alternative_id: String
+      title: String
+      description: String
+      startsAt: String
+      endsAt: String
+      room: String
+      roomId: Int
+      status: String
+      isConfirmed: Boolean
+      isInformed: Boolean
+      isPlenumSession: Boolean
+      isServiceSession: Boolean
+      speakers: [SessionizeSessionSpeaker!]
+      categories: [SessionizeSessionCategory!]
+    }
+
+    type SessionizeSessionSpeaker {
+      alternative_id: String
+      name: String
+    }
+
+    type SessionizeSessionCategory {
+      alternative_id: Int
+      name: String
+      sort: Int
+      categoryItems: [SessionizeSessionCategoryItem!]
+    }
+
+    type SessionizeSessionCategoryItem {
+      alternative_id: Int
+      name: String
+    }
+  `)
 }
 
 exports.sourceNodes = async ({ actions, createNodeId, createContentDigest, reporter }) => {
@@ -211,6 +259,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             isInformed
             isPlenumSession
             isServiceSession
+            startsAt
+            endsAt
             alternative_id
             speakers {
               alternative_id
@@ -243,15 +293,25 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   })
 
 
-  sessions.forEach(({ alternative_id }) => {
-    createPage({
-      path: `/session/${alternative_id}`,
-      component: path.resolve('./src/templates/session.js'),
-      context: {
-        slug: alternative_id,
-      },
+  // The lightning talk block gets a page: its talks are off the schedule grid.
+  const lightningBlock = getLightningTalkBlock(sessions)
+
+  sessions
+    .filter(
+      (session) =>
+        !session.isServiceSession ||
+        (lightningBlock &&
+          session.alternative_id === lightningBlock.alternative_id)
+    )
+    .forEach(({ alternative_id }) => {
+      createPage({
+        path: `/session/${alternative_id}`,
+        component: path.resolve('./src/templates/session.js'),
+        context: {
+          slug: alternative_id,
+        },
+      })
     })
-  })
 
 
 }

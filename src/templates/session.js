@@ -1,9 +1,12 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import { Wrapper } from '../components'
-import { getSpeakerNameLink } from '../utils/getSpeakerNameLink'
+import { getSpeakerNameLinks } from '../utils/getSpeakerNameLink'
 import { LEVEL_ID, TAG_ID } from '../assets/data/levelAndTagId'
 import { getSessionizeSessions } from '../utils/getSessionizeSessions'
+import { getCategoryItems } from '../utils/getCategoryItems'
+import { getLightningTalksIn } from '../utils/lightningTalks'
+import { isLightningTalk } from '../utils/sessionSections'
 import '../assets/css/session.css'
 
 const SessionTemplate = ({ data: { allSessionizeSessionGroup, allSessionizeSpeaker }, pageContext: { slug } }) => {
@@ -12,40 +15,61 @@ const SessionTemplate = ({ data: { allSessionizeSessionGroup, allSessionizeSpeak
   const session = allSessionizeSessionGroup.find((session) => session.alternative_id === slug)
   const title = session ? session.title : ''
   const speakerNames = session && session.speakers ? session.speakers.map((speaker) => speaker.name) : []
-  const level =
-    session && session.categories && session.categories.find((cat) => cat.alternative_id === LEVEL_ID)
-      ? session.categories.find((cat) => cat.alternative_id === LEVEL_ID).categoryItems[0].name
-      : ''
-  const tags =
-    session && session.categories && session.categories.find((cat) => cat.alternative_id === TAG_ID)
-      ? session.categories.find((cat) => cat.alternative_id === TAG_ID).categoryItems.map((item) => item.name)
-      : ''
+  const level = getCategoryItems(session, LEVEL_ID)[0] || ''
+  const tags = getCategoryItems(session, TAG_ID)
   const speaker1 =
     session && session.speakers && session.speakers[0]
       ? allSessionizeSpeaker.find((speaker) => speaker.alternative_id === session.speakers[0].alternative_id)
       : null
 
-  const pageDescription = `${title} presented by ${speakerNames.join(', ')} at Momentum 2026`
+  const lightningTalks = getLightningTalksIn(allSessionizeSessionGroup, session)
+
+  const pageDescription = speakerNames.length
+    ? `${title} presented by ${speakerNames.join(', ')} at Momentum 2026`
+    : `${title} at Momentum 2026`
 
   const PresenterInfo = () =>
     speakerNames.length > 0 ? (
       <div className="presenter">
         <span className="info-prefix">Presented by:</span>
-        {getSpeakerNameLink(speakerNames[0])}
-        {speakerNames.length > 1 ? <span> and {getSpeakerNameLink(speakerNames[1])}</span> : ''}
+        {getSpeakerNameLinks(speakerNames)}
       </div>
     ) : (
       ''
     )
 
+  const LightningTalks = () =>
+    lightningTalks.length > 0 ? (
+      <div className="lightningTalks">
+        <h2>Talks</h2>
+        {lightningTalks.map((talk) => (
+          <div className="lightningTalk" key={talk.alternative_id}>
+            <Link to={`/session/${talk.alternative_id}`}>{talk.title}</Link>
+            <div className="lightningTalkSpeakers">
+              {getSpeakerNameLinks(
+                (talk.speakers || []).map((speaker) => speaker.name)
+              )}
+            </div>
+          </div>
+        ))}
+      </div>
+    ) : (
+      ''
+    )
+
+  const lightning = isLightningTalk(session)
+
   const LevelTags = () =>
-    tags && tags.length > 0 ? (
+    lightning || level || tags.length > 0 ? (
       <div className="levelTags">
         <span>
+          {lightning ? (
+            <span className="lightningTalkLabel">Lightning Talk</span>
+          ) : ''}
           <span className="info-prefix">Level: </span>
           {level}
         </span>
-        {tags && tags.length > 0 ? (
+        {tags.length > 0 ? (
           <span>
             <span className="info-prefix">Tags:</span>
             {tags.map((tag, index) => (
@@ -67,6 +91,7 @@ const SessionTemplate = ({ data: { allSessionizeSessionGroup, allSessionizeSpeak
           <div className="inner">
             <PresenterInfo />
             <div className="description">{session && session.description}</div>
+            <LightningTalks />
             <LevelTags />
           </div>
         </section>
@@ -91,6 +116,8 @@ export const query = graphql`
       nodes {
         sessions {
           alternative_id
+          startsAt
+          endsAt
           description
           speakers {
             alternative_id
@@ -99,6 +126,7 @@ export const query = graphql`
           categories {
             alternative_id
             categoryItems {
+              alternative_id
               name
             }
           }

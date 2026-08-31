@@ -15,18 +15,6 @@
   flex-direction: column;
 }
 
-.sponsor-level > h1 {
-  text-align: center;
-  margin: 0 0 0.5em 0;
-}
-
-.sponsor-level .line {
-  height: 2px;
-  background-color: #fff;
-  width: 75%;
-  margin: 0 auto;
-}
-
 .sponsors {
   display: flex;
   justify-content: center;

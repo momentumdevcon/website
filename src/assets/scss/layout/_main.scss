@@ -60,6 +60,17 @@
             border-radius: 50%;
           }
 
+          // Back to the standard size below 360px, where the wider card overflows.
+          &.keynoteSpeaker img {
+            height: 260px;
+            width: 260px;
+
+            @include breakpoint(xxsmall) {
+              height: 200px;
+              width: 200px;
+            }
+          }
+
           & .speakerSocialIcons {
             position: relative;
             left: 0;

@@ -23,3 +23,33 @@
 .gatsby-link {
   border: none;
 }
+
+.lightningTalks {
+  margin-top: 25px;
+}
+
+.lightningTalks > h2 {
+  margin-bottom: 0.5em;
+}
+
+.lightningTalk {
+  margin-bottom: 12px;
+}
+
+.lightningTalkSpeakers {
+  font-style: italic;
+}
+
+.lightningTalkLabel {
+  display: inline-block;
+  background: #ffc633;
+  color: #303658;
+  border-radius: 5px;
+  padding: 2px 8px;
+  margin-right: 10px;
+  font-size: 0.75em;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}

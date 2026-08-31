@@ -1,0 +1,11 @@
+.section-heading > h1 {
+  text-align: center;
+  margin: 0 0 0.5em 0;
+}
+
+.section-heading .line {
+  height: 2px;
+  background-color: #fff;
+  width: 75%;
+  margin: 0 auto;
+}
