@@ -7,16 +7,22 @@ import {
 import '../assets/css/ticketsPopup.css'
 
 // Bump the version suffix to re-show the popup to everyone (e.g. an early-bird deadline push).
-const STORAGE_KEY = 'momentum-2026-tickets-popup-v1'
+const STORAGE_KEY = 'momentum-2026-tickets-popup-v2'
 const SHOW_DELAY_MS = 2000
+// How long a visitor stays "already nudged" after seeing the popup once.
+const SNOOZE_DAYS = 7
+const SNOOZE_MS = SNOOZE_DAYS * 24 * 60 * 60 * 1000
 // Visitors already on the tickets page don't need the nudge.
 const SUPPRESSED_PATHS = ['/tickets']
 
+// localStorage (not sessionStorage) so the snooze survives closing the browser.
 // Storage access throws in Safari private mode and when site data is blocked.
 // Failing open (show the popup) is better than letting an exception break the page.
 const hasSeenPopup = () => {
   try {
-    return window.sessionStorage.getItem(STORAGE_KEY) === 'true'
+    const seenAt = Number(window.localStorage.getItem(STORAGE_KEY))
+    // NaN (missing/garbage value) fails this check, so we fall through and show it.
+    return seenAt > 0 && Date.now() - seenAt < SNOOZE_MS
   } catch (e) {
     return false
   }
@@ -24,7 +30,8 @@ const hasSeenPopup = () => {
 
 const markPopupSeen = () => {
   try {
-    window.sessionStorage.setItem(STORAGE_KEY, 'true')
+    // Store the timestamp rather than a boolean so the snooze can expire.
+    window.localStorage.setItem(STORAGE_KEY, String(Date.now()))
   } catch (e) {
     // Ignore: the popup simply shows again next load.
   }
