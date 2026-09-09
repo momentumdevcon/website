@@ -29,6 +29,13 @@ export const sponsorData = {
       link: 'https://leapwork.com/',
     },
   ],
+  'After Party': [
+    {
+      company: 'DocuSOR',
+      fileName: 'docusor.png',
+      link: 'https://docusor.ai/',
+    },
+  ],
   'Experience': [
     {
       company: 'TQL',
