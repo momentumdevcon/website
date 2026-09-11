@@ -59,7 +59,12 @@ const TicketsPage = () => (
             <li>35 sessions from local, regional, and international speakers</li>
             <li>Breakfast, lunch, and refreshments throughout the day</li>
             <li>A full day to connect with the developer community</li>
-            <li>An afterparty at the Hard Rock Casino once the sessions wrap</li>
+            <li>
+              An afterparty at the Hard Rock Casino once the sessions wrap, hosted by{' '}
+              <a href="https://docusor.ai/" target="_blank" rel="noreferrer">
+                DocuSOR
+              </a>
+            </li>
           </ul>
         </div>
       </section>

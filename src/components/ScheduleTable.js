@@ -7,6 +7,7 @@ import { LEVEL_ID, TAG_ID } from '../assets/data/levelAndTagId'
 import { getCategoryItems } from '../utils/getCategoryItems'
 import { getLightningTalkBlock } from '../utils/lightningTalks'
 import { isLightningTalk } from '../utils/sessionSections'
+import { afterparty } from '../assets/data/afterparty'
 import '../assets/css/schedule.css'
 
 export const ScheduleTable = () => (
@@ -67,7 +68,8 @@ export const ScheduleTable = () => (
       const isBanner = (session) =>
         session.isServiceSession || slotSizes[session.startsAt] === 1
 
-      const bannerSessions = scheduled.filter(isBanner)
+      // The afterparty follows the last session and comes from outside Sessionize.
+      const bannerSessions = scheduled.filter(isBanner).concat(afterparty)
       const roomSessions = scheduled.filter((session) => !isBanner(session))
 
       const rooms = roomSessions
