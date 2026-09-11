@@ -59,6 +59,7 @@ const TicketsPage = () => (
             <li>35 sessions from local, regional, and international speakers</li>
             <li>Breakfast, lunch, and refreshments throughout the day</li>
             <li>A full day to connect with the developer community</li>
+            <li>An afterparty at the Hard Rock Casino once the sessions wrap</li>
           </ul>
         </div>
       </section>
