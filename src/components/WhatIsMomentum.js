@@ -18,6 +18,7 @@ export const WhatIsMomentum = () => (
         </li>
         <li>Breakfast and lunch</li>
         <li>Refreshments throughout the day</li>
+        <li>An afterparty at the Hard Rock Casino once the sessions wrap</li>
         <li>Connect and chat with awesome developers</li>
       </ul>
     </article>
