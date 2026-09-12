@@ -18,7 +18,12 @@ export const WhatIsMomentum = () => (
         </li>
         <li>Breakfast and lunch</li>
         <li>Refreshments throughout the day</li>
-        <li>An afterparty at the Hard Rock Casino once the sessions wrap</li>
+        <li>
+          An afterparty at the Hard Rock Casino once the sessions wrap, hosted by{' '}
+          <a href="https://docusor.ai/" target="_blank" rel="noreferrer">
+            DocuSOR
+          </a>
+        </li>
         <li>Connect and chat with awesome developers</li>
       </ul>
     </article>
