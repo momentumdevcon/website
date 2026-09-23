@@ -259,7 +259,84 @@
       width: fit-content;
     }
   }
-  
+
+  // Whova app download strip. Deliberately quieter than .tickets-cta: the base background with
+  // an accent-colored eyebrow, so it reads as a helpful aside rather than a second hero banner.
+  .whova-callout {
+    background-color: _palette(bg);
+
+    > .inner {
+      align-items: center;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5em 3em;
+      justify-content: space-between;
+      padding: 2.5em 0;
+    }
+
+    h3 {
+      margin-bottom: 0.35em;
+    }
+
+    p:not(.whova-callout__eyebrow) {
+      margin: 0;
+      max-width: 34em;
+    }
+  }
+
+  .whova-callout__copy {
+    flex: 1 1 22em;
+  }
+
+  .whova-callout__logo {
+    display: block;
+    height: 32px;
+    margin-bottom: 1em;
+  }
+
+  // Echoes .tickets-cta__eyebrow, keyed to the strip's accent color.
+  .whova-callout__eyebrow {
+    color: _palette(accent2);
+    font-size: 0.8em;
+    font-weight: _font(weight-bold);
+    letter-spacing: _font(letter-spacing-alt);
+    margin-bottom: 0.5em;
+    text-transform: uppercase;
+  }
+
+  .whova-callout__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75em;
+    margin: 0;
+
+    li {
+      padding: 0;
+    }
+  }
+
+  .whova-callout__icon {
+    margin-right: 0.6em;
+  }
+
+  // Full-width buttons on phones so the three store links are easy tap targets.
+  @include breakpoint(small) {
+    .whova-callout > .inner {
+      padding: 2em 0;
+    }
+
+    .whova-callout__actions {
+      width: 100%;
+
+      li {
+        flex: 1 1 100%;
+      }
+
+      .button {
+        width: 100%;
+      }
+    }
+  }
 
   .sponsors {
     display: flex;

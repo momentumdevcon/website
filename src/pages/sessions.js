@@ -1,9 +1,10 @@
 import React from 'react'
-import { SessionsList, Wrapper } from '../components'
+import { SessionsList, WhovaCallout, Wrapper } from '../components'
 
 const Sessions = () => (
   <Wrapper title="2026 Sessions">
     <div id="main">
+      <WhovaCallout />
       <SessionsList />
     </div>
   </Wrapper>
