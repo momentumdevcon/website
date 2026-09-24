@@ -2,6 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import { GatsbyImage } from 'gatsby-plugin-image'
 import { SectionHeading, sponsorData, Wrapper } from '../components'
+import { DocusorDance } from '../components/DocusorDance'
 import '../assets/css/sponsors.css'
 
 const Sponsors = ({ data }) => {
@@ -37,6 +38,7 @@ const Sponsors = ({ data }) => {
                           {company}
                         </h3>
                       </a>
+                      {fileName === 'docusor.png' && <DocusorDance />}
                     </div>
                   ))}
                 </div>
