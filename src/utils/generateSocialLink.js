@@ -1,14 +1,14 @@
 import React from 'react';
 import { Icon } from '../components/Icon';
 import { faRss, faBuilding } from '@fortawesome/free-solid-svg-icons';
-import { faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faLinkedin, faXTwitter } from '@fortawesome/free-brands-svg-icons';
 
 export const generateSocialLink = (link, className) => {
   const types = {
-    Twitter: faTwitter,
+    Twitter: faXTwitter,
     LinkedIn: faLinkedin,
     Blog: faRss,
-    Company_Website: faBuilding 
+    Company_Website: faBuilding
   }
 
   const iconType = types[link.linkType] || '';

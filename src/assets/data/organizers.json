@@ -72,6 +72,20 @@
     ]
   },
   {
+    "name": "Kat Fairbanks",
+    "photo": "kat",
+    "links": [
+      {
+        "linkType": "Twitter",
+        "url": "https://twitter.com/DerKatzenbar"
+      },
+      {
+        "linkType": "LinkedIn",
+        "url": "https://www.linkedin.com/in/katzenbar/"
+      }
+    ]
+  },
+  {
     "name": "Carly Schumacher",
     "photo": "carly",
     "links": [
