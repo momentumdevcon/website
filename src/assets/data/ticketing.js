@@ -38,6 +38,12 @@ export const toLocalIsoDate = (date) => {
   return `${date.getFullYear()}-${pad(date.getMonth() + 1)}-${pad(date.getDate())}`
 }
 
+// True on the visitor's local conference day. Browser-only: call it after mount, not during render.
+export const isConferenceDay = () => toLocalIsoDate(new Date()) === conferenceDate
+
+// ?dayof in the URL previews the day-of intro on any date.
+export const isDayOfPreview = () => new URLSearchParams(window.location.search).has('dayof')
+
 // The tier on sale on the given date, or undefined before/after the whole schedule.
 export const findActiveTier = (isoDate) =>
   ticketTiers.find((tier) => tier.start <= isoDate && isoDate <= tier.end)

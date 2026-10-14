@@ -38,39 +38,3 @@
     padding: 0 1em;
   }
 }
-
-/* ---- Day-of: live badge ---- */
-
-.live-badge {
-  align-items: center;
-  background: rgba(255, 255, 255, 0.15);
-  border-radius: 999px;
-  display: inline-flex;
-  font-size: 0.5em;
-  gap: 0.5em;
-  letter-spacing: 0.1em;
-  margin-left: 0.6em;
-  padding: 0.3em 0.9em;
-  text-transform: uppercase;
-  vertical-align: middle;
-}
-
-.live-badge__dot {
-  animation: live-pulse 1.6s ease-out infinite;
-  background: #ff4d4d;
-  border-radius: 50%;
-  height: 0.7em;
-  width: 0.7em;
-}
-
-@keyframes live-pulse {
-  0% { box-shadow: 0 0 0 0 rgba(255, 77, 77, 0.7); }
-  100% { box-shadow: 0 0 0 0.8em rgba(255, 77, 77, 0); }
-}
-
-/* Respect visitors who've asked their OS for less motion */
-@media (prefers-reduced-motion: reduce) {
-  .live-badge__dot {
-    animation: none !important;
-  }
-}

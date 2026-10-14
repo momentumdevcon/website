@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { AnimatedLogo } from './AnimatedLogo'
-import { conferenceDate, toLocalIsoDate } from '../assets/data/ticketing'
+import { isConferenceDay, isDayOfPreview } from '../assets/data/ticketing'
 import '../assets/css/dayOfIntro.css'
 
 const SEEN_KEY = 'momentum-dayof-intro-seen'
@@ -49,8 +49,8 @@ export const DayOfIntro = () => {
 
   // Decide whether to show after mount, never during render, so Gatsby's static HTML stays date-agnostic.
   useEffect(() => {
-    const forced = new URLSearchParams(window.location.search).has('dayof')
-    const isDayOf = toLocalIsoDate(new Date()) === conferenceDate
+    const forced = isDayOfPreview()
+    const isDayOf = isConferenceDay()
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
     if (forced || (isDayOf && !readSeen() && !reducedMotion)) {
       setConfetti(makeConfetti(70))
