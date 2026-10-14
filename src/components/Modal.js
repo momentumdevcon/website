@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'gatsby'
 import '../assets/css/modal.css'
 
 export const Modal = ({ children, formState, updateFormState }) => {
@@ -52,6 +53,11 @@ export const Modal = ({ children, formState, updateFormState }) => {
           justifyContent: 'center',
           alignItems: 'center'
         }}>
+          {/* TODO: point at the 2026 "What to Expect" post once it's published */}
+          <Link to="/blog/what-to-expect-2025" style={{ textDecoration: 'none', borderBottom: 'none' }}>
+            <button className='banner-btn'>What to Expect</button>
+          </Link>
+
           <a
             href="mailto:sponsors@momentumdevcon.com"
             style={{ textDecoration: 'none', borderBottom: 'none' }}
@@ -69,14 +75,14 @@ export const Modal = ({ children, formState, updateFormState }) => {
             Sign up for updates
           </button>
 
-          <a
+          {/* <a
             href="https://forms.gle/Jo18kwSHf4LnWdSEA"
             target="_blank"
             rel="noreferrer"
             style={{ textDecoration: 'none', borderBottom: 'none' }}
           >
             <button className='banner-btn'>Become a Volunteer</button>
-          </a>
+          </a> */}
         </div>
 
       </div>

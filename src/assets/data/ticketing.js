@@ -6,6 +6,9 @@ export const whovaRegistrationUrl =
 
 export const ticketsAreAvailable = Boolean(whovaRegistrationUrl)
 
+// Conference day as a local YYYY-MM-DD string (see the UTC note below for why it isn't a Date).
+export const conferenceDate = '2026-10-15'
+
 // Momentum 2026 ticket tiers, in sale order. Ranges are inclusive on both ends.
 // Dates are plain YYYY-MM-DD strings rather than Date objects on purpose: `new Date('2026-08-17')`
 // parses as UTC midnight, which lands on Aug 16 for anyone west of Greenwich. Comparing ISO
