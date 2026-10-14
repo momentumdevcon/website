@@ -55,6 +55,11 @@ export const sponsorData = {
       link: 'https://afidence.com/',
     },
     {
+      company: 'Encore Talent',
+      fileName: 'encore.png',
+      link: 'https://helloencore.com/',
+    },
+    {
       company: 'MAX Technical Training',
       fileName: 'max.png',
       link: 'https://maxtrain.com/',
