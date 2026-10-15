@@ -53,9 +53,11 @@ export const Modal = ({ children, formState, updateFormState }) => {
           justifyContent: 'center',
           alignItems: 'center'
         }}>
-          {/* TODO: point at the 2026 "What to Expect" post once it's published */}
-          <Link to="/blog/what-to-expect-2025" style={{ textDecoration: 'none', borderBottom: 'none' }}>
-            <button className='banner-btn'>What to Expect</button>
+          <Link
+            to="/blog/what-to-expect-2026"
+            style={{ textDecoration: 'none', borderBottom: 'none' }}
+          >
+            <button className='banner-btn'>What To Expect</button>
           </Link>
 
           <a

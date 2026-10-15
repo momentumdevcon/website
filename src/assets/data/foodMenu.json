@@ -24,28 +24,8 @@
     "meal": "Lunch",
     "dishes": [
       {
-        "dish": "Boxed Lunch",
-        "items": [
-          "All boxed lunches include a pasta salad, house-made cookie, whole fruit, chips, a soft drink or bottled water"
-        ]
-      },
-      {
-        "dish": "Middle Eastern Turkey",
-        "items": [
-          "House-roasted turkey, roasted garlic hummus, lightly dressed Fattoush salad, sesame roll"
-        ]
-      },
-      {
-        "dish": "Country Ham",
-        "items": [
-          "Gruyère, Honey Dijon mustard, brioche"
-        ]
-      },
-       {
-        "dish": "Grilled Garden Vegetables",
-        "items": [
-          "Zucchini, squash, eggplant, mixed mushrooms, lightly dressed spinach, focaccia"
-        ]
+        "dish": "Deli Buffet",
+        "items": []
       }
     ]
   }
