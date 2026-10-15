@@ -1,0 +1,171 @@
+/* Full-screen "Today's the day" splash (DayOfIntro.js). Timeline:
+   0-0.9s logo assembles -> 0.9s headline slams in + confetti bursts -> ~4.2s slides up and away. */
+
+.dayof-intro {
+  align-items: center;
+  animation: dayof-fade-in 0.3s ease-out both;
+  background: radial-gradient(circle at center, #34395e 0%, #242943 55%, #161a2e 100%);
+  cursor: pointer;
+  display: flex;
+  inset: 0;
+  justify-content: center;
+  overflow: hidden;
+  position: fixed;
+  z-index: 10001;
+}
+
+.dayof-intro.is-leaving {
+  animation: dayof-exit 0.7s cubic-bezier(0.7, 0, 0.3, 1) both;
+}
+
+.dayof-intro__content {
+  padding: 0 16px;
+  position: relative;
+  text-align: center;
+}
+
+.dayof-intro .animated-logo {
+  fill: #fff;
+  margin: 0 auto 1.5rem;
+  overflow: visible;
+  width: min(420px, 80vw);
+}
+
+.dayof-intro__headline {
+  animation: dayof-slam 0.55s cubic-bezier(0.2, 0.9, 0.3, 1.4) 0.9s both;
+  background: linear-gradient(90deg, #9bf1ff, #8d82c4, #ec8d81, #e7b788, #9bf1ff);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: clamp(2.6rem, 9vw, 6.5rem);
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  line-height: 1;
+  margin: 0 0 0.75rem;
+  text-transform: uppercase;
+}
+
+/* After landing, the gradient keeps drifting across the letters */
+.dayof-intro:not(.is-leaving) .dayof-intro__headline {
+  animation:
+    dayof-slam 0.55s cubic-bezier(0.2, 0.9, 0.3, 1.4) 0.9s both,
+    dayof-shimmer 3s linear 1.45s infinite;
+}
+
+.dayof-intro__sub {
+  animation: dayof-rise 0.5s ease-out 1.3s both;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: clamp(1rem, 2.6vw, 1.4rem);
+  letter-spacing: 0.15em;
+  margin-bottom: 1.75rem;
+  text-transform: uppercase;
+}
+
+.dayof-intro__cta {
+  animation: dayof-rise 0.5s ease-out 1.6s both;
+}
+
+/* Confetti: skewed slashes echoing the logo, all launched from the center */
+.dayof-intro__confetti span {
+  animation: dayof-burst 2.6s cubic-bezier(0.1, 0.8, 0.3, 1) calc(0.9s + var(--delay)) both;
+  border-radius: 2px;
+  height: 22px;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  width: 8px;
+}
+
+@keyframes dayof-burst {
+  0% { opacity: 1; transform: translate(-50%, -50%) scale(0) rotate(0) skewX(-20deg); }
+  35% { opacity: 1; transform: translate(var(--x), var(--y)) scale(1) rotate(var(--r)) skewX(-20deg); }
+  100% { opacity: 0; transform: translate(var(--x), calc(var(--y) + 40vh)) scale(0.8) rotate(calc(var(--r) * 2)) skewX(-20deg); }
+}
+
+@keyframes dayof-slam {
+  0% { opacity: 0; transform: scale(3) rotate(-4deg); }
+  60% { opacity: 1; transform: scale(0.92) rotate(1deg); }
+  100% { opacity: 1; transform: none; }
+}
+
+@keyframes dayof-shimmer {
+  to { background-position: 200% center; }
+}
+
+@keyframes dayof-rise {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: none; }
+}
+
+@keyframes dayof-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes dayof-exit {
+  to { opacity: 0.6; transform: translateY(-100%); }
+}
+
+/* ---- Animated logo (AnimatedLogo.js): chevrons slide in, slashes drop in then ripple ---- */
+
+/* transform-box lets each SVG shape rotate/scale around its own center */
+.animated-logo polygon,
+.animated-logo path {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.animated-logo__chevron--left {
+  animation: logo-slide-left 0.7s cubic-bezier(0.2, 0.8, 0.2, 1.2) both;
+}
+
+.animated-logo__chevron--right {
+  animation: logo-slide-right 0.7s cubic-bezier(0.2, 0.8, 0.2, 1.2) both;
+}
+
+/* Each slash drops in, then ripples every few seconds; staggered via nth-of-type */
+.animated-logo__slash {
+  animation:
+    logo-drop 0.6s cubic-bezier(0.2, 0.8, 0.2, 1.3) both,
+    logo-ripple 4s ease-in-out 2s infinite;
+}
+
+.animated-logo path.animated-logo__slash {
+  animation-delay: 0.5s, 2s;
+}
+
+.animated-logo polygon.animated-logo__slash:nth-of-type(2) {
+  animation-delay: 0.65s, 2.12s;
+}
+
+.animated-logo polygon.animated-logo__slash:nth-of-type(3) {
+  animation-delay: 0.8s, 2.24s;
+}
+
+@keyframes logo-slide-left {
+  from { opacity: 0; transform: translateX(-160px); }
+  to { opacity: 1; transform: none; }
+}
+
+@keyframes logo-slide-right {
+  from { opacity: 0; transform: translateX(160px); }
+  to { opacity: 1; transform: none; }
+}
+
+@keyframes logo-drop {
+  from { opacity: 0; transform: translateY(-120px); }
+  to { opacity: 1; transform: none; }
+}
+
+/* Quick lean-forward "momentum" bump, then rest for the remainder of the 4s loop */
+@keyframes logo-ripple {
+  0%, 18%, 100% { transform: none; }
+  8% { transform: translateX(14px) skewX(-8deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animated-logo * {
+    animation: none !important;
+  }
+}

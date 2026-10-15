@@ -1,6 +1,8 @@
 export { Banner } from './Banner'
 export { BannerLanding } from './BannerLanding'
+export { AnimatedLogo } from './AnimatedLogo'
 export { Contact } from './Contact'
+export { DayOfIntro } from './DayOfIntro'
 export { Footer } from './Footer'
 export { Header } from './Header'
 export { Icon } from './Icon'
