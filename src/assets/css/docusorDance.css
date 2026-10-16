@@ -1,0 +1,62 @@
+.docusor-dance-stage {
+  --dancer-size: clamp(80px, 18vw, 150px);
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.docusor-dance-traveler {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  width: calc(100% - var(--dancer-size) - 48px);
+  height: calc(100% - var(--dancer-size) - 48px);
+  animation: docusor-travel 12s ease-in-out both;
+}
+
+.docusor-dance-logo {
+  display: block;
+  width: var(--dancer-size);
+  height: var(--dancer-size);
+  object-fit: contain;
+  padding: 12px;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0 8px 28px #0005;
+  animation: docusor-boogie 600ms ease-in-out infinite alternate;
+}
+
+.docusor-dance-toggle {
+  margin-top: 12px;
+  font-size: 0.65em;
+}
+
+@keyframes docusor-travel {
+  0% { transform: translate(0, 0); opacity: 0; }
+  5% { opacity: 1; }
+  20% { transform: translate(100%, 20%); }
+  40% { transform: translate(15%, 100%); }
+  60% { transform: translate(85%, 75%); }
+  80% { transform: translate(40%, 0); }
+  95% { opacity: 1; }
+  100% { transform: translate(0, 60%); opacity: 0; }
+}
+
+@keyframes docusor-boogie {
+  from { transform: rotate(-14deg) scale(0.9); }
+  to { transform: rotate(14deg) scale(1.05); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .docusor-dance-stage,
+  .docusor-dance-toggle {
+    display: none;
+  }
+
+  .docusor-dance-traveler,
+  .docusor-dance-logo {
+    animation: none;
+  }
+}
