@@ -17,7 +17,7 @@ export const Banner = () => (
           </a>
         </p>
       </div>
-      <p className="date">October 15, 2026</p>
+      <p className="date">October 2027</p>
       <div className="banner-actions">
         {/* <Link className="button special" to="https://whova.com/portal/registration/2ev2ReOea-5UJ4yBtC2-/" target="_blank">
           {ticketsAreAvailable ? 'Get tickets' : 'Ticket details'}
