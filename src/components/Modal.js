@@ -53,8 +53,11 @@ export const Modal = ({ children, formState, updateFormState }) => {
           justifyContent: 'center',
           alignItems: 'center'
         }}>
-          {/* <Link to="/blog/what-to-expect-2025" style={{ textDecoration: 'none', borderBottom: 'none' }}>
-            <button className='banner-btn'>What to Expect</button>
+          {/* <Link
+            to="/blog/what-to-expect-2026"
+            style={{ textDecoration: 'none', borderBottom: 'none' }}
+          >
+            <button className='banner-btn'>What To Expect</button>
           </Link> */}
 
           <a
