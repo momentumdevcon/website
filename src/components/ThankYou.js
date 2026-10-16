@@ -1,7 +1,7 @@
 import React from 'react'
 
 // Shared inline style so the anchor wrappers don't pick up the theme's link underline.
-const buttonLinkStyle = { textDecoration: 'none', borderBottom: 'none' }
+// const buttonLinkStyle = { textDecoration: 'none', borderBottom: 'none' }
 
 export const ThankYou = () => (
   <section id="one" className="tiles whatIsMomentumTiles">
@@ -21,6 +21,7 @@ export const ThankYou = () => (
         app. Your input directly shapes what Momentum looks like next year.
       </p>
 
+      {/* Buttons hidden for now - uncomment to bring back Provide Feedback and Check out 2025.
       <div
         style={{
           display: 'flex',
@@ -40,7 +41,7 @@ export const ThankYou = () => (
         <a href="https://2025.momentumdevcon.com" target="_blank" rel="noopener noreferrer" style={buttonLinkStyle}>
           <button className="banner-btn">Check out 2025!</button>
         </a>
-      </div>
+      </div> */}
     </article>
   </section>
 )
